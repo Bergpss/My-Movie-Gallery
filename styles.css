@@ -1,0 +1,17 @@
+.movie-item {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.movie-item img {
+    display: block;
+    margin-bottom: 8px;
+    width: 100px;
+    height: 150px;
+}
+
+.movie-item p {
+    margin: 0;
+    font-size: 14px;
+}
