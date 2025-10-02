@@ -4,7 +4,8 @@
     "type": "account-rated-movies",
     "accountId": null,
     "language": "zh-CN",
-    "sortBy": "rated_at.desc"
+    "sortBy": "created_at.desc",
+    "auth": null
   },
   "items": []
 }

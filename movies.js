@@ -44,7 +44,11 @@ function renderMovies(movies) {
 
         const title = movie.title || movie.name || 'Untitled';
         const rating = typeof movie.rating === 'number' ? movie.rating.toFixed(1) : null;
-        const watchedOn = formatWatchDate(movie.rated_at || movie.created_at);
+        const watchedOn = formatWatchDate(
+            movie.rated_at
+            || movie.account_rating?.created_at
+            || movie.created_at
+        );
 
         container.innerHTML += `
             <div class="movie-item">
