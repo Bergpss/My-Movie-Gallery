@@ -193,6 +193,7 @@ async function main() {
                 rated_at: previous.rated_at ?? item.rated_at ?? item.account_rating?.created_at ?? null,
                 account_rating: item.account_rating ?? previous.account_rating ?? null,
                 note: previous.note ?? null,
+                status: previous.status ?? item.status ?? null,
             };
         });
 

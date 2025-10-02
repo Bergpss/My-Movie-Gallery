@@ -32,6 +32,7 @@ The fetch script now merges new TMDB data with anything already present in `data
 
 - To override a watch date, edit the `rated_at` field for that movie in `data/movies.json`. Future runs keep this value unless TMDB returns a new timestamp for that item.
 - You can add a free-form `note` field to any movie object; it will also persist across refreshes.
+- Set `status` to `"watching"` (or `"in-progress"`) on any movie to surface it in the “正在看” section; remove the field or change the value to move it back to “已看完”。
 - Entries that disappear from TMDB remain in your local file (with whatever you recorded) unless you delete them manually.
 3. Commit the refreshed `data/movies.json` so GitHub Pages (or any static host) can serve the updated snapshot.
 
