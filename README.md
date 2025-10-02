@@ -48,6 +48,7 @@
 - 更改 `watchDate`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。
 - 若想把影片移到“正在看”，把它放入 `watching` 数组或把 `status` 改为 `watching`。
 - 删除条目即从 `library.json` 移除对应对象，再跑一次脚本。
+- 页面上的日期取自 TMDB 的 `release_date`，若该字段缺失则不会显示日期。
 
 ## 部署提示
 

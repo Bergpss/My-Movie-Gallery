@@ -2,7 +2,7 @@ const MOVIE_DATA_URL = 'data/movies.json';
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const PLACEHOLDER_POSTER = 'movie_posters/placeholder.png';
 
-function formatWatchDate(isoString) {
+function formatDate(isoString) {
     if (!isoString) {
         return null;
     }
@@ -15,18 +15,14 @@ function formatWatchDate(isoString) {
     return date.toISOString().split('T')[0];
 }
 
-function getWatchDateSource(movie) {
-    return (
-        movie.watchDate
-        || movie.tmdb?.release_date
-        || null
-    );
+function getReleaseDate(movie) {
+    return movie.tmdb?.release_date || null;
 }
 
-function sortMoviesByWatchDate(movies) {
+function sortMoviesByReleaseDate(movies) {
     return [...movies].sort((a, b) => {
-        const dateA = formatWatchDate(getWatchDateSource(a));
-        const dateB = formatWatchDate(getWatchDateSource(b));
+        const dateA = formatDate(getReleaseDate(a));
+        const dateB = formatDate(getReleaseDate(b));
 
         if (dateA && dateB) {
             if (dateA > dateB) return -1;
@@ -87,7 +83,7 @@ function renderMovies(movies) {
             return;
         }
 
-        const sorted = sortMoviesByWatchDate(list);
+        const sorted = sortMoviesByReleaseDate(list);
 
         if (sorted.length === 0) {
             emptyMessageEl.hidden = false;
@@ -109,7 +105,7 @@ function renderMovies(movies) {
                     ? movie.tmdb.vote_average
                     : null;
             const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
-            const watchedOn = formatWatchDate(getWatchDateSource(movie));
+            const releaseDate = formatDate(getReleaseDate(movie));
             const note = movie.note ? `<p class="watch-note">${movie.note}</p>` : '';
 
             container.innerHTML += `
@@ -119,7 +115,7 @@ function renderMovies(movies) {
                         ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
                     </div>
                     <p>${title}</p>
-                    ${watchedOn ? `<p class="watch-date">${watchedOn}</p>` : ''}
+                    ${releaseDate ? `<p class="release-date">${releaseDate}</p>` : ''}
                     ${note}
                 </div>
             `;

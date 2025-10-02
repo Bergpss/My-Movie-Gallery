@@ -1,11 +1,46 @@
 {
-  "generatedAt": "2025-10-02T14:51:15.601Z",
+  "generatedAt": "2025-10-02T15:42:31.371Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 2
+    "total": 3
   },
   "items": [
+    {
+      "id": 615457,
+      "title": "小人物",
+      "status": "watching",
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "tmdb": {
+        "original_title": "Nobody",
+        "original_language": "en",
+        "title": "小人物",
+        "overview": "　　一天晚上，Hutch位于郊区的家中遭两名小偷闯入。为了避免暴力冲突，Hutch没有为自己或是家人反击。他的儿子Blake对他感到很失望，他的老婆Becca似乎也因此更加疏远他。这起事件激发了Hutch心中压抑许久的情绪和本能，促使他走上残酷的道路，将揭露他黑暗的秘密和致命的能力。在拳头、枪弹和急速行驶的车阵中，Hutch必须从危险的敌人手中救出自己的家人，并确保别人不会再把他视作无名小卒。",
+        "poster_path": "/z8gPKTxSXRUIizGqF8R4ZNW9uln.jpg",
+        "backdrop_path": "/61MrK5U4w4MVL1vfwoG12zYPJ8B.jpg",
+        "release_date": "2021-03-18",
+        "runtime": 91,
+        "genres": [
+          {
+            "id": 28,
+            "name": "动作"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 7.91,
+        "vote_count": 7755,
+        "popularity": 23.9117,
+        "homepage": "",
+        "directors": [
+          "伊利亚·奈舒勒"
+        ]
+      }
+    },
     {
       "id": 933260,
       "title": "某种物质",
