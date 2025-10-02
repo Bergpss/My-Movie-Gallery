@@ -23,6 +23,6 @@ The frontend reads `data/movies.json` at runtime, so no TMDB credentials are exp
 
 ## Development Notes
 
-- `movies.js` expects rated-movie payloads (including the `rating` field) and decorates the poster with your score.
+- `movies.js` expects rated-movie payloads (including the `rating` field) and decorates the poster with your score plus the rating timestamp (shown as the watch date beneath the title).
 - Running the fetch script without valid credentials will exit with an error; this is by design to avoid publishing incomplete data.
 - When deploying to GitHub Pages as a project site, ensure the `data/` directory sits beside `index.html` so the JSON loads correctly.

@@ -2,6 +2,19 @@ const MOVIE_DATA_URL = 'data/movies.json';
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const PLACEHOLDER_POSTER = 'movie_posters/placeholder.png';
 
+function formatWatchDate(isoString) {
+    if (!isoString) {
+        return null;
+    }
+
+    const date = new Date(isoString);
+    if (Number.isNaN(date.getTime())) {
+        return null;
+    }
+
+    return date.toISOString().split('T')[0];
+}
+
 async function fetchMoviesFromList() {
     try {
         const response = await fetch(MOVIE_DATA_URL, { cache: 'no-store' });
@@ -31,6 +44,7 @@ function renderMovies(movies) {
 
         const title = movie.title || movie.name || 'Untitled';
         const rating = typeof movie.rating === 'number' ? movie.rating.toFixed(1) : null;
+        const watchedOn = formatWatchDate(movie.rated_at || movie.created_at);
 
         container.innerHTML += `
             <div class="movie-item">
@@ -39,6 +53,7 @@ function renderMovies(movies) {
                     ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
                 </div>
                 <p>${title}</p>
+                ${watchedOn ? `<p class="watch-date">${watchedOn}</p>` : ''}
             </div>
         `;
     });

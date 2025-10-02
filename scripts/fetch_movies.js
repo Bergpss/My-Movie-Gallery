@@ -48,6 +48,7 @@ async function fetchRatedMovies() {
         rated.push(...results.map(item => ({
             ...item,
             media_type: 'movie',
+            rated_at: item.rated_at || item.created_at || null,
         })));
 
         totalPages = data.total_pages ?? 1;
