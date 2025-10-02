@@ -25,6 +25,14 @@ A static gallery that showcases the movies you've personally rated on TMDB. The 
    node scripts/fetch_movies.js
    ```
    The script automatically walks every result page returned by `/account/{account_id}/movie/rated` (v4) or `/account/{account_id}/rated/movies` (v3). When using v4, account metadata is fetched automatically and stored in `data/movies.json`.
+
+### Preserving custom watch dates or notes
+
+The fetch script now merges new TMDB data with anything already present in `data/movies.json`.
+
+- To override a watch date, edit the `rated_at` field for that movie in `data/movies.json`. Future runs keep this value unless TMDB returns a new timestamp for that item.
+- You can add a free-form `note` field to any movie object; it will also persist across refreshes.
+- Entries that disappear from TMDB remain in your local file (with whatever you recorded) unless you delete them manually.
 3. Commit the refreshed `data/movies.json` so GitHub Pages (or any static host) can serve the updated snapshot.
 
 The frontend reads `data/movies.json` at runtime, so no TMDB credentials are exposed to visitors.

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import process from 'node:process';
 
@@ -167,6 +167,40 @@ async function main() {
         const { accountId, accountUsername, items } = await fetchRatedMovies();
         const outputPath = resolve(process.cwd(), 'data/movies.json');
 
+        let existing = {};
+        try {
+            const current = await readFile(outputPath, 'utf-8');
+            const parsed = JSON.parse(current);
+            if (Array.isArray(parsed?.items)) {
+                existing = Object.fromEntries(
+                    parsed.items
+                        .filter(item => item && typeof item.id !== 'undefined')
+                        .map(item => [String(item.id), item])
+                );
+            }
+        } catch (error) {
+            if (error.code !== 'ENOENT') {
+                console.warn('Unable to read existing data/movies.json, starting fresh:', error.message);
+            }
+        }
+
+        const merged = items.map(item => {
+            const key = String(item.id);
+            const previous = existing[key] || {};
+
+            return {
+                ...item,
+                rated_at: previous.rated_at ?? item.rated_at ?? item.account_rating?.created_at ?? null,
+                account_rating: item.account_rating ?? previous.account_rating ?? null,
+                note: previous.note ?? null,
+            };
+        });
+
+        const newIds = new Set(merged.map(movie => String(movie.id)));
+        const preserved = Object.entries(existing)
+            .filter(([key]) => !newIds.has(key))
+            .map(([, value]) => value);
+
         const payload = {
             generatedAt: new Date().toISOString(),
             source: {
@@ -177,7 +211,7 @@ async function main() {
                 sortBy: SORT_BY,
                 auth: TMDB_V4_ACCESS_TOKEN ? 'v4' : 'v3',
             },
-            items,
+            items: [...merged, ...preserved],
         };
 
         await mkdir(dirname(outputPath), { recursive: true });
