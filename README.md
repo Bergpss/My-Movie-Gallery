@@ -1,24 +1,28 @@
 # My Movie Gallery
 
-A static gallery that displays movies sourced from a TMDB list. The TMDB API key is no longer exposed in the frontend; instead, list data is fetched offline and stored as a static JSON file that GitHub Pages can host.
+A static gallery that showcases the movies you've personally rated on TMDB. The browser only consumes a pre-generated JSON snapshot, so your API key and session never leave the server or build environment.
 
-## Updating the Movie Data
+## Updating the Rated Movies Snapshot
 
-1. Retrieve a TMDB API key and keep it private. Do **not** commit it to the repository.
-2. From the project root, run the fetch script with the necessary environment variables. For example:
+1. Create or reuse the following TMDB credentials (keep them secret):
+   - `TMDB_API_KEY`: your v3 API key.
+   - `TMDB_SESSION_ID`: a user session with permission to read your rated movies.
+   - `TMDB_ACCOUNT_ID`: the numeric TMDB account identifier tied to the session.
+   - Optional overrides: `TMDB_LANGUAGE` (defaults to `zh-CN`) and `TMDB_SORT_BY` (defaults to `rated_at.desc`).
+2. Run the fetch script from the project root:
    ```bash
-   TMDB_API_KEY="<your api key>" \
-   TMDB_LIST_ID="8520430" \
-   TMDB_LANGUAGE="zh-CN" \
+   TMDB_API_KEY="<api key>" \
+   TMDB_SESSION_ID="<session id>" \
+   TMDB_ACCOUNT_ID="<account id>" \
    node scripts/fetch_movies.js
    ```
-   `TMDB_LIST_ID` and `TMDB_LANGUAGE` are optional; they default to the values shown above.
-3. The script writes the latest data to `data/movies.json`. Commit the updated JSON so GitHub Pages can serve it.
+   The script automatically walks every result page returned by `/account/{account_id}/rated/movies`.
+3. Commit the refreshed `data/movies.json` so GitHub Pages (or any static host) can serve the updated snapshot.
 
-The frontend reads `data/movies.json` at runtime, so no TMDB credentials are sent to visitors.
+The frontend reads `data/movies.json` at runtime, so no TMDB credentials are exposed to visitors.
 
 ## Development Notes
 
-- `movies.js` loads from `data/movies.json`. Make sure that file exists (the repository includes an empty placeholder).
-- If you change the TMDB list or language, rerun the fetch script and redeploy.
-- When deploying to GitHub Pages as a project site, ensure the build output keeps the `data/` directory alongside `index.html`.
+- `movies.js` expects rated-movie payloads (including the `rating` field) and decorates the poster with your score.
+- Running the fetch script without valid credentials will exit with an error; this is by design to avoid publishing incomplete data.
+- When deploying to GitHub Pages as a project site, ensure the `data/` directory sits beside `index.html` so the JSON loads correctly.

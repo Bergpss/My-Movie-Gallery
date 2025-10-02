@@ -23,15 +23,21 @@ function renderMovies(movies) {
     container.innerHTML = '';
 
     movies.forEach(movie => {
-        const backdropPath = movie.backdrop_path
-            ? `${POSTER_BASE_URL}${movie.backdrop_path}`
-            : PLACEHOLDER_POSTER;
+        const imagePath = movie.poster_path
+            ? `${POSTER_BASE_URL}${movie.poster_path}`
+            : movie.backdrop_path
+                ? `${POSTER_BASE_URL}${movie.backdrop_path}`
+                : PLACEHOLDER_POSTER;
 
-        const title = movie.media_type === 'movie' ? movie.title : movie.name;
+        const title = movie.title || movie.name || 'Untitled';
+        const rating = typeof movie.rating === 'number' ? movie.rating.toFixed(1) : null;
 
         container.innerHTML += `
             <div class="movie-item">
-                <img src="${backdropPath}" alt="${title}" loading="lazy">
+                <div class="poster-wrapper">
+                    <img src="${imagePath}" alt="${title}" loading="lazy">
+                    ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
+                </div>
                 <p>${title}</p>
             </div>
         `;
