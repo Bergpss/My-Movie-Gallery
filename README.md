@@ -28,8 +28,14 @@
 1. 准备 TMDB API Key（v3），保存在环境变量 `TMDB_API_KEY` 中。可选：
    - `TMDB_LANGUAGE`（默认 `zh-CN`）
    - `TMDB_REGION`
-2. 编辑 `data/library.json`，维护正在看/已看完的电影列表。
-3. 运行脚本：
+2. 通过脚本维护清单：
+   ```bash
+   TMDB_API_KEY="<你的 API Key>" \
+   node scripts/add_movie.js
+   ```
+   脚本会引导你输入中文片名、状态（正在看/已看过/想看）、备注等信息，并自动调用 TMDB 搜索获取 ID，随后写入 `data/library.json`。
+   - 若你愿意，也可以直接手动编辑 `data/library.json`。
+3. 运行生成脚本：
    ```bash
    TMDB_API_KEY="<你的 API Key>" \
    node scripts/fetch_movies.js
