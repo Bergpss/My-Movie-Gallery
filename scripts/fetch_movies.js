@@ -73,19 +73,27 @@ async function fetchRatedMoviesV4() {
         'Content-Type': 'application/json;charset=utf-8',
     };
 
-    const profileResponse = await fetch(`${TMDB_V4_BASE_URL}/account`, {
-        headers,
-    });
-
-    if (!profileResponse.ok) {
-        throw new Error(`Failed to resolve TMDB v4 account profile (status ${profileResponse.status})`);
-    }
-
-    const profile = await profileResponse.json();
-    const resolvedAccountId = String(profile.id ?? '').trim();
+    let resolvedAccountId = TMDB_ACCOUNT_ID ? String(TMDB_ACCOUNT_ID).trim() : '';
+    let accountUsername = null;
 
     if (!resolvedAccountId) {
-        throw new Error('TMDB v4 account profile did not include an id');
+        const profileResponse = await fetch(`${TMDB_V4_BASE_URL}/account`, { headers });
+
+        if (profileResponse.status === 404) {
+            throw new Error('Failed to resolve TMDB v4 account profile (status 404). Either the token lacks access or you can set TMDB_ACCOUNT_ID to skip auto lookup.');
+        }
+
+        if (!profileResponse.ok) {
+            throw new Error(`Failed to resolve TMDB v4 account profile (status ${profileResponse.status})`);
+        }
+
+        const profile = await profileResponse.json();
+        resolvedAccountId = String(profile.id ?? '').trim();
+        accountUsername = profile.username ?? profile.name ?? null;
+
+        if (!resolvedAccountId) {
+            throw new Error('TMDB v4 account profile did not include an id');
+        }
     }
 
     let page = 1;
@@ -120,7 +128,7 @@ async function fetchRatedMoviesV4() {
 
     return {
         accountId: resolvedAccountId,
-        accountUsername: profile.username ?? profile.name ?? null,
+        accountUsername,
         items: rated,
     };
 }
