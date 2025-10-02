@@ -1,45 +1,49 @@
 # My Movie Gallery
 
-A static gallery that showcases the movies you've personally rated on TMDB. The browser only consumes a pre-generated JSON snapshot, so your API key and session never leave the server or build environment.
+静态站点，用本地维护的观影记录列表去 TMDB 拉取详情，最终生成 `data/movies.json` 给前端使用。无需数据库，也不会把 TMDB 凭据暴露给访客。
 
-## Updating the Rated Movies Snapshot
+## 数据结构
 
-1. Create or reuse the following TMDB credentials (keep them secret):
-   - **Recommended** `TMDB_V4_ACCESS_TOKEN`: the long "API Read Access Token (v4 auth)" from TMDB settings. The script decodes the token to discover your v4 account id automatically; if that fails, provide it manually via `TMDB_ACCOUNT_ID`.
-   - Optional overrides: `TMDB_LANGUAGE` (defaults to `zh-CN`) and `TMDB_SORT_BY` (defaults to `created_at.desc`).
-   - Fallback (only needed if you skip the v4 token or if decoding fails):
-     - `TMDB_API_KEY`: your v3 API key.
-     - `TMDB_SESSION_ID`: a user session with permission to read your rated movies.
-     - `TMDB_ACCOUNT_ID`: the numeric TMDB account identifier. v3 responses do **not** include rating timestamps.
-2. Run the fetch script from the project root:
+- `data/library.json` 是唯一需要手动维护的文件。
+  ```json
+  {
+    "watching": [
+      { "id": 933260, "title": "某种物质", "status": "watching", "note": "…" }
+    ],
+    "watched": [
+      { "id": 137, "title": "土拨鼠之日", "watchDate": "2025-09-30", "rating": 8 }
+    ]
+  }
+  ```
+  - `id` 是 TMDB 电影 ID（推荐：先查询一次 TMDB，确认后写入）。
+  - `title` 只是方便识别，脚本生成时会用 TMDB 的官方标题兜底。
+  - `watchDate`（可选）记录观影日期，格式 `YYYY-MM-DD`。
+  - `status`（可选）默认分为 `watching` / `watched`，前端据此显示“两大板块”。
+  - `rating`、`note`（可选）会直接渲染在页面上。
+
+- `data/movies.json` 由脚本自动生成，包含 TMDB 详情（海报、导演、上映日期等），不需要手动编辑。
+
+## 生成流程
+
+1. 准备 TMDB API Key（v3），保存在环境变量 `TMDB_API_KEY` 中。可选：
+   - `TMDB_LANGUAGE`（默认 `zh-CN`）
+   - `TMDB_REGION`
+2. 编辑 `data/library.json`，维护正在看/已看完的电影列表。
+3. 运行脚本：
    ```bash
-   TMDB_V4_ACCESS_TOKEN="<v4 token>" \
-   TMDB_ACCOUNT_ID="<v4 account id>" # optional override if auto lookup fails (usually the `sub` claim in the token)
+   TMDB_API_KEY="<你的 API Key>" \
    node scripts/fetch_movies.js
    ```
-   If you prefer the v3 flow instead:
-   ```bash
-   TMDB_API_KEY="<api key>" \
-   TMDB_SESSION_ID="<session id>" \
-   TMDB_ACCOUNT_ID="<account id>" \
-   node scripts/fetch_movies.js
-   ```
-   The script automatically walks every result page returned by `/account/{account_id}/movie/rated` (v4) or `/account/{account_id}/rated/movies` (v3). When using v4, account metadata is fetched automatically and stored in `data/movies.json`.
+4. 脚本会读取 `library.json`，逐个访问 TMDB `/movie/{id}` 接口，生成新的 `data/movies.json`。
+5. 将 `data/movies.json`（以及更新后的 `library.json`）纳入版本控制并部署到 GitHub Pages。
 
-### Preserving custom watch dates or notes
+## 自定义字段
 
-The fetch script now merges new TMDB data with anything already present in `data/movies.json`.
+- 更改 `watchDate`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。
+- 若想把影片移到“正在看”，把它放入 `watching` 数组或把 `status` 改为 `watching`。
+- 删除条目即从 `library.json` 移除对应对象，再跑一次脚本。
 
-- To override a watch date, edit the `rated_at` field for that movie in `data/movies.json`. Future runs keep this value unless TMDB returns a new timestamp for that item.
-- You can add a free-form `note` field to any movie object; it will also persist across refreshes.
-- Set `status` to `"watching"` (or `"in-progress"`) on any movie to surface it in the “正在看” section; remove the field or change the value to move it back to “已看完”。
-- Entries that disappear from TMDB remain in your local file (with whatever you recorded) unless you delete them manually.
-3. Commit the refreshed `data/movies.json` so GitHub Pages (or any static host) can serve the updated snapshot.
+## 部署提示
 
-The frontend reads `data/movies.json` at runtime, so no TMDB credentials are exposed to visitors.
-
-## Development Notes
-
-- `movies.js` expects rated-movie payloads (including the `rating` field) and decorates the poster with your score plus the rating timestamp (shown as the watch date beneath the title when available).
-- Running the fetch script without valid credentials will exit with an error; this is by design to avoid publishing incomplete data.
-- When deploying to GitHub Pages as a project site, ensure the `data/` directory sits beside `index.html` so the JSON loads correctly.
+- 站点是纯静态输出，GitHub Pages 只需要 `index.html`、`movies.js`、`styles.css` 和自动生成的 `data/movies.json`。
+- 记得不要把 `TMDB_API_KEY` 写进仓库；只需在本地或 CI 环境变量中配置后运行脚本即可。

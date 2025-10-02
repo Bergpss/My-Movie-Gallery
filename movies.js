@@ -17,9 +17,8 @@ function formatWatchDate(isoString) {
 
 function getWatchDateSource(movie) {
     return (
-        movie.rated_at
-        || movie.account_rating?.created_at
-        || movie.created_at
+        movie.watchDate
+        || movie.tmdb?.release_date
         || null
     );
 }
@@ -98,15 +97,20 @@ function renderMovies(movies) {
         emptyMessageEl.hidden = true;
 
         sorted.forEach(movie => {
-            const imagePath = movie.poster_path
-                ? `${POSTER_BASE_URL}${movie.poster_path}`
-                : movie.backdrop_path
-                    ? `${POSTER_BASE_URL}${movie.backdrop_path}`
-                    : PLACEHOLDER_POSTER;
+            const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path || null;
+            const imagePath = posterPath
+                ? `${POSTER_BASE_URL}${posterPath}`
+                : PLACEHOLDER_POSTER;
 
-            const title = movie.title || movie.name || 'Untitled';
-            const rating = typeof movie.rating === 'number' ? movie.rating.toFixed(1) : null;
+            const title = movie.title || movie.tmdb?.title || movie.tmdb?.original_title || 'Untitled';
+            const ratingValue = typeof movie.rating === 'number'
+                ? movie.rating
+                : typeof movie.tmdb?.vote_average === 'number'
+                    ? movie.tmdb.vote_average
+                    : null;
+            const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
             const watchedOn = formatWatchDate(getWatchDateSource(movie));
+            const note = movie.note ? `<p class="watch-note">${movie.note}</p>` : '';
 
             container.innerHTML += `
                 <div class="movie-item">
@@ -116,6 +120,7 @@ function renderMovies(movies) {
                     </div>
                     <p>${title}</p>
                     ${watchedOn ? `<p class="watch-date">${watchedOn}</p>` : ''}
+                    ${note}
                 </div>
             `;
         });
