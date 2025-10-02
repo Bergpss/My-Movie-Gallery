@@ -12,6 +12,26 @@ const TMDB_V4_BASE_URL = 'https://api.themoviedb.org/4';
 const LANGUAGE = process.env.TMDB_LANGUAGE || 'zh-CN';
 const SORT_BY = process.env.TMDB_SORT_BY || 'created_at.desc';
 
+function decodeAccountIdFromToken(token) {
+    if (!token) {
+        return null;
+    }
+
+    try {
+        const [, payload] = token.split('.');
+        if (!payload) {
+            return null;
+        }
+
+        const json = Buffer.from(payload.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf-8');
+        const data = JSON.parse(json);
+        return data.sub ?? null;
+    } catch (error) {
+        console.warn('Failed to decode TMDB v4 token payload:', error.message);
+        return null;
+    }
+}
+
 async function fetchRatedMoviesV3() {
     if (!TMDB_API_KEY) {
         throw new Error('Missing TMDB_API_KEY environment variable');
@@ -73,27 +93,17 @@ async function fetchRatedMoviesV4() {
         'Content-Type': 'application/json;charset=utf-8',
     };
 
+    const decodedAccountId = decodeAccountIdFromToken(TMDB_V4_ACCESS_TOKEN);
+
     let resolvedAccountId = TMDB_ACCOUNT_ID ? String(TMDB_ACCOUNT_ID).trim() : '';
     let accountUsername = null;
 
+    if (!resolvedAccountId && decodedAccountId) {
+        resolvedAccountId = String(decodedAccountId).trim();
+    }
+
     if (!resolvedAccountId) {
-        const profileResponse = await fetch(`${TMDB_V4_BASE_URL}/account`, { headers });
-
-        if (profileResponse.status === 404) {
-            throw new Error('Failed to resolve TMDB v4 account profile (status 404). Either the token lacks access or you can set TMDB_ACCOUNT_ID to skip auto lookup.');
-        }
-
-        if (!profileResponse.ok) {
-            throw new Error(`Failed to resolve TMDB v4 account profile (status ${profileResponse.status})`);
-        }
-
-        const profile = await profileResponse.json();
-        resolvedAccountId = String(profile.id ?? '').trim();
-        accountUsername = profile.username ?? profile.name ?? null;
-
-        if (!resolvedAccountId) {
-            throw new Error('TMDB v4 account profile did not include an id');
-        }
+        throw new Error('Unable to determine TMDB account id from TMDB_V4_ACCESS_TOKEN. Set TMDB_ACCOUNT_ID explicitly.');
     }
 
     let page = 1;

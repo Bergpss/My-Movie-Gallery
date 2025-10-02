@@ -5,16 +5,16 @@ A static gallery that showcases the movies you've personally rated on TMDB. The 
 ## Updating the Rated Movies Snapshot
 
 1. Create or reuse the following TMDB credentials (keep them secret):
-   - **Recommended** `TMDB_V4_ACCESS_TOKEN`: the long "API Read Access Token (v4 auth)" from TMDB settings. When provided, the script resolves your account ID (or you can set it manually via `TMDB_ACCOUNT_ID`) and captures the rating timestamps.
+   - **Recommended** `TMDB_V4_ACCESS_TOKEN`: the long "API Read Access Token (v4 auth)" from TMDB settings. The script decodes the token to discover your v4 account id automatically; if that fails, provide it manually via `TMDB_ACCOUNT_ID`.
    - Optional overrides: `TMDB_LANGUAGE` (defaults to `zh-CN`) and `TMDB_SORT_BY` (defaults to `created_at.desc`).
-   - Fallback (only needed if you skip the v4 token):
+   - Fallback (only needed if you skip the v4 token or if decoding fails):
      - `TMDB_API_KEY`: your v3 API key.
      - `TMDB_SESSION_ID`: a user session with permission to read your rated movies.
      - `TMDB_ACCOUNT_ID`: the numeric TMDB account identifier. v3 responses do **not** include rating timestamps.
 2. Run the fetch script from the project root:
    ```bash
    TMDB_V4_ACCESS_TOKEN="<v4 token>" \
-   TMDB_ACCOUNT_ID="<account id>" # optional override if auto lookup fails
+   TMDB_ACCOUNT_ID="<v4 account id>" # optional override if auto lookup fails (usually the `sub` claim in the token)
    node scripts/fetch_movies.js
    ```
    If you prefer the v3 flow instead:
