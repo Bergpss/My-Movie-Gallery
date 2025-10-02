@@ -35,7 +35,37 @@ function renderMovies(movies) {
     const container = document.getElementById('movie-container');
     container.innerHTML = '';
 
-    movies.forEach(movie => {
+    const sorted = [...movies].sort((a, b) => {
+        const dateA = formatWatchDate(
+            a.rated_at
+            || a.account_rating?.created_at
+            || a.created_at
+        );
+        const dateB = formatWatchDate(
+            b.rated_at
+            || b.account_rating?.created_at
+            || b.created_at
+        );
+
+        if (dateA && dateB) {
+            if (dateA > dateB) return -1;
+            if (dateA < dateB) return 1;
+        } else if (dateA) {
+            return -1;
+        } else if (dateB) {
+            return 1;
+        }
+
+        const ratingA = typeof a.rating === 'number' ? a.rating : -Infinity;
+        const ratingB = typeof b.rating === 'number' ? b.rating : -Infinity;
+
+        if (ratingA > ratingB) return -1;
+        if (ratingA < ratingB) return 1;
+
+        return String(a.title || a.name || '').localeCompare(String(b.title || b.name || '')); 
+    });
+
+    sorted.forEach(movie => {
         const imagePath = movie.poster_path
             ? `${POSTER_BASE_URL}${movie.poster_path}`
             : movie.backdrop_path
