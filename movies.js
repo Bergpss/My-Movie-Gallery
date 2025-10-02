@@ -1,28 +1,46 @@
-const movies = [
-    {
-        title: "Stranger Things 2016",
-        image: "Stranger_Things_2016.jpg"
-    },
-    {
-        title: "Breaking Bad",
-        image: "Breaking_Bad.jpg"
-    }
-    // 可以继续添加更多电影
-];
+const TMDB_API_KEY = 'b4dead5f272af393f355a31fd8361ba5'; // Replace with your actual API key
+const LIST_ID = '8520430'; // Replace with your list ID
+const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
+const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+const LANGUAGE = "zh-CN"
 
-function renderMovies() {
+async function fetchMoviesFromList() {
+    try {
+        const response = await fetch(
+            `${TMDB_BASE_URL}/list/${LIST_ID}?language=${LANGUAGE}&api_key=${TMDB_API_KEY}`
+        );
+        const data = await response.json();
+        return data.items;
+    } catch (error) {
+        console.error('Error fetching movies:', error);
+        return [];
+    }
+}
+
+function renderMovies(movies) {
     const container = document.getElementById('movie-container');
-    container.innerHTML = ''; // 清空容器
+    container.innerHTML = '';
     
     movies.forEach(movie => {
+        const backdropPath = movie.backdrop_path 
+            ? `${POSTER_BASE_URL}${movie.backdrop_path}`
+            : 'movie_posters/placeholder.png'; // Add a placeholder image for movies without posters
+        
+        const title = movie.media_type == "movie" ? movie.title : movie.name
+
         container.innerHTML += `
             <div class="movie-item">
-                <img src="movie_posters/${movie.image}" alt="${movie.title}">
-                <p>${movie.title}</p>
+                <img src="${backdropPath}" alt="${title}" loading="lazy">
+                <p>${title}</p>
             </div>
         `;
     });
 }
 
-// 页面加载时渲染电影列表
-window.onload = renderMovies;
+// Initialize the gallery
+async function initGallery() {
+    const movies = await fetchMoviesFromList();
+    renderMovies(movies);
+}
+
+window.onload = initGallery;
