@@ -57,7 +57,10 @@ async function fetchRatedMoviesV3() {
         page += 1;
     }
 
-    return rated;
+    return {
+        accountId: TMDB_ACCOUNT_ID,
+        items: rated,
+    };
 }
 
 async function fetchRatedMoviesV4() {
@@ -65,23 +68,38 @@ async function fetchRatedMoviesV4() {
         return null;
     }
 
+    const headers = {
+        Authorization: `Bearer ${TMDB_V4_ACCESS_TOKEN}`,
+        'Content-Type': 'application/json;charset=utf-8',
+    };
+
+    const profileResponse = await fetch(`${TMDB_V4_BASE_URL}/account`, {
+        headers,
+    });
+
+    if (!profileResponse.ok) {
+        throw new Error(`Failed to resolve TMDB v4 account profile (status ${profileResponse.status})`);
+    }
+
+    const profile = await profileResponse.json();
+    const resolvedAccountId = String(profile.id ?? '').trim();
+
+    if (!resolvedAccountId) {
+        throw new Error('TMDB v4 account profile did not include an id');
+    }
+
     let page = 1;
     let totalPages = 1;
     const rated = [];
 
     while (page <= totalPages) {
-        const url = new URL(`${TMDB_V4_BASE_URL}/account/${TMDB_ACCOUNT_ID}/movie/rated`);
+        const url = new URL(`${TMDB_V4_BASE_URL}/account/${resolvedAccountId}/movie/rated`);
         url.searchParams.set('language', LANGUAGE);
         url.searchParams.set('sort_by', SORT_BY);
         url.searchParams.set('page', String(page));
 
         console.log(`Fetching rated movies (v4) page ${page}/${totalPages}...`);
-        const response = await fetch(url, {
-            headers: {
-                Authorization: `Bearer ${TMDB_V4_ACCESS_TOKEN}`,
-                'Content-Type': 'application/json;charset=utf-8',
-            },
-        });
+        const response = await fetch(url, { headers });
 
         if (!response.ok) {
             throw new Error(`TMDB v4 request failed with status ${response.status}`);
@@ -100,43 +118,48 @@ async function fetchRatedMoviesV4() {
         page += 1;
     }
 
-    return rated;
+    return {
+        accountId: resolvedAccountId,
+        accountUsername: profile.username ?? profile.name ?? null,
+        items: rated,
+    };
 }
 
 async function fetchRatedMovies() {
-    if (!TMDB_ACCOUNT_ID) {
-        throw new Error('Missing TMDB_ACCOUNT_ID environment variable');
-    }
-
     if (TMDB_V4_ACCESS_TOKEN) {
         return fetchRatedMoviesV4();
     }
 
-    const movies = await fetchRatedMoviesV3();
+    if (!TMDB_ACCOUNT_ID) {
+        throw new Error('Missing TMDB_ACCOUNT_ID environment variable');
+    }
 
-    const hasTimestamps = movies.some(item => item.rated_at);
+    const result = await fetchRatedMoviesV3();
+
+    const hasTimestamps = result.items.some(item => item.rated_at);
     if (!hasTimestamps) {
         console.warn('TMDB v3 responses do not include rating timestamps. Provide TMDB_V4_ACCESS_TOKEN to populate watch dates.');
     }
 
-    return movies;
+    return result;
 }
 
 async function main() {
     try {
-        const movies = await fetchRatedMovies();
+        const { accountId, accountUsername, items } = await fetchRatedMovies();
         const outputPath = resolve(process.cwd(), 'data/movies.json');
 
         const payload = {
             generatedAt: new Date().toISOString(),
             source: {
                 type: 'account-rated-movies',
-                accountId: TMDB_ACCOUNT_ID,
+                accountId,
+                accountUsername: accountUsername ?? undefined,
                 language: LANGUAGE,
                 sortBy: SORT_BY,
                 auth: TMDB_V4_ACCESS_TOKEN ? 'v4' : 'v3',
             },
-            items: movies,
+            items,
         };
 
         await mkdir(dirname(outputPath), { recursive: true });
