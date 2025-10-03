@@ -114,6 +114,45 @@ async function saveLibrary(library) {
     console.log(`已更新 ${LIBRARY_PATH}`);
 }
 
+function normaliseDateInput(value) {
+    if (!value) {
+        return null;
+    }
+
+    const trimmed = value.trim();
+    if (!trimmed) {
+        return null;
+    }
+
+    const iso = new Date(trimmed);
+    if (Number.isNaN(iso.getTime())) {
+        return null;
+    }
+
+    return iso.toISOString().slice(0, 10);
+}
+
+function parseWatchDates(raw) {
+    if (!raw) {
+        return [];
+    }
+
+    const parts = raw
+        .split(/[,，\s]+/)
+        .map(normaliseDateInput)
+        .filter(Boolean);
+
+    return Array.from(new Set(parts)).sort((a, b) => b.localeCompare(a));
+}
+
+function flattenLists(library) {
+    return [
+        ...(Array.isArray(library.watching) ? library.watching : []),
+        ...(Array.isArray(library.watched) ? library.watched : []),
+        ...(Array.isArray(library.wishlist) ? library.wishlist : []),
+    ];
+}
+
 function insertEntry(library, entry) {
     const buckets = {
         watching: library.watching,
@@ -125,13 +164,49 @@ function insertEntry(library, entry) {
         buckets[entry.status] = library[entry.status] = [];
     }
 
+    let existingEntry = null;
     const allLists = Object.values(buckets);
     for (const list of allLists) {
         const index = list.findIndex(item => String(item.id) === String(entry.id));
         if (index !== -1) {
+            existingEntry = list[index];
             list.splice(index, 1);
         }
     }
+
+    if (existingEntry) {
+        if ((!entry.note || entry.note === null) && existingEntry.note) {
+            entry.note = existingEntry.note;
+        }
+
+        if (typeof entry.rating !== 'number' && typeof existingEntry.rating === 'number') {
+            entry.rating = existingEntry.rating;
+        }
+
+        const existingDates = Array.isArray(existingEntry.watchDates)
+            ? existingEntry.watchDates
+            : existingEntry.watchDate
+                ? [existingEntry.watchDate]
+                : [];
+        const incomingDates = Array.isArray(entry.watchDates)
+            ? entry.watchDates
+            : entry.watchDate
+                ? [entry.watchDate]
+                : [];
+
+        const mergedDates = Array.from(new Set([...existingDates, ...incomingDates].filter(Boolean)))
+            .sort((a, b) => b.localeCompare(a));
+
+        if (mergedDates.length > 0) {
+            entry.watchDates = mergedDates;
+        }
+
+        if (!entry.status && existingEntry.status) {
+            entry.status = existingEntry.status;
+        }
+    }
+
+    delete entry.watchDate;
 
     const target = buckets[entry.status];
     target.unshift(entry);
@@ -166,17 +241,18 @@ async function main() {
         }
     }
 
-    let watchDate = null;
+    const library = await loadLibrary();
+
+    const existing = flattenLists(library).find(item => String(item.id) === String(chosen.id));
+
+    let watchDates = [];
     if (status === 'watched') {
-        const dateInput = await prompt('观影日期（YYYY-MM-DD，可留空）：');
-        if (dateInput) {
-            const iso = new Date(dateInput);
-            if (Number.isNaN(iso.getTime())) {
-                console.log('日期格式无效，已忽略。');
-            } else {
-                watchDate = iso.toISOString().slice(0, 10);
-            }
+        if (existing && existing.watchDates && existing.watchDates.length) {
+            console.log(`当前已记录的观影日期：${existing.watchDates.join(', ')}`);
         }
+
+        const dateInput = await prompt('观影日期（YYYY-MM-DD，可输入多个，使用逗号分隔，留空则不记录）：');
+        watchDates = parseWatchDates(dateInput);
     }
 
     const note = await prompt('备注（可留空）：');
@@ -194,8 +270,6 @@ async function main() {
         }
     }
 
-    const library = await loadLibrary();
-
     const entry = {
         id: chosen.id,
         title: titleInput || chosen.title || chosen.original_title,
@@ -203,8 +277,8 @@ async function main() {
         note: note || null,
     };
 
-    if (watchDate) {
-        entry.watchDate = watchDate;
+    if (watchDates.length > 0) {
+        entry.watchDates = watchDates;
     }
 
     if (rating !== null) {

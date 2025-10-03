@@ -26,6 +26,24 @@ async function loadLibrary() {
 
     const deduped = new Map();
 
+    const normaliseWatchDates = (...sources) => {
+        const combined = [];
+        sources.forEach(source => {
+            if (Array.isArray(source)) {
+                combined.push(...source);
+            } else if (source) {
+                combined.push(source);
+            }
+        });
+
+        return Array.from(new Set(
+            combined
+                .filter(Boolean)
+                .map(item => item.trim())
+                .filter(Boolean),
+        )).sort((a, b) => b.localeCompare(a));
+    };
+
     const upsert = (entry, defaultStatus) => {
         if (!entry || typeof entry.id === 'undefined') {
             return;
@@ -34,10 +52,18 @@ async function loadLibrary() {
         const key = String(entry.id);
         const existing = deduped.get(key) || {};
 
+        const watchDates = normaliseWatchDates(
+            existing.watchDates,
+            existing.watchDate,
+            entry.watchDates,
+            entry.watchDate,
+        );
+
         deduped.set(key, {
             id: entry.id,
             title: entry.title ?? existing.title ?? null,
-            watchDate: entry.watchDate ?? existing.watchDate ?? null,
+            watchDates,
+            watchDate: watchDates[0] ?? null,
             rating: typeof entry.rating === 'number' ? entry.rating : existing.rating ?? null,
             status: (entry.status || existing.status || defaultStatus || null),
             note: entry.note ?? existing.note ?? null,
@@ -97,11 +123,20 @@ async function buildSnapshot(libraryEntries) {
 
         const directors = extractDirectors(details.credits);
 
+        const watchDates = Array.isArray(entry.watchDates)
+            ? entry.watchDates
+            : entry.watchDate
+                ? [entry.watchDate]
+                : [];
+
+        const orderedWatchDates = [...watchDates].sort((a, b) => b.localeCompare(a));
+
         enriched.push({
             id: details.id,
             title: entry.title ?? details.title ?? details.name ?? '',
             status: entry.status ?? null,
-            watchDate: entry.watchDate ?? null,
+            watchDates: orderedWatchDates,
+            watchDate: orderedWatchDates[0] ?? null,
             rating: typeof entry.rating === 'number' ? entry.rating : null,
             note: entry.note ?? null,
             tmdb: {

@@ -17,8 +17,8 @@
   ```
   - `id` 是 TMDB 电影 ID（推荐：先查询一次 TMDB，确认后写入）。
   - `title` 只是方便识别，脚本生成时会用 TMDB 的官方标题兜底。
-  - `watchDate`（可选）记录观影日期，格式 `YYYY-MM-DD`。
-  - `status`（可选）默认分为 `watching` / `watched`，前端据此显示“两大板块”。
+  - `watchDates`（可选）记录多次观影日期，按字符串数组存储（例如 `"watchDates": ["2024-10-01", "2025-01-12"]`）。
+  - `status`（可选）默认分为 `watching` / `watched` / `wishlist`，前端据此显示“两大板块”（“正在看”含想看内容）。
   - `rating`、`note`（可选）会直接渲染在页面上。
 
 - `data/movies.json` 由脚本自动生成，包含 TMDB 详情（海报、导演、上映日期等），不需要手动编辑。
@@ -45,10 +45,10 @@
 
 ## 自定义字段
 
-- 更改 `watchDate`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。
+- 更改 `watchDates`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。
 - 若想把影片移到“正在看”，把它放入 `watching` 数组或把 `status` 改为 `watching`。
 - 删除条目即从 `library.json` 移除对应对象，再跑一次脚本。
-- 页面上的日期取自 TMDB 的 `release_date`，若该字段缺失则不会显示日期。
+- 页面展示为“上映日期 + 观影日期列表”。上映日期来自 TMDB 的 `release_date`；观影日期来自 `watchDates`，若为空则不显示。
 
 ## 部署提示
 

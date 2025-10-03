@@ -73,7 +73,7 @@ function renderMovies(movies) {
 
     const watchingMovies = movies.filter(movie => {
         const status = (movie.status || '').toLowerCase();
-        return status === 'watching' || status === 'in-progress' || status === 'ongoing';
+        return status === 'watching' || status === 'in-progress' || status === 'ongoing' || status === 'wishlist' || status === 'planned';
     });
 
     const watchedMovies = movies.filter(movie => !watchingMovies.includes(movie));
@@ -106,7 +106,18 @@ function renderMovies(movies) {
                     : null;
             const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
             const releaseDate = formatDate(getReleaseDate(movie));
+            const watchDates = Array.isArray(movie.watchDates)
+                ? movie.watchDates
+                : movie.watchDate
+                    ? [movie.watchDate]
+                    : [];
+            const formattedWatchDates = watchDates
+                .map(date => formatDate(date))
+                .filter(Boolean);
             const note = movie.note ? `<p class="watch-note">${movie.note}</p>` : '';
+            const watchDatesMarkup = formattedWatchDates.length
+                ? `<p class="watch-dates">观影：${formattedWatchDates.join('、')}</p>`
+                : '';
 
             container.innerHTML += `
                 <div class="movie-item">
@@ -115,7 +126,8 @@ function renderMovies(movies) {
                         ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
                     </div>
                     <p>${title}</p>
-                    ${releaseDate ? `<p class="release-date">${releaseDate}</p>` : ''}
+                    ${releaseDate ? `<p class="release-date">上映：${releaseDate}</p>` : ''}
+                    ${watchDatesMarkup}
                     ${note}
                 </div>
             `;
