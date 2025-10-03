@@ -145,6 +145,11 @@ function removeById(list, id) {
     return list.filter(item => String(item.id) !== String(id));
 }
 
+async function saveLibrary(library) {
+    await writeFile(LIBRARY_PATH, `${JSON.stringify(library, null, 2)}\n`);
+    console.log(`\n已更新 ${LIBRARY_PATH}`);
+}
+
 async function main() {
     console.log(`读取影片列表：${INPUT_PATH}`);
     const items = await loadJson(INPUT_PATH, []);
