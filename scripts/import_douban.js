@@ -91,6 +91,11 @@ async function chooseMatch(initialQuery, itemIndex, total) {
         top.forEach((movie, index) => {
             console.log(`${index + 1}. ${summariseMovie(movie)}`);
         });
+        if (top.length === 1) {
+            console.log('仅有一个结果，已自动选择。');
+            return top[0];
+        }
+
         console.log('0. 重新搜索   s. 跳过该影片');
 
         const choice = await prompt('选择编号：', { required: true });
