@@ -35,6 +35,11 @@
    ```
    脚本会引导你输入中文片名、状态（正在看/已看过/想看）、备注等信息，并自动调用 TMDB 搜索获取 ID，随后写入 `data/library.json`。
    - 若你愿意，也可以直接手动编辑 `data/library.json`。
+   - 已经在“正在看”中的影片想要快速标记为“已看过”时，可运行：
+     ```bash
+     node scripts/promote_movie.js
+     ```
+     选择条目并输入观影日期/评分即可自动移入 `watched` 列表并追加日期。
 3. 运行生成脚本：
    ```bash
    TMDB_API_KEY="<你的 API Key>" \
@@ -45,7 +50,7 @@
 
 ## 自定义字段
 
-- 更改 `watchDates`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。
+- 更改 `watchDates`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。配合 `scripts/promote_movie.js` 可快速把“正在看”条目转移至“已看过”。
 - 若想把影片移到“正在看”，把它放入 `watching` 数组或把 `status` 改为 `watching`。
 - 删除条目即从 `library.json` 移除对应对象，再跑一次脚本。
 - 页面展示为“上映日期 + 观影日期列表”。上映日期来自 TMDB 的 `release_date`；观影日期来自 `watchDates`，若为空则不显示。
