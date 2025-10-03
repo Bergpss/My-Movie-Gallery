@@ -1,18 +1,60 @@
 {
-  "generatedAt": "2025-10-03T13:52:42.027Z",
+  "generatedAt": "2025-10-03T14:00:17.299Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 3
+    "total": 4
   },
   "items": [
     {
-      "id": 615457,
-      "title": "小人物",
+      "id": 915935,
+      "title": "堕落的审判",
       "status": "watching",
       "watchDates": [],
       "watchDate": null,
       "rating": null,
+      "note": "和康康朋友一起看",
+      "tmdb": {
+        "original_title": "Anatomie d'une chute",
+        "original_language": "fr",
+        "title": "坠落的审判",
+        "overview": "一对夫妇——桑德拉和塞缪尔，以及他们视力受损的儿子丹尼尔在法国阿尔卑斯山的格勒诺布尔郊区过着远离尘世的生活。然而，有一天塞缪尔在房子外面被发现死亡，这一事件引发了警方关于自杀还是他杀的嫌疑调查。桑德拉因此被卷入其中，面临着巨大的压力。一年后，丹尼尔参与了母亲的审判，这不仅是对案件真相的探寻，也是对他们家庭关系的一次深刻剖析。",
+        "poster_path": "/64sltz8tKvDxpIT7GHhFCyOVBKH.jpg",
+        "backdrop_path": "/kszooR7v1TLFM4pzx6IkKq2jDAN.jpg",
+        "release_date": "2023-08-23",
+        "runtime": 151,
+        "genres": [
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          }
+        ],
+        "vote_average": 7.531,
+        "vote_count": 2946,
+        "popularity": 6.9104,
+        "homepage": "",
+        "directors": [
+          "朱斯蒂娜·特里耶"
+        ]
+      }
+    },
+    {
+      "id": 615457,
+      "title": "小人物",
+      "status": "watched",
+      "watchDates": [
+        "2025-10-03"
+      ],
+      "watchDate": "2025-10-03",
+      "rating": 7,
       "note": null,
       "tmdb": {
         "original_title": "Nobody",

@@ -40,6 +40,12 @@
      node scripts/promote_movie.js
      ```
      选择条目并输入观影日期/评分即可自动移入 `watched` 列表并追加日期。
+   - 批量导入（例如来自豆瓣）的观影记录，可运行：
+     ```bash
+     TMDB_API_KEY="<你的 API Key>" \
+     node scripts/import_douban.js fromdouban.json
+     ```
+     脚本会逐条显示搜索结果供确认，自动写入 `watched` 列表并合并观影日期。
 3. 运行生成脚本：
    ```bash
    TMDB_API_KEY="<你的 API Key>" \

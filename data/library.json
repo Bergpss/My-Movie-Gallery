@@ -1,13 +1,24 @@
 {
   "watching": [
     {
-      "id": 615457,
-      "title": "小人物",
+      "id": 915935,
+      "title": "堕落的审判",
       "status": "watching",
-      "note": null
+      "note": "和康康朋友一起看"
     }
   ],
   "watched": [
+    {
+      "id": 615457,
+      "title": "小人物",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2025-10-03"
+      ],
+      "watchDate": "2025-10-03",
+      "rating": 7
+    },
     {
       "id": 137,
       "title": "土拨鼠之日",
