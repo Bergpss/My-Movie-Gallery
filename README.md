@@ -44,9 +44,9 @@
    - 批量导入（例如来自豆瓣）的观影记录，可运行：
      ```bash
      TMDB_API_KEY="<你的 API Key>" \
-     node scripts/import_douban.js fromdouban.json
+     node scripts/import_douban.js "data/豆伴(180354423).csv" --limit=10
      ```
-     支持字段：`title`（中文片名）、`watch_date`，可选 `imdb_id`（若提供则优先使用 TMDB find 接口自动匹配）。脚本会逐条显示结果供确认（或自动选择唯一结果），并将记录写入 `watched` 列表，自动合并观影日期。
+     支持 JSON 数组或 CSV（如豆瓣导出的“豆伴.csv”）。字段：`title`、`watch_date`，可选 `imdb_id` 以及 `链接`（用于从豆瓣页面补全 IMDb）。脚本会逐条显示结果供确认（若仅有一个候选会自动选中），并把记录写入 `watched` 列表、合并所有观影日期。调试时可利用 `--limit=` 参数限制导入数量。
 3. 运行生成脚本：
    ```bash
    TMDB_API_KEY="<你的 API Key>" \

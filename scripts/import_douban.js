@@ -10,6 +10,10 @@ const TMDB_REGION = process.env.TMDB_REGION || 'CN';
 const TMDB_SEARCH_MOVIE_URL = 'https://api.themoviedb.org/3/search/movie';
 const TMDB_SEARCH_TV_URL = 'https://api.themoviedb.org/3/search/tv';
 const TMDB_FIND_URL = 'https://api.themoviedb.org/3/find';
+const DOUBAN_IMDB_REGEX = /https?:\/\/www\.imdb\.com\/title\/(tt\d+)/i;
+
+const imdbCache = new Map();
+const doubanFailCache = new Set();
 
 if (!TMDB_API_KEY) {
     console.error('Missing TMDB_API_KEY environment variable.');
@@ -51,13 +55,106 @@ async function prompt(question, { required = false } = {}) {
     return trimmed;
 }
 
-async function loadJson(path, fallback = null) {
+function parseCsvLine(line) {
+    const values = [];
+    let current = '';
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i += 1) {
+        const char = line[i];
+        if (char === '"') {
+            if (inQuotes && line[i + 1] === '"') {
+                current += '"';
+                i += 1;
+            } else {
+                inQuotes = !inQuotes;
+            }
+        } else if (char === ',' && !inQuotes) {
+            values.push(current.trim());
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+    if (current.length || line.endsWith(',')) {
+        values.push(current.trim());
+    }
+    return values;
+}
+
+function parseCsv(raw) {
+    const lines = raw.split(/\r?\n/).filter(line => line.trim().length);
+    if (!lines.length) {
+        return [];
+    }
+    const headers = parseCsvLine(lines[0]);
+    const records = [];
+    for (let i = 1; i < lines.length; i += 1) {
+        const values = parseCsvLine(lines[i]);
+        if (!values.length) {
+            continue;
+        }
+        const record = {};
+        headers.forEach((header, index) => {
+            record[header] = values[index] ?? '';
+        });
+        const title = (record['标题'] || record['title'] || '').trim();
+        const watchDateRaw = (record['创建时间'] || record['watch_date'] || record['watchDate'] || '').trim();
+        const watchDate = watchDateRaw ? watchDateRaw.split(' ')[0] : '';
+        const imdb = (record['IMDb'] || record['IMDb链接'] || record['imdb_id'] || record['imdb'] || '').trim();
+        const link = (record['链接'] || record['douban_link'] || record['url'] || '').trim();
+        const rating = (record['我的评分'] || record['rating'] || '').trim();
+        records.push({
+            title,
+            watch_date: watchDate,
+            imdb_id: imdb,
+            douban_url: link,
+            my_rating: rating,
+            __raw: record,
+        });
+    }
+    return records;
+}
+
+async function loadEntries(path) {
     try {
         const raw = await readFile(path, 'utf-8');
-        return JSON.parse(raw);
+        const trimmed = raw.trim();
+        if (!trimmed) {
+            return [];
+        }
+        if (path.toLowerCase().endsWith('.csv')) {
+            return parseCsv(trimmed);
+        }
+        if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
+            try {
+                const parsed = JSON.parse(trimmed);
+                return Array.isArray(parsed) ? parsed : [];
+            } catch (error) {
+                console.warn('JSON 解析失败，尝试按 CSV 解析。');
+                return parseCsv(trimmed);
+            }
+        }
+        return parseCsv(trimmed);
     } catch (error) {
-        if (fallback !== null && error.code === 'ENOENT') {
-            return fallback;
+        if (error.code === 'ENOENT') {
+            console.warn(`未找到输入文件：${path}`);
+            return [];
+        }
+        throw error;
+    }
+}
+
+async function loadLibraryData(path, fallback) {
+    try {
+        const raw = await readFile(path, 'utf-8');
+        const parsed = JSON.parse(raw);
+        parsed.watching = Array.isArray(parsed.watching) ? parsed.watching : [];
+        parsed.watched = Array.isArray(parsed.watched) ? parsed.watched : [];
+        parsed.wishlist = Array.isArray(parsed.wishlist) ? parsed.wishlist : [];
+        return parsed;
+    } catch (error) {
+        if (fallback && error.code === 'ENOENT') {
+            return JSON.parse(JSON.stringify(fallback));
         }
         throw error;
     }
@@ -222,18 +319,57 @@ async function saveLibrary(library) {
     console.log(`\n已更新 ${LIBRARY_PATH}`);
 }
 
+async function fetchImdbFromDouban(url) {
+    if (!url || doubanFailCache.has(url)) {
+        return null;
+    }
+
+    if (imdbCache.has(url)) {
+        return imdbCache.get(url);
+    }
+
+    try {
+        const response = await fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (compatible; MyMovieGallery/1.0)'
+            }
+        });
+
+        if (!response.ok) {
+            console.warn(`请求豆瓣页面失败 (${response.status})：${url}`);
+            doubanFailCache.add(url);
+            return null;
+        }
+
+        const html = await response.text();
+        const match = html.match(DOUBAN_IMDB_REGEX);
+        if (match) {
+            const imdbId = match[1];
+            imdbCache.set(url, imdbId);
+            // 简单限速，避免请求过快
+            await new Promise(resolve => setTimeout(resolve, 400));
+            return imdbId;
+        }
+
+        doubanFailCache.add(url);
+        await new Promise(resolve => setTimeout(resolve, 200));
+        return null;
+    } catch (error) {
+        console.warn(`抓取豆瓣页面出错：${url} - ${error.message}`);
+        doubanFailCache.add(url);
+        return null;
+    }
+}
+
 async function main() {
     console.log(`读取影片列表：${INPUT_PATH}`);
-    const items = await loadJson(INPUT_PATH, []);
+    const items = await loadEntries(INPUT_PATH);
     if (!Array.isArray(items) || !items.length) {
         console.log('文件内容为空，操作结束。');
         return;
     }
 
-    const library = await loadJson(LIBRARY_PATH, { watching: [], watched: [], wishlist: [] });
-    library.watching = Array.isArray(library.watching) ? library.watching : [];
-    library.watched = Array.isArray(library.watched) ? library.watched : [];
-    library.wishlist = Array.isArray(library.wishlist) ? library.wishlist : [];
+    const library = await loadLibraryData(LIBRARY_PATH, { watching: [], watched: [], wishlist: [] });
 
     const updates = [];
 
@@ -244,7 +380,8 @@ async function main() {
         const item = items[index];
         const title = item?.title?.trim();
         const watchDate = normaliseDate(item?.watch_date || item?.watchDate);
-        const imdbId = item?.imdb_id || item?.imdbId || item?.imdb;
+        let imdbId = item?.imdb_id || item?.imdbId || item?.imdb;
+        const doubanUrl = item?.douban_url || item?.douban || item?.douban_link;
 
         if (!title && !imdbId) {
             console.log(`\n[${index + 1}] 缺少标题或 IMDb ID，已跳过。`);
@@ -258,6 +395,17 @@ async function main() {
                 console.log(`\n[${index + 1}] 通过 IMDb ${imdbId} 找到：${summarise(match)}`);
             } else {
                 console.log(`\n[${index + 1}] 未找到 IMDb ${imdbId}，改用标题搜索。`);
+            }
+        } else if (doubanUrl) {
+            const scrapedImdb = await fetchImdbFromDouban(doubanUrl);
+            if (scrapedImdb) {
+                imdbId = scrapedImdb;
+                match = await findByImdb(imdbId);
+                if (match) {
+                    console.log(`\n[${index + 1}] 通过豆瓣页面找到 IMDb ${imdbId}：${summarise(match)}`);
+                } else {
+                    console.log(`\n[${index + 1}] IMDb ${imdbId} 未匹配到 TMDB 记录，继续尝试标题搜索。`);
+                }
             }
         }
 
