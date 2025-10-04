@@ -11,7 +11,7 @@
       { "id": 933260, "title": "某种物质", "status": "watching", "note": "…" }
     ],
     "watched": [
-      { "id": 137, "title": "土拨鼠之日", "watchDate": "2025-09-30", "rating": 8 }
+      { "id": 137, "title": "土拨鼠之日", "watchDates": ["2025-09-30"], "rating": 8 }
     ]
   }
   ```
@@ -45,7 +45,7 @@
      TMDB_API_KEY="<你的 API Key>" \
      node scripts/import_douban.js fromdouban.json
      ```
-     脚本会逐条显示搜索结果供确认，自动写入 `watched` 列表并合并观影日期。
+     支持字段：`title`（中文片名）、`watch_date`，可选 `imdb_id`（若提供则优先使用 TMDB find 接口自动匹配）。脚本会逐条显示结果供确认（或自动选择唯一结果），并将记录写入 `watched` 列表，自动合并观影日期。
 3. 运行生成脚本：
    ```bash
    TMDB_API_KEY="<你的 API Key>" \

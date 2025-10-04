@@ -8,6 +8,7 @@ const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_LANGUAGE = process.env.TMDB_LANGUAGE || 'zh-CN';
 const TMDB_REGION = process.env.TMDB_REGION || 'CN';
 const TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/search/movie';
+const TMDB_FIND_URL = 'https://api.themoviedb.org/3/find';
 
 if (!TMDB_API_KEY) {
     console.error('Missing TMDB_API_KEY environment variable.');
@@ -70,6 +71,45 @@ function summariseMovie(movie) {
     const release = movie.release_date ? movie.release_date.slice(0, 4) : '????';
     const overview = movie.overview ? movie.overview.slice(0, 80).replace(/\s+/g, ' ') : '';
     return `${title} (${release}) - TMDB ID ${movie.id}${overview ? `\n    ${overview}…` : ''}`;
+}
+
+async function findByImdbId(imdbId) {
+    if (!imdbId) {
+        return null;
+    }
+
+    const trimmed = imdbId.trim();
+    if (!trimmed) {
+        return null;
+    }
+
+    const url = new URL(`${TMDB_FIND_URL}/${encodeURIComponent(trimmed)}`);
+    url.searchParams.set('api_key', TMDB_API_KEY);
+    url.searchParams.set('language', TMDB_LANGUAGE);
+    url.searchParams.set('external_source', 'imdb_id');
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error(`TMDB find failed for ${imdbId} with status ${response.status}`);
+    }
+
+    const data = await response.json();
+    const candidates = Array.isArray(data.movie_results) && data.movie_results.length
+        ? data.movie_results
+        : Array.isArray(data.tv_results) && data.tv_results.length
+            ? data.tv_results
+            : [];
+
+    if (!candidates.length) {
+        return null;
+    }
+
+    const movie = candidates[0];
+    return {
+        ...movie,
+        id: movie.id,
+    };
 }
 
 async function chooseMatch(initialQuery, itemIndex, total) {
@@ -170,15 +210,30 @@ async function main() {
         const title = item?.title?.trim();
         const watchDateInput = item?.watch_date || item?.watchDate;
         const watchDate = normaliseDate(watchDateInput);
+        const imdbId = item?.imdb_id || item?.imdbId || item?.imdb;
 
-        if (!title) {
+        if (!title && !imdbId) {
             console.log(`\n[${index + 1}] 缺少标题，已跳过。`);
             continue;
         }
 
-        const match = await chooseMatch(title, index + 1, items.length);
+        let match = null;
+
+        if (imdbId) {
+            match = await findByImdbId(imdbId);
+            if (match) {
+                console.log(`\n[${index + 1}] 通过 IMDb ${imdbId} 找到：${match.title || match.original_title}`);
+            } else {
+                console.log(`\n[${index + 1}] 未找到 IMDb ${imdbId} 对应的影片，改用标题搜索。`);
+            }
+        }
+
         if (!match) {
-            console.log(`已跳过：${title}`);
+            const queryTitle = title || imdbId;
+            match = await chooseMatch(queryTitle, index + 1, items.length);
+        }
+        if (!match) {
+            console.log(`已跳过：${title || imdbId}`);
             continue;
         }
 
