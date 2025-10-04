@@ -17,8 +17,24 @@ if (!TMDB_API_KEY) {
 }
 
 const LIBRARY_PATH = resolve(process.cwd(), 'data/library.json');
+
+const args = argv.slice(2);
+let inputArg = null;
+let limit = null;
+
+args.forEach(arg => {
+    if (arg.startsWith('--limit=')) {
+        const value = Number(arg.split('=')[1]);
+        if (!Number.isNaN(value) && value > 0) {
+            limit = value;
+        }
+    } else if (!inputArg) {
+        inputArg = arg;
+    }
+});
+
 const INPUT_PATH = (() => {
-    const arg = argv[2];
+    const arg = inputArg;
     if (!arg) return resolve(process.cwd(), 'fromdouban.json');
     return isAbsolute(arg) ? arg : resolve(process.cwd(), arg);
 })();
@@ -222,6 +238,9 @@ async function main() {
     const updates = [];
 
     for (let index = 0; index < items.length; index += 1) {
+        if (limit && updates.length >= limit) {
+            break;
+        }
         const item = items[index];
         const title = item?.title?.trim();
         const watchDate = normaliseDate(item?.watch_date || item?.watchDate);
