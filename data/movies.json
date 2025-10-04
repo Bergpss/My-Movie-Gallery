@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-03T14:00:17.299Z",
+  "generatedAt": "2025-10-04T14:57:25.345Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -9,6 +9,7 @@
     {
       "id": 915935,
       "title": "堕落的审判",
+      "mediaType": "movie",
       "status": "watching",
       "watchDates": [],
       "watchDate": null,
@@ -39,7 +40,7 @@
         ],
         "vote_average": 7.531,
         "vote_count": 2946,
-        "popularity": 6.9104,
+        "popularity": 6.2167,
         "homepage": "",
         "directors": [
           "朱斯蒂娜·特里耶"
@@ -49,6 +50,7 @@
     {
       "id": 615457,
       "title": "小人物",
+      "mediaType": "movie",
       "status": "watched",
       "watchDates": [
         "2025-10-03"
@@ -75,9 +77,9 @@
             "name": "惊悚"
           }
         ],
-        "vote_average": 7.9,
-        "vote_count": 7757,
-        "popularity": 22.9251,
+        "vote_average": 7.909,
+        "vote_count": 7762,
+        "popularity": 24.5338,
         "homepage": "",
         "directors": [
           "伊利亚·奈舒勒"
@@ -87,6 +89,7 @@
     {
       "id": 137,
       "title": "土拨鼠之日",
+      "mediaType": "movie",
       "status": "watched",
       "watchDates": [
         "2025-09-30"
@@ -121,9 +124,9 @@
             "name": "喜剧"
           }
         ],
-        "vote_average": 7.6,
-        "vote_count": 8431,
-        "popularity": 8.6927,
+        "vote_average": 7.617,
+        "vote_count": 8432,
+        "popularity": 8.7081,
         "homepage": "",
         "directors": [
           "哈罗德·拉米斯"
@@ -133,6 +136,7 @@
     {
       "id": 933260,
       "title": "某种物质",
+      "mediaType": "movie",
       "status": "watched",
       "watchDates": [
         "2024-10-01"
@@ -163,9 +167,9 @@
             "name": "科幻"
           }
         ],
-        "vote_average": 7.2,
-        "vote_count": 5109,
-        "popularity": 26.7439,
+        "vote_average": 7.151,
+        "vote_count": 5115,
+        "popularity": 27.9959,
         "homepage": "",
         "directors": [
           "科拉莉·法尔雅"

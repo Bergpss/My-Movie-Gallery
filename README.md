@@ -8,10 +8,10 @@
   ```json
   {
     "watching": [
-      { "id": 933260, "title": "某种物质", "status": "watching", "note": "…" }
+      { "id": 933260, "title": "某种物质", "mediaType": "movie", "status": "watching", "note": "…" }
     ],
     "watched": [
-      { "id": 137, "title": "土拨鼠之日", "watchDates": ["2025-09-30"], "rating": 8 }
+      { "id": 137, "title": "土拨鼠之日", "mediaType": "movie", "watchDates": ["2025-09-30"], "rating": 8 }
     ]
   }
   ```
@@ -19,6 +19,7 @@
   - `title` 只是方便识别，脚本生成时会用 TMDB 的官方标题兜底。
   - `watchDates`（可选）记录多次观影日期，按字符串数组存储（例如 `"watchDates": ["2024-10-01", "2025-01-12"]`）。
   - `status`（可选）默认分为 `watching` / `watched` / `wishlist`，前端据此显示“两大板块”（“正在看”含想看内容）。
+  - `mediaType`（可选）`movie` 或 `tv`，缺省为 `movie`。导入/新增脚本会自动给出。
   - `rating`、`note`（可选）会直接渲染在页面上。
 
 - `data/movies.json` 由脚本自动生成，包含 TMDB 详情（海报、导演、上映日期等），不需要手动编辑。

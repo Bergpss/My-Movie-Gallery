@@ -16,6 +16,23 @@ if (!TMDB_API_KEY) {
     process.exit(1);
 }
 
+function normaliseWatchDates(...sources) {
+    const combined = [];
+    sources.forEach(source => {
+        if (Array.isArray(source)) {
+            combined.push(...source);
+        } else if (source) {
+            combined.push(source);
+        }
+    });
+    return Array.from(new Set(
+        combined
+            .filter(Boolean)
+            .map(item => item.trim())
+            .filter(Boolean),
+    )).sort((a, b) => b.localeCompare(a));
+}
+
 async function loadLibrary() {
     const raw = await readFile(LIBRARY_PATH, 'utf-8');
     const parsed = JSON.parse(raw);
@@ -26,29 +43,10 @@ async function loadLibrary() {
 
     const deduped = new Map();
 
-    const normaliseWatchDates = (...sources) => {
-        const combined = [];
-        sources.forEach(source => {
-            if (Array.isArray(source)) {
-                combined.push(...source);
-            } else if (source) {
-                combined.push(source);
-            }
-        });
-
-        return Array.from(new Set(
-            combined
-                .filter(Boolean)
-                .map(item => item.trim())
-                .filter(Boolean),
-        )).sort((a, b) => b.localeCompare(a));
-    };
-
     const upsert = (entry, defaultStatus) => {
         if (!entry || typeof entry.id === 'undefined') {
             return;
         }
-
         const key = String(entry.id);
         const existing = deduped.get(key) || {};
 
@@ -65,8 +63,9 @@ async function loadLibrary() {
             watchDates,
             watchDate: watchDates[0] ?? null,
             rating: typeof entry.rating === 'number' ? entry.rating : existing.rating ?? null,
-            status: (entry.status || existing.status || defaultStatus || null),
+            status: entry.status || existing.status || defaultStatus || null,
             note: entry.note ?? existing.note ?? null,
+            mediaType: entry.mediaType || existing.mediaType || 'movie',
         });
     };
 
@@ -77,24 +76,26 @@ async function loadLibrary() {
     return Array.from(deduped.values());
 }
 
-async function fetchMovieDetails(id) {
-    const url = new URL(`${TMDB_BASE_URL}/movie/${id}`);
+async function fetchDetails(id, mediaType = 'movie') {
+    const path = mediaType === 'tv' ? `/tv/${id}` : `/movie/${id}`;
+    const url = new URL(`${TMDB_BASE_URL}${path}`);
     url.searchParams.set('api_key', TMDB_API_KEY);
     url.searchParams.set('language', TMDB_LANGUAGE);
-    if (TMDB_REGION) {
+    if (TMDB_REGION && mediaType === 'movie') {
         url.searchParams.set('region', TMDB_REGION);
     }
-    url.searchParams.set('append_to_response', 'credits,release_dates');
+    const append = mediaType === 'tv' ? 'credits' : 'credits,release_dates';
+    url.searchParams.set('append_to_response', append);
 
     const response = await fetch(url);
 
     if (response.status === 404) {
-        console.warn(`Movie ${id} not found on TMDB (404)`);
+        console.warn(`${mediaType.toUpperCase()} ${id} not found on TMDB (404)`);
         return null;
     }
 
     if (!response.ok) {
-        throw new Error(`TMDB request failed for movie ${id} with status ${response.status}`);
+        throw new Error(`TMDB request failed for ${mediaType} ${id} with status ${response.status}`);
     }
 
     return response.json();
@@ -106,55 +107,78 @@ function extractDirectors(credits) {
     }
 
     return credits.crew
-        .filter(member => member.job === 'Director')
+        .filter(member => member.job === 'Director' || member.job === 'Series Director')
         .map(member => member.name)
         .filter(Boolean);
 }
 
-async function buildSnapshot(libraryEntries) {
+function buildTmdbPayload(details, mediaType) {
+    if (mediaType === 'tv') {
+        return {
+            original_title: details.original_name,
+            original_language: details.original_language,
+            title: details.name,
+            overview: details.overview,
+            poster_path: details.poster_path,
+            backdrop_path: details.backdrop_path,
+            release_date: details.first_air_date,
+            runtime: Array.isArray(details.episode_run_time) && details.episode_run_time.length
+                ? details.episode_run_time[0]
+                : null,
+            genres: details.genres ?? [],
+            vote_average: details.vote_average,
+            vote_count: details.vote_count,
+            popularity: details.popularity,
+            homepage: details.homepage ?? null,
+            directors: extractDirectors(details.credits),
+        };
+    }
+
+    return {
+        original_title: details.original_title,
+        original_language: details.original_language,
+        title: details.title,
+        overview: details.overview,
+        poster_path: details.poster_path,
+        backdrop_path: details.backdrop_path,
+        release_date: details.release_date,
+        runtime: details.runtime,
+        genres: details.genres ?? [],
+        vote_average: details.vote_average,
+        vote_count: details.vote_count,
+        popularity: details.popularity,
+        homepage: details.homepage ?? null,
+        directors: extractDirectors(details.credits),
+    };
+}
+
+async function buildSnapshot(entries) {
     const enriched = [];
 
-    for (const entry of libraryEntries) {
-        const details = await fetchMovieDetails(entry.id);
-
+    for (const entry of entries) {
+        const mediaType = entry.mediaType || 'movie';
+        const details = await fetchDetails(entry.id, mediaType);
         if (!details) {
             continue;
         }
-
-        const directors = extractDirectors(details.credits);
 
         const watchDates = Array.isArray(entry.watchDates)
             ? entry.watchDates
             : entry.watchDate
                 ? [entry.watchDate]
                 : [];
-
         const orderedWatchDates = [...watchDates].sort((a, b) => b.localeCompare(a));
 
         enriched.push({
             id: details.id,
-            title: entry.title ?? details.title ?? details.name ?? '',
+            title: entry.title ?? (mediaType === 'tv' ? details.name : details.title) ?? '',
+            mediaType,
             status: entry.status ?? null,
             watchDates: orderedWatchDates,
             watchDate: orderedWatchDates[0] ?? null,
             rating: typeof entry.rating === 'number' ? entry.rating : null,
             note: entry.note ?? null,
-            tmdb: {
-                original_title: details.original_title,
-                original_language: details.original_language,
-                title: details.title,
-                overview: details.overview,
-                poster_path: details.poster_path,
-                backdrop_path: details.backdrop_path,
-                release_date: details.release_date,
-                runtime: details.runtime,
-                genres: details.genres ?? [],
-                vote_average: details.vote_average,
-                vote_count: details.vote_count,
-                popularity: details.popularity,
-                homepage: details.homepage ?? null,
-                directors,
-            },
+            tmdb: buildTmdbPayload(details, mediaType),
         });
     }
 
@@ -164,9 +188,8 @@ async function buildSnapshot(libraryEntries) {
 async function main() {
     try {
         const entries = await loadLibrary();
-
-        if (entries.length === 0) {
-            console.warn('Library is empty. No movies to fetch.');
+        if (!entries.length) {
+            console.warn('Library is empty. No entries to process.');
         }
 
         const snapshot = await buildSnapshot(entries);
@@ -183,15 +206,16 @@ async function main() {
         };
 
         await mkdir(dirname(OUTPUT_PATH), { recursive: true });
-        await writeFile(OUTPUT_PATH, JSON.stringify(payload, null, 2));
-        console.log(`Wrote ${snapshot.length} movies to ${OUTPUT_PATH}`);
+        await writeFile(OUTPUT_PATH, `${JSON.stringify(payload, null, 2)}\n`);
+        console.log(`Wrote ${snapshot.length} entries to ${OUTPUT_PATH}`);
     } catch (error) {
         console.error('Failed to build movie snapshot:', error.message);
         process.exitCode = 1;
     }
 }
 
-main().catch(error => {
-    console.error('Unexpected error:', error);
-    process.exitCode = 1;
-});
+main()
+    .catch(error => {
+        console.error('Unexpected error:', error);
+        process.exitCode = 1;
+    });

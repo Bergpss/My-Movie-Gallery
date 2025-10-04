@@ -3,6 +3,7 @@
     {
       "id": 915935,
       "title": "堕落的审判",
+      "mediaType": "movie",
       "status": "watching",
       "note": "和康康朋友一起看"
     }
@@ -11,6 +12,7 @@
     {
       "id": 615457,
       "title": "小人物",
+      "mediaType": "movie",
       "status": "watched",
       "note": null,
       "watchDates": [
@@ -22,6 +24,7 @@
     {
       "id": 137,
       "title": "土拨鼠之日",
+      "mediaType": "movie",
       "watchDates": [
         "2025-09-30"
       ],
@@ -31,6 +34,7 @@
     {
       "id": 933260,
       "title": "某种物质",
+      "mediaType": "movie",
       "watchDates": [
         "2024-10-01"
       ],
