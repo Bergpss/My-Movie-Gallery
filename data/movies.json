@@ -1,11 +1,49 @@
 {
-  "generatedAt": "2025-10-05T13:45:43.996Z",
+  "generatedAt": "2025-10-05T13:47:00.344Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 221
+    "total": 222
   },
   "items": [
+    {
+      "id": 842924,
+      "title": "查克的一生",
+      "mediaType": "movie",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Life of Chuck",
+        "original_language": "en",
+        "title": "查克的一生",
+        "overview": "　　影片根据史蒂芬·金的同名短片小说改编，以三幕倒叙的方式，讲述查尔斯·克兰兹的一生，以他39岁因脑瘤去世为开端，以他在闹鬼的房子里度过的童年时光为结尾。",
+        "poster_path": "/2nbnPVh2OIRK3sbwBM4Kxpyxavi.jpg",
+        "backdrop_path": "/lecBUG6Hsw7pYjTNAPBUgouDfjW.jpg",
+        "release_date": "2025-06-05",
+        "runtime": 110,
+        "genres": [
+          {
+            "id": 14,
+            "name": "奇幻"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.394,
+        "vote_count": 430,
+        "popularity": 14.2642,
+        "homepage": "",
+        "directors": [
+          "迈克·弗拉纳根"
+        ]
+      }
+    },
     {
       "id": 137,
       "title": "土拨鼠之日",

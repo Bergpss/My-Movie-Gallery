@@ -1,5 +1,13 @@
 {
-  "watching": [],
+  "watching": [
+    {
+      "id": 842924,
+      "title": "查克的一生",
+      "mediaType": "movie",
+      "status": "watching",
+      "note": null
+    }
+  ],
   "watched": [
     {
       "id": 137,
