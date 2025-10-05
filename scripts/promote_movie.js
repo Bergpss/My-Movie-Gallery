@@ -77,6 +77,31 @@ function removeById(list, id) {
     return list.filter(item => String(item.id) !== String(id));
 }
 
+function primaryWatchDate(entry) {
+    if (!entry) return null;
+    if (entry.watchDate) return entry.watchDate;
+    if (Array.isArray(entry.watchDates) && entry.watchDates.length) {
+        return entry.watchDates[0];
+    }
+    return null;
+}
+
+function sortByWatchDateDesc(list) {
+    return [...list].sort((a, b) => {
+        const dateA = primaryWatchDate(a);
+        const dateB = primaryWatchDate(b);
+        if (dateA && dateB) {
+            if (dateA > dateB) return -1;
+            if (dateA < dateB) return 1;
+        } else if (dateA) {
+            return -1;
+        } else if (dateB) {
+            return 1;
+        }
+        return (a.title || '').localeCompare(b.title || '');
+    });
+}
+
 async function main() {
     const library = await loadLibrary();
     const watching = library.watching;
@@ -155,7 +180,7 @@ async function main() {
     }
 
     library.watching = updatedWatching;
-    library.watched = updatedWatched;
+    library.watched = sortByWatchDateDesc(updatedWatched);
 
     await saveLibrary(library);
 

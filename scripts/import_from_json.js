@@ -53,6 +53,31 @@ function parseRating(raw) {
     return numeric;
 }
 
+function primaryWatchDate(entry) {
+    if (!entry) return null;
+    if (entry.watchDate) return entry.watchDate;
+    if (Array.isArray(entry.watchDates) && entry.watchDates.length) {
+        return entry.watchDates[0];
+    }
+    return null;
+}
+
+function sortByWatchDateDesc(list) {
+    return [...list].sort((a, b) => {
+        const dateA = primaryWatchDate(a);
+        const dateB = primaryWatchDate(b);
+        if (dateA && dateB) {
+            if (dateA > dateB) return -1;
+            if (dateA < dateB) return 1;
+        } else if (dateA) {
+            return -1;
+        } else if (dateB) {
+            return 1;
+        }
+        return (a.title || '').localeCompare(b.title || '');
+    });
+}
+
 async function loadJson(path, fallback = null) {
     try {
         const raw = await readFile(path, 'utf-8');
@@ -160,7 +185,7 @@ async function main() {
     }
 
     library.watching = watching;
-    library.watched = watched;
+    library.watched = sortByWatchDateDesc(watched);
     library.wishlist = wishlist;
 
     await writeFile(LIBRARY_PATH, `${JSON.stringify(library, null, 2)}\n`);
