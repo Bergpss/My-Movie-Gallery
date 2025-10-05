@@ -66,6 +66,9 @@ async function loadLibrary() {
             status: entry.status || existing.status || defaultStatus || null,
             note: entry.note ?? existing.note ?? null,
             mediaType: entry.mediaType || existing.mediaType || 'movie',
+            inCinema: typeof entry.inCinema === 'boolean'
+                ? entry.inCinema
+                : (typeof existing.inCinema === 'boolean' ? existing.inCinema : false),
         });
     };
 
@@ -178,6 +181,7 @@ async function buildSnapshot(entries) {
             watchDate: orderedWatchDates[0] ?? null,
             rating: typeof entry.rating === 'number' ? entry.rating : null,
             note: entry.note ?? null,
+            inCinema: typeof entry.inCinema === 'boolean' ? entry.inCinema : false,
             tmdb: buildTmdbPayload(details, mediaType),
         });
     }

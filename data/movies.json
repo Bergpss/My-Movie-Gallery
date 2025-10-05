@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-05T11:20:25.155Z",
+  "generatedAt": "2025-10-05T11:27:22.210Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -15,6 +15,7 @@
       "watchDate": null,
       "rating": null,
       "note": "和康康朋友一起看",
+      "inCinema": false,
       "tmdb": {
         "original_title": "Anatomie d'une chute",
         "original_language": "fr",
@@ -58,6 +59,7 @@
       "watchDate": "2023-07-07",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "金枝玉葉 2",
         "original_language": "cn",
@@ -101,6 +103,7 @@
       "watchDate": "2023-06-29",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Grand Budapest Hotel",
         "original_language": "en",
@@ -140,6 +143,7 @@
       "watchDate": "2023-04-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Lord of the Rings: The Fellowship of the Ring",
         "original_language": "en",
@@ -183,6 +187,7 @@
       "watchDate": "2023-03-27",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Godfather",
         "original_language": "en",
@@ -222,6 +227,7 @@
       "watchDate": "2023-03-27",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Godfather Part II",
         "original_language": "en",
@@ -261,6 +267,7 @@
       "watchDate": "2023-03-27",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "There Will Be Blood",
         "original_language": "en",
@@ -296,6 +303,7 @@
       "watchDate": "2023-02-05",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "더 폰",
         "original_language": "ko",
@@ -339,6 +347,7 @@
       "watchDate": "2022-12-25",
       "rating": 5,
       "note": null,
+      "inCinema": true,
       "tmdb": {
         "original_title": "Avatar: The Way of Water",
         "original_language": "en",
@@ -382,6 +391,7 @@
       "watchDate": "2022-12-22",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Mary and Max",
         "original_language": "en",
@@ -425,6 +435,7 @@
       "watchDate": "2022-12-22",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "罗曼蒂克消亡史",
         "original_language": "zh",
@@ -468,6 +479,7 @@
       "watchDate": "2022-12-11",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "天注定",
         "original_language": "zh",
@@ -507,6 +519,7 @@
       "watchDate": "2022-12-03",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Terminal",
         "original_language": "en",
@@ -546,6 +559,7 @@
       "watchDate": "2022-12-01",
       "rating": 5,
       "note": "无法评价。。经典中的经典。。",
+      "inCinema": false,
       "tmdb": {
         "original_title": "2001: A Space Odyssey",
         "original_language": "en",
@@ -589,6 +603,7 @@
       "watchDate": "2022-11-23",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "疯狂的赛车",
         "original_language": "zh",
@@ -624,6 +639,7 @@
       "watchDate": "2022-11-20",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "海街diary",
         "original_language": "ja",
@@ -659,6 +675,7 @@
       "watchDate": "2022-11-12",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Mad Max: Fury Road",
         "original_language": "en",
@@ -702,6 +719,7 @@
       "watchDate": "2022-10-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "カメラを止めるな！",
         "original_language": "ja",
@@ -745,6 +763,7 @@
       "watchDate": "2022-09-12",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Relatos salvajes",
         "original_language": "es",
@@ -788,6 +807,7 @@
       "watchDate": "2022-09-11",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "雙瞳",
         "original_language": "zh",
@@ -827,6 +847,7 @@
       "watchDate": "2022-08-20",
       "rating": 5,
       "note": "tips：先看好（老）电影再看新电影",
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Martian",
         "original_language": "en",
@@ -870,6 +891,7 @@
       "watchDate": "2022-08-04",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Malèna",
         "original_language": "it",
@@ -905,6 +927,7 @@
       "watchDate": "2022-08-02",
       "rating": 2,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "独行月球",
         "original_language": "zh",
@@ -948,6 +971,7 @@
       "watchDate": "2022-08-01",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Imitation Game",
         "original_language": "en",
@@ -995,6 +1019,7 @@
       "watchDate": "2022-08-01",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "疯狂的石头",
         "original_language": "zh",
@@ -1034,6 +1059,7 @@
       "watchDate": "2022-07-24",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "오아시스",
         "original_language": "ko",
@@ -1073,6 +1099,7 @@
       "watchDate": "2022-07-23",
       "rating": 5,
       "note": "2022年7月为止，本年度最好的国内电影！很真实的爱情故事，有很强的代入感。",
+      "inCinema": false,
       "tmdb": {
         "original_title": "隐入尘烟",
         "original_language": "zh",
@@ -1112,6 +1139,7 @@
       "watchDate": "2022-07-17",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "山河故人",
         "original_language": "zh",
@@ -1151,6 +1179,7 @@
       "watchDate": "2022-07-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Hello！树先生",
         "original_language": "zh",
@@ -1186,6 +1215,7 @@
       "watchDate": "2022-07-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "同學麥娜絲",
         "original_language": "zh",
@@ -1225,6 +1255,7 @@
       "watchDate": "2022-07-16",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "無雙",
         "original_language": "cn",
@@ -1268,6 +1299,7 @@
       "watchDate": "2022-07-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "江湖儿女",
         "original_language": "zh",
@@ -1311,6 +1343,7 @@
       "watchDate": "2022-07-16",
       "rating": 3,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "过春天",
         "original_language": "zh",
@@ -1350,6 +1383,7 @@
       "watchDate": "2022-07-16",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "雄狮少年",
         "original_language": "zh",
@@ -1397,6 +1431,7 @@
       "watchDate": "2022-07-16",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "青春派",
         "original_language": "zh",
@@ -1440,6 +1475,7 @@
       "watchDate": "2022-07-15",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "推拿",
         "original_language": "zh",
@@ -1475,6 +1511,7 @@
       "watchDate": "2022-07-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "孤味",
         "original_language": "zh",
@@ -1510,6 +1547,7 @@
       "watchDate": "2022-06-19",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "背靠背，脸对脸",
         "original_language": "zh",
@@ -1546,6 +1584,7 @@
       "watchDate": "2022-05-30",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Pursuit of Happyness",
         "original_language": "en",
@@ -1581,6 +1620,7 @@
       "watchDate": "2022-05-26",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Everything Everywhere All at Once",
         "original_language": "en",
@@ -1625,6 +1665,7 @@
       "watchDate": "2022-04-27",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "投名狀",
         "original_language": "zh",
@@ -1668,6 +1709,7 @@
       "watchDate": "2022-04-21",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "猫の恩返し",
         "original_language": "ja",
@@ -1719,6 +1761,7 @@
       "watchDate": "2022-04-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "甲方乙方",
         "original_language": "zh",
@@ -1754,6 +1797,7 @@
       "watchDate": "2022-04-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "縱橫四海",
         "original_language": "cn",
@@ -1801,6 +1845,7 @@
       "watchDate": "2022-04-05",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "孔雀",
         "original_language": "zh",
@@ -1836,6 +1881,7 @@
       "watchDate": "2022-04-04",
       "rating": 5,
       "note": "love back",
+      "inCinema": false,
       "tmdb": {
         "original_title": "A.I. Artificial Intelligence",
         "original_language": "en",
@@ -1879,6 +1925,7 @@
       "watchDate": "2022-03-31",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "李米的猜想",
         "original_language": "zh",
@@ -1922,6 +1969,7 @@
       "watchDate": "2022-03-27",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Bucket List",
         "original_language": "en",
@@ -1961,6 +2009,7 @@
       "watchDate": "2022-03-20",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "기생충",
         "original_language": "ko",
@@ -2004,6 +2053,7 @@
       "watchDate": "2022-03-20",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "誰先愛上他的",
         "original_language": "zh",
@@ -2044,6 +2094,7 @@
       "watchDate": "2022-03-15",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "斗牛",
         "original_language": "zh",
@@ -2083,6 +2134,7 @@
       "watchDate": "2022-03-15",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "El hoyo",
         "original_language": "es",
@@ -2126,6 +2178,7 @@
       "watchDate": "2022-03-14",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Ratatouille",
         "original_language": "en",
@@ -2173,6 +2226,7 @@
       "watchDate": "2022-03-14",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Cars",
         "original_language": "en",
@@ -2220,6 +2274,7 @@
       "watchDate": "2022-03-14",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Incredibles",
         "original_language": "en",
@@ -2267,6 +2322,7 @@
       "watchDate": "2022-03-08",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Perfume: The Story of a Murderer",
         "original_language": "en",
@@ -2310,6 +2366,7 @@
       "watchDate": "2022-03-05",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "钢的琴",
         "original_language": "zh",
@@ -2345,6 +2402,7 @@
       "watchDate": "2022-03-02",
       "rating": 5,
       "note": "个人觉得更多是关于女性话题，电影里，姐姐和妹妹的对比让我印象深刻",
+      "inCinema": false,
       "tmdb": {
         "original_title": "Ballon",
         "original_language": "de",
@@ -2388,6 +2446,7 @@
       "watchDate": "2022-02-26",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "推手",
         "original_language": "zh",
@@ -2427,6 +2486,7 @@
       "watchDate": "2022-02-26",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "괴물",
         "original_language": "ko",
@@ -2470,6 +2530,7 @@
       "watchDate": "2022-02-26",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "花束みたいな恋をした",
         "original_language": "ja",
@@ -2509,6 +2570,7 @@
       "watchDate": "2022-02-26",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "부산행",
         "original_language": "ko",
@@ -2556,6 +2618,7 @@
       "watchDate": "2022-02-23",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Mist",
         "original_language": "en",
@@ -2599,6 +2662,7 @@
       "watchDate": "2022-02-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "一九四二",
         "original_language": "zh",
@@ -2638,6 +2702,7 @@
       "watchDate": "2022-02-10",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "这个杀手不太冷静",
         "original_language": "zh",
@@ -2677,6 +2742,7 @@
       "watchDate": "2022-02-06",
       "rating": 2,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "四海",
         "original_language": "zh",
@@ -2724,6 +2790,7 @@
       "watchDate": "2021-12-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "风声",
         "original_language": "zh",
@@ -2764,6 +2831,7 @@
       "watchDate": "2021-12-03",
       "rating": 4,
       "note": "。。别轻易看",
+      "inCinema": false,
       "tmdb": {
         "original_title": "김복남 살인사건의 전말",
         "original_language": "ko",
@@ -2811,6 +2879,7 @@
       "watchDate": "2021-11-22",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Graduate",
         "original_language": "en",
@@ -2854,6 +2923,7 @@
       "watchDate": "2021-11-18",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The House That Jack Built",
         "original_language": "en",
@@ -2901,6 +2971,7 @@
       "watchDate": "2021-11-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Dune",
         "original_language": "en",
@@ -2940,6 +3011,7 @@
       "watchDate": "2021-11-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Arrival",
         "original_language": "en",
@@ -2983,6 +3055,7 @@
       "watchDate": "2021-11-11",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Free Guy",
         "original_language": "en",
@@ -3026,6 +3099,7 @@
       "watchDate": "2021-11-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "借りぐらしのアリエッティ",
         "original_language": "ja",
@@ -3069,6 +3143,7 @@
       "watchDate": "2021-11-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "天空の城ラピュタ",
         "original_language": "ja",
@@ -3120,6 +3195,7 @@
       "watchDate": "2021-11-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "紅の豚",
         "original_language": "ja",
@@ -3167,6 +3243,7 @@
       "watchDate": "2021-08-21",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Luca",
         "original_language": "en",
@@ -3218,6 +3295,7 @@
       "watchDate": "2021-08-06",
       "rating": 5,
       "note": "唉",
+      "inCinema": false,
       "tmdb": {
         "original_title": "盲山",
         "original_language": "zh",
@@ -3257,6 +3335,7 @@
       "watchDate": "2021-07-31",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "大红灯笼高高挂",
         "original_language": "zh",
@@ -3292,6 +3371,7 @@
       "watchDate": "2021-07-31",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "天下无贼",
         "original_language": "zh",
@@ -3331,6 +3411,7 @@
       "watchDate": "2021-07-31",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "血觀音",
         "original_language": "zh",
@@ -3374,6 +3455,7 @@
       "watchDate": "2021-06-14",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "落叶归根",
         "original_language": "zh",
@@ -3413,6 +3495,7 @@
       "watchDate": "2021-06-08",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "战狼",
         "original_language": "zh",
@@ -3452,6 +3535,7 @@
       "watchDate": "2021-06-02",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Wreck-It Ralph",
         "original_language": "en",
@@ -3499,6 +3583,7 @@
       "watchDate": "2021-05-07",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Father",
         "original_language": "en",
@@ -3534,6 +3619,7 @@
       "watchDate": "2021-05-07",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "大佛普拉斯",
         "original_language": "zh",
@@ -3573,6 +3659,7 @@
       "watchDate": "2021-05-07",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "悬崖之上",
         "original_language": "zh",
@@ -3620,6 +3707,7 @@
       "watchDate": "2021-05-04",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "친절한 금자씨",
         "original_language": "ko",
@@ -3659,6 +3747,7 @@
       "watchDate": "2021-05-04",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Cove",
         "original_language": "en",
@@ -3694,6 +3783,7 @@
       "watchDate": "2021-03-13",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Paprika",
         "original_language": "it",
@@ -3729,6 +3819,7 @@
       "watchDate": "2021-03-12",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "もののけ姫",
         "original_language": "ja",
@@ -3772,6 +3863,7 @@
       "watchDate": "2021-03-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "姜子牙",
         "original_language": "zh",
@@ -3820,6 +3912,7 @@
       "watchDate": "2021-03-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "我和我的家乡",
         "original_language": "zh",
@@ -3865,6 +3958,7 @@
       "watchDate": "2021-03-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Croods: A New Age",
         "original_language": "en",
@@ -3916,6 +4010,7 @@
       "watchDate": "2021-03-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Slumdog Millionaire",
         "original_language": "en",
@@ -3955,6 +4050,7 @@
       "watchDate": "2021-03-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "送你一朵小红花",
         "original_language": "zh",
@@ -3994,6 +4090,7 @@
       "watchDate": "2021-03-09",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "劇場版「鬼滅の刃」無限列車編",
         "original_language": "ja",
@@ -4041,6 +4138,7 @@
       "watchDate": "2021-03-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "天気の子",
         "original_language": "ja",
@@ -4088,6 +4186,7 @@
       "watchDate": "2021-03-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Coco",
         "original_language": "en",
@@ -4135,6 +4234,7 @@
       "watchDate": "2021-03-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "红高粱",
         "original_language": "zh",
@@ -4178,6 +4278,7 @@
       "watchDate": "2021-03-02",
       "rating": 5,
       "note": "必看，好吧",
+      "inCinema": false,
       "tmdb": {
         "original_title": "吉祥如意",
         "original_language": "zh",
@@ -4213,6 +4314,7 @@
       "watchDate": "2021-02-22",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "你好，李焕英",
         "original_language": "zh",
@@ -4256,6 +4358,7 @@
       "watchDate": "2021-02-17",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "唐人街探案2",
         "original_language": "zh",
@@ -4295,6 +4398,7 @@
       "watchDate": "2021-01-16",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "驴得水",
         "original_language": "zh",
@@ -4335,6 +4439,7 @@
       "watchDate": "2021-01-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Inside Out",
         "original_language": "en",
@@ -4386,6 +4491,7 @@
       "watchDate": "2021-01-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Soul",
         "original_language": "en",
@@ -4437,6 +4543,7 @@
       "watchDate": "2020-11-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "A Clockwork Orange",
         "original_language": "en",
@@ -4476,6 +4583,7 @@
       "watchDate": "2020-11-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Shining",
         "original_language": "en",
@@ -4515,6 +4623,7 @@
       "watchDate": "2020-11-05",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "囍宴",
         "original_language": "zh",
@@ -4558,6 +4667,7 @@
       "watchDate": "2020-10-31",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "High-Rise",
         "original_language": "en",
@@ -4593,6 +4703,7 @@
       "watchDate": "2020-10-26",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Young and Prodigious T.S. Spivet",
         "original_language": "en",
@@ -4636,6 +4747,7 @@
       "watchDate": "2020-10-20",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Hangover",
         "original_language": "en",
@@ -4671,6 +4783,7 @@
       "watchDate": "2020-10-18",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "卧虎藏龍",
         "original_language": "zh",
@@ -4718,6 +4831,7 @@
       "watchDate": "2020-09-29",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "飞驰人生",
         "original_language": "zh",
@@ -4757,6 +4871,7 @@
       "watchDate": "2020-09-13",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "太阳照常升起",
         "original_language": "zh",
@@ -4796,6 +4911,7 @@
       "watchDate": "2020-09-13",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "邪不压正",
         "original_language": "zh",
@@ -4839,6 +4955,7 @@
       "watchDate": "2020-09-13",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "鬼子来了",
         "original_language": "zh",
@@ -4878,6 +4995,7 @@
       "watchDate": "2020-09-10",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "PERFECT BLUE",
         "original_language": "ja",
@@ -4917,6 +5035,7 @@
       "watchDate": "2020-08-24",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "La Vie d'Adèle - Chapitres 1 et 2",
         "original_language": "fr",
@@ -4956,6 +5075,7 @@
       "watchDate": "2020-08-18",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Her",
         "original_language": "en",
@@ -4999,6 +5119,7 @@
       "watchDate": "2020-08-18",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Orphan",
         "original_language": "en",
@@ -5038,6 +5159,7 @@
       "watchDate": "2020-08-18",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "아가씨",
         "original_language": "ko",
@@ -5081,6 +5203,7 @@
       "watchDate": "2020-08-11",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "올드보이",
         "original_language": "ko",
@@ -5128,6 +5251,7 @@
       "watchDate": "2020-08-06",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "誰も知らない",
         "original_language": "ja",
@@ -5163,6 +5287,7 @@
       "watchDate": "2020-08-05",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Coherence",
         "original_language": "en",
@@ -5202,6 +5327,7 @@
       "watchDate": "2020-08-05",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Dallas Buyers Club",
         "original_language": "en",
@@ -5241,6 +5367,7 @@
       "watchDate": "2020-08-03",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "心迷宫",
         "original_language": "zh",
@@ -5276,6 +5403,7 @@
       "watchDate": "2020-07-27",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Cast Away",
         "original_language": "en",
@@ -5315,6 +5443,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "82년생 김지영",
         "original_language": "ko",
@@ -5350,6 +5479,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Se7en",
         "original_language": "en",
@@ -5393,6 +5523,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "3 Idiots",
         "original_language": "hi",
@@ -5432,6 +5563,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "人生フルーツ",
         "original_language": "ja",
@@ -5467,6 +5599,7 @@
       "watchDate": "2020-07-25",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Knives Out",
         "original_language": "en",
@@ -5510,6 +5643,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "功夫",
         "original_language": "cn",
@@ -5557,6 +5691,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Pirates of the Caribbean: On Stranger Tides",
         "original_language": "en",
@@ -5600,6 +5735,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "千と千尋の神隠し",
         "original_language": "ja",
@@ -5643,6 +5779,7 @@
       "watchDate": "2020-07-25",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "ハウルの動く城",
         "original_language": "ja",
@@ -5686,6 +5823,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "唐伯虎點秋香",
         "original_language": "cn",
@@ -5729,6 +5867,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "大话西游之仙履奇缘",
         "original_language": "cn",
@@ -5780,6 +5919,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Joker",
         "original_language": "en",
@@ -5823,6 +5963,7 @@
       "watchDate": "2020-07-25",
       "rating": 4,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "少年的你",
         "original_language": "zh",
@@ -5866,6 +6007,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Monsters, Inc.",
         "original_language": "en",
@@ -5909,6 +6051,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Saving Private Ryan",
         "original_language": "en",
@@ -5952,6 +6095,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Fight Club",
         "original_language": "en",
@@ -5991,6 +6135,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "About Time",
         "original_language": "en",
@@ -6034,6 +6179,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Interstellar",
         "original_language": "en",
@@ -6077,6 +6223,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "WALL·E",
         "original_language": "en",
@@ -6120,6 +6267,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "살인의 추억",
         "original_language": "ko",
@@ -6163,6 +6311,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Truman Show",
         "original_language": "en",
@@ -6202,6 +6351,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Dead Poets Society",
         "original_language": "en",
@@ -6237,6 +6387,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Silence of the Lambs",
         "original_language": "en",
@@ -6280,6 +6431,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Titanic",
         "original_language": "en",
@@ -6319,6 +6471,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Alone",
         "original_language": "en",
@@ -6358,6 +6511,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Gone Girl",
         "original_language": "en",
@@ -6401,6 +6555,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "도가니",
         "original_language": "ko",
@@ -6436,6 +6591,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Lion King",
         "original_language": "en",
@@ -6484,6 +6640,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Catch Me If You Can",
         "original_language": "en",
@@ -6523,6 +6680,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Toy Story 3",
         "original_language": "en",
@@ -6566,6 +6724,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Saw",
         "original_language": "en",
@@ -6609,6 +6768,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Despicable Me",
         "original_language": "en",
@@ -6653,6 +6813,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "El Camino: A Breaking Bad Movie",
         "original_language": "en",
@@ -6696,6 +6857,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Green Book",
         "original_language": "en",
@@ -6739,6 +6901,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Shawshank Redemption",
         "original_language": "en",
@@ -6778,6 +6941,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Identity",
         "original_language": "en",
@@ -6817,6 +6981,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Dark Knight",
         "original_language": "en",
@@ -6864,6 +7029,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Butterfly Effect",
         "original_language": "en",
@@ -6904,6 +7070,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "嫌われ松子の一生",
         "original_language": "ja",
@@ -6947,6 +7114,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "讓子彈飛",
         "original_language": "zh",
@@ -6986,6 +7154,7 @@
       "watchDate": "2020-07-25",
       "rating": 3,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "误杀",
         "original_language": "zh",
@@ -7029,6 +7198,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "변호인",
         "original_language": "ko",
@@ -7068,6 +7238,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Léon",
         "original_language": "fr",
@@ -7111,6 +7282,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Avatar",
         "original_language": "en",
@@ -7158,6 +7330,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Forrest Gump",
         "original_language": "en",
@@ -7201,6 +7374,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "霸王别姬",
         "original_language": "zh",
@@ -7236,6 +7410,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Up",
         "original_language": "en",
@@ -7283,6 +7458,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "飲食男女",
         "original_language": "zh",
@@ -7326,6 +7502,7 @@
       "watchDate": "2020-07-25",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Matrix",
         "original_language": "en",
@@ -7366,6 +7543,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "一出好戏",
         "original_language": "zh",
@@ -7409,6 +7587,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "从你的全世界路过",
         "original_language": "zh",
@@ -7448,6 +7627,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "君の名は。",
         "original_language": "ja",
@@ -7491,6 +7671,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Jurassic World: Fallen Kingdom",
         "original_language": "en",
@@ -7538,6 +7719,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Pirates of the Caribbean: Dead Men Tell No Tales",
         "original_language": "en",
@@ -7582,6 +7764,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "后来的我们",
         "original_language": "zh",
@@ -7621,6 +7804,7 @@
       "watchDate": "2020-01-14",
       "rating": 5,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "哪吒之魔童降世",
         "original_language": "zh",
@@ -7664,6 +7848,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "地久天长",
         "original_language": "zh",
@@ -7699,6 +7884,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Avengers",
         "original_language": "en",
@@ -7742,6 +7928,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Avengers: Age of Ultron",
         "original_language": "en",
@@ -7785,6 +7972,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Avengers: Infinity War",
         "original_language": "en",
@@ -7829,6 +8017,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Avengers: Endgame",
         "original_language": "en",
@@ -7873,6 +8062,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Ready Player One",
         "original_language": "en",
@@ -7916,6 +8106,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Doctor Strange",
         "original_language": "en",
@@ -7959,6 +8150,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Escape Room",
         "original_language": "en",
@@ -8002,6 +8194,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Meg",
         "original_language": "en",
@@ -8045,6 +8238,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "影",
         "original_language": "zh",
@@ -8084,6 +8278,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "心理罪之城市之光",
         "original_language": "zh",
@@ -8124,6 +8319,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "我不是药神",
         "original_language": "zh",
@@ -8163,6 +8359,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "我和我的祖国",
         "original_language": "zh",
@@ -8208,6 +8405,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "战狼2",
         "original_language": "zh",
@@ -8247,6 +8445,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "The Incredible Hulk",
         "original_language": "en",
@@ -8290,6 +8489,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "无问西东",
         "original_language": "zh",
@@ -8337,6 +8537,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Venom",
         "original_language": "en",
@@ -8376,6 +8577,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "流浪地球",
         "original_language": "zh",
@@ -8419,6 +8621,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Annihilation",
         "original_language": "en",
@@ -8458,6 +8661,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "狄仁杰之四大天王",
         "original_language": "zh",
@@ -8505,6 +8709,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "狗十三",
         "original_language": "zh",
@@ -8540,6 +8745,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "War for the Planet of the Apes",
         "original_language": "en",
@@ -8583,6 +8789,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "白蛇：缘起",
         "original_language": "zh",
@@ -8627,6 +8834,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Contratiempo",
         "original_language": "es",
@@ -8670,6 +8878,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Captain America: The First Avenger",
         "original_language": "en",
@@ -8713,6 +8922,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Captain America: The Winter Soldier",
         "original_language": "en",
@@ -8757,6 +8967,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Captain America: Civil War",
         "original_language": "en",
@@ -8801,6 +9012,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "芳华",
         "original_language": "zh",
@@ -8844,6 +9056,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Iron Man",
         "original_language": "en",
@@ -8887,6 +9100,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Iron Man 2",
         "original_language": "en",
@@ -8930,6 +9144,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Iron Man 3",
         "original_language": "en",
@@ -8954,7 +9169,7 @@
           }
         ],
         "vote_average": 6.929,
-        "vote_count": 22846,
+        "vote_count": 22847,
         "popularity": 16.4161,
         "homepage": "",
         "directors": [
@@ -8973,6 +9188,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Alita: Battle Angel",
         "original_language": "en",
@@ -9016,6 +9232,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Thor",
         "original_language": "en",
@@ -9059,6 +9276,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Thor: The Dark World",
         "original_language": "en",
@@ -9102,6 +9320,7 @@
       "watchDate": "2020-01-14",
       "rating": null,
       "note": null,
+      "inCinema": false,
       "tmdb": {
         "original_title": "Thor: Ragnarok",
         "original_language": "en",
