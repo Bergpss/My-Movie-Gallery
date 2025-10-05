@@ -1,19 +1,113 @@
 {
-  "generatedAt": "2025-10-05T11:51:13.192Z",
+  "generatedAt": "2025-10-05T13:45:43.996Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 219
+    "total": 221
   },
   "items": [
+    {
+      "id": 137,
+      "title": "土拨鼠之日",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-10-01"
+      ],
+      "watchDate": "2025-10-01",
+      "rating": 9,
+      "note": "真好看啊",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Groundhog Day",
+        "original_language": "en",
+        "title": "土拨鼠之日",
+        "overview": "　　菲尔（Bill Murray饰）是个气象播报员，每天除了在摄像机前给观众做风趣幽默的天气预报外，每年的2月2日他还要前往一个名为普苏塔尼的边境小镇，报导当地的土拨鼠日庆典。事实上，菲尔对这一节日相当嗤之以鼻并开始对工作感到厌倦，当他例行公事完成今年的报导后，便急不可待地想重返家园，却因为一场突如其来的暴风雪耽搁了。第2天醒来后，菲尔意外地发现时间仍然停留在前一天土拨鼠日，昨日的一切重新上演。惊讶、不信、刺激、狂喜、烦闷、焦虑、不安、绝望、倦怠等各种情绪轮流侵占菲尔的感官领域，可无论他如何选择度过这一天，他都始终无法再前进一步，开始了他重复的人生。",
+        "poster_path": "/kr9Ec4Sxk2zj3AfbaMtLsxKozkh.jpg",
+        "backdrop_path": "/ttBydD0SynC0TMkW3AcnmsySkLp.jpg",
+        "release_date": "1993-02-11",
+        "runtime": 101,
+        "genres": [
+          {
+            "id": 10749,
+            "name": "爱情"
+          },
+          {
+            "id": 14,
+            "name": "奇幻"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.617,
+        "vote_count": 8432,
+        "popularity": 7.8934,
+        "homepage": "",
+        "directors": [
+          "哈罗德·拉米斯"
+        ]
+      }
+    },
+    {
+      "id": 933260,
+      "title": "某种元素",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2024-11-15"
+      ],
+      "watchDate": "2024-11-15",
+      "rating": 7,
+      "note": "和雅慧朋友一起看的",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Substance",
+        "original_language": "en",
+        "title": "某种物质",
+        "overview": "曾经红极一时的好莱坞巨星伊丽莎白无法面对自己老去的容颜，决定使用一种名为“完美物质”的黑市药物，透过注射药物的细胞复制物质，创造出更年轻、更好的另一个自己。“年华老去”及“年轻貌美”的自己该如何共存？会是更强烈的容貌焦虑大战？还是要不断迎合大众对“美”的期待？一场自我身体主导权的争夺战即将上演……",
+        "poster_path": "/1gIM1hYy1HjxSszkh5AemZ3jBfo.jpg",
+        "backdrop_path": "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
+        "release_date": "2024-09-07",
+        "runtime": 141,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          }
+        ],
+        "vote_average": 7.151,
+        "vote_count": 5120,
+        "popularity": 28.3128,
+        "homepage": "",
+        "directors": [
+          "科拉莉·法尔雅"
+        ]
+      }
+    },
     {
       "id": 915935,
       "title": "堕落的审判",
       "mediaType": "movie",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
+      "status": "watched",
+      "watchDates": [
+        "2025-10-05"
+      ],
+      "watchDate": "2025-10-05",
+      "rating": 8,
       "note": "和康康朋友一起看",
       "inCinema": false,
       "tmdb": {

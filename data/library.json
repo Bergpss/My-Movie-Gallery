@@ -1,14 +1,40 @@
 {
-  "watching": [
+  "watching": [],
+  "watched": [
+    {
+      "id": 137,
+      "title": "土拨鼠之日",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "真好看啊",
+      "watchDates": [
+        "2025-10-01"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 933260,
+      "title": "某种元素",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和雅慧朋友一起看的",
+      "watchDates": [
+        "2024-11-15"
+      ],
+      "rating": 7
+    },
     {
       "id": 915935,
       "title": "堕落的审判",
       "mediaType": "movie",
-      "status": "watching",
-      "note": "和康康朋友一起看"
-    }
-  ],
-  "watched": [
+      "status": "watched",
+      "note": "和康康朋友一起看",
+      "watchDates": [
+        "2025-10-05"
+      ],
+      "watchDate": "2025-10-05",
+      "rating": 8
+    },
     {
       "id": 133578,
       "title": "金枝玉叶2",
