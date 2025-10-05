@@ -50,7 +50,14 @@ function parseRating(raw) {
     if (Number.isNaN(numeric)) {
         return null;
     }
-    return numeric;
+    if (numeric < 0) return 0;
+    if (numeric <= 5) {
+        return Number((numeric * 2).toFixed(1));
+    }
+    if (numeric <= 10) {
+        return Number(numeric.toFixed(1));
+    }
+    return 10;
 }
 
 function normaliseBoolean(value) {

@@ -155,14 +155,61 @@ function buildTmdbPayload(details, mediaType) {
     };
 }
 
-async function buildSnapshot(entries) {
+async function loadExistingSnapshot() {
+    try {
+        const raw = await readFile(OUTPUT_PATH, 'utf-8');
+        const parsed = JSON.parse(raw);
+        const map = new Map();
+        if (Array.isArray(parsed?.items)) {
+            parsed.items.forEach(item => {
+                if (item && typeof item.id !== 'undefined') {
+                    map.set(String(item.id), item);
+                }
+            });
+        }
+        return map;
+    } catch (error) {
+        if (error.code !== 'ENOENT') {
+            console.warn('读取已有 movies.json 失败：', error.message);
+        }
+        return new Map();
+    }
+}
+
+function shouldRefresh(existing, entry) {
+    if (!existing) return true;
+    if ((existing.mediaType || 'movie') !== (entry.mediaType || 'movie')) return true;
+    if (!existing.tmdb) return true;
+    return false;
+}
+
+async function buildSnapshot(entries, existingMap) {
     const enriched = [];
 
     for (const entry of entries) {
         const mediaType = entry.mediaType || 'movie';
-        const details = await fetchDetails(entry.id, mediaType);
-        if (!details) {
-            continue;
+        const existing = existingMap.get(String(entry.id));
+
+        let tmdbData = existing?.tmdb;
+        let details = null;
+
+        if (shouldRefresh(existing, entry)) {
+            details = await fetchDetails(entry.id, mediaType);
+            if (!details) {
+                continue;
+            }
+            tmdbData = buildTmdbPayload(details, mediaType);
+        } else if (existing) {
+            tmdbData = existing.tmdb;
+            details = existing.tmdb;
+        }
+
+        if (!tmdbData) {
+            details = await fetchDetails(entry.id, mediaType);
+            if (!details) {
+                continue;
+            }
+            tmdbData = buildTmdbPayload(details, mediaType);
         }
 
         const watchDates = Array.isArray(entry.watchDates)
@@ -173,8 +220,8 @@ async function buildSnapshot(entries) {
         const orderedWatchDates = [...watchDates].sort((a, b) => b.localeCompare(a));
 
         enriched.push({
-            id: details.id,
-            title: entry.title ?? (mediaType === 'tv' ? details.name : details.title) ?? '',
+            id: entry.id,
+            title: entry.title ?? (mediaType === 'tv' ? tmdbData.title : tmdbData.title) ?? '',
             mediaType,
             status: entry.status ?? null,
             watchDates: orderedWatchDates,
@@ -182,7 +229,7 @@ async function buildSnapshot(entries) {
             rating: typeof entry.rating === 'number' ? entry.rating : null,
             note: entry.note ?? null,
             inCinema: typeof entry.inCinema === 'boolean' ? entry.inCinema : false,
-            tmdb: buildTmdbPayload(details, mediaType),
+            tmdb: tmdbData,
         });
     }
 
@@ -196,7 +243,8 @@ async function main() {
             console.warn('Library is empty. No entries to process.');
         }
 
-        const snapshot = await buildSnapshot(entries);
+        const existingMap = await loadExistingSnapshot();
+        const snapshot = await buildSnapshot(entries, existingMap);
 
         const payload = {
             generatedAt: new Date().toISOString(),

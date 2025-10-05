@@ -310,6 +310,22 @@ function mergeDates(existing = [], incoming = []) {
     return Array.from(new Set([...existing, ...incoming].filter(Boolean))).sort((a, b) => a.localeCompare(b));
 }
 
+function convertRating(raw) {
+    if (!raw && raw !== 0) return null;
+    const numeric = Number(String(raw).trim());
+    if (Number.isNaN(numeric)) {
+        return null;
+    }
+    if (numeric < 0) return 0;
+    if (numeric <= 5) {
+        return Number((numeric * 2).toFixed(1));
+    }
+    if (numeric <= 10) {
+        return Number(numeric.toFixed(1));
+    }
+    return 10;
+}
+
 function removeById(list, id) {
     return list.filter(item => String(item.id) !== String(id));
 }
@@ -462,6 +478,8 @@ async function main() {
             mediaType,
             watchDates: mergedDates,
             status: 'watched',
+            rating: convertRating(item?.my_rating),
+            inCinema: false,
         });
     }
 
@@ -488,7 +506,8 @@ async function main() {
                 watchDates: mergedDates,
                 watchDate: mergedDates[0] || null,
                 status: 'watched',
-                inCinema: existing.inCinema ?? false,
+                inCinema: existing.inCinema ?? entry.inCinema ?? false,
+                rating: typeof entry.rating === 'number' ? entry.rating : existing.rating ?? null,
             };
         } else {
             const mergedDates = entry.watchDates;
@@ -500,7 +519,8 @@ async function main() {
                 watchDates: mergedDates,
                 watchDate: mergedDates[0] || null,
                 note: entry.note ?? null,
-                inCinema: false,
+                rating: typeof entry.rating === 'number' ? entry.rating : null,
+                inCinema: entry.inCinema ?? false,
             });
         }
     });

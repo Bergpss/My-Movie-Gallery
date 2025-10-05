@@ -18,8 +18,9 @@
         "2023-07-07"
       ],
       "watchDate": "2023-07-07",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 120467,
@@ -30,8 +31,9 @@
         "2023-06-29"
       ],
       "watchDate": "2023-06-29",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 120,
@@ -42,8 +44,9 @@
         "2023-04-16"
       ],
       "watchDate": "2023-04-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 238,
@@ -54,8 +57,9 @@
         "2023-03-27"
       ],
       "watchDate": "2023-03-27",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 240,
@@ -66,8 +70,9 @@
         "2023-03-27"
       ],
       "watchDate": "2023-03-27",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 7345,
@@ -78,8 +83,9 @@
         "2023-03-27"
       ],
       "watchDate": "2023-03-27",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 367882,
@@ -90,8 +96,9 @@
         "2023-02-05"
       ],
       "watchDate": "2023-02-05",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 76600,
@@ -102,7 +109,7 @@
         "2022-12-25"
       ],
       "watchDate": "2022-12-25",
-      "rating": 5,
+      "rating": 10,
       "note": null,
       "inCinema": true
     },
@@ -115,8 +122,9 @@
         "2022-12-22"
       ],
       "watchDate": "2022-12-22",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 382572,
@@ -127,8 +135,9 @@
         "2022-12-22"
       ],
       "watchDate": "2022-12-22",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 187022,
@@ -139,8 +148,9 @@
         "2022-12-11"
       ],
       "watchDate": "2022-12-11",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 594,
@@ -151,8 +161,9 @@
         "2022-12-03"
       ],
       "watchDate": "2022-12-03",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 62,
@@ -163,8 +174,9 @@
         "2022-12-01"
       ],
       "watchDate": "2022-12-01",
-      "rating": 5,
-      "note": "无法评价。。经典中的经典。。"
+      "rating": 10,
+      "note": "无法评价。。经典中的经典。。",
+      "inCinema": false
     },
     {
       "id": 33106,
@@ -175,8 +187,9 @@
         "2022-11-23"
       ],
       "watchDate": "2022-11-23",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 315846,
@@ -187,8 +200,9 @@
         "2022-11-20"
       ],
       "watchDate": "2022-11-20",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 76341,
@@ -199,8 +213,9 @@
         "2022-11-12"
       ],
       "watchDate": "2022-11-12",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 513434,
@@ -211,8 +226,9 @@
         "2022-10-06"
       ],
       "watchDate": "2022-10-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 265195,
@@ -223,8 +239,9 @@
         "2022-09-12"
       ],
       "watchDate": "2022-09-12",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 57100,
@@ -235,8 +252,9 @@
         "2022-09-11"
       ],
       "watchDate": "2022-09-11",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 286217,
@@ -247,8 +265,9 @@
         "2022-08-20"
       ],
       "watchDate": "2022-08-20",
-      "rating": 5,
-      "note": "tips：先看好（老）电影再看新电影"
+      "rating": 10,
+      "note": "tips：先看好（老）电影再看新电影",
+      "inCinema": false
     },
     {
       "id": 10867,
@@ -259,8 +278,9 @@
         "2022-08-04"
       ],
       "watchDate": "2022-08-04",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 801803,
@@ -271,8 +291,9 @@
         "2022-08-02"
       ],
       "watchDate": "2022-08-02",
-      "rating": 2,
-      "note": null
+      "rating": 4,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 205596,
@@ -283,8 +304,9 @@
         "2022-08-01"
       ],
       "watchDate": "2022-08-01",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 45380,
@@ -295,8 +317,9 @@
         "2022-08-01"
       ],
       "watchDate": "2022-08-01",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 26955,
@@ -307,8 +330,9 @@
         "2022-07-24"
       ],
       "watchDate": "2022-07-24",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 928720,
@@ -319,8 +343,9 @@
         "2022-07-23"
       ],
       "watchDate": "2022-07-23",
-      "rating": 5,
-      "note": "2022年7月为止，本年度最好的国内电影！很真实的爱情故事，有很强的代入感。"
+      "rating": 10,
+      "note": "2022年7月为止，本年度最好的国内电影！很真实的爱情故事，有很强的代入感。",
+      "inCinema": false
     },
     {
       "id": 314388,
@@ -331,8 +356,9 @@
         "2022-07-17"
       ],
       "watchDate": "2022-07-17",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 90283,
@@ -343,8 +369,9 @@
         "2022-07-16"
       ],
       "watchDate": "2022-07-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 739267,
@@ -355,8 +382,9 @@
         "2022-07-16"
       ],
       "watchDate": "2022-07-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 531384,
@@ -367,8 +395,9 @@
         "2022-07-16"
       ],
       "watchDate": "2022-07-16",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 441393,
@@ -379,8 +408,9 @@
         "2022-07-16"
       ],
       "watchDate": "2022-07-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 543762,
@@ -391,8 +421,9 @@
         "2022-07-16"
       ],
       "watchDate": "2022-07-16",
-      "rating": 3,
-      "note": null
+      "rating": 6,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 839803,
@@ -403,8 +434,9 @@
         "2022-07-16"
       ],
       "watchDate": "2022-07-16",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 412555,
@@ -416,7 +448,8 @@
       ],
       "watchDate": "2022-07-16",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 256106,
@@ -427,8 +460,9 @@
         "2022-07-15"
       ],
       "watchDate": "2022-07-15",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 739269,
@@ -439,8 +473,9 @@
         "2022-07-10"
       ],
       "watchDate": "2022-07-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 295279,
@@ -451,8 +486,9 @@
         "2022-06-19"
       ],
       "watchDate": "2022-06-19",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1402,
@@ -463,8 +499,9 @@
         "2022-05-30"
       ],
       "watchDate": "2022-05-30",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 545611,
@@ -475,8 +512,9 @@
         "2022-05-26"
       ],
       "watchDate": "2022-05-26",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 14392,
@@ -487,8 +525,9 @@
         "2022-04-27"
       ],
       "watchDate": "2022-04-27",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 15370,
@@ -499,8 +538,9 @@
         "2022-04-21"
       ],
       "watchDate": "2022-04-21",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 79279,
@@ -511,8 +551,9 @@
         "2022-04-16"
       ],
       "watchDate": "2022-04-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 47423,
@@ -523,8 +564,9 @@
         "2022-04-09"
       ],
       "watchDate": "2022-04-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 11728,
@@ -535,8 +577,9 @@
         "2022-04-05"
       ],
       "watchDate": "2022-04-05",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 644,
@@ -547,8 +590,9 @@
         "2022-04-04"
       ],
       "watchDate": "2022-04-04",
-      "rating": 5,
-      "note": "love back"
+      "rating": 10,
+      "note": "love back",
+      "inCinema": false
     },
     {
       "id": 75677,
@@ -559,8 +603,9 @@
         "2022-03-31"
       ],
       "watchDate": "2022-03-31",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 7350,
@@ -571,8 +616,9 @@
         "2022-03-27"
       ],
       "watchDate": "2022-03-27",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 496243,
@@ -583,8 +629,9 @@
         "2022-03-20"
       ],
       "watchDate": "2022-03-20",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 524087,
@@ -595,8 +642,9 @@
         "2022-03-20"
       ],
       "watchDate": "2022-03-20",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 44714,
@@ -607,8 +655,9 @@
         "2022-03-15"
       ],
       "watchDate": "2022-03-15",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 619264,
@@ -619,8 +668,9 @@
         "2022-03-15"
       ],
       "watchDate": "2022-03-15",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 2062,
@@ -631,8 +681,9 @@
         "2022-03-14"
       ],
       "watchDate": "2022-03-14",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 920,
@@ -643,8 +694,9 @@
         "2022-03-14"
       ],
       "watchDate": "2022-03-14",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 9806,
@@ -655,8 +707,9 @@
         "2022-03-14"
       ],
       "watchDate": "2022-03-14",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1427,
@@ -667,8 +720,9 @@
         "2022-03-08"
       ],
       "watchDate": "2022-03-08",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 72245,
@@ -679,8 +733,9 @@
         "2022-03-05"
       ],
       "watchDate": "2022-03-05",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 483983,
@@ -691,8 +746,9 @@
         "2022-03-02"
       ],
       "watchDate": "2022-03-02",
-      "rating": 5,
-      "note": "个人觉得更多是关于女性话题，电影里，姐姐和妹妹的对比让我印象深刻"
+      "rating": 10,
+      "note": "个人觉得更多是关于女性话题，电影里，姐姐和妹妹的对比让我印象深刻",
+      "inCinema": false
     },
     {
       "id": 25296,
@@ -703,8 +759,9 @@
         "2022-02-26"
       ],
       "watchDate": "2022-02-26",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1255,
@@ -715,8 +772,9 @@
         "2022-02-26"
       ],
       "watchDate": "2022-02-26",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 695932,
@@ -727,8 +785,9 @@
         "2022-02-26"
       ],
       "watchDate": "2022-02-26",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 396535,
@@ -739,8 +798,9 @@
         "2022-02-26"
       ],
       "watchDate": "2022-02-26",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 5876,
@@ -751,8 +811,9 @@
         "2022-02-23"
       ],
       "watchDate": "2022-02-23",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 139329,
@@ -763,8 +824,9 @@
         "2022-02-10"
       ],
       "watchDate": "2022-02-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 923192,
@@ -775,8 +837,9 @@
         "2022-02-10"
       ],
       "watchDate": "2022-02-10",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 827689,
@@ -787,8 +850,9 @@
         "2022-02-06"
       ],
       "watchDate": "2022-02-06",
-      "rating": 2,
-      "note": null
+      "rating": 4,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 32582,
@@ -799,8 +863,9 @@
         "2021-12-25"
       ],
       "watchDate": "2021-12-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 59421,
@@ -811,8 +876,9 @@
         "2021-12-03"
       ],
       "watchDate": "2021-12-03",
-      "rating": 4,
-      "note": "。。别轻易看"
+      "rating": 8,
+      "note": "。。别轻易看",
+      "inCinema": false
     },
     {
       "id": 37247,
@@ -823,8 +889,9 @@
         "2021-11-22"
       ],
       "watchDate": "2021-11-22",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 398173,
@@ -835,8 +902,9 @@
         "2021-11-18"
       ],
       "watchDate": "2021-11-18",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 438631,
@@ -847,8 +915,9 @@
         "2021-11-16"
       ],
       "watchDate": "2021-11-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 329865,
@@ -859,8 +928,9 @@
         "2021-11-16"
       ],
       "watchDate": "2021-11-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 550988,
@@ -871,8 +941,9 @@
         "2021-11-11"
       ],
       "watchDate": "2021-11-11",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 51739,
@@ -883,8 +954,9 @@
         "2021-11-10"
       ],
       "watchDate": "2021-11-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10515,
@@ -895,8 +967,9 @@
         "2021-11-10"
       ],
       "watchDate": "2021-11-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 11621,
@@ -907,8 +980,9 @@
         "2021-11-10"
       ],
       "watchDate": "2021-11-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 508943,
@@ -919,8 +993,9 @@
         "2021-08-21"
       ],
       "watchDate": "2021-08-21",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 51520,
@@ -931,8 +1006,9 @@
         "2021-08-06"
       ],
       "watchDate": "2021-08-06",
-      "rating": 5,
-      "note": "唉"
+      "rating": 10,
+      "note": "唉",
+      "inCinema": false
     },
     {
       "id": 10404,
@@ -943,8 +1019,9 @@
         "2021-07-31"
       ],
       "watchDate": "2021-07-31",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 29363,
@@ -955,8 +1032,9 @@
         "2021-07-31"
       ],
       "watchDate": "2021-07-31",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 478804,
@@ -967,8 +1045,9 @@
         "2021-07-31"
       ],
       "watchDate": "2021-07-31",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 36113,
@@ -979,8 +1058,9 @@
         "2021-06-14"
       ],
       "watchDate": "2021-06-14",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 335462,
@@ -991,8 +1071,9 @@
         "2021-06-08"
       ],
       "watchDate": "2021-06-08",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 82690,
@@ -1003,8 +1084,9 @@
         "2021-06-02"
       ],
       "watchDate": "2021-06-02",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 600354,
@@ -1015,8 +1097,9 @@
         "2021-05-07"
       ],
       "watchDate": "2021-05-07",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 475149,
@@ -1027,8 +1110,9 @@
         "2021-05-07"
       ],
       "watchDate": "2021-05-07",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 639557,
@@ -1039,8 +1123,9 @@
         "2021-05-07"
       ],
       "watchDate": "2021-05-07",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 4550,
@@ -1051,8 +1136,9 @@
         "2021-05-04"
       ],
       "watchDate": "2021-05-04",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 23128,
@@ -1063,8 +1149,9 @@
         "2021-05-04"
       ],
       "watchDate": "2021-05-04",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 50270,
@@ -1075,8 +1162,9 @@
         "2021-03-13"
       ],
       "watchDate": "2021-03-13",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 128,
@@ -1087,8 +1175,9 @@
         "2021-03-12"
       ],
       "watchDate": "2021-03-12",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 635389,
@@ -1099,8 +1188,9 @@
         "2021-03-09"
       ],
       "watchDate": "2021-03-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 734778,
@@ -1111,8 +1201,9 @@
         "2021-03-09"
       ],
       "watchDate": "2021-03-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 529203,
@@ -1123,8 +1214,9 @@
         "2021-03-09"
       ],
       "watchDate": "2021-03-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 12405,
@@ -1135,8 +1227,9 @@
         "2021-03-09"
       ],
       "watchDate": "2021-03-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 716815,
@@ -1147,8 +1240,9 @@
         "2021-03-09"
       ],
       "watchDate": "2021-03-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 635302,
@@ -1159,8 +1253,9 @@
         "2021-03-09"
       ],
       "watchDate": "2021-03-09",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 568160,
@@ -1171,8 +1266,9 @@
         "2021-03-06"
       ],
       "watchDate": "2021-03-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 354912,
@@ -1183,8 +1279,9 @@
         "2021-03-06"
       ],
       "watchDate": "2021-03-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 42006,
@@ -1195,8 +1292,9 @@
         "2021-03-06"
       ],
       "watchDate": "2021-03-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 736516,
@@ -1207,8 +1305,9 @@
         "2021-03-02"
       ],
       "watchDate": "2021-03-02",
-      "rating": 5,
-      "note": "必看，好吧"
+      "rating": 10,
+      "note": "必看，好吧",
+      "inCinema": false
     },
     {
       "id": 758891,
@@ -1219,8 +1318,9 @@
         "2021-02-22"
       ],
       "watchDate": "2021-02-22",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 505513,
@@ -1231,8 +1331,9 @@
         "2021-02-17"
       ],
       "watchDate": "2021-02-17",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 421742,
@@ -1243,8 +1344,9 @@
         "2021-01-16"
       ],
       "watchDate": "2021-01-16",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 150540,
@@ -1255,8 +1357,9 @@
         "2021-01-06"
       ],
       "watchDate": "2021-01-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 508442,
@@ -1267,8 +1370,9 @@
         "2021-01-06"
       ],
       "watchDate": "2021-01-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 185,
@@ -1279,8 +1383,9 @@
         "2020-11-10"
       ],
       "watchDate": "2020-11-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 694,
@@ -1291,8 +1396,9 @@
         "2020-11-10"
       ],
       "watchDate": "2020-11-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 9261,
@@ -1303,8 +1409,9 @@
         "2020-11-05"
       ],
       "watchDate": "2020-11-05",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 254302,
@@ -1315,8 +1422,9 @@
         "2020-10-31"
       ],
       "watchDate": "2020-10-31",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 157841,
@@ -1327,8 +1435,9 @@
         "2020-10-26"
       ],
       "watchDate": "2020-10-26",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 18785,
@@ -1339,8 +1448,9 @@
         "2020-10-20"
       ],
       "watchDate": "2020-10-20",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 146,
@@ -1351,8 +1461,9 @@
         "2020-10-18"
       ],
       "watchDate": "2020-10-18",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 575219,
@@ -1363,8 +1474,9 @@
         "2020-09-29"
       ],
       "watchDate": "2020-09-29",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 51885,
@@ -1375,8 +1487,9 @@
         "2020-09-13"
       ],
       "watchDate": "2020-09-13",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 503235,
@@ -1387,8 +1500,9 @@
         "2020-09-13"
       ],
       "watchDate": "2020-09-13",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 25838,
@@ -1399,8 +1513,9 @@
         "2020-09-13"
       ],
       "watchDate": "2020-09-13",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10494,
@@ -1411,8 +1526,9 @@
         "2020-09-10"
       ],
       "watchDate": "2020-09-10",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 152584,
@@ -1423,8 +1539,9 @@
         "2020-08-24"
       ],
       "watchDate": "2020-08-24",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 152601,
@@ -1435,8 +1552,9 @@
         "2020-08-18"
       ],
       "watchDate": "2020-08-18",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 21208,
@@ -1447,8 +1565,9 @@
         "2020-08-18"
       ],
       "watchDate": "2020-08-18",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 290098,
@@ -1459,8 +1578,9 @@
         "2020-08-18"
       ],
       "watchDate": "2020-08-18",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 670,
@@ -1471,8 +1591,9 @@
         "2020-08-11"
       ],
       "watchDate": "2020-08-11",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 2517,
@@ -1483,8 +1604,9 @@
         "2020-08-06"
       ],
       "watchDate": "2020-08-06",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 220289,
@@ -1495,8 +1617,9 @@
         "2020-08-05"
       ],
       "watchDate": "2020-08-05",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 152532,
@@ -1507,8 +1630,9 @@
         "2020-08-05"
       ],
       "watchDate": "2020-08-05",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 292362,
@@ -1519,8 +1643,9 @@
         "2020-08-03"
       ],
       "watchDate": "2020-08-03",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 8358,
@@ -1531,8 +1656,9 @@
         "2020-07-27"
       ],
       "watchDate": "2020-07-27",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 586048,
@@ -1543,8 +1669,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 807,
@@ -1555,8 +1682,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 20453,
@@ -1567,8 +1695,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 512350,
@@ -1579,8 +1708,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 546554,
@@ -1591,8 +1721,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 9470,
@@ -1603,8 +1734,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1865,
@@ -1615,8 +1747,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 129,
@@ -1627,8 +1760,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 4935,
@@ -1640,7 +1774,8 @@
       ],
       "watchDate": "2020-07-25",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 37703,
@@ -1651,8 +1786,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 21835,
@@ -1663,8 +1799,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 475557,
@@ -1675,8 +1812,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 575813,
@@ -1687,8 +1825,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 4,
-      "note": null
+      "rating": 8,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 585,
@@ -1699,8 +1838,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 857,
@@ -1711,8 +1851,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 550,
@@ -1723,8 +1864,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 122906,
@@ -1735,8 +1877,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 157336,
@@ -1747,8 +1890,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10681,
@@ -1759,8 +1903,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 11423,
@@ -1771,8 +1916,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 37165,
@@ -1783,8 +1929,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 207,
@@ -1795,8 +1942,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 274,
@@ -1807,8 +1955,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 597,
@@ -1819,8 +1968,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 661950,
@@ -1831,8 +1981,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 210577,
@@ -1843,8 +1994,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 81481,
@@ -1855,8 +2007,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 8587,
@@ -1867,8 +2020,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 640,
@@ -1879,8 +2033,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10193,
@@ -1891,8 +2046,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 176,
@@ -1903,8 +2059,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 20352,
@@ -1915,8 +2072,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 559969,
@@ -1927,8 +2085,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 490132,
@@ -1939,8 +2098,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 278,
@@ -1951,8 +2111,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 2832,
@@ -1963,8 +2124,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 155,
@@ -1975,8 +2137,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1954,
@@ -1987,8 +2150,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 31512,
@@ -1999,8 +2163,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 51533,
@@ -2011,8 +2176,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 652783,
@@ -2023,8 +2189,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 3,
-      "note": null
+      "rating": 6,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 242452,
@@ -2035,8 +2202,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 101,
@@ -2047,8 +2215,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 19995,
@@ -2059,8 +2228,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 13,
@@ -2071,8 +2241,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10997,
@@ -2083,8 +2254,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 14160,
@@ -2095,8 +2267,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10451,
@@ -2107,8 +2280,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 603,
@@ -2119,8 +2293,9 @@
         "2020-07-25"
       ],
       "watchDate": "2020-07-25",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 535170,
@@ -2132,7 +2307,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 415636,
@@ -2144,7 +2320,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 372058,
@@ -2156,7 +2333,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 351286,
@@ -2168,7 +2346,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 166426,
@@ -2180,7 +2359,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 508747,
@@ -2192,7 +2372,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 615453,
@@ -2203,8 +2384,9 @@
         "2020-01-14"
       ],
       "watchDate": "2020-01-14",
-      "rating": 5,
-      "note": null
+      "rating": 10,
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 493899,
@@ -2216,7 +2398,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 24428,
@@ -2228,7 +2411,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 99861,
@@ -2240,7 +2424,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 299536,
@@ -2252,7 +2437,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 299534,
@@ -2264,7 +2450,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 333339,
@@ -2276,7 +2463,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 284052,
@@ -2288,7 +2476,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 522681,
@@ -2300,7 +2489,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 345940,
@@ -2312,7 +2502,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 463319,
@@ -2324,7 +2515,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 494858,
@@ -2336,7 +2528,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 532753,
@@ -2348,7 +2541,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 612845,
@@ -2360,7 +2554,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 452557,
@@ -2372,7 +2567,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1724,
@@ -2384,7 +2580,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 289930,
@@ -2396,7 +2593,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 335983,
@@ -2408,7 +2606,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 535167,
@@ -2420,7 +2619,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 300668,
@@ -2432,7 +2632,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 506763,
@@ -2444,7 +2645,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 284593,
@@ -2456,7 +2658,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 281338,
@@ -2468,7 +2671,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 573699,
@@ -2480,7 +2684,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 411088,
@@ -2492,7 +2697,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1771,
@@ -2504,7 +2710,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 100402,
@@ -2516,7 +2723,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 271110,
@@ -2528,7 +2736,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 457251,
@@ -2540,7 +2749,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 1726,
@@ -2552,7 +2762,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10138,
@@ -2564,7 +2775,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 68721,
@@ -2576,7 +2788,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 399579,
@@ -2588,7 +2801,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 10195,
@@ -2600,7 +2814,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 76338,
@@ -2612,7 +2827,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 284053,
@@ -2624,7 +2840,8 @@
       ],
       "watchDate": "2020-01-14",
       "rating": null,
-      "note": null
+      "note": null,
+      "inCinema": false
     }
   ],
   "wishlist": []

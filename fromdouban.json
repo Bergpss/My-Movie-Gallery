@@ -11,6 +11,28 @@
     "media_type": "movie"
   },
   {
+    "title": "JOJO的奇妙冒险 星尘斗士 埃及篇",
+    "watch_date": "2023-01-29",
+    "year": "",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "douban_url": "https://movie.douban.com/subject/25984031/",
+    "note": null,
+    "my_rating": null,
+    "media_type": "movie"
+  },
+  {
+    "title": "JOJO的奇妙冒险",
+    "watch_date": "2023-01-29",
+    "year": "",
+    "imdb_id": "tt2359704",
+    "tmdb_id": 45790,
+    "douban_url": "https://movie.douban.com/subject/11498785/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
+  },
+  {
     "title": "金枝玉叶2",
     "watch_date": "2023-07-07",
     "year": "",
@@ -20,6 +42,17 @@
     "note": null,
     "my_rating": "4",
     "media_type": "movie"
+  },
+  {
+    "title": "JOJO的奇妙冒险 星尘斗士",
+    "watch_date": "2023-01-29",
+    "year": "",
+    "imdb_id": "tt2359704",
+    "tmdb_id": 45790,
+    "douban_url": "https://movie.douban.com/subject/23774708/",
+    "note": null,
+    "my_rating": null,
+    "media_type": "tv"
   },
   {
     "title": "罗曼蒂克消亡史",
@@ -286,6 +319,17 @@
     "media_type": "movie"
   },
   {
+    "title": "金枝玉叶",
+    "watch_date": "2022-04-07",
+    "year": "",
+    "imdb_id": "tt29443342",
+    "tmdb_id": 221934,
+    "douban_url": "https://movie.douban.com/subject/1303376/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
+  },
+  {
     "title": "投名状",
     "watch_date": "2022-04-27",
     "year": "",
@@ -550,6 +594,28 @@
     "media_type": "movie"
   },
   {
+    "title": "俗女养成记",
+    "watch_date": "2021-11-18",
+    "year": "",
+    "imdb_id": "tt10752444",
+    "tmdb_id": 92925,
+    "douban_url": "https://movie.douban.com/subject/34785763/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
+  },
+  {
+    "title": "俗女养成记2",
+    "watch_date": "2021-12-01",
+    "year": "",
+    "imdb_id": "tt10752444",
+    "tmdb_id": 92925,
+    "douban_url": "https://movie.douban.com/subject/35215517/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
+  },
+  {
     "title": "此房是我造",
     "watch_date": "2021-11-18",
     "year": "",
@@ -704,6 +770,17 @@
     "media_type": "movie"
   },
   {
+    "title": "爱，死亡和机器人 第二季",
+    "watch_date": "2021-07-31",
+    "year": "",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "douban_url": "https://movie.douban.com/subject/34418203/",
+    "note": null,
+    "my_rating": null,
+    "media_type": "movie"
+  },
+  {
     "title": "困在时间里的父亲",
     "watch_date": "2021-05-07",
     "year": "",
@@ -803,6 +880,17 @@
     "media_type": "movie"
   },
   {
+    "title": "鬼灭之刃",
+    "watch_date": "2021-03-09",
+    "year": "",
+    "imdb_id": "tt9335498",
+    "tmdb_id": 85937,
+    "douban_url": "https://movie.douban.com/subject/30210221/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
+  },
+  {
     "title": "贫民窟的百万富翁",
     "watch_date": "2021-03-09",
     "year": "",
@@ -889,6 +977,17 @@
     "note": null,
     "my_rating": "5",
     "media_type": "movie"
+  },
+  {
+    "title": "唐人街探案",
+    "watch_date": "2021-02-17",
+    "year": "",
+    "imdb_id": "tt11502628",
+    "tmdb_id": 97317,
+    "douban_url": "https://movie.douban.com/subject/26311973/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
   },
   {
     "title": "鬼灭之刃 剧场版 无限列车篇",
@@ -1067,6 +1166,17 @@
     "media_type": "movie"
   },
   {
+    "title": "隐秘的角落",
+    "watch_date": "2020-08-08",
+    "year": "",
+    "imdb_id": "tt12477942",
+    "tmdb_id": 104960,
+    "douban_url": "https://movie.douban.com/subject/33404425/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "tv"
+  },
+  {
     "title": "她",
     "watch_date": "2020-08-18",
     "year": "",
@@ -1150,6 +1260,28 @@
     "imdb_id": "tt4078856",
     "tmdb_id": 292362,
     "douban_url": "https://movie.douban.com/subject/25917973/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "movie"
+  },
+  {
+    "title": "去他*的世界 第二季",
+    "watch_date": "2020-08-03",
+    "year": "",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "douban_url": "https://movie.douban.com/subject/27625457/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "movie"
+  },
+  {
+    "title": "去他*的世界 第一季",
+    "watch_date": "2020-08-03",
+    "year": "",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "douban_url": "https://movie.douban.com/subject/27031389/",
     "note": null,
     "my_rating": "5",
     "media_type": "movie"
@@ -1414,6 +1546,17 @@
     "imdb_id": "tt0114369",
     "tmdb_id": 807,
     "douban_url": "https://movie.douban.com/subject/1292223/",
+    "note": null,
+    "my_rating": "5",
+    "media_type": "movie"
+  },
+  {
+    "title": "性爱自修室 第一季",
+    "watch_date": "2020-07-25",
+    "year": "",
+    "imdb_id": null,
+    "tmdb_id": null,
+    "douban_url": "https://movie.douban.com/subject/27594217/",
     "note": null,
     "my_rating": "5",
     "media_type": "movie"
