@@ -41,6 +41,12 @@
      node scripts/promote_movie.js
      ```
      选择条目并输入观影日期/评分即可自动移入 `watched` 列表并追加日期。
+   - 如果只想把豆瓣 CSV 转成 JSON 并补全 IMDb，可运行：
+     ```bash
+     TMDB_API_KEY="<你的 API Key>" \
+     node scripts/export_douban_json.js "data/豆伴(180354423).csv" --limit=10
+     ```
+     脚本会在 `fromdouban.json` 输出包含 `title`、`watch_date`、`imdb_id`、`douban_url`、`note` 等字段的数组，可在导入前检查或做进一步处理。
    - 批量导入（例如来自豆瓣）的观影记录，可运行：
      ```bash
      TMDB_API_KEY="<你的 API Key>" \
