@@ -132,12 +132,13 @@ function renderMovies(movies) {
                     ? movie.tmdb.vote_average
                     : null;
             const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
+            const cinemaBadge = movie.inCinema ? '<span class="cinema-badge" title="影院观影">🎦</span>' : '';
             const releaseDate = formatDate(getReleaseDate(movie));
             const formattedWatchDates = (Array.isArray(movie.watchDates)
                 ? movie.watchDates
                 : movie.watchDate
                     ? [movie.watchDate]
-                    : [])
+                : [])
                 .map(date => formatDate(date))
                 .filter(Boolean);
             const [primaryWatchDate, ...extraWatchDates] = formattedWatchDates;
@@ -150,7 +151,10 @@ function renderMovies(movies) {
                 <div class="movie-item">
                     <div class="poster-wrapper">
                         <img src="${imagePath}" alt="${title}" loading="lazy">
-                        ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
+                        <div class="badge-row">
+                            ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
+                            ${cinemaBadge}
+                        </div>
                     </div>
                     <p>${title}</p>
                     ${releaseDate ? `<p class="release-date">上映：${releaseDate}</p>` : ''}

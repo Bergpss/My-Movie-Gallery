@@ -51,7 +51,7 @@ function normaliseDate(value) {
 }
 
 function dedupeDates(existing = [], incoming = []) {
-    return Array.from(new Set([...existing, ...incoming].filter(Boolean))).sort((a, b) => b.localeCompare(a));
+    return Array.from(new Set([...existing, ...incoming].filter(Boolean))).sort((a, b) => a.localeCompare(b));
 }
 
 function displayWatching(list) {
@@ -77,19 +77,24 @@ function removeById(list, id) {
     return list.filter(item => String(item.id) !== String(id));
 }
 
-function primaryWatchDate(entry) {
-    if (!entry) return null;
-    if (entry.watchDate) return entry.watchDate;
-    if (Array.isArray(entry.watchDates) && entry.watchDates.length) {
+function earliestWatchDate(entry) {
+    if (Array.isArray(entry?.watchDates) && entry.watchDates.length) {
         return entry.watchDates[0];
     }
-    return null;
+    return entry?.watchDate ?? null;
+}
+
+function latestWatchDate(entry) {
+    if (Array.isArray(entry?.watchDates) && entry.watchDates.length) {
+        return entry.watchDates[entry.watchDates.length - 1];
+    }
+    return entry?.watchDate ?? null;
 }
 
 function sortByWatchDateDesc(list) {
     return [...list].sort((a, b) => {
-        const dateA = primaryWatchDate(a);
-        const dateB = primaryWatchDate(b);
+        const dateA = latestWatchDate(a);
+        const dateB = latestWatchDate(b);
         if (dateA && dateB) {
             if (dateA > dateB) return -1;
             if (dateA < dateB) return 1;

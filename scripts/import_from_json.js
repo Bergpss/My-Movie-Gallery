@@ -53,19 +53,35 @@ function parseRating(raw) {
     return numeric;
 }
 
-function primaryWatchDate(entry) {
-    if (!entry) return null;
-    if (entry.watchDate) return entry.watchDate;
-    if (Array.isArray(entry.watchDates) && entry.watchDates.length) {
+function normaliseBoolean(value) {
+    if (typeof value === 'boolean') return value;
+    if (typeof value === 'number') return value !== 0;
+    if (typeof value === 'string') {
+        const normalised = value.trim().toLowerCase();
+        if (!normalised) return false;
+        return ['1', 'true', 'yes', 'y', '是'].includes(normalised);
+    }
+    return false;
+}
+
+function earliestWatchDate(entry) {
+    if (Array.isArray(entry?.watchDates) && entry.watchDates.length) {
         return entry.watchDates[0];
     }
-    return null;
+    return entry?.watchDate ?? null;
+}
+
+function latestWatchDate(entry) {
+    if (Array.isArray(entry?.watchDates) && entry.watchDates.length) {
+        return entry.watchDates[entry.watchDates.length - 1];
+    }
+    return entry?.watchDate ?? null;
 }
 
 function sortByWatchDateDesc(list) {
     return [...list].sort((a, b) => {
-        const dateA = primaryWatchDate(a);
-        const dateB = primaryWatchDate(b);
+        const dateA = latestWatchDate(a);
+        const dateB = latestWatchDate(b);
         if (dateA && dateB) {
             if (dateA > dateB) return -1;
             if (dateA < dateB) return 1;
@@ -101,7 +117,7 @@ function extractWatchDates(entry) {
 }
 
 function mergeDates(existing = [], incoming = []) {
-    return Array.from(new Set([...existing, ...incoming].filter(Boolean))).sort((a, b) => b.localeCompare(a));
+    return Array.from(new Set([...existing, ...incoming].filter(Boolean))).sort((a, b) => a.localeCompare(b));
 }
 
 function removeById(list, id) {
@@ -147,8 +163,13 @@ async function main() {
 
         const mediaType = 'movie';
         const watchDate = normaliseDate(item?.watch_date);
+        const additionalDates = Array.isArray(item?.watchDates)
+            ? item.watchDates.map(normaliseDate).filter(Boolean)
+            : [];
+        const combinedDates = mergeDates(additionalDates, watchDate ? [watchDate] : []);
         const rating = parseRating(item?.my_rating);
         const note = item?.note?.trim() || null;
+        const inCinema = normaliseBoolean(item?.inCinema ?? item?.in_cinema);
 
         watching = removeById(watching, tmdbId);
         wishlist = removeById(wishlist, tmdbId);
@@ -156,7 +177,7 @@ async function main() {
         const existingIndex = watched.findIndex(entry => String(entry.id) === String(tmdbId));
         if (existingIndex !== -1) {
             const existing = watched[existingIndex];
-            const mergedDates = mergeDates(extractWatchDates(existing), watchDate ? [watchDate] : []);
+            const mergedDates = mergeDates(extractWatchDates(existing), combinedDates);
             watched[existingIndex] = {
                 ...existing,
                 title: title || existing.title,
@@ -166,9 +187,12 @@ async function main() {
                 watchDate: mergedDates[0] || null,
                 rating: typeof rating === 'number' ? rating : existing.rating,
                 note: note || existing.note || null,
+                inCinema: typeof item?.inCinema !== 'undefined'
+                    ? inCinema
+                    : (existing.inCinema ?? false),
             };
         } else {
-            const watchDates = watchDate ? [watchDate] : [];
+            const watchDates = combinedDates;
             watched.unshift({
                 id: tmdbId,
                 title,
@@ -178,6 +202,7 @@ async function main() {
                 watchDate: watchDates[0] || null,
                 rating: typeof rating === 'number' ? rating : null,
                 note,
+                inCinema,
             });
         }
 
