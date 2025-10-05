@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2025-10-05T13:47:00.344Z",
+  "generatedAt": "2025-10-05T14:06:53.077Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 222
+    "total": 233
   },
   "items": [
     {
@@ -42,6 +42,459 @@
         "directors": [
           "迈克·弗拉纳根"
         ]
+      }
+    },
+    {
+      "id": 574475,
+      "title": "死神来了6",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-08-28"
+      ],
+      "watchDate": "2025-08-28",
+      "rating": 7,
+      "note": "和霖霖一起看的~",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Final Destination Bloodlines",
+        "original_language": "en",
+        "title": "死神来了：血脉诅咒",
+        "overview": "　大学生斯蒂芬妮（凯特琳·桑塔·胡安娜 Kaitlyn Santa Juana 饰）长期被噩梦困扰，她决定返回家乡寻找噩梦起源，却意外发现曾发生在外婆艾莉丝身上的离奇旧事，并牵连出流淌在整个家族血脉中的秘密：死神诅咒。当她试图破解诅咒密码，却发现死神的镰刀早已垂下…… 随着身边亲人一个个离奇惨死，斯蒂芬妮还能带领幸存者逃脱死神的宿命猎杀吗？",
+        "poster_path": "/d9GpZ1hYLRoFLZxEXVZJ89t6CUS.jpg",
+        "backdrop_path": "/uIpJPDNFoeX0TVml9smPrs9KUVx.jpg",
+        "release_date": "2025-05-14",
+        "runtime": 109,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 7.1,
+        "vote_count": 2206,
+        "popularity": 50.6865,
+        "homepage": "",
+        "directors": [
+          "扎克·利波夫斯基",
+          "亚当 B·斯坦因"
+        ]
+      }
+    },
+    {
+      "id": 39111,
+      "title": "死神的十字路口",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-09-12"
+      ],
+      "watchDate": "2025-09-12",
+      "rating": 8,
+      "note": "故事很有意思",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "สี่แพร่ง",
+        "original_language": "th",
+        "title": "死神的十字路口",
+        "overview": "影片由四个小故事组成。\r 　　因为车祸而行动不便的女孩通过短信与一素未谋面的男孩交往甚密，她将自拍发给男孩，并向男孩索要照片，手机嗡嗡的震动着，男孩发给她的照片上，女孩看到的究竟是什么？男孩生来性格内向懦弱，这成为了同学欺负他的最佳理由。一开始只是玩笑般的打闹，但逐渐的，欺负步步升级。男孩忍无可忍，决定冒着极大的危险，通过降头术将欺负他的人一一杀死。一群朋友外出露营，夜里，无聊的他们以讲恐怖故事为消遣，却自己被自己吓到，抢着要睡中间最有安全感的位置。第二天，睡在中间的男孩意外溺水身亡，按照恐怖故事所说的，今晚，已经死去的他会从地狱归来。飞机上搭载着王妃的遗体，这次航班的任务就是护送遗体回国火化。空姐心里惴惴不安，没想到恐怖的事情真的发生了，遗体离奇消失，在机舱封闭的空间里，在本该空无一人的厕所中，传来了令人毛骨悚然的声音。",
+        "poster_path": "/cbaGHfS0gOJmqNkX208KIKQBzvH.jpg",
+        "backdrop_path": "/9syZBfM2JW6sV95OittooG2WWoy.jpg",
+        "release_date": "2008-04-25",
+        "runtime": 120,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 6.217,
+        "vote_count": 99,
+        "popularity": 4.1794,
+        "homepage": "",
+        "directors": [
+          "ยงยุทธ ทองกองทุน",
+          "柏德潘·王般",
+          "班庄·比辛达拿刚",
+          "ปวีณ ภูริจิตปัญญา"
+        ]
+      }
+    },
+    {
+      "id": 11324,
+      "title": "禁闭岛",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-07-20"
+      ],
+      "watchDate": "2025-07-20",
+      "rating": 9,
+      "note": "和霖霖一起看的",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Shutter Island",
+        "original_language": "en",
+        "title": "禁闭岛",
+        "overview": "故事发生于波士顿海湾的一座与世隔绝的小岛上，66名精神病罪犯被关押于此，传言岛上正在进行种种人体实验。重重戒备之下，一个杀害了三个亲生孩子的女犯雷切尔，竟诡异失踪。联邦执法官泰德·丹尼尔和搭档查克奉命上岛调查此事。而泰德此行前来还有一个隐秘的目的——寻找让妻子 葬身火海的凶手。故事遵循这条线索展开，寻找失踪之谜、访问医院工作人员与病人、地毯式搜查……泰德查遍全岛，意外发现岛上多出一份神秘档案：第67号病人的 ！岛上所有秘密无不纠结于这个多出来的人。但究竟谁是67号？",
+        "poster_path": "/lVmoFqvQrFQJWWJt3TkHiE3Cr0n.jpg",
+        "backdrop_path": "/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
+        "release_date": "2010-02-14",
+        "runtime": 138,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8.201,
+        "vote_count": 24925,
+        "popularity": 13.4156,
+        "homepage": "",
+        "directors": [
+          "马丁·斯科塞斯"
+        ]
+      }
+    },
+    {
+      "id": 67070,
+      "title": "伦敦生活",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2025-07-22"
+      ],
+      "watchDate": "2025-07-22",
+      "rating": 10,
+      "note": "神父~",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Fleabag",
+        "original_language": "en",
+        "title": "伦敦生活",
+        "overview": "本剧主人公是一个绰号为“Fleabag”的单身女子（菲比·沃勒-布里奇 Phoebe Waller-Bridge 饰），故事围绕着Fleabag的伦敦生活展开。她原本和最好的朋友Boo合伙在伦敦经营着一家咖啡厅，然而她的生活因好朋友的意外去世而发生变化。Fleabag的伦敦生活非常不如人意：和姐姐Claire（茜安·克利福德 Sian Clifford 饰）的关系疏远；爸爸选择和继母生活而忽视女儿；男朋友又一次提出分手；最让她难受的是，现在的生活看似早已恢复正常，但是昔日好朋友的身影时常闪现。往日和如今的场景相互交叠，暗涌的情绪找不到适当的宣泄口，Fleabag伦敦生活的走向会是如何……",
+        "poster_path": "/nWsI7cPDqLQKw0kErgLCZDpEeEh.jpg",
+        "backdrop_path": "/52FrqXobnTvkt5otdkcWcToIReH.jpg",
+        "release_date": "2016-07-21",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 8.268,
+        "vote_count": 1647,
+        "popularity": 7.8379,
+        "homepage": "https://www.bbc.co.uk/programmes/p070npjv",
+        "directors": []
+      }
+    },
+    {
+      "id": 4291,
+      "title": "菊次郎的夏天",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-09-05"
+      ],
+      "watchDate": "2025-09-05",
+      "rating": 10,
+      "note": "很喜欢",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "菊次郎の夏",
+        "original_language": "ja",
+        "title": "菊次郎的夏天",
+        "overview": "小学三年级的正男自幼丧父，和婆婆两人生活在一起。 对他来说，暑假既无聊又寂寞。 于是，正男背上行囊出发去寻找住在另一个城市的母亲。 邻居的阿姨发现后，叫丈夫菊次郎与之同行。 生性游手好闲的菊次郎带着正男，一老一小踏上了一次心灵的旅行。\r 《菊次郎的夏天》由日本北野武工作室制作，灵感是从导演北野武父亲的生活故事中提取而来的。相比于过去北野武的作品，影片的主题不再是暴力与血腥，而是将视角投注在人与人的关系上，风格轻松而温馨。影片曾获得第52届戛纳电影节主竞赛单元金棕榈奖提名的殊荣。",
+        "poster_path": "/xw5ztHLA2JzONGJzJGd27R6oENX.jpg",
+        "backdrop_path": "/rn7i9XrcKtOU6RGhYPukaZTkGNN.jpg",
+        "release_date": "1999-06-05",
+        "runtime": 121,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.515,
+        "vote_count": 562,
+        "popularity": 4.8925,
+        "homepage": "",
+        "directors": [
+          "北野武"
+        ]
+      }
+    },
+    {
+      "id": 435,
+      "title": "后天",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-08-26"
+      ],
+      "watchDate": "2025-08-26",
+      "rating": 7,
+      "note": "2025年8月从家返回的路上看的",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Day After Tomorrow",
+        "original_language": "en",
+        "title": "后天",
+        "overview": "美国气候学家杰克（丹尼斯•奎德 Dennis Quaid 饰）认为，温室效应正在引发地球的大灾难，北极冰川的融化，会让地球回到冰河世纪那样的劫难。他的提醒并没有引起美国当局的重视，一切都已经太晚：飓风、冰雹、洪水、冰山融化、极度严寒，一系列的地球巨变引发了一场不可挽救的灾难。美国政府组织北纬30度的民众转移到赤道周围，场面一片混乱。更糟糕的是，杰克的儿子，正困在曼哈顿的图书馆里，靠烧书生火来维持体温。大家怎样才能逃过这场灭顶的灾祸？冰天雪地的地球何时才能回暖？",
+        "poster_path": "/7ofpLvibdY6YwtpRGGQGsWOn5IG.jpg",
+        "backdrop_path": "/smqQ71MIn1DSdSiQzCzCOV6rgRq.jpg",
+        "release_date": "2004-05-26",
+        "runtime": 123,
+        "genres": [
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          }
+        ],
+        "vote_average": 6.545,
+        "vote_count": 8495,
+        "popularity": 6.9887,
+        "homepage": "",
+        "directors": [
+          "罗兰·艾默里奇"
+        ]
+      }
+    },
+    {
+      "id": 9769,
+      "title": "一枝梨花压海棠",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-08-26"
+      ],
+      "watchDate": "2025-08-26",
+      "rating": 9,
+      "note": "2025年8月从家返回的路上看的",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Lolita",
+        "original_language": "en",
+        "title": "一树梨花压海棠",
+        "overview": "大学教授亨伯特（杰里米•艾恩斯 饰）年幼时经历了失去初恋女友之痛后，自此他对未成年少女有特殊的感情。一次他到了美国去，成为了寡妇夏洛特（梅勒尼•格利菲恩 饰）的房客，当他看到夏洛特年仅14岁的女儿洛丽塔（多米尼克•斯温 饰）时，他疯狂爱上了这个美丽的少女。事实上，夏洛特希望可以跟亨伯特结婚，让自己与女儿都能有个依靠。同时为了能让自己能够留在洛丽塔身边，亨伯特还是跟夏洛特结婚了。不久，夏洛特知道了丈夫对自己女儿的迷恋，愤怒出走时遇车祸身亡了...",
+        "poster_path": "/gZZwscJdfJISRAiu9pMbE3WvGA4.jpg",
+        "backdrop_path": "/bWftGh0aLMzb8wetgziLq3fHpTJ.jpg",
+        "release_date": "1997-09-27",
+        "runtime": 137,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10749,
+            "name": "爱情"
+          }
+        ],
+        "vote_average": 7.132,
+        "vote_count": 1881,
+        "popularity": 10.3689,
+        "homepage": "",
+        "directors": [
+          "Adrian Lyne"
+        ]
+      }
+    },
+    {
+      "id": 86831,
+      "title": "爱,死亡与机器人",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2021-07-31"
+      ],
+      "watchDate": "2021-07-31",
+      "rating": 9,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Love, Death & Robots",
+        "original_language": "en",
+        "title": "Love, Death & Robots",
+        "overview": "融合恐怖、想象力和美，从揭示古老的邪恶力量到喜剧般的末日，剧集以标志性的巧思和创造性的视觉效果，为观众带来令人震惊的奇幻、恐怖和科幻短篇故事。",
+        "poster_path": "/1Ih4qcyMHvjuVtc7MqwiZtEtZjB.jpg",
+        "backdrop_path": "/nBrkOZyI75artyizuBFeya48KbO.jpg",
+        "release_date": "2019-03-15",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "vote_average": 8.229,
+        "vote_count": 3694,
+        "popularity": 21.187,
+        "homepage": "https://www.netflix.com/title/80174608",
+        "directors": []
+      }
+    },
+    {
+      "id": 45790,
+      "title": "JOJO的奇妙冒",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2023-01-29"
+      ],
+      "watchDate": "2023-01-29",
+      "rating": 8,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "ジョジョの奇妙な冒険",
+        "original_language": "ja",
+        "title": "JOJO的奇妙冒险",
+        "overview": "乔斯达家族的数代人都有一个相同的绰号“JOJO”，他们在不同的时代与各种拥有超自然力量的反派战斗不休。",
+        "poster_path": "/v3tg5I7DkyXjSVgV0MINbNaeR12.jpg",
+        "backdrop_path": "/mLKN1dsimKPiXCZ48KED0X8a02t.jpg",
+        "release_date": "2012-10-06",
+        "runtime": 24,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "vote_average": 8.554,
+        "vote_count": 1496,
+        "popularity": 27.442,
+        "homepage": "https://jojo-portal.com/anime/",
+        "directors": [
+          "加藤敏幸",
+          "铃木健一"
+        ]
+      }
+    },
+    {
+      "id": 74577,
+      "title": "去他妈的世界",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2020-08-03"
+      ],
+      "watchDate": "2020-08-03",
+      "rating": 9,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The End of the F***ing World",
+        "original_language": "en",
+        "title": "去他*的世界",
+        "overview": "詹姆斯表面看来是一个其貌不扬的17岁男孩，实际上，年纪轻轻的他自诩为变态，并且以此为荣，他不仅毫无恐惧的伤害自己的身体，还以残杀小动物为乐。在学校里，詹姆斯邂逅了名为艾丽莎的女孩，这个抑郁厌世，骨子里又带着叛逆的姑娘吸引了詹姆斯的注意。詹姆斯决定让她成为自己第一个杀掉的人。就这样，詹姆斯开始接近艾丽莎，很快两人就开始了交往。在某一次约会中，詹姆斯决定执行他的杀人计划，哪知道却在误打误撞之中目睹了艾丽莎和继父争吵的场面。艾丽莎痛恨这个小镇，痛恨自己的生活，她邀请詹姆斯和她一起逃离这里，去寻找自己的生父。",
+        "poster_path": "/e18yzAZuMZz5B0mGjdebQq2Qsrn.jpg",
+        "backdrop_path": "/nfWhNM5VVd9a5bEGobs83TWTuLM.jpg",
+        "release_date": "2017-10-24",
+        "runtime": 21,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          }
+        ],
+        "vote_average": 8.049,
+        "vote_count": 3376,
+        "popularity": 6.7752,
+        "homepage": "https://media.netflix.com/ua-ru/only-on-netflix/80175722",
+        "directors": []
+      }
+    },
+    {
+      "id": 81356,
+      "title": "性爱自修室",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2020-07-25"
+      ],
+      "watchDate": "2020-07-25",
+      "rating": 10,
+      "note": "很喜欢的剧",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Sex Education",
+        "original_language": "en",
+        "title": "性爱自修室",
+        "overview": "奥蒂斯固然缺乏性经验，但他的母亲可是一名性治疗师。他决定将母亲的衣钵发扬光大，于是在就读的莫戴尔中学设立性爱治疗咨询服务，造福无可救药的同学。他们水乳交融，其乐无穷，一起渡过人生最灿烂的时光。",
+        "poster_path": "/zvTQePeQPhP6jN7tspQz5HGv0ma.jpg",
+        "backdrop_path": "/u23G9KZregWHs1use6ir1fX27gl.jpg",
+        "release_date": "2019-01-11",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 8.226,
+        "vote_count": 7593,
+        "popularity": 68.375,
+        "homepage": "https://www.netflix.com/title/80197526",
+        "directors": []
       }
     },
     {

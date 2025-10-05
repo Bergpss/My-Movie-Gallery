@@ -10,6 +10,127 @@
   ],
   "watched": [
     {
+      "id": 574475,
+      "title": "死神来了6",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和霖霖一起看的~",
+      "watchDates": [
+        "2025-08-28"
+      ],
+      "rating": 7
+    },
+    {
+      "id": 39111,
+      "title": "死神的十字路口",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "故事很有意思",
+      "watchDates": [
+        "2025-09-12"
+      ],
+      "rating": 8
+    },
+    {
+      "id": 11324,
+      "title": "禁闭岛",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和霖霖一起看的",
+      "watchDates": [
+        "2025-07-20"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 67070,
+      "title": "伦敦生活",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "神父~",
+      "watchDates": [
+        "2025-07-22"
+      ],
+      "rating": 10
+    },
+    {
+      "id": 4291,
+      "title": "菊次郎的夏天",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "很喜欢",
+      "watchDates": [
+        "2025-09-05"
+      ],
+      "rating": 10
+    },
+    {
+      "id": 435,
+      "title": "后天",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "2025年8月从家返回的路上看的",
+      "watchDates": [
+        "2025-08-26"
+      ],
+      "rating": 7
+    },
+    {
+      "id": 9769,
+      "title": "一枝梨花压海棠",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "2025年8月从家返回的路上看的",
+      "watchDates": [
+        "2025-08-26"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 86831,
+      "title": "爱,死亡与机器人",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2021-07-31"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 45790,
+      "title": "JOJO的奇妙冒",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2023-01-29"
+      ],
+      "rating": 8
+    },
+    {
+      "id": 74577,
+      "title": "去他妈的世界",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2020-08-03"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 81356,
+      "title": "性爱自修室",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "很喜欢的剧",
+      "watchDates": [
+        "2020-07-25"
+      ],
+      "rating": 10
+    },
+    {
       "id": 137,
       "title": "土拨鼠之日",
       "mediaType": "movie",
