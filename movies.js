@@ -19,6 +19,13 @@ function getReleaseDate(movie) {
     return movie.tmdb?.release_date || null;
 }
 
+function getWatchDate(movie) {
+    if (Array.isArray(movie.watchDates) && movie.watchDates.length) {
+        return movie.watchDates[0];
+    }
+    return movie.watchDate || null;
+}
+
 function sortMoviesByReleaseDate(movies) {
     return [...movies].sort((a, b) => {
         const dateA = formatDate(getReleaseDate(a));
@@ -40,6 +47,24 @@ function sortMoviesByReleaseDate(movies) {
         if (ratingA < ratingB) return 1;
 
         return String(a.title || a.name || '').localeCompare(String(b.title || b.name || ''));
+    });
+}
+
+function sortMoviesByWatchDate(movies) {
+    return [...movies].sort((a, b) => {
+        const dateA = formatDate(getWatchDate(a));
+        const dateB = formatDate(getWatchDate(b));
+
+        if (dateA && dateB) {
+            if (dateA > dateB) return -1;
+            if (dateA < dateB) return 1;
+        } else if (dateA) {
+            return -1;
+        } else if (dateB) {
+            return 1;
+        }
+
+        return (a.title || '').localeCompare(b.title || '');
     });
 }
 
@@ -78,12 +103,14 @@ function renderMovies(movies) {
 
     const watchedMovies = movies.filter(movie => !watchingMovies.includes(movie));
 
-    const renderList = (container, emptyMessageEl, list) => {
+    const renderList = (container, emptyMessageEl, list, sortMode) => {
         if (!container || !emptyMessageEl) {
             return;
         }
 
-        const sorted = sortMoviesByReleaseDate(list);
+        const sorted = sortMode === 'watch'
+            ? sortMoviesByWatchDate(list)
+            : sortMoviesByReleaseDate(list);
 
         if (sorted.length === 0) {
             emptyMessageEl.hidden = false;
@@ -106,17 +133,17 @@ function renderMovies(movies) {
                     : null;
             const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
             const releaseDate = formatDate(getReleaseDate(movie));
-            const watchDates = Array.isArray(movie.watchDates)
+            const formattedWatchDates = (Array.isArray(movie.watchDates)
                 ? movie.watchDates
                 : movie.watchDate
                     ? [movie.watchDate]
-                    : [];
-            const formattedWatchDates = watchDates
+                    : [])
                 .map(date => formatDate(date))
                 .filter(Boolean);
+            const [primaryWatchDate, ...extraWatchDates] = formattedWatchDates;
             const note = movie.note ? `<p class="watch-note">${movie.note}</p>` : '';
-            const watchDatesMarkup = formattedWatchDates.length
-                ? `<p class="watch-dates">观影：${formattedWatchDates.join('、')}</p>`
+            const watchDatesMarkup = extraWatchDates.length
+                ? `<p class="watch-dates">再看：${extraWatchDates.join('、')}</p>`
                 : '';
 
             container.innerHTML += `
@@ -127,6 +154,7 @@ function renderMovies(movies) {
                     </div>
                     <p>${title}</p>
                     ${releaseDate ? `<p class="release-date">上映：${releaseDate}</p>` : ''}
+                    ${primaryWatchDate ? `<p class="watch-date">观影：${primaryWatchDate}</p>` : ''}
                     ${watchDatesMarkup}
                     ${note}
                 </div>
@@ -134,8 +162,8 @@ function renderMovies(movies) {
         });
     };
 
-    renderList(watchingContainer, watchingEmpty, watchingMovies);
-    renderList(watchedContainer, watchedEmpty, watchedMovies);
+    renderList(watchingContainer, watchingEmpty, watchingMovies, 'release');
+    renderList(watchedContainer, watchedEmpty, watchedMovies, 'watch');
 }
 
 async function initGallery() {

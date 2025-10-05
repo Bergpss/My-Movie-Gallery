@@ -86,6 +86,13 @@
     color: #666;
 }
 
+.watch-date {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #444;
+    text-align: center;
+}
+
 .watch-dates {
     margin-top: 4px;
     font-size: 12px;
