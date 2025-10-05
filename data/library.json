@@ -10,6 +10,83 @@
   ],
   "watched": [
     {
+      "id": 130099,
+      "title": "再见爱人",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "看了第一季和黄圣依那一季",
+      "watchDates": [
+        "2024-11-14"
+      ],
+      "rating": 6
+    },
+    {
+      "id": 374671,
+      "title": "比海更深",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "日式电影的舒服",
+      "watchDates": [
+        "2025-03-29"
+      ],
+      "rating": 8
+    },
+    {
+      "id": 219246,
+      "title": "苦尽柑来遇见你",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "和康康看的,好好哭",
+      "watchDates": [
+        "2025-03-30"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 1542314,
+      "title": "破地狱",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和康康看的~",
+      "watchDates": [
+        "2025-04-06"
+      ],
+      "rating": 7
+    },
+    {
+      "id": 50878,
+      "title": "甄嬛传",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "和康康的下饭神剧,yyds",
+      "watchDates": [
+        "2025-04-28"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 416144,
+      "title": "孟买酒店",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和霖霖一起看的灾难片",
+      "watchDates": [
+        "2025-07-27"
+      ],
+      "rating": 8
+    },
+    {
+      "id": 103,
+      "title": "隧道",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "和霖霖一起看灾难片",
+      "watchDates": [
+        "2025-07-31"
+      ],
+      "rating": 7
+    },
+    {
       "id": 574475,
       "title": "死神来了6",
       "mediaType": "movie",

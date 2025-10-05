@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2025-10-05T14:06:53.077Z",
+  "generatedAt": "2025-10-05T14:36:50.914Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 233
+    "total": 240
   },
   "items": [
     {
@@ -42,6 +42,272 @@
         "directors": [
           "迈克·弗拉纳根"
         ]
+      }
+    },
+    {
+      "id": 130099,
+      "title": "再见爱人",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2024-11-14"
+      ],
+      "watchDate": "2024-11-14",
+      "rating": 6,
+      "note": "看了第一季和黄圣依那一季",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "再见爱人",
+        "original_language": "zh",
+        "title": "再见爱人",
+        "overview": "本节目是由芒果TV打造的婚姻纪实观察真人秀。三对面临感情危机的夫妻，乘坐两辆房车，开启一段为期18天的旅行。处在不同的情感阶段中的他们，他们怀着或抱怨、或委屈或遗憾的心情出发，又能否在旅行中寻找到属于自己的答案？这一次，面临感情危机的夫妻愿意为爱再尝试一回，在这个快节奏的时代让情感慢下来。节目将通过真人秀和观察室的结合，用纪实性的方式讲述他们的婚姻故事，通过专家和观察嘉宾的温情观察和理性分析，让观众真正感受到婚姻的责任与意义，了解到提升婚姻质量和幸福感的方法论。",
+        "poster_path": "/a8Nlv1jjsk7iozJMwgeYwrioRiM.jpg",
+        "backdrop_path": "/9H7Bz2rrv82rBvkhEYeCeDysCNm.jpg",
+        "release_date": "2021-07-28",
+        "runtime": 70,
+        "genres": [
+          {
+            "id": 10764,
+            "name": "真人秀"
+          }
+        ],
+        "vote_average": 8.1,
+        "vote_count": 8,
+        "popularity": 4.2434,
+        "homepage": "https://www.mgtv.com/h/365319.html",
+        "directors": []
+      }
+    },
+    {
+      "id": 374671,
+      "title": "比海更深",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-03-29"
+      ],
+      "watchDate": "2025-03-29",
+      "rating": 8,
+      "note": "日式电影的舒服",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "海よりもまだ深く",
+        "original_language": "ja",
+        "title": "比海更深",
+        "overview": "　　篠田良多曾是一名获奖作家，但他一直沉浸在过去的光辉岁月中，并把他当私家侦探赚来的钱全都挥霍在赌博上，几乎无法支付孩子的赡养费。父亲去世后，他年迈的母亲和美丽的前妻似乎都已经继续前行，过着各自的生活。重新与之前不信任自己的家庭取得联系后，良多努力重塑他在家中的存在感，并试图在 自己年幼儿子的生活中找到自己长久的地位。但直到一个风雨交加的夏夜，他们才有机会真正重新结合在一起。",
+        "poster_path": "/mC80aKsZCjsg5Oy9VLGtjxJNXJu.jpg",
+        "backdrop_path": "/6v9G4Sc5ciRUoJ2wkutX3JBQj9K.jpg",
+        "release_date": "2016-05-21",
+        "runtime": 117,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.2,
+        "vote_count": 364,
+        "popularity": 3.3334,
+        "homepage": "",
+        "directors": [
+          "是枝裕和"
+        ]
+      }
+    },
+    {
+      "id": 219246,
+      "title": "苦尽柑来遇见你",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2025-03-30"
+      ],
+      "watchDate": "2025-03-30",
+      "rating": 9,
+      "note": "和康康看的,好好哭",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "폭싹 속았수다",
+        "original_language": "ko",
+        "title": "苦尽柑来遇见你",
+        "overview": "人称“干练的反抗者”的吴爱纯与绰号“固执的钢铁心”的梁宽植在济州岛经历四季更迭，谱出一段多姿多采的冒险人生，其中有挫败也有成功，更证明了爱能通过时间的考验。",
+        "poster_path": "/ru98SmLQvKR8MMiqjpBXSfimZ0C.jpg",
+        "backdrop_path": "/a9qlroMOHewiDsUR93PYMVfpbF5.jpg",
+        "release_date": "2025-03-07",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 8.768,
+        "vote_count": 399,
+        "popularity": 17.6204,
+        "homepage": "https://www.netflix.com/title/81681535",
+        "directors": [
+          "金元硕"
+        ]
+      }
+    },
+    {
+      "id": 1542314,
+      "title": "破地狱",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-04-06"
+      ],
+      "watchDate": "2025-04-06",
+      "rating": 7,
+      "note": "和康康看的~",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "破·地獄 (加長版)",
+        "original_language": "cn",
+        "title": "破·地狱：感恩特别版",
+        "overview": "婚礼策划师道生因婚礼市场萧条而债台高筑，被迫改行成为葬礼经纪人。红白二事大相径庭，令道生处处碰壁，但最难一关是要得到喃呒师傅文哥的认可。起初因为理念不合，道生与文哥冲突不断，两人的关系岌岌可危。但数次危难时刻文哥的出手相助，以及亲历文哥与女儿文玥的相处点滴，道生与文哥之间的心结慢慢解开，也逐渐悟到“破地狱”的真正意义。",
+        "poster_path": "/bOyCUvyLJqggfEFlMEXGy2KwEdD.jpg",
+        "backdrop_path": "/6JAK4aSSq1ClDiJPDA4hczlq871.jpg",
+        "release_date": "2025-04-04",
+        "runtime": 140,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 9,
+        "vote_count": 1,
+        "popularity": 2.665,
+        "homepage": "",
+        "directors": []
+      }
+    },
+    {
+      "id": 50878,
+      "title": "甄嬛传",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2025-04-28"
+      ],
+      "watchDate": "2025-04-28",
+      "rating": 9,
+      "note": "和康康的下饭神剧,yyds",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "甄嬛传",
+        "original_language": "zh",
+        "title": "甄嬛传",
+        "overview": "时为满清雍正元年，结束了血腥的夺位之争，国泰民安，政治清明，但在一片祥和的表象之下，一股暗流蠢蠢欲动。后宫之中，华妃与皇后分庭抗礼，各方势力裹挟其中，凶险异常。在太后的主持下，一场盛大的选秀拉开帷幕。以此为机缘，美丽善良的女孩——大理寺少卿甄远道长女甄嬛意外得到皇帝的赏识，从此步入皇宫。在皇后和华妃两方势力的夹击下，甄嬛小心周旋，忍辱负重，命悬一线。她不得不用自己的智慧保护自己，但却一次次被卷入残酷的宫闱斗争之中，天真的甄嬛慢慢变成了后宫精明的女子。",
+        "poster_path": "/iOMoMkDAAS2lJ1p5yCnKhrToWqc.jpg",
+        "backdrop_path": "/c41yiFWQcJd1i8HLlyj8rEbeUcV.jpg",
+        "release_date": "2011-11-17",
+        "runtime": 45,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 8.525,
+        "vote_count": 61,
+        "popularity": 9.2601,
+        "homepage": "",
+        "directors": [
+          "郑晓龙"
+        ]
+      }
+    },
+    {
+      "id": 416144,
+      "title": "孟买酒店",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-07-27"
+      ],
+      "watchDate": "2025-07-27",
+      "rating": 8,
+      "note": "和霖霖一起看的灾难片",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Hotel Mumbai",
+        "original_language": "en",
+        "title": "孟买酒店",
+        "overview": "2008年11月，著名的泰姬陵酒店意外遭到恐怖分子入侵，恐怖分子无差别行凶，让整个酒店陷入绝望之境，百余名酒店住客及员工被困，无人得知何时能等来救援，一场与死神的赛跑就此开启…",
+        "poster_path": "/5iLhhdK5hZQ24da3zxMrUWIf3JL.jpg",
+        "backdrop_path": "/tdK6A1wJVOze1zuiCwFQMR228k5.jpg",
+        "release_date": "2019-03-14",
+        "runtime": 123,
+        "genres": [
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 36,
+            "name": "历史"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 28,
+            "name": "动作"
+          }
+        ],
+        "vote_average": 7.546,
+        "vote_count": 1645,
+        "popularity": 4.1792,
+        "homepage": "",
+        "directors": [
+          "安东尼·马拉斯"
+        ]
+      }
+    },
+    {
+      "id": 103,
+      "title": "隧道",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2025-07-31"
+      ],
+      "watchDate": "2025-07-31",
+      "rating": 7,
+      "note": "和霖霖一起看灾难片",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Time Tunnel",
+        "original_language": "en",
+        "title": "时间隧道",
+        "overview": "美国政府制定一项计划，拟花费七十亿美元，建造一台可以提供时空旅行的机器。一位参议员被国会派去检查该项目进展情况，以决定政府是否继续资助这计划。由于项目的进展令议员很失望，因而项目负责人之一托尼决定以身涉险，使用“时光隧道”进行了一次短途的时光履行，回到了过去，以证明该装置的效能。",
+        "poster_path": "/6E3Ncd9iLWqi8m1GcdkU5bSwOnS.jpg",
+        "backdrop_path": "/omPcylzcwlsser7aKTlsyoMJLyK.jpg",
+        "release_date": "1966-09-09",
+        "runtime": 60,
+        "genres": [
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.6,
+        "vote_count": 174,
+        "popularity": 7.6119,
+        "homepage": "",
+        "directors": []
       }
     },
     {
