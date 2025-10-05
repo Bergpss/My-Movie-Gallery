@@ -45,6 +45,8 @@
 .poster-wrapper {
     position: relative;
     width: 100%;
+    display: block;
+    text-decoration: none;
 }
 
 .badge-row {
