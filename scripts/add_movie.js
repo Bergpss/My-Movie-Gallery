@@ -11,6 +11,7 @@ const TMDB_SEARCH_MOVIE_URL = 'https://api.themoviedb.org/3/search/movie';
 const TMDB_SEARCH_TV_URL = 'https://api.themoviedb.org/3/search/tv';
 
 const LIBRARY_PATH = resolve(process.cwd(), 'data/library.json');
+const MOVIES_PATH = resolve(process.cwd(), 'data/movies.json');
 
 if (!TMDB_API_KEY) {
     console.error('Missing TMDB_API_KEY environment variable.');
@@ -134,6 +135,23 @@ async function loadLibrary() {
             return { watching: [], watched: [], wishlist: [] };
         }
         throw error;
+    }
+}
+
+async function loadExistingMovieIds() {
+    try {
+        const raw = await readFile(MOVIES_PATH, 'utf-8');
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed?.items)) {
+            return new Set();
+        }
+        return new Set(parsed.items.map(item => String(item.id)));
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return new Set();
+        }
+        console.warn('读取 data/movies.json 失败：', error.message);
+        return new Set();
     }
 }
 
@@ -266,6 +284,12 @@ async function main() {
         ? (chosen.name || chosen.original_name)
         : (chosen.title || chosen.original_title);
     console.log(`已选择：${chosenTitle} (TMDB ID ${chosen.id})`);
+
+    const existingIds = await loadExistingMovieIds();
+    if (existingIds.has(String(chosen.id))) {
+        console.log('提示：该影片已存在于 data/movies.json 中，无需重复添加。');
+        return;
+    }
 
     let status;
     while (!status) {
