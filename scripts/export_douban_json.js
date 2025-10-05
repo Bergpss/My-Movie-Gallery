@@ -4,8 +4,13 @@ import { resolve, isAbsolute, dirname } from 'node:path';
 import { argv, exit } from 'node:process';
 
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
-const DOUBAN_IMDB_REGEX = /https?:\/\/www\.imdb\.com\/title\/(tt\d+)/i;
-const USER_AGENT = 'Mozilla/5.0 (compatible; MyMovieGallery-Douban/1.0)';
+const TMDB_LANGUAGE = process.env.TMDB_LANGUAGE || 'zh-CN';
+const TMDB_REGION = process.env.TMDB_REGION || null;
+const TMDB_SEARCH_MOVIE_URL = 'https://api.themoviedb.org/3/search/movie';
+const TMDB_SEARCH_TV_URL = 'https://api.themoviedb.org/3/search/tv';
+const TMDB_MOVIE_DETAILS_URL = (id) => `https://api.themoviedb.org/3/movie/${id}`;
+const TMDB_TV_DETAILS_URL = (id) => `https://api.themoviedb.org/3/tv/${id}`;
+const TMDB_TV_EXTERNAL_IDS_URL = (id) => `https://api.themoviedb.org/3/tv/${id}/external_ids`;
 
 if (!TMDB_API_KEY) {
     console.error('Missing TMDB_API_KEY environment variable.');
@@ -129,43 +134,103 @@ async function loadEntries(path) {
     return parseCsv(trimmed);
 }
 
-const imdbCache = new Map();
-const failCache = new Set();
+async function searchMovies(title, year) {
+    const url = new URL(TMDB_SEARCH_MOVIE_URL);
+    url.searchParams.set('api_key', TMDB_API_KEY);
+    url.searchParams.set('query', title);
+    url.searchParams.set('language', TMDB_LANGUAGE);
+    url.searchParams.set('include_adult', 'false');
+    if (year) {
+        url.searchParams.set('year', year);
+        url.searchParams.set('primary_release_year', year);
+    }
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`TMDB movie search failed (${response.status})`);
+    }
+    const data = await response.json();
+    return Array.isArray(data.results)
+        ? data.results.map(item => ({ ...item, media_type: 'movie' }))
+        : [];
+}
 
-async function fetchImdbFromDouban(url) {
-    if (!url || failCache.has(url)) {
-        return null;
+async function searchTvShows(title, year) {
+    const url = new URL(TMDB_SEARCH_TV_URL);
+    url.searchParams.set('api_key', TMDB_API_KEY);
+    url.searchParams.set('query', title);
+    url.searchParams.set('language', TMDB_LANGUAGE);
+    url.searchParams.set('include_adult', 'false');
+    if (year) {
+        url.searchParams.set('first_air_date_year', year);
     }
-    if (imdbCache.has(url)) {
-        return imdbCache.get(url);
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`TMDB TV search failed (${response.status})`);
     }
-    try {
-        const response = await fetch(url, {
-            headers: {
-                'User-Agent': USER_AGENT,
-            },
-        });
+    const data = await response.json();
+    return Array.isArray(data.results)
+        ? data.results.map(item => ({ ...item, media_type: 'tv' }))
+        : [];
+}
+
+function releaseYearFromResult(result) {
+    const source = result.media_type === 'tv'
+        ? result.first_air_date
+        : result.release_date;
+    return source ? source.slice(0, 4) : '';
+}
+
+function pickBestMatch(results, title, year) {
+    if (!results.length) return null;
+    const normalizedTitle = title.replace(/\s+/g, '').toLowerCase();
+
+    let filtered = results;
+    if (year) {
+        filtered = results.filter(res => releaseYearFromResult(res) === year);
+    }
+    if (filtered.length === 1) {
+        return filtered[0];
+    }
+
+    const exactMatches = filtered.filter(res => {
+        const resTitle = (res.title || res.name || '').replace(/\s+/g, '').toLowerCase();
+        return resTitle === normalizedTitle;
+    });
+    if (exactMatches.length === 1) {
+        return exactMatches[0];
+    }
+    if (exactMatches.length > 1) {
+        filtered = exactMatches;
+    }
+
+    return filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0))[0];
+}
+
+async function resolveImdbId(result) {
+    if (!result) return null;
+    if (result.media_type === 'tv') {
+        const url = new URL(TMDB_TV_EXTERNAL_IDS_URL(result.id));
+        url.searchParams.set('api_key', TMDB_API_KEY);
+        url.searchParams.set('language', TMDB_LANGUAGE);
+        const response = await fetch(url);
         if (!response.ok) {
-            console.warn(`豆瓣页面请求失败 (${response.status}): ${url}`);
-            failCache.add(url);
+            console.warn(`获取 TV External IDs 失败 (${response.status})`);
             return null;
         }
-        const html = await response.text();
-        const match = html.match(DOUBAN_IMDB_REGEX);
-        if (match) {
-            const imdbId = match[1];
-            imdbCache.set(url, imdbId);
-            await new Promise(resolve => setTimeout(resolve, 400));
-            return imdbId;
-        }
-        failCache.add(url);
-        await new Promise(resolve => setTimeout(resolve, 200));
-        return null;
-    } catch (error) {
-        console.warn(`抓取豆瓣页面出错：${url} - ${error.message}`);
-        failCache.add(url);
+        const data = await response.json();
+        return data.imdb_id || null;
+    }
+
+    const url = new URL(TMDB_MOVIE_DETAILS_URL(result.id));
+    url.searchParams.set('api_key', TMDB_API_KEY);
+    url.searchParams.set('language', TMDB_LANGUAGE);
+    const response = await fetch(url);
+    if (!response.ok) {
+        console.warn(`获取 Movie Details 失败 (${response.status})`);
         return null;
     }
+    const data = await response.json();
+    return data.imdb_id || null;
 }
 
 async function main() {
@@ -188,24 +253,37 @@ async function main() {
             continue;
         }
 
+        const year = (item.year || '').trim();
         let imdbId = item.imdb_id?.trim();
-        if (!imdbId && item.douban_url) {
-            console.log(`\n[${index + 1}] ${title} —— 正在尝试从豆瓣页面获取 IMDb ...`);
-            imdbId = await fetchImdbFromDouban(item.douban_url);
-            if (imdbId) {
-                console.log(`找到 IMDb: ${imdbId}`);
+        let tmdbId = null;
+        let mediaType = 'movie';
+
+        if (imdbId) {
+            tmdbId = null;
+        } else {
+            const movieResults = await searchMovies(title, year);
+            const tvResults = await searchTvShows(title, year);
+            const combined = [...movieResults, ...tvResults];
+            const best = pickBestMatch(combined, title, year);
+            if (best) {
+                tmdbId = best.id;
+                mediaType = best.media_type || 'movie';
+                imdbId = await resolveImdbId(best);
             } else {
-                console.log('未找到 IMDb ID。');
+                console.log(`未找到 TMDB 匹配：${title}`);
             }
         }
 
         results.push({
             title,
             watch_date: item.watch_date || '',
+            year,
             imdb_id: imdbId || null,
+            tmdb_id: tmdbId,
             douban_url: item.douban_url || null,
             note: item.note || null,
             my_rating: item.my_rating || null,
+            media_type: mediaType,
         });
     }
 

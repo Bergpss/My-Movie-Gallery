@@ -47,12 +47,24 @@
      node scripts/export_douban_json.js "data/豆伴(180354423).csv" --limit=10
      ```
      脚本会在 `fromdouban.json` 输出包含 `title`、`watch_date`、`imdb_id`、`douban_url`、`note` 等字段的数组，可在导入前检查或做进一步处理。
-   - 批量导入（例如来自豆瓣）的观影记录，可运行：
-     ```bash
-     TMDB_API_KEY="<你的 API Key>" \
-     node scripts/import_douban.js "data/豆伴(180354423).csv" --limit=10
-     ```
-     支持 JSON 数组或 CSV（如豆瓣导出的“豆伴.csv”）。字段：`title`、`watch_date`，可选 `imdb_id` 以及 `链接`（用于从豆瓣页面补全 IMDb）。脚本会逐条显示结果供确认（若仅有一个候选会自动选中），并把记录写入 `watched` 列表、合并所有观影日期。调试时可利用 `--limit=` 参数限制导入数量。
+  - 批量导入（例如来自豆瓣）的观影记录，可运行：
+    ```bash
+    TMDB_API_KEY="<你的 API Key>" \
+    node scripts/import_douban.js "data/豆伴(180354423).csv" --limit=10
+    ```
+    支持 JSON 数组或 CSV（如豆瓣导出的“豆伴.csv”）。字段：`title`、`watch_date`、`year`（可选，上映年份），可选 `imdb_id` 以及 `链接`。脚本会根据标题与年份自动匹配 TMDB（电影与剧集都会搜索），尽量补全 `tmdb_id` 与 `imdb_id`，并把记录写入 `watched` 列表、合并所有观影日期。调试时可利用 `--limit=` 参数限制导入数量。
+  - 如果只想把豆瓣 CSV 转成 JSON 并补全 TMDB/IMDb，可运行：
+    ```bash
+    TMDB_API_KEY="<你的 API Key>" \
+    node scripts/export_douban_json.js "data/豆伴(180354423).csv" --limit=10
+    ```
+    脚本会生成 `fromdouban.json`（含 `title`、`watch_date`、`year`、`tmdb_id`、`imdb_id` 等字段），便于在导入前进行校验或补充。
+  - 若已生成 `fromdouban.json`，可直接导入库：
+    ```bash
+    TMDB_API_KEY="<你的 API Key>" \
+    node scripts/import_from_json.js fromdouban.json
+    ```
+    该脚本会把所有包含 `tmdb_id` 的条目写入 `library.json` 的 `watched`，并合并观影日期。
 3. 运行生成脚本：
    ```bash
    TMDB_API_KEY="<你的 API Key>" \
