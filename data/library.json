@@ -1,101 +1,40 @@
 {
-  "watching": [
+  "watching": [],
+  "watched": [
     {
       "id": 842924,
       "title": "查克的一生",
       "mediaType": "movie",
-      "status": "watching",
-      "note": null
-    }
-  ],
-  "watched": [
-    {
-      "id": 130099,
-      "title": "再见爱人",
-      "mediaType": "tv",
       "status": "watched",
-      "note": "看了第一季和黄圣依那一季",
+      "note": null,
       "watchDates": [
-        "2024-11-14"
+        "2025-10-07"
       ],
-      "rating": 6
+      "watchDate": "2025-10-07",
+      "rating": 7
     },
     {
-      "id": 374671,
-      "title": "比海更深",
+      "id": 915935,
+      "title": "堕落的审判",
       "mediaType": "movie",
       "status": "watched",
-      "note": "日式电影的舒服",
+      "note": "和康康朋友一起看",
       "watchDates": [
-        "2025-03-29"
+        "2025-10-05"
       ],
+      "watchDate": "2025-10-05",
       "rating": 8
     },
     {
-      "id": 219246,
-      "title": "苦尽柑来遇见你",
-      "mediaType": "tv",
+      "id": 137,
+      "title": "土拨鼠之日",
+      "mediaType": "movie",
       "status": "watched",
-      "note": "和康康看的,好好哭",
+      "note": "真好看啊",
       "watchDates": [
-        "2025-03-30"
+        "2025-10-01"
       ],
       "rating": 9
-    },
-    {
-      "id": 1542314,
-      "title": "破地狱",
-      "mediaType": "movie",
-      "status": "watched",
-      "note": "和康康看的~",
-      "watchDates": [
-        "2025-04-06"
-      ],
-      "rating": 7
-    },
-    {
-      "id": 50878,
-      "title": "甄嬛传",
-      "mediaType": "tv",
-      "status": "watched",
-      "note": "和康康的下饭神剧,yyds",
-      "watchDates": [
-        "2025-04-28"
-      ],
-      "rating": 9
-    },
-    {
-      "id": 416144,
-      "title": "孟买酒店",
-      "mediaType": "movie",
-      "status": "watched",
-      "note": "和霖霖一起看的灾难片",
-      "watchDates": [
-        "2025-07-27"
-      ],
-      "rating": 8
-    },
-    {
-      "id": 103,
-      "title": "隧道",
-      "mediaType": "tv",
-      "status": "watched",
-      "note": "和霖霖一起看灾难片",
-      "watchDates": [
-        "2025-07-31"
-      ],
-      "rating": 7
-    },
-    {
-      "id": 574475,
-      "title": "死神来了6",
-      "mediaType": "movie",
-      "status": "watched",
-      "note": "和霖霖一起看的~",
-      "watchDates": [
-        "2025-08-28"
-      ],
-      "rating": 7
     },
     {
       "id": 39111,
@@ -109,28 +48,6 @@
       "rating": 8
     },
     {
-      "id": 11324,
-      "title": "禁闭岛",
-      "mediaType": "movie",
-      "status": "watched",
-      "note": "和霖霖一起看的",
-      "watchDates": [
-        "2025-07-20"
-      ],
-      "rating": 9
-    },
-    {
-      "id": 67070,
-      "title": "伦敦生活",
-      "mediaType": "tv",
-      "status": "watched",
-      "note": "神父~",
-      "watchDates": [
-        "2025-07-22"
-      ],
-      "rating": 10
-    },
-    {
       "id": 4291,
       "title": "菊次郎的夏天",
       "mediaType": "movie",
@@ -142,13 +59,13 @@
       "rating": 10
     },
     {
-      "id": 435,
-      "title": "后天",
+      "id": 574475,
+      "title": "死神来了6",
       "mediaType": "movie",
       "status": "watched",
-      "note": "2025年8月从家返回的路上看的",
+      "note": "和霖霖一起看的~",
       "watchDates": [
-        "2025-08-26"
+        "2025-08-28"
       ],
       "rating": 7
     },
@@ -164,59 +81,103 @@
       "rating": 9
     },
     {
-      "id": 86831,
-      "title": "爱,死亡与机器人",
-      "mediaType": "tv",
+      "id": 435,
+      "title": "后天",
+      "mediaType": "movie",
       "status": "watched",
-      "note": null,
+      "note": "2025年8月从家返回的路上看的",
       "watchDates": [
-        "2021-07-31"
+        "2025-08-26"
       ],
-      "rating": 9
+      "rating": 7
     },
     {
-      "id": 45790,
-      "title": "JOJO的奇妙冒",
+      "id": 103,
+      "title": "隧道",
       "mediaType": "tv",
       "status": "watched",
-      "note": null,
+      "note": "和霖霖一起看灾难片",
       "watchDates": [
-        "2023-01-29"
+        "2025-07-31"
+      ],
+      "rating": 7
+    },
+    {
+      "id": 416144,
+      "title": "孟买酒店",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和霖霖一起看的灾难片",
+      "watchDates": [
+        "2025-07-27"
       ],
       "rating": 8
     },
     {
-      "id": 74577,
-      "title": "去他妈的世界",
+      "id": 67070,
+      "title": "伦敦生活",
       "mediaType": "tv",
       "status": "watched",
-      "note": null,
+      "note": "神父~",
       "watchDates": [
-        "2020-08-03"
-      ],
-      "rating": 9
-    },
-    {
-      "id": 81356,
-      "title": "性爱自修室",
-      "mediaType": "tv",
-      "status": "watched",
-      "note": "很喜欢的剧",
-      "watchDates": [
-        "2020-07-25"
+        "2025-07-22"
       ],
       "rating": 10
     },
     {
-      "id": 137,
-      "title": "土拨鼠之日",
+      "id": 11324,
+      "title": "禁闭岛",
       "mediaType": "movie",
       "status": "watched",
-      "note": "真好看啊",
+      "note": "和霖霖一起看的",
       "watchDates": [
-        "2025-10-01"
+        "2025-07-20"
       ],
       "rating": 9
+    },
+    {
+      "id": 50878,
+      "title": "甄嬛传",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "和康康的下饭神剧,yyds",
+      "watchDates": [
+        "2025-04-28"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 1542314,
+      "title": "破地狱",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "和康康看的~",
+      "watchDates": [
+        "2025-04-06"
+      ],
+      "rating": 7
+    },
+    {
+      "id": 219246,
+      "title": "苦尽柑来遇见你",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "和康康看的,好好哭",
+      "watchDates": [
+        "2025-03-30"
+      ],
+      "rating": 9
+    },
+    {
+      "id": 374671,
+      "title": "比海更深",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "日式电影的舒服",
+      "watchDates": [
+        "2025-03-29"
+      ],
+      "rating": 8
     },
     {
       "id": 933260,
@@ -230,16 +191,15 @@
       "rating": 7
     },
     {
-      "id": 915935,
-      "title": "堕落的审判",
-      "mediaType": "movie",
+      "id": 130099,
+      "title": "再见爱人",
+      "mediaType": "tv",
       "status": "watched",
-      "note": "和康康朋友一起看",
+      "note": "看了第一季和黄圣依那一季",
       "watchDates": [
-        "2025-10-05"
+        "2024-11-14"
       ],
-      "watchDate": "2025-10-05",
-      "rating": 8
+      "rating": 6
     },
     {
       "id": 133578,
@@ -331,6 +291,17 @@
       "rating": 10,
       "note": null,
       "inCinema": false
+    },
+    {
+      "id": 45790,
+      "title": "JOJO的奇妙冒",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2023-01-29"
+      ],
+      "rating": 8
     },
     {
       "id": 76600,
@@ -1269,6 +1240,17 @@
       "inCinema": false
     },
     {
+      "id": 86831,
+      "title": "爱,死亡与机器人",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2021-07-31"
+      ],
+      "rating": 9
+    },
+    {
       "id": 478804,
       "title": "血观音",
       "mediaType": "movie",
@@ -1867,6 +1849,17 @@
       "inCinema": false
     },
     {
+      "id": 74577,
+      "title": "去他妈的世界",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2020-08-03"
+      ],
+      "rating": 9
+    },
+    {
       "id": 292362,
       "title": "心迷宫",
       "mediaType": "movie",
@@ -2060,6 +2053,17 @@
       "rating": 8,
       "note": null,
       "inCinema": false
+    },
+    {
+      "id": 81356,
+      "title": "性爱自修室",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": "很喜欢的剧",
+      "watchDates": [
+        "2020-07-25"
+      ],
+      "rating": 10
     },
     {
       "id": 585,
