@@ -2,25 +2,30 @@
 <html lang="zh-CN">
 
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Berg-Movie-Gallery</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     </head>
 
     <body>
-        <h1 id="year-title">Berg观影记录</h1>
+        <div class="page-container">
+            <h1 id="year-title">Berg观影记录</h1>
 
-        <section class="movie-section" id="watching-section">
-            <h2 class="section-title">正在看</h2>
-            <div id="watching-container" class="movie-grid"></div>
-            <p class="empty-message" hidden>暂无正在看的影片</p>
-        </section>
+            <section class="movie-section" id="watching-section">
+                <h2 class="section-title">正在看</h2>
+                <div id="watching-container" class="movie-grid"></div>
+                <p class="empty-message" hidden>暂无正在看的影片</p>
+            </section>
 
-        <section class="movie-section" id="watched-section">
-            <h2 class="section-title">已看完</h2>
-            <div id="movie-container" class="movie-grid"></div>
-            <p class="empty-message" hidden>还没有完成的观影记录</p>
-        </section>
+            <section class="movie-section" id="watched-section">
+                <h2 class="section-title">已看完</h2>
+                <div id="movie-container" class="movie-grid"></div>
+                <p class="empty-message" hidden>还没有完成的观影记录</p>
+            </section>
+        </div>
+
         <script src="movies.js"></script>
     </body>
 
