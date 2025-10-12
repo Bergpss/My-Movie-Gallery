@@ -1,5 +1,20 @@
 {
-  "watching": [],
+  "watching": [
+    {
+      "id": 257161,
+      "title": "喜人奇妙夜",
+      "mediaType": "tv",
+      "status": "watching",
+      "note": null
+    },
+    {
+      "id": 252135,
+      "title": "回魂记",
+      "mediaType": "tv",
+      "status": "watching",
+      "note": null
+    }
+  ],
   "watched": [
     {
       "id": 842924,

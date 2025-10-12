@@ -1,11 +1,90 @@
 {
-  "generatedAt": "2025-10-07T10:03:20.106Z",
+  "generatedAt": "2025-10-12T12:52:44.252Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 240
+    "total": 242
   },
   "items": [
+    {
+      "id": 257161,
+      "title": "喜人奇妙夜",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "喜人奇妙夜",
+        "original_language": "zh",
+        "title": "喜人奇妙夜",
+        "overview": "《喜人奇妙夜》是由腾讯视频、米未联合出品的一档原创新喜剧综艺，黄渤、秦昊、贾冰、高圆圆、马东、金靖、宋木子将作为观众代表，除此之外，每期还有一位神秘观众代表，陪伴大家度过一个又一个的喜剧奇妙夜晚！节目秉持“只要大声笑，烦恼都丢掉”的宗旨，喜剧小队们将围绕最具热点和最有共鸣的情绪主题演绎喜剧作品，用喜剧解构一切！",
+        "poster_path": "/fuBwfFWGu1m0OI961Y5X5ogsqmi.jpg",
+        "backdrop_path": "/5TvKAb7oS3N2K5h6VDIYJlKYtaY.jpg",
+        "release_date": "2024-06-28",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 10764,
+            "name": "真人秀"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.5,
+        "vote_count": 4,
+        "popularity": 20.0283,
+        "homepage": "https://v.qq.com/x/cover/mzc00200vyot3cs.html",
+        "directors": []
+      }
+    },
+    {
+      "id": 252135,
+      "title": "回魂记",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "回魂計",
+        "original_language": "zh",
+        "title": "回魂计",
+        "overview": "以一宗诈骗绑架案为引线，两位失去女儿的母亲因仇恨结盟，在神秘力量的协助下，竟将凶手复活、施以酷刑，只为亲手惩罚。她们在复仇与救赎之间愈陷愈深，不仅对抗谎言与操控的危险世界，更被迫面对友谊与道德的撕裂。当真相逐步揭开，复仇究竟能带来慰藉，还是吞噬她们最后的希望？",
+        "poster_path": "/ukoPA4WnfIlApNtc7AF5TTLhouy.jpg",
+        "backdrop_path": "/hvSHnrbLlR829PqGdf1PXQZuDPb.jpg",
+        "release_date": "2025-10-09",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8,
+        "vote_count": 7,
+        "popularity": 34.0044,
+        "homepage": "https://www.netflix.com/TheResurrected",
+        "directors": [
+          "陈正道",
+          "许肇任"
+        ]
+      }
+    },
     {
       "id": 842924,
       "title": "查克的一生",
