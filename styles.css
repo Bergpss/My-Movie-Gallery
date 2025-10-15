@@ -18,6 +18,37 @@ body {
     margin: 32px 0 24px;
 }
 
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 0 32px;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.filter-btn:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+.filter-btn.active {
+    color: #fff;
+    background: #333;
+    border-color: #333;
+}
+
 .movie-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -153,6 +184,16 @@ body {
         margin: 24px 0 20px;
     }
 
+    .filter-container {
+        gap: 8px;
+        margin: 0 0 24px;
+    }
+
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
     .section-title {
         font-size: 20px;
     }
@@ -175,6 +216,16 @@ body {
     #year-title {
         font-size: 24px;
         margin: 20px 0 16px;
+    }
+
+    .filter-container {
+        gap: 6px;
+        margin: 0 0 20px;
+    }
+
+    .filter-btn {
+        padding: 6px 14px;
+        font-size: 12px;
     }
 
     .section-title {

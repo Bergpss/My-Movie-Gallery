@@ -2,6 +2,9 @@ const MOVIE_DATA_URL = 'data/movies.json';
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const PLACEHOLDER_POSTER = 'movie_posters/placeholder.png';
 
+let allMovies = [];
+let currentFilter = 'all';
+
 function formatDate(isoString) {
     if (!isoString) {
         return null;
@@ -84,6 +87,16 @@ async function fetchMoviesFromList() {
     }
 }
 
+function filterMoviesByType(movies, filterType) {
+    if (filterType === 'all') {
+        return movies;
+    }
+    return movies.filter(movie => {
+        const mediaType = movie.mediaType || 'movie';
+        return mediaType === filterType;
+    });
+}
+
 function renderMovies(movies) {
     const watchingContainer = document.getElementById('watching-container');
     const watchingEmpty = document.querySelector('#watching-section .empty-message');
@@ -96,12 +109,14 @@ function renderMovies(movies) {
         }
     });
 
-    const watchingMovies = movies.filter(movie => {
+    const filteredMovies = filterMoviesByType(movies, currentFilter);
+
+    const watchingMovies = filteredMovies.filter(movie => {
         const status = (movie.status || '').toLowerCase();
         return status === 'watching' || status === 'in-progress' || status === 'ongoing' || status === 'wishlist' || status === 'planned';
     });
 
-    const watchedMovies = movies.filter(movie => !watchingMovies.includes(movie));
+    const watchedMovies = filteredMovies.filter(movie => !watchingMovies.includes(movie));
 
     const renderList = (container, emptyMessageEl, list, sortMode) => {
         if (!container || !emptyMessageEl) {
@@ -174,9 +189,24 @@ function renderMovies(movies) {
     renderList(watchedContainer, watchedEmpty, watchedMovies, 'watch');
 }
 
+function setupFilterButtons() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            currentFilter = button.getAttribute('data-filter');
+            renderMovies(allMovies);
+        });
+    });
+}
+
 async function initGallery() {
-    const movies = await fetchMoviesFromList();
-    renderMovies(movies);
+    allMovies = await fetchMoviesFromList();
+    renderMovies(allMovies);
+    setupFilterButtons();
 }
 
 window.onload = initGallery;
