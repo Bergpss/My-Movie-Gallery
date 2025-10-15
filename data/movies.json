@@ -1,11 +1,57 @@
 {
-  "generatedAt": "2025-10-12T12:52:44.252Z",
+  "generatedAt": "2025-10-15T15:18:18.616Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 242
+    "total": 243
   },
   "items": [
+    {
+      "id": 209867,
+      "title": "葬送的芙莉莲",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "葬送のフリーレン",
+        "original_language": "ja",
+        "title": "葬送的芙莉莲",
+        "overview": "打倒了魔王的勇者一行人的后日谈——在“那之后”的故事。身为魔法使的芙莉莲是一位精灵，她和另外三人有着不一样的地方。对于生活在“之后”的世界、感受到的事情有着不一样的看法……残存世间的人们所编织的，葬送与祈祷相伴的故事——从“冒险的结束”开始了。",
+        "poster_path": "/jvueXfiDeeifwGCySYsQdcw2fCz.jpg",
+        "backdrop_path": "/emGCHnRPru5LLWcKbSFzUEUisac.jpg",
+        "release_date": "2023-09-29",
+        "runtime": 25,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "vote_average": 8.751,
+        "vote_count": 535,
+        "popularity": 27.5825,
+        "homepage": "https://frieren-anime.jp/",
+        "directors": [
+          "斋藤圭一郎"
+        ]
+      }
+    },
     {
       "id": 257161,
       "title": "喜人奇妙夜",
