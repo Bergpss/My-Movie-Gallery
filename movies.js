@@ -97,6 +97,30 @@ function filterMoviesByType(movies, filterType) {
     });
 }
 
+function getPlatformIcon(platform) {
+    const icons = {
+        'bilibili': 'B',
+        'youtube': 'Y',
+        'iqiyi': '爱',
+        'tencent': '腾',
+        'youku': '优',
+        'other': '▶',
+    };
+    return icons[platform] || '▶';
+}
+
+function getPlatformColor(platform) {
+    const colors = {
+        'bilibili': '#00a1d6',
+        'youtube': '#ff0000',
+        'iqiyi': '#00be06',
+        'tencent': '#ff6428',
+        'youku': '#00a4ff',
+        'other': '#666',
+    };
+    return colors[platform] || '#666';
+}
+
 function renderMovies(movies) {
     const watchingContainer = document.getElementById('watching-container');
     const watchingEmpty = document.querySelector('#watching-section .empty-message');
@@ -135,24 +159,54 @@ function renderMovies(movies) {
         emptyMessageEl.hidden = true;
 
         sorted.forEach(movie => {
-            const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path || null;
-            const imagePath = posterPath
-                ? `${POSTER_BASE_URL}${posterPath}`
-                : PLACEHOLDER_POSTER;
+            const isWebVideo = movie.mediaType === 'web-video';
 
-            const title = movie.title || movie.tmdb?.title || movie.tmdb?.original_title || 'Untitled';
-            const ratingValue = typeof movie.rating === 'number'
-                ? movie.rating
-                : typeof movie.tmdb?.vote_average === 'number'
-                    ? movie.tmdb.vote_average
-                    : null;
-            const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
-            const cinemaBadge = movie.inCinema ? '<span class="cinema-badge" title="影院观影">🎦</span>' : '';
-            const mediaType = movie.mediaType === 'tv' ? 'tv' : 'movie';
-            const tmdbUrl = movie.id
-                ? `https://www.themoviedb.org/${mediaType}/${movie.id}`
-                : '#';
-            const releaseDate = formatDate(getReleaseDate(movie));
+            let imagePath, title, rating, cinemaBadge, targetUrl, releaseDate;
+            let platformBadge = '';
+            let creatorInfo = '';
+            let durationInfo = '';
+
+            if (isWebVideo) {
+                // Web video rendering
+                // Use a solid color placeholder if no cover URL
+                imagePath = movie.coverUrl || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="225"%3E%3Crect width="400" height="225" fill="%2300a1d6"/%3E%3Ctext x="50%25" y="50%25" font-size="48" fill="white" text-anchor="middle" dy=".3em"%3E▶%3C/text%3E%3C/svg%3E';
+                title = movie.title || 'Untitled';
+                const ratingValue = typeof movie.rating === 'number' ? movie.rating : null;
+                rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
+                cinemaBadge = '';
+                targetUrl = movie.url || '#';
+                releaseDate = null;
+
+                if (movie.platform) {
+                    const icon = getPlatformIcon(movie.platform);
+                    const color = getPlatformColor(movie.platform);
+                    platformBadge = `<span class="platform-badge" style="background-color: ${color}" title="${movie.platform}">${icon}</span>`;
+                }
+
+                if (movie.creator) {
+                    creatorInfo = `<p class="creator-info">UP主：${movie.creator}</p>`;
+                }
+
+                if (movie.duration) {
+                    durationInfo = `<p class="duration-info">时长：${movie.duration}</p>`;
+                }
+            } else {
+                // Movie/TV rendering
+                const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path || null;
+                imagePath = posterPath ? `${POSTER_BASE_URL}${posterPath}` : PLACEHOLDER_POSTER;
+                title = movie.title || movie.tmdb?.title || movie.tmdb?.original_title || 'Untitled';
+                const ratingValue = typeof movie.rating === 'number'
+                    ? movie.rating
+                    : typeof movie.tmdb?.vote_average === 'number'
+                        ? movie.tmdb.vote_average
+                        : null;
+                rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
+                cinemaBadge = movie.inCinema ? '<span class="cinema-badge" title="影院观影">🎦</span>' : '';
+                const mediaType = movie.mediaType === 'tv' ? 'tv' : 'movie';
+                targetUrl = movie.id ? `https://www.themoviedb.org/${mediaType}/${movie.id}` : '#';
+                releaseDate = formatDate(getReleaseDate(movie));
+            }
+
             const formattedWatchDates = (Array.isArray(movie.watchDates)
                 ? movie.watchDates
                 : movie.watchDate
@@ -168,15 +222,18 @@ function renderMovies(movies) {
 
             container.innerHTML += `
                 <div class="movie-item">
-                    <a class="poster-wrapper" href="${tmdbUrl}" target="_blank" rel="noopener noreferrer">
+                    <a class="poster-wrapper" href="${targetUrl}" target="_blank" rel="noopener noreferrer">
                         <img src="${imagePath}" alt="${title}" loading="lazy">
                         <div class="badge-row">
                             ${rating ? `<span class="rating-badge">${rating}</span>` : ''}
                             ${cinemaBadge}
+                            ${platformBadge}
                         </div>
                     </a>
                     <p>${title}</p>
                     ${releaseDate ? `<p class="release-date">上映：${releaseDate}</p>` : ''}
+                    ${creatorInfo}
+                    ${durationInfo}
                     ${primaryWatchDate ? `<p class="watch-date">观影：${primaryWatchDate}</p>` : ''}
                     ${watchDatesMarkup}
                     ${note}

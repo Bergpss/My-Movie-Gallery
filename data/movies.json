@@ -1,11 +1,27 @@
 {
-  "generatedAt": "2025-10-15T15:18:18.616Z",
+  "generatedAt": "2025-10-16T10:29:18.397Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 243
+    "total": 244
   },
   "items": [
+    {
+      "id": "bilibili-BV1NGHGzJEfx",
+      "title": "首尔夏天",
+      "mediaType": "web-video",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
+      "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
+      "creator": "食贫道",
+      "duration": "03:17:25"
+    },
     {
       "id": 209867,
       "title": "葬送的芙莉莲",

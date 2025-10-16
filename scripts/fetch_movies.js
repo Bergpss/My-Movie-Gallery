@@ -57,7 +57,10 @@ async function loadLibrary() {
             entry.watchDate,
         );
 
-        deduped.set(key, {
+        const mediaType = entry.mediaType || existing.mediaType || 'movie';
+        const isWebVideo = mediaType === 'web-video';
+
+        const baseData = {
             id: entry.id,
             title: entry.title ?? existing.title ?? null,
             watchDates,
@@ -65,11 +68,22 @@ async function loadLibrary() {
             rating: typeof entry.rating === 'number' ? entry.rating : existing.rating ?? null,
             status: entry.status || existing.status || defaultStatus || null,
             note: entry.note ?? existing.note ?? null,
-            mediaType: entry.mediaType || existing.mediaType || 'movie',
+            mediaType,
             inCinema: typeof entry.inCinema === 'boolean'
                 ? entry.inCinema
                 : (typeof existing.inCinema === 'boolean' ? existing.inCinema : false),
-        });
+        };
+
+        // For web-video, add custom fields
+        if (isWebVideo) {
+            baseData.platform = entry.platform ?? existing.platform ?? null;
+            baseData.url = entry.url ?? existing.url ?? null;
+            baseData.coverUrl = entry.coverUrl ?? existing.coverUrl ?? null;
+            baseData.creator = entry.creator ?? existing.creator ?? null;
+            baseData.duration = entry.duration ?? existing.duration ?? null;
+        }
+
+        deduped.set(key, baseData);
     };
 
     watching.forEach(entry => upsert(entry, 'watching'));
@@ -188,8 +202,38 @@ async function buildSnapshot(entries, existingMap) {
 
     for (const entry of entries) {
         const mediaType = entry.mediaType || 'movie';
+        const isWebVideo = mediaType === 'web-video';
         const existing = existingMap.get(String(entry.id));
 
+        const watchDates = Array.isArray(entry.watchDates)
+            ? entry.watchDates
+            : entry.watchDate
+                ? [entry.watchDate]
+                : [];
+        const orderedWatchDates = [...watchDates].sort((a, b) => b.localeCompare(a));
+
+        // For web-video, skip TMDB fetch and use custom data
+        if (isWebVideo) {
+            enriched.push({
+                id: entry.id,
+                title: entry.title ?? '',
+                mediaType,
+                status: entry.status ?? null,
+                watchDates: orderedWatchDates,
+                watchDate: orderedWatchDates[0] ?? null,
+                rating: typeof entry.rating === 'number' ? entry.rating : null,
+                note: entry.note ?? null,
+                inCinema: false,
+                platform: entry.platform ?? null,
+                url: entry.url ?? null,
+                coverUrl: entry.coverUrl ?? null,
+                creator: entry.creator ?? null,
+                duration: entry.duration ?? null,
+            });
+            continue;
+        }
+
+        // For movie/tv, fetch TMDB data
         let tmdbData = existing?.tmdb;
         let details = null;
 
@@ -211,13 +255,6 @@ async function buildSnapshot(entries, existingMap) {
             }
             tmdbData = buildTmdbPayload(details, mediaType);
         }
-
-        const watchDates = Array.isArray(entry.watchDates)
-            ? entry.watchDates
-            : entry.watchDate
-                ? [entry.watchDate]
-                : [];
-        const orderedWatchDates = [...watchDates].sort((a, b) => b.localeCompare(a));
 
         enriched.push({
             id: entry.id,

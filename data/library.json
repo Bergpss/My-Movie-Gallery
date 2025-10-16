@@ -1,6 +1,18 @@
 {
   "watching": [
     {
+      "id": "bilibili-BV1NGHGzJEfx",
+      "title": "首尔夏天",
+      "mediaType": "web-video",
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
+      "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
+      "creator": "食贫道",
+      "duration": "03:17:25",
+      "status": "watching",
+      "note": null
+    },
+    {
       "id": 209867,
       "title": "葬送的芙莉莲",
       "mediaType": "tv",
