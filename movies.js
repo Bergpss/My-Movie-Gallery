@@ -124,10 +124,12 @@ function getPlatformColor(platform) {
 function renderMovies(movies) {
     const watchingContainer = document.getElementById('watching-container');
     const watchingEmpty = document.querySelector('#watching-section .empty-message');
+    const wishlistContainer = document.getElementById('wishlist-container');
+    const wishlistEmpty = document.querySelector('#wishlist-section .empty-message');
     const watchedContainer = document.getElementById('movie-container');
     const watchedEmpty = document.querySelector('#watched-section .empty-message');
 
-    [watchingContainer, watchedContainer].forEach(container => {
+    [watchingContainer, wishlistContainer, watchedContainer].forEach(container => {
         if (container) {
             container.innerHTML = '';
         }
@@ -137,10 +139,17 @@ function renderMovies(movies) {
 
     const watchingMovies = filteredMovies.filter(movie => {
         const status = (movie.status || '').toLowerCase();
-        return status === 'watching' || status === 'in-progress' || status === 'ongoing' || status === 'wishlist' || status === 'planned';
+        return status === 'watching' || status === 'in-progress' || status === 'ongoing';
     });
 
-    const watchedMovies = filteredMovies.filter(movie => !watchingMovies.includes(movie));
+    const wishlistMovies = filteredMovies.filter(movie => {
+        const status = (movie.status || '').toLowerCase();
+        return status === 'wishlist' || status === 'planned';
+    });
+
+    const watchedMovies = filteredMovies.filter(movie => {
+        return !watchingMovies.includes(movie) && !wishlistMovies.includes(movie);
+    });
 
     const renderList = (container, emptyMessageEl, list, sortMode) => {
         if (!container || !emptyMessageEl) {
@@ -243,6 +252,7 @@ function renderMovies(movies) {
     };
 
     renderList(watchingContainer, watchingEmpty, watchingMovies, 'release');
+    renderList(wishlistContainer, wishlistEmpty, wishlistMovies, 'release');
     renderList(watchedContainer, watchedEmpty, watchedMovies, 'watch');
 }
 
