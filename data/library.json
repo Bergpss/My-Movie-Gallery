@@ -36,6 +36,17 @@
   ],
   "watched": [
     {
+      "id": 774531,
+      "title": "泳者之心",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "如果能把事做成,大家都会为你鼓掌",
+      "watchDates": [
+        "2025-10-21"
+      ],
+      "rating": 10
+    },
+    {
       "id": 842924,
       "title": "查克的一生",
       "mediaType": "movie",
@@ -3114,5 +3125,20 @@
       "inCinema": false
     }
   ],
-  "wishlist": []
+  "wishlist": [
+    {
+      "id": 105,
+      "title": "回到未来",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "note": null
+    },
+    {
+      "id": 5915,
+      "title": "荒野生存",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "note": null
+    }
+  ]
 }
