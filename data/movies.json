@@ -1,11 +1,58 @@
 {
-  "generatedAt": "2025-10-21T14:45:35.381Z",
+  "generatedAt": "2025-10-30T02:50:36.201Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 247
+    "total": 248
   },
   "items": [
+    {
+      "id": 277834,
+      "title": "海洋奇缘",
+      "mediaType": "movie",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Moana",
+        "original_language": "en",
+        "title": "海洋奇缘",
+        "overview": "故事最早始于住在风和海的半神毛伊（道恩·强森 Dwayne Johnson 配音），他偷走了女神的特菲堤之心，导致岩浆魔鬼厄卡陷入疯狂的状态，南太平洋各小岛也面临着毁灭的威胁。一千多年后，某座小岛上的酋长女儿莫阿娜（奥丽依·卡拉瓦霍 Auli'i Cravalho 配音）在父母的呵护下渐渐长大，童年时她曾偶然捡到特菲堤之心，亦曾受到大海的召唤，然而父亲却严厉禁止莫阿娜出海，即使小岛正遭受着死亡的威胁。从奶奶那里，莫阿娜知晓了他们这一族人的历史，于是为了拯救小岛，她依然出海去寻找被困在某地的毛伊，好让他归还特菲堤之心。历经千辛万苦，莫阿娜终于见到了这个传说中的高傲自大的半神。而毛伊则担心特菲堤之心带来霉运拒绝前往。\r 只不过在命运的指引下，毛伊还是随着莫阿娜踏上未知的征途……",
+        "poster_path": "/uGhuJL7iTCwg1DfFCCLEcabGn6W.jpg",
+        "backdrop_path": "/iYLKMV7PIBtFmtygRrhSiyzcVsF.jpg",
+        "release_date": "2016-10-13",
+        "runtime": 107,
+        "genres": [
+          {
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 10751,
+            "name": "家庭"
+          },
+          {
+            "id": 16,
+            "name": "动画"
+          }
+        ],
+        "vote_average": 7.564,
+        "vote_count": 13360,
+        "popularity": 2.9738,
+        "homepage": "",
+        "directors": [
+          "约翰·马斯克",
+          "罗恩·克莱蒙兹"
+        ]
+      }
+    },
     {
       "id": "bilibili-BV1NGHGzJEfx",
       "title": "首尔夏天",
