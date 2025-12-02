@@ -3136,7 +3136,8 @@
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
-        "2022-03-14"
+        "2022-03-14",
+        "2025-11-24"
       ],
       "watchDate": "2022-03-14",
       "rating": 10,
@@ -7299,7 +7300,8 @@
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
-        "2020-07-25"
+        "2020-07-25",
+        "2025-11-25"
       ],
       "watchDate": "2020-07-25",
       "rating": 10,
