@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-02T16:51:06.242Z",
+  "generatedAt": "2026-01-02T17:34:29.750Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -7,190 +7,38 @@
   },
   "items": [
     {
-      "id": 277834,
-      "title": "海洋奇缘",
+      "id": 309435,
+      "title": "蒙古草原,天气晴",
       "mediaType": "movie",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
+      "status": "watched",
+      "watchDates": [
+        "2026-01-02"
+      ],
+      "watchDate": "2026-01-02",
+      "rating": 9,
+      "note": "甜甜-晓荷-Berg一起看,真实的记录,人生的无常,内心角落被触动",
       "inCinema": false,
       "tmdb": {
-        "original_title": "Moana",
-        "original_language": "en",
-        "title": "海洋奇缘",
-        "overview": "故事最早始于住在风和海的半神毛伊（道恩·强森 Dwayne Johnson 配音），他偷走了女神的特菲堤之心，导致岩浆魔鬼厄卡陷入疯狂的状态，南太平洋各小岛也面临着毁灭的威胁。一千多年后，某座小岛上的酋长女儿莫阿娜（奥丽依·卡拉瓦霍 Auli'i Cravalho 配音）在父母的呵护下渐渐长大，童年时她曾偶然捡到特菲堤之心，亦曾受到大海的召唤，然而父亲却严厉禁止莫阿娜出海，即使小岛正遭受着死亡的威胁。从奶奶那里，莫阿娜知晓了他们这一族人的历史，于是为了拯救小岛，她依然出海去寻找被困在某地的毛伊，好让他归还特菲堤之心。历经千辛万苦，莫阿娜终于见到了这个传说中的高傲自大的半神。而毛伊则担心特菲堤之心带来霉运拒绝前往。\r 只不过在命运的指引下，毛伊还是随着莫阿娜踏上未知的征途……",
-        "poster_path": "/uGhuJL7iTCwg1DfFCCLEcabGn6W.jpg",
-        "backdrop_path": "/iYLKMV7PIBtFmtygRrhSiyzcVsF.jpg",
-        "release_date": "2016-10-13",
-        "runtime": 107,
+        "original_title": "プージェー",
+        "original_language": "ja",
+        "title": "蒙古草原，天气晴",
+        "overview": "999年秋天，日本探险家关野吉晴正骑着脚踏车横越蒙古，偶遇了年仅6岁、桀敖不驯的蒙古女孩普洁。他想用相机拍摄她的模样，但她拒绝了：“如果你只是来这儿拍照的，那走开吧！” 然而，这却开启了他们之间的友谊。普洁很小就学会牧羊、骑马，蒙古社会与经济形态的转型为生活带来更大的考验。普洁在妈妈的坚持下到学校上学，这让她的梦想多了一双翅膀，飞跃蒙古草原……",
+        "poster_path": "/j8hSUA1JD5P9LO58LUee7j2YFnf.jpg",
+        "backdrop_path": "/qM3yNdGhgMxs1JjZYxPsA48djZr.jpg",
+        "release_date": "2006-06-03",
+        "runtime": 109,
         "genres": [
           {
-            "id": 12,
-            "name": "冒险"
-          },
-          {
-            "id": 35,
-            "name": "喜剧"
-          },
-          {
-            "id": 10751,
-            "name": "家庭"
-          },
-          {
-            "id": 16,
-            "name": "动画"
+            "id": 99,
+            "name": "纪录"
           }
         ],
-        "vote_average": 7.564,
-        "vote_count": 13360,
-        "popularity": 2.9738,
+        "vote_average": 7.429,
+        "vote_count": 7,
+        "popularity": 0.1534,
         "homepage": "",
         "directors": [
-          "约翰·马斯克",
-          "罗恩·克莱蒙兹"
-        ]
-      }
-    },
-    {
-      "id": "bilibili-BV1NGHGzJEfx",
-      "title": "首尔夏天",
-      "mediaType": "web-video",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "platform": "bilibili",
-      "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
-      "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
-      "creator": "食贫道",
-      "duration": "03:17:25"
-    },
-    {
-      "id": 209867,
-      "title": "葬送的芙莉莲",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "葬送のフリーレン",
-        "original_language": "ja",
-        "title": "葬送的芙莉莲",
-        "overview": "打倒了魔王的勇者一行人的后日谈——在“那之后”的故事。身为魔法使的芙莉莲是一位精灵，她和另外三人有着不一样的地方。对于生活在“之后”的世界、感受到的事情有着不一样的看法……残存世间的人们所编织的，葬送与祈祷相伴的故事——从“冒险的结束”开始了。",
-        "poster_path": "/jvueXfiDeeifwGCySYsQdcw2fCz.jpg",
-        "backdrop_path": "/emGCHnRPru5LLWcKbSFzUEUisac.jpg",
-        "release_date": "2023-09-29",
-        "runtime": 25,
-        "genres": [
-          {
-            "id": 16,
-            "name": "动画"
-          },
-          {
-            "id": 10759,
-            "name": "动作冒险"
-          },
-          {
-            "id": 18,
-            "name": "剧情"
-          },
-          {
-            "id": 10765,
-            "name": "Sci-Fi & Fantasy"
-          }
-        ],
-        "vote_average": 8.751,
-        "vote_count": 535,
-        "popularity": 27.5825,
-        "homepage": "https://frieren-anime.jp/",
-        "directors": [
-          "斋藤圭一郎"
-        ]
-      }
-    },
-    {
-      "id": 257161,
-      "title": "喜人奇妙夜",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "喜人奇妙夜",
-        "original_language": "zh",
-        "title": "喜人奇妙夜",
-        "overview": "《喜人奇妙夜》是由腾讯视频、米未联合出品的一档原创新喜剧综艺，黄渤、秦昊、贾冰、高圆圆、马东、金靖、宋木子将作为观众代表，除此之外，每期还有一位神秘观众代表，陪伴大家度过一个又一个的喜剧奇妙夜晚！节目秉持“只要大声笑，烦恼都丢掉”的宗旨，喜剧小队们将围绕最具热点和最有共鸣的情绪主题演绎喜剧作品，用喜剧解构一切！",
-        "poster_path": "/fuBwfFWGu1m0OI961Y5X5ogsqmi.jpg",
-        "backdrop_path": "/5TvKAb7oS3N2K5h6VDIYJlKYtaY.jpg",
-        "release_date": "2024-06-28",
-        "runtime": null,
-        "genres": [
-          {
-            "id": 10764,
-            "name": "真人秀"
-          },
-          {
-            "id": 35,
-            "name": "喜剧"
-          }
-        ],
-        "vote_average": 7.5,
-        "vote_count": 4,
-        "popularity": 20.0283,
-        "homepage": "https://v.qq.com/x/cover/mzc00200vyot3cs.html",
-        "directors": []
-      }
-    },
-    {
-      "id": 252135,
-      "title": "回魂记",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "回魂計",
-        "original_language": "zh",
-        "title": "回魂计",
-        "overview": "以一宗诈骗绑架案为引线，两位失去女儿的母亲因仇恨结盟，在神秘力量的协助下，竟将凶手复活、施以酷刑，只为亲手惩罚。她们在复仇与救赎之间愈陷愈深，不仅对抗谎言与操控的危险世界，更被迫面对友谊与道德的撕裂。当真相逐步揭开，复仇究竟能带来慰藉，还是吞噬她们最后的希望？",
-        "poster_path": "/ukoPA4WnfIlApNtc7AF5TTLhouy.jpg",
-        "backdrop_path": "/hvSHnrbLlR829PqGdf1PXQZuDPb.jpg",
-        "release_date": "2025-10-09",
-        "runtime": null,
-        "genres": [
-          {
-            "id": 80,
-            "name": "犯罪"
-          },
-          {
-            "id": 18,
-            "name": "剧情"
-          },
-          {
-            "id": 9648,
-            "name": "悬疑"
-          }
-        ],
-        "vote_average": 8,
-        "vote_count": 7,
-        "popularity": 34.0044,
-        "homepage": "https://www.netflix.com/TheResurrected",
-        "directors": [
-          "陈正道",
-          "许肇任"
+          "山田和也"
         ]
       }
     },
@@ -248,38 +96,89 @@
       }
     },
     {
-      "id": 309435,
-      "title": "蒙古草原,天气晴",
+      "id": 257161,
+      "title": "喜人奇妙夜",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2025-12-10"
+      ],
+      "watchDate": "2025-12-10",
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "喜人奇妙夜",
+        "original_language": "zh",
+        "title": "喜人奇妙夜",
+        "overview": "《喜人奇妙夜》是由腾讯视频、米未联合出品的一档原创新喜剧综艺，黄渤、秦昊、贾冰、高圆圆、马东、金靖、宋木子将作为观众代表，除此之外，每期还有一位神秘观众代表，陪伴大家度过一个又一个的喜剧奇妙夜晚！节目秉持“只要大声笑，烦恼都丢掉”的宗旨，喜剧小队们将围绕最具热点和最有共鸣的情绪主题演绎喜剧作品，用喜剧解构一切！",
+        "poster_path": "/fuBwfFWGu1m0OI961Y5X5ogsqmi.jpg",
+        "backdrop_path": "/5TvKAb7oS3N2K5h6VDIYJlKYtaY.jpg",
+        "release_date": "2024-06-28",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 10764,
+            "name": "真人秀"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.5,
+        "vote_count": 4,
+        "popularity": 20.0283,
+        "homepage": "https://v.qq.com/x/cover/mzc00200vyot3cs.html",
+        "directors": []
+      }
+    },
+    {
+      "id": 277834,
+      "title": "海洋奇缘",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
-        "2026-01-02"
+        "2025-11-25"
       ],
-      "watchDate": "2026-01-02",
-      "rating": 9,
-      "note": "甜甜-晓荷-Berg一起看,真实的记录,人生的无常,内心角落被触动",
+      "watchDate": "2025-11-25",
+      "rating": null,
+      "note": null,
       "inCinema": false,
       "tmdb": {
-        "original_title": "プージェー",
-        "original_language": "ja",
-        "title": "蒙古草原，天气晴",
-        "overview": "999年秋天，日本探险家关野吉晴正骑着脚踏车横越蒙古，偶遇了年仅6岁、桀敖不驯的蒙古女孩普洁。他想用相机拍摄她的模样，但她拒绝了：“如果你只是来这儿拍照的，那走开吧！” 然而，这却开启了他们之间的友谊。普洁很小就学会牧羊、骑马，蒙古社会与经济形态的转型为生活带来更大的考验。普洁在妈妈的坚持下到学校上学，这让她的梦想多了一双翅膀，飞跃蒙古草原……",
-        "poster_path": "/j8hSUA1JD5P9LO58LUee7j2YFnf.jpg",
-        "backdrop_path": "/qM3yNdGhgMxs1JjZYxPsA48djZr.jpg",
-        "release_date": "2006-06-03",
-        "runtime": 109,
+        "original_title": "Moana",
+        "original_language": "en",
+        "title": "海洋奇缘",
+        "overview": "故事最早始于住在风和海的半神毛伊（道恩·强森 Dwayne Johnson 配音），他偷走了女神的特菲堤之心，导致岩浆魔鬼厄卡陷入疯狂的状态，南太平洋各小岛也面临着毁灭的威胁。一千多年后，某座小岛上的酋长女儿莫阿娜（奥丽依·卡拉瓦霍 Auli'i Cravalho 配音）在父母的呵护下渐渐长大，童年时她曾偶然捡到特菲堤之心，亦曾受到大海的召唤，然而父亲却严厉禁止莫阿娜出海，即使小岛正遭受着死亡的威胁。从奶奶那里，莫阿娜知晓了他们这一族人的历史，于是为了拯救小岛，她依然出海去寻找被困在某地的毛伊，好让他归还特菲堤之心。历经千辛万苦，莫阿娜终于见到了这个传说中的高傲自大的半神。而毛伊则担心特菲堤之心带来霉运拒绝前往。\r 只不过在命运的指引下，毛伊还是随着莫阿娜踏上未知的征途……",
+        "poster_path": "/uGhuJL7iTCwg1DfFCCLEcabGn6W.jpg",
+        "backdrop_path": "/iYLKMV7PIBtFmtygRrhSiyzcVsF.jpg",
+        "release_date": "2016-10-13",
+        "runtime": 107,
         "genres": [
           {
-            "id": 99,
-            "name": "纪录"
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 10751,
+            "name": "家庭"
+          },
+          {
+            "id": 16,
+            "name": "动画"
           }
         ],
-        "vote_average": 7.429,
-        "vote_count": 7,
-        "popularity": 0.1534,
+        "vote_average": 7.564,
+        "vote_count": 13360,
+        "popularity": 2.9738,
         "homepage": "",
         "directors": [
-          "山田和也"
+          "约翰·马斯克",
+          "罗恩·克莱蒙兹"
         ]
       }
     },
@@ -10602,6 +10501,111 @@
           "西恩·潘"
         ]
       }
+    },
+    {
+      "id": 252135,
+      "title": "回魂记",
+      "mediaType": "tv",
+      "status": "dropped",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": "不想看了",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "回魂計",
+        "original_language": "zh",
+        "title": "回魂计",
+        "overview": "以一宗诈骗绑架案为引线，两位失去女儿的母亲因仇恨结盟，在神秘力量的协助下，竟将凶手复活、施以酷刑，只为亲手惩罚。她们在复仇与救赎之间愈陷愈深，不仅对抗谎言与操控的危险世界，更被迫面对友谊与道德的撕裂。当真相逐步揭开，复仇究竟能带来慰藉，还是吞噬她们最后的希望？",
+        "poster_path": "/ukoPA4WnfIlApNtc7AF5TTLhouy.jpg",
+        "backdrop_path": "/hvSHnrbLlR829PqGdf1PXQZuDPb.jpg",
+        "release_date": "2025-10-09",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8,
+        "vote_count": 7,
+        "popularity": 34.0044,
+        "homepage": "https://www.netflix.com/TheResurrected",
+        "directors": [
+          "陈正道",
+          "许肇任"
+        ]
+      }
+    },
+    {
+      "id": 209867,
+      "title": "葬送的芙莉莲",
+      "mediaType": "tv",
+      "status": "dropped",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": "不想看了~",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "葬送のフリーレン",
+        "original_language": "ja",
+        "title": "葬送的芙莉莲",
+        "overview": "打倒了魔王的勇者一行人的后日谈——在“那之后”的故事。身为魔法使的芙莉莲是一位精灵，她和另外三人有着不一样的地方。对于生活在“之后”的世界、感受到的事情有着不一样的看法……残存世间的人们所编织的，葬送与祈祷相伴的故事——从“冒险的结束”开始了。",
+        "poster_path": "/jvueXfiDeeifwGCySYsQdcw2fCz.jpg",
+        "backdrop_path": "/emGCHnRPru5LLWcKbSFzUEUisac.jpg",
+        "release_date": "2023-09-29",
+        "runtime": 25,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "vote_average": 8.751,
+        "vote_count": 535,
+        "popularity": 27.5825,
+        "homepage": "https://frieren-anime.jp/",
+        "directors": [
+          "斋藤圭一郎"
+        ]
+      }
+    },
+    {
+      "id": "bilibili-BV1NGHGzJEfx",
+      "title": "首尔夏天",
+      "mediaType": "web-video",
+      "status": "dropped",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": "时长比较长,没有一口气看完",
+      "inCinema": false,
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
+      "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
+      "creator": "食贫道",
+      "duration": "03:17:25"
     }
   ]
 }

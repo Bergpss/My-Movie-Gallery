@@ -1,47 +1,17 @@
 {
-  "watching": [
-    {
-      "id": 277834,
-      "title": "海洋奇缘",
-      "mediaType": "movie",
-      "status": "watching",
-      "note": null
-    },
-    {
-      "id": "bilibili-BV1NGHGzJEfx",
-      "title": "首尔夏天",
-      "mediaType": "web-video",
-      "platform": "bilibili",
-      "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
-      "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
-      "creator": "食贫道",
-      "duration": "03:17:25",
-      "status": "watching",
-      "note": null
-    },
-    {
-      "id": 209867,
-      "title": "葬送的芙莉莲",
-      "mediaType": "tv",
-      "status": "watching",
-      "note": null
-    },
-    {
-      "id": 257161,
-      "title": "喜人奇妙夜",
-      "mediaType": "tv",
-      "status": "watching",
-      "note": null
-    },
-    {
-      "id": 252135,
-      "title": "回魂记",
-      "mediaType": "tv",
-      "status": "watching",
-      "note": null
-    }
-  ],
+  "watching": [],
   "watched": [
+    {
+      "id": 309435,
+      "title": "蒙古草原,天气晴",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "甜甜-晓荷-Berg一起看,真实的记录,人生的无常,内心角落被触动",
+      "watchDates": [
+        "2026-01-02"
+      ],
+      "rating": 9
+    },
     {
       "id": 1084242,
       "title": "疯狂动物城",
@@ -54,15 +24,26 @@
       "rating": 9
     },
     {
-      "id": 309435,
-      "title": "蒙古草原,天气晴",
+      "id": 257161,
+      "title": "喜人奇妙夜",
+      "mediaType": "tv",
+      "status": "watched",
+      "note": null,
+      "watchDates": [
+        "2025-12-10"
+      ],
+      "watchDate": "2025-12-10"
+    },
+    {
+      "id": 277834,
+      "title": "海洋奇缘",
       "mediaType": "movie",
       "status": "watched",
-      "note": "甜甜-晓荷-Berg一起看,真实的记录,人生的无常,内心角落被触动",
+      "note": null,
       "watchDates": [
-        "2026-01-02"
+        "2025-11-25"
       ],
-      "rating": 9
+      "watchDate": "2025-11-25"
     },
     {
       "id": 774531,
@@ -3168,6 +3149,37 @@
       "mediaType": "movie",
       "status": "wishlist",
       "note": null
+    }
+  ],
+  "dropped": [
+    {
+      "id": 252135,
+      "title": "回魂记",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": "不想看了",
+      "droppedDate": "2026-01-02"
+    },
+    {
+      "id": 209867,
+      "title": "葬送的芙莉莲",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": "不想看了~",
+      "droppedDate": "2026-01-02"
+    },
+    {
+      "id": "bilibili-BV1NGHGzJEfx",
+      "title": "首尔夏天",
+      "mediaType": "web-video",
+      "platform": "bilibili",
+      "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
+      "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
+      "creator": "食贫道",
+      "duration": "03:17:25",
+      "status": "dropped",
+      "note": "时长比较长,没有一口气看完",
+      "droppedDate": "2026-01-02"
     }
   ]
 }

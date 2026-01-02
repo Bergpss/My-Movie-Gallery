@@ -40,6 +40,7 @@ async function loadLibrary() {
     const watching = Array.isArray(parsed?.watching) ? parsed.watching : [];
     const watched = Array.isArray(parsed?.watched) ? parsed.watched : [];
     const wishlist = Array.isArray(parsed?.wishlist) ? parsed.wishlist : [];
+    const dropped = Array.isArray(parsed?.dropped) ? parsed.dropped : [];
 
     const deduped = new Map();
 
@@ -89,6 +90,7 @@ async function loadLibrary() {
     watching.forEach(entry => upsert(entry, 'watching'));
     watched.forEach(entry => upsert(entry, 'watched'));
     wishlist.forEach(entry => upsert(entry, 'wishlist'));
+    dropped.forEach(entry => upsert(entry, 'dropped'));
 
     return Array.from(deduped.values());
 }

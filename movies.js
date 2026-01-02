@@ -128,8 +128,10 @@ function renderMovies(movies) {
     const wishlistEmpty = document.querySelector('#wishlist-section .empty-message');
     const watchedContainer = document.getElementById('movie-container');
     const watchedEmpty = document.querySelector('#watched-section .empty-message');
+    const droppedContainer = document.getElementById('dropped-container');
+    const droppedEmpty = document.querySelector('#dropped-section .empty-message');
 
-    [watchingContainer, wishlistContainer, watchedContainer].forEach(container => {
+    [watchingContainer, wishlistContainer, watchedContainer, droppedContainer].forEach(container => {
         if (container) {
             container.innerHTML = '';
         }
@@ -147,8 +149,13 @@ function renderMovies(movies) {
         return status === 'wishlist' || status === 'planned';
     });
 
+    const droppedMovies = filteredMovies.filter(movie => {
+        const status = (movie.status || '').toLowerCase();
+        return status === 'dropped';
+    });
+
     const watchedMovies = filteredMovies.filter(movie => {
-        return !watchingMovies.includes(movie) && !wishlistMovies.includes(movie);
+        return !watchingMovies.includes(movie) && !wishlistMovies.includes(movie) && !droppedMovies.includes(movie);
     });
 
     const renderList = (container, emptyMessageEl, list, sortMode) => {
@@ -220,7 +227,7 @@ function renderMovies(movies) {
                 ? movie.watchDates
                 : movie.watchDate
                     ? [movie.watchDate]
-                : [])
+                    : [])
                 .map(date => formatDate(date))
                 .filter(Boolean);
             const [primaryWatchDate, ...extraWatchDates] = formattedWatchDates;
@@ -254,6 +261,7 @@ function renderMovies(movies) {
     renderList(watchingContainer, watchingEmpty, watchingMovies, 'release');
     renderList(wishlistContainer, wishlistEmpty, wishlistMovies, 'release');
     renderList(watchedContainer, watchedEmpty, watchedMovies, 'watch');
+    renderList(droppedContainer, droppedEmpty, droppedMovies, 'release');
 }
 
 function setupFilterButtons() {
