@@ -1,11 +1,87 @@
 {
-  "generatedAt": "2026-01-02T17:34:29.750Z",
+  "generatedAt": "2026-01-02T17:41:00.835Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 250
+    "total": 252
   },
   "items": [
+    {
+      "id": 200875,
+      "title": "小丑回魂：欢迎来到德里",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "IT: Welcome to Derry",
+        "original_language": "en",
+        "title": "小丑回魂：欢迎来到德里镇",
+        "overview": "《小丑回魂》系列前传剧集，故事背景设定在1962年，比原版电影的时间线早了27年，深入探索了恐怖小丑潘尼怀斯的起源以及德里镇背后循环发生的恐怖事件。",
+        "poster_path": "/kk0hdltG1EkGNRV8noegSErSZKQ.jpg",
+        "backdrop_path": "/2fOKVDoc2O3eZmBZesWPuE5kgPN.jpg",
+        "release_date": "2025-10-26",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8.24,
+        "vote_count": 1106,
+        "popularity": 156.2423,
+        "homepage": "https://www.hbo.com/content/it-welcome-to-derry",
+        "directors": []
+      }
+    },
+    {
+      "id": 2196,
+      "title": "葬礼上的死亡",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-01-01"
+      ],
+      "watchDate": "2026-01-01",
+      "rating": 8,
+      "note": "新年的第一个电影,和朱-晓荷-甜一起看的",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Death at a Funeral",
+        "original_language": "en",
+        "title": "葬礼上的死亡",
+        "overview": "　　丹尼尔（马修·麦克费登 Matthew Macfadyen 饰）是个久不得志的作家，而且一直生活在名作家哥哥罗伯特（拉珀特·格雷夫斯 Rupert Graves 饰）的阴影之下。默默担负赡养父母义务的他这次主办父亲的葬礼，却同样被哥哥喧宾夺主。\r 　　本来严肃而又神圣的葬礼更是被堂姐的未婚夫，错食了迷幻药的可怜虫西蒙（艾伦·图代克 Alan Tudyk 饰），搅得一团糟。然而更大的危机在后面，一个神秘的侏儒男子（彼特·丁拉基 Peter Dinklage 饰）现身了，带着毁坏父亲所有声名的证据对丹尼尔进行敲诈。原来丹尼尔的父亲是同性恋，这个秘密眼看就要在他死后被揭开。\r 　　在一团混乱中，葬礼断断续续的进行着。戏剧化的悲伤和幽默悄然向我们揭示葬礼的意义——带着挚爱的心情缅怀死者，也让生者将不如意的过去埋葬在葬礼上。 ©豆瓣",
+        "poster_path": "/r90Mmt0mn9KbWCR0m3f76ipgM1H.jpg",
+        "backdrop_path": "/lIXNL1uoEyuTLqaTAqtBYoc71WF.jpg",
+        "release_date": "2007-08-17",
+        "runtime": 91,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 6.911,
+        "vote_count": 1860,
+        "popularity": 2.4025,
+        "homepage": "",
+        "directors": [
+          "弗兰克·奥兹"
+        ]
+      }
+    },
     {
       "id": 309435,
       "title": "蒙古草原,天气晴",

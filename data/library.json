@@ -1,6 +1,25 @@
 {
-  "watching": [],
+  "watching": [
+    {
+      "id": 200875,
+      "title": "小丑回魂：欢迎来到德里",
+      "mediaType": "tv",
+      "status": "watching",
+      "note": null
+    }
+  ],
   "watched": [
+    {
+      "id": 2196,
+      "title": "葬礼上的死亡",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "新年的第一个电影,和朱-晓荷-甜一起看的",
+      "watchDates": [
+        "2026-01-01"
+      ],
+      "rating": 8
+    },
     {
       "id": 309435,
       "title": "蒙古草原,天气晴",
