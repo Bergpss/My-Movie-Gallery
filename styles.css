@@ -102,7 +102,7 @@ body {
 .movie-item img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 2/3;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
