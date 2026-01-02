@@ -43,6 +43,17 @@
   ],
   "watched": [
     {
+      "id": 1084242,
+      "title": "疯狂动物城",
+      "mediaType": "movie",
+      "status": "watched",
+      "note": "甜甜考完试我们一起看嘟",
+      "watchDates": [
+        "2025-12-21"
+      ],
+      "rating": 9
+    },
+    {
       "id": 309435,
       "title": "蒙古草原,天气晴",
       "mediaType": "movie",

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-02T16:42:00.249Z",
+  "generatedAt": "2026-01-02T16:51:06.242Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 249
+    "total": 250
   },
   "items": [
     {
@@ -191,6 +191,59 @@
         "directors": [
           "陈正道",
           "许肇任"
+        ]
+      }
+    },
+    {
+      "id": 1084242,
+      "title": "疯狂动物城",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-12-21"
+      ],
+      "watchDate": "2025-12-21",
+      "rating": 9,
+      "note": "甜甜考完试我们一起看嘟",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Zootopia 2",
+        "original_language": "en",
+        "title": "疯狂动物城2",
+        "overview": "在《疯狂动物城2》中，警官兔朱迪（金妮弗·古德温 配音）与狐尼克（杰森·贝特曼 配音）这对备受全球观众喜爱的搭档将再度携手，带领观众重返充满活力的动物城，开启全新冒险。故事紧接前作，这对默契十足的搭档将直面职业与关系上的新挑战，揭开动物城深藏的秘密。",
+        "poster_path": "/vmz5Ev5dZGPltYH58wOZhPmxL7Z.jpg",
+        "backdrop_path": "/7nfpkR9XsQ1lBNCXSSHxGV7Dkxe.jpg",
+        "release_date": "2025-11-26",
+        "runtime": 107,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 10751,
+            "name": "家庭"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 7.7,
+        "vote_count": 887,
+        "popularity": 380.0296,
+        "homepage": "",
+        "directors": [
+          "贾里德·布什",
+          "拜恩·霍华德"
         ]
       }
     },
