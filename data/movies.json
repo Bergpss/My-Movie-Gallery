@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2025-10-30T02:50:36.201Z",
+  "generatedAt": "2026-01-02T16:42:00.249Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 248
+    "total": 249
   },
   "items": [
     {
@@ -191,6 +191,42 @@
         "directors": [
           "陈正道",
           "许肇任"
+        ]
+      }
+    },
+    {
+      "id": 309435,
+      "title": "蒙古草原,天气晴",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-01-02"
+      ],
+      "watchDate": "2026-01-02",
+      "rating": 9,
+      "note": "甜甜-晓荷-Berg一起看,真实的记录,人生的无常,内心角落被触动",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "プージェー",
+        "original_language": "ja",
+        "title": "蒙古草原，天气晴",
+        "overview": "999年秋天，日本探险家关野吉晴正骑着脚踏车横越蒙古，偶遇了年仅6岁、桀敖不驯的蒙古女孩普洁。他想用相机拍摄她的模样，但她拒绝了：“如果你只是来这儿拍照的，那走开吧！” 然而，这却开启了他们之间的友谊。普洁很小就学会牧羊、骑马，蒙古社会与经济形态的转型为生活带来更大的考验。普洁在妈妈的坚持下到学校上学，这让她的梦想多了一双翅膀，飞跃蒙古草原……",
+        "poster_path": "/j8hSUA1JD5P9LO58LUee7j2YFnf.jpg",
+        "backdrop_path": "/qM3yNdGhgMxs1JjZYxPsA48djZr.jpg",
+        "release_date": "2006-06-03",
+        "runtime": 109,
+        "genres": [
+          {
+            "id": 99,
+            "name": "纪录"
+          }
+        ],
+        "vote_average": 7.429,
+        "vote_count": 7,
+        "popularity": 0.1534,
+        "homepage": "",
+        "directors": [
+          "山田和也"
         ]
       }
     },
@@ -3136,8 +3172,7 @@
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
-        "2022-03-14",
-        "2025-11-24"
+        "2022-03-14"
       ],
       "watchDate": "2022-03-14",
       "rating": 10,
@@ -7300,8 +7335,7 @@
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
-        "2020-07-25",
-        "2025-11-25"
+        "2020-07-25"
       ],
       "watchDate": "2020-07-25",
       "rating": 10,
