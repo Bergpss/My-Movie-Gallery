@@ -328,7 +328,7 @@ async function main() {
 
     const entry = {
         id: chosen.id,
-        title: titleInput || chosenTitle,
+        title: chosenTitle,
         mediaType: chosen.media_type || 'movie',
         status,
         note: note || null,
