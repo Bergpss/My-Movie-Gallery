@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-04T11:04:58.916Z",
+  "generatedAt": "2026-01-04T11:05:40.812Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 256
+    "total": 257
   },
   "items": [
     {
@@ -39,6 +39,48 @@
         "vote_count": 1106,
         "popularity": 156.2423,
         "homepage": "https://www.hbo.com/content/it-welcome-to-derry",
+        "directors": []
+      }
+    },
+    {
+      "id": 246386,
+      "title": "都是她的错",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2025-12-25"
+      ],
+      "watchDate": "2025-12-25",
+      "rating": 9,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "All Her Fault",
+        "original_language": "en",
+        "title": "都是她的错",
+        "overview": "玛丽莎去接年幼的儿子麦洛，他刚和新学校的一名男孩结束第一次的玩伴聚会。然而，开门的女人并不是她认识的那位母亲或保姆，更没有麦洛的踪影。全天下父母最不愿面对的噩梦就此展开…",
+        "poster_path": "/lgVY2OSdzOZ5uaAhVunWkAnHM9f.jpg",
+        "backdrop_path": "/vIUWZNvdWUyZrJwSMahgweXiZU9.jpg",
+        "release_date": "2025-11-07",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          }
+        ],
+        "vote_average": 8.3,
+        "vote_count": 79,
+        "popularity": 22.1349,
+        "homepage": "https://www.sky.com/watch/all-her-fault",
         "directors": []
       }
     },
