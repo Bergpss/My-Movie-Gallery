@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-04T10:54:31.349Z",
+  "generatedAt": "2026-01-04T11:04:58.916Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 255
+    "total": 256
   },
   "items": [
     {
@@ -10624,6 +10624,42 @@
         "directors": [
           "塔伊加·维迪提"
         ]
+      }
+    },
+    {
+      "id": 225171,
+      "title": "Pluribus",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Pluribus",
+        "original_language": "en",
+        "title": "Pluribus",
+        "overview": "故事围绕“幸福也会像病毒一样传染”这一概念展开。背景设定在一个与现实世界相似却被微妙扭曲的平行世界中，当快乐突然成为可怕的“传染病”，女主必须想办法在这场全民狂欢中拯救世界。",
+        "poster_path": "/2CmFP7hMzC8OGu9ur2oQu12J5A.jpg",
+        "backdrop_path": "/vNCNUxNHHgP0WsA19hxztUsG3yG.jpg",
+        "release_date": "2025-11-06",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "vote_average": 8,
+        "vote_count": 471,
+        "popularity": 94.3217,
+        "homepage": "https://tv.apple.com/show/umc.cmc.37axgovs2yozlyh3c2cmwzlza",
+        "directors": []
       }
     },
     {
