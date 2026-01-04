@@ -5,6 +5,7 @@ const API_BASE = '/api';
 
 // 状态
 let authToken = localStorage.getItem('adminToken');
+let existingMovieIds = new Set(); // 已添加的电影 ID 集合
 
 // DOM 元素
 const loginSection = document.getElementById('login-section');
@@ -35,9 +36,28 @@ function init() {
 }
 
 // 显示管理区域
-function showAdminSection() {
+async function showAdminSection() {
     loginSection.hidden = true;
     adminSection.hidden = false;
+    // 加载已添加的电影列表
+    await loadExistingMovies();
+}
+
+// 加载已添加的电影ID列表
+async function loadExistingMovies() {
+    try {
+        const response = await fetch('/data/movies.json');
+        if (response.ok) {
+            const data = await response.json();
+            existingMovieIds.clear();
+            (data.items || []).forEach(movie => {
+                if (movie.id) existingMovieIds.add(movie.id);
+            });
+            console.log(`已加载 ${existingMovieIds.size} 部电影记录`);
+        }
+    } catch (error) {
+        console.warn('加载电影列表失败:', error);
+    }
 }
 
 // 显示消息
@@ -146,23 +166,31 @@ async function handleSearch(e) {
 
 // 渲染搜索结果
 function renderSearchResults(results) {
-    searchResults.innerHTML = results.map(movie => `
-        <div class="result-item" data-movie='${JSON.stringify(movie).replace(/'/g, "&#39;")}'>
+    searchResults.innerHTML = results.map(movie => {
+        const isAdded = existingMovieIds.has(movie.id);
+        return `
+        <div class="result-item ${isAdded ? 'already-added' : ''}" data-movie='${JSON.stringify(movie).replace(/'/g, "&#39;")}' data-added="${isAdded}">
+            ${isAdded ? '<span class="added-badge">✓ 已添加</span>' : ''}
             ${movie.posterPath
-            ? `<img src="${POSTER_BASE_URL}${movie.posterPath}" alt="${movie.title}" loading="lazy">`
-            : `<div class="no-poster">🎬</div>`
-        }
+                ? `<img src="${POSTER_BASE_URL}${movie.posterPath}" alt="${movie.title}" loading="lazy">`
+                : `<div class="no-poster">🎬</div>`
+            }
             <div class="result-item-info">
                 <h4>${movie.title}</h4>
                 <p>${movie.releaseDate ? movie.releaseDate.slice(0, 4) : '未知'} · ${movie.mediaType === 'tv' ? '剧集' : '电影'}</p>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 
     // 绑定点击事件
     document.querySelectorAll('.result-item').forEach(item => {
         item.addEventListener('click', () => {
             const movie = JSON.parse(item.dataset.movie);
+            const isAdded = item.dataset.added === 'true';
+            if (isAdded) {
+                showMessage(adminMessage, '该电影已在你的观影记录中', true);
+                return;
+            }
             openAddModal(movie);
         });
     });

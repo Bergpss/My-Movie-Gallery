@@ -256,6 +256,32 @@ body {
     color: #888;
 }
 
+/* 已添加电影标记 */
+.result-item.already-added {
+    position: relative;
+    opacity: 0.6;
+}
+
+.result-item.already-added:hover {
+    transform: none;
+    box-shadow: none;
+    cursor: default;
+}
+
+.added-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* 消息样式 */
 .error-message {
     color: #ef4444;
