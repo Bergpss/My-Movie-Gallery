@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>管理后台 - Berg观影记录</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>🎬 观影记录管理</h1>
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </header>
+
+        <!-- 登录区域 -->
+        <section id="login-section" class="card">
+            <h2>管理员登录</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="请输入管理员密码" required>
+                </div>
+                <button type="submit" class="btn btn-primary">登录</button>
+            </form>
+            <p id="login-error" class="error-message" hidden></p>
+        </section>
+
+        <!-- 管理区域（登录后显示） -->
+        <section id="admin-section" class="card" hidden>
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="search">搜索添加</button>
+                <button class="tab-btn" data-tab="manual">手动添加</button>
+            </div>
+
+            <!-- 搜索添加 Tab -->
+            <div id="search-tab" class="tab-content active">
+                <form id="search-form">
+                    <div class="form-row">
+                        <div class="form-group flex-grow">
+                            <label for="search-query">电影名称</label>
+                            <input type="text" id="search-query" placeholder="输入中文或英文片名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="search-type">类型</label>
+                            <select id="search-type">
+                                <option value="multi">全部</option>
+                                <option value="movie">电影</option>
+                                <option value="tv">剧集</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">搜索</button>
+                    </div>
+                </form>
+
+                <div id="search-results" class="results-grid"></div>
+                <p id="search-loading" class="loading-message" hidden>搜索中...</p>
+                <p id="search-empty" class="empty-message" hidden>未找到结果</p>
+            </div>
+
+            <!-- 手动添加 Tab -->
+            <div id="manual-tab" class="tab-content" hidden>
+                <form id="manual-form">
+                    <div class="form-group">
+                        <label for="manual-id">TMDB ID</label>
+                        <input type="number" id="manual-id" placeholder="例如: 269149" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="manual-title">电影名称</label>
+                        <input type="text" id="manual-title" placeholder="例如: 疯狂动物城" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="manual-type">类型</label>
+                            <select id="manual-type">
+                                <option value="movie">电影</option>
+                                <option value="tv">剧集</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="manual-status">状态</label>
+                            <select id="manual-status">
+                                <option value="watched">已看完</option>
+                                <option value="watching">正在看</option>
+                                <option value="wishlist">想看</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="manual-rating">评分 (0-10)</label>
+                            <input type="number" id="manual-rating" min="0" max="10" step="0.1" placeholder="可选">
+                        </div>
+                        <div class="form-group">
+                            <label for="manual-date">观影日期</label>
+                            <input type="date" id="manual-date">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="manual-cinema"> 影院观影 🎦
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="manual-note">备注</label>
+                        <textarea id="manual-note" rows="2" placeholder="可选"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">添加电影</button>
+                </form>
+            </div>
+
+            <p id="admin-message" class="message" hidden></p>
+        </section>
+
+        <!-- 添加电影弹窗 -->
+        <div id="add-modal" class="modal" hidden>
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-movie-info">
+                    <img id="modal-poster" src="" alt="">
+                    <div class="modal-movie-details">
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-meta"></p>
+                    </div>
+                </div>
+                <form id="add-form">
+                    <input type="hidden" id="add-id">
+                    <input type="hidden" id="add-title">
+                    <input type="hidden" id="add-type">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="add-status">状态</label>
+                            <select id="add-status">
+                                <option value="watched">已看完</option>
+                                <option value="watching">正在看</option>
+                                <option value="wishlist">想看</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-rating">评分 (0-10)</label>
+                            <input type="number" id="add-rating" min="0" max="10" step="0.1" placeholder="可选">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="add-date">观影日期</label>
+                            <input type="date" id="add-date">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="add-cinema"> 影院观影 🎦
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="add-note">备注</label>
+                        <textarea id="add-note" rows="2" placeholder="可选"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">确认添加</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
