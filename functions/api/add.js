@@ -105,7 +105,9 @@ export async function onRequestPost(context) {
         }
 
         const fileData = await getResponse.json();
-        const currentContent = JSON.parse(atob(fileData.content));
+        // 正确解码 UTF-8 内容（GitHub API 返回的是 Base64 编码的 UTF-8）
+        const decodedContent = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ''))));
+        const currentContent = JSON.parse(decodedContent);
         const sha = fileData.sha;
 
         // 构造新电影记录
