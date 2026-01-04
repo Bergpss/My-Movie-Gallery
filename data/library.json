@@ -2,7 +2,7 @@
   "watching": [
     {
       "id": 200875,
-      "title": "小丑回魂：欢迎来到德里",
+      "title": "å°ä¸åé­ï¼æ¬¢è¿æ¥å°å¾·é",
       "mediaType": "tv",
       "status": "watching",
       "note": null
@@ -10,11 +10,21 @@
   ],
   "watched": [
     {
+      "id": 17379,
+      "title": "最后的假期",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-01-03"
+      ],
+      "rating": 10,
+      "note": "很幸运能在新年看到这样一部佳作，给人无限的希望，最喜欢的一句台词：“It's not how you start but how you finish.”"
+    },
+    {
       "id": 2196,
-      "title": "葬礼上的死亡",
+      "title": "è¬ç¤¼ä¸çæ­»äº¡",
       "mediaType": "movie",
       "status": "watched",
-      "note": "新年的第一个电影,和朱-晓荷-甜一起看的",
+      "note": "æ°å¹´çç¬¬ä¸ä¸ªçµå½±,åæ±-æè·-çä¸èµ·çç",
       "watchDates": [
         "2026-01-01"
       ],
@@ -22,10 +32,10 @@
     },
     {
       "id": 309435,
-      "title": "蒙古草原,天气晴",
+      "title": "èå¤èå,å¤©æ°æ´",
       "mediaType": "movie",
       "status": "watched",
-      "note": "甜甜-晓荷-Berg一起看,真实的记录,人生的无常,内心角落被触动",
+      "note": "çç-æè·-Bergä¸èµ·ç,çå®çè®°å½,äººççæ å¸¸,åå¿è§è½è¢«è§¦å¨",
       "watchDates": [
         "2026-01-02"
       ],
@@ -33,10 +43,10 @@
     },
     {
       "id": 1084242,
-      "title": "疯狂动物城",
+      "title": "ç¯çå¨ç©å",
       "mediaType": "movie",
       "status": "watched",
-      "note": "甜甜考完试我们一起看嘟",
+      "note": "ççèå®è¯æä»¬ä¸èµ·çå",
       "watchDates": [
         "2025-12-21"
       ],
@@ -44,7 +54,7 @@
     },
     {
       "id": 257161,
-      "title": "喜人奇妙夜",
+      "title": "åäººå¥å¦å¤",
       "mediaType": "tv",
       "status": "watched",
       "note": null,
@@ -55,7 +65,7 @@
     },
     {
       "id": 277834,
-      "title": "海洋奇缘",
+      "title": "æµ·æ´å¥ç¼",
       "mediaType": "movie",
       "status": "watched",
       "note": null,
@@ -66,10 +76,10 @@
     },
     {
       "id": 774531,
-      "title": "泳者之心",
+      "title": "æ³³èä¹å¿",
       "mediaType": "movie",
       "status": "watched",
-      "note": "如果能把事做成,大家都会为你鼓掌",
+      "note": "å¦æè½æäºåæ,å¤§å®¶é½ä¼ä¸ºä½ é¼æ",
       "watchDates": [
         "2025-10-21"
       ],
@@ -77,7 +87,7 @@
     },
     {
       "id": 842924,
-      "title": "查克的一生",
+      "title": "æ¥åçä¸ç",
       "mediaType": "movie",
       "status": "watched",
       "note": null,
@@ -89,10 +99,10 @@
     },
     {
       "id": 915935,
-      "title": "堕落的审判",
+      "title": "å è½çå®¡å¤",
       "mediaType": "movie",
       "status": "watched",
-      "note": "和康康朋友一起看",
+      "note": "ååº·åº·æåä¸èµ·ç",
       "watchDates": [
         "2025-10-05"
       ],
@@ -101,10 +111,10 @@
     },
     {
       "id": 137,
-      "title": "土拨鼠之日",
+      "title": "åæ¨é¼ ä¹æ¥",
       "mediaType": "movie",
       "status": "watched",
-      "note": "真好看啊",
+      "note": "çå¥½çå",
       "watchDates": [
         "2025-10-01"
       ],
@@ -112,10 +122,10 @@
     },
     {
       "id": 39111,
-      "title": "死神的十字路口",
+      "title": "æ­»ç¥çåå­è·¯å£",
       "mediaType": "movie",
       "status": "watched",
-      "note": "故事很有意思",
+      "note": "æäºå¾æææ",
       "watchDates": [
         "2025-09-12"
       ],
@@ -123,10 +133,10 @@
     },
     {
       "id": 4291,
-      "title": "菊次郎的夏天",
+      "title": "èæ¬¡éçå¤å¤©",
       "mediaType": "movie",
       "status": "watched",
-      "note": "很喜欢",
+      "note": "å¾åæ¬¢",
       "watchDates": [
         "2025-09-05"
       ],
@@ -134,10 +144,10 @@
     },
     {
       "id": 574475,
-      "title": "死神来了6",
+      "title": "æ­»ç¥æ¥äº6",
       "mediaType": "movie",
       "status": "watched",
-      "note": "和霖霖一起看的~",
+      "note": "åééä¸èµ·çç~",
       "watchDates": [
         "2025-08-28"
       ],
@@ -145,10 +155,10 @@
     },
     {
       "id": 9769,
-      "title": "一枝梨花压海棠",
+      "title": "ä¸ææ¢¨è±åæµ·æ£ ",
       "mediaType": "movie",
       "status": "watched",
-      "note": "2025年8月从家返回的路上看的",
+      "note": "2025å¹´8æä»å®¶è¿åçè·¯ä¸çç",
       "watchDates": [
         "2025-08-26"
       ],
@@ -156,10 +166,10 @@
     },
     {
       "id": 435,
-      "title": "后天",
+      "title": "åå¤©",
       "mediaType": "movie",
       "status": "watched",
-      "note": "2025年8月从家返回的路上看的",
+      "note": "2025å¹´8æä»å®¶è¿åçè·¯ä¸çç",
       "watchDates": [
         "2025-08-26"
       ],
@@ -167,10 +177,10 @@
     },
     {
       "id": 103,
-      "title": "隧道",
+      "title": "é§é",
       "mediaType": "tv",
       "status": "watched",
-      "note": "和霖霖一起看灾难片",
+      "note": "åééä¸èµ·çç¾é¾ç",
       "watchDates": [
         "2025-07-31"
       ],
@@ -178,10 +188,10 @@
     },
     {
       "id": 416144,
-      "title": "孟买酒店",
+      "title": "å­ä¹°éåº",
       "mediaType": "movie",
       "status": "watched",
-      "note": "和霖霖一起看的灾难片",
+      "note": "åééä¸èµ·ççç¾é¾ç",
       "watchDates": [
         "2025-07-27"
       ],
@@ -189,10 +199,10 @@
     },
     {
       "id": 67070,
-      "title": "伦敦生活",
+      "title": "ä¼¦æ¦çæ´»",
       "mediaType": "tv",
       "status": "watched",
-      "note": "神父~",
+      "note": "ç¥ç¶~",
       "watchDates": [
         "2025-07-22"
       ],
@@ -200,10 +210,10 @@
     },
     {
       "id": 11324,
-      "title": "禁闭岛",
+      "title": "ç¦é­å²",
       "mediaType": "movie",
       "status": "watched",
-      "note": "和霖霖一起看的",
+      "note": "åééä¸èµ·çç",
       "watchDates": [
         "2025-07-20"
       ],
@@ -211,10 +221,10 @@
     },
     {
       "id": 50878,
-      "title": "甄嬛传",
+      "title": "çå¬ä¼ ",
       "mediaType": "tv",
       "status": "watched",
-      "note": "和康康的下饭神剧,yyds",
+      "note": "ååº·åº·çä¸é¥­ç¥å§,yyds",
       "watchDates": [
         "2025-04-28"
       ],
@@ -222,10 +232,10 @@
     },
     {
       "id": 1542314,
-      "title": "破地狱",
+      "title": "ç ´å°ç±",
       "mediaType": "movie",
       "status": "watched",
-      "note": "和康康看的~",
+      "note": "ååº·åº·çç~",
       "watchDates": [
         "2025-04-06"
       ],
@@ -233,10 +243,10 @@
     },
     {
       "id": 219246,
-      "title": "苦尽柑来遇见你",
+      "title": "è¦å°½ææ¥éè§ä½ ",
       "mediaType": "tv",
       "status": "watched",
-      "note": "和康康看的,好好哭",
+      "note": "ååº·åº·çç,å¥½å¥½å­",
       "watchDates": [
         "2025-03-30"
       ],
@@ -244,10 +254,10 @@
     },
     {
       "id": 374671,
-      "title": "比海更深",
+      "title": "æ¯æµ·æ´æ·±",
       "mediaType": "movie",
       "status": "watched",
-      "note": "日式电影的舒服",
+      "note": "æ¥å¼çµå½±çèæ",
       "watchDates": [
         "2025-03-29"
       ],
@@ -255,10 +265,10 @@
     },
     {
       "id": 933260,
-      "title": "某种元素",
+      "title": "æç§åç´ ",
       "mediaType": "movie",
       "status": "watched",
-      "note": "和雅慧朋友一起看的",
+      "note": "åéæ§æåä¸èµ·çç",
       "watchDates": [
         "2024-11-15"
       ],
@@ -266,10 +276,10 @@
     },
     {
       "id": 130099,
-      "title": "再见爱人",
+      "title": "åè§ç±äºº",
       "mediaType": "tv",
       "status": "watched",
-      "note": "看了第一季和黄圣依那一季",
+      "note": "çäºç¬¬ä¸å­£åé»å£ä¾é£ä¸å­£",
       "watchDates": [
         "2024-11-14"
       ],
@@ -277,7 +287,7 @@
     },
     {
       "id": 133578,
-      "title": "金枝玉叶2",
+      "title": "éæçå¶2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -290,7 +300,7 @@
     },
     {
       "id": 120467,
-      "title": "布达佩斯大饭店",
+      "title": "å¸è¾¾ä½©æ¯å¤§é¥­åº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -303,7 +313,7 @@
     },
     {
       "id": 120,
-      "title": "指环王1：护戒使者",
+      "title": "æç¯ç1ï¼æ¤æä½¿è",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -316,7 +326,7 @@
     },
     {
       "id": 238,
-      "title": "教父",
+      "title": "æç¶",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -329,7 +339,7 @@
     },
     {
       "id": 240,
-      "title": "教父2",
+      "title": "æç¶2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -342,7 +352,7 @@
     },
     {
       "id": 7345,
-      "title": "血色将至",
+      "title": "è¡è²å°è³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -355,7 +365,7 @@
     },
     {
       "id": 367882,
-      "title": "手机",
+      "title": "ææº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -368,7 +378,7 @@
     },
     {
       "id": 45790,
-      "title": "JOJO的奇妙冒",
+      "title": "JOJOçå¥å¦å",
       "mediaType": "tv",
       "status": "watched",
       "note": null,
@@ -379,7 +389,7 @@
     },
     {
       "id": 76600,
-      "title": "阿凡达：水之道",
+      "title": "é¿å¡è¾¾ï¼æ°´ä¹é",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -392,7 +402,7 @@
     },
     {
       "id": 24238,
-      "title": "玛丽和麦克斯",
+      "title": "çä¸½åéº¦åæ¯",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -405,7 +415,7 @@
     },
     {
       "id": 382572,
-      "title": "罗曼蒂克消亡史",
+      "title": "ç½æ¼èåæ¶äº¡å²",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -418,7 +428,7 @@
     },
     {
       "id": 187022,
-      "title": "天注定",
+      "title": "å¤©æ³¨å®",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -431,7 +441,7 @@
     },
     {
       "id": 594,
-      "title": "幸福终点站",
+      "title": "å¹¸ç¦ç»ç¹ç«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -444,7 +454,7 @@
     },
     {
       "id": 62,
-      "title": "2001太空漫游",
+      "title": "2001å¤ªç©ºæ¼«æ¸¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -452,12 +462,12 @@
       ],
       "watchDate": "2022-12-01",
       "rating": 10,
-      "note": "无法评价。。经典中的经典。。",
+      "note": "æ æ³è¯ä»·ããç»å¸ä¸­çç»å¸ãã",
       "inCinema": false
     },
     {
       "id": 33106,
-      "title": "疯狂的赛车",
+      "title": "ç¯ççèµè½¦",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -470,7 +480,7 @@
     },
     {
       "id": 315846,
-      "title": "海街日记",
+      "title": "æµ·è¡æ¥è®°",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -483,7 +493,7 @@
     },
     {
       "id": 76341,
-      "title": "疯狂的麦克斯4：狂暴之路",
+      "title": "ç¯ççéº¦åæ¯4ï¼çæ´ä¹è·¯",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -496,7 +506,7 @@
     },
     {
       "id": 513434,
-      "title": "摄影机不要停！",
+      "title": "æå½±æºä¸è¦åï¼",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -509,7 +519,7 @@
     },
     {
       "id": 265195,
-      "title": "荒蛮故事",
+      "title": "èè®æäº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -522,7 +532,7 @@
     },
     {
       "id": 57100,
-      "title": "双瞳",
+      "title": "åç³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -535,7 +545,7 @@
     },
     {
       "id": 286217,
-      "title": "火星救援",
+      "title": "ç«æææ´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -543,12 +553,12 @@
       ],
       "watchDate": "2022-08-20",
       "rating": 10,
-      "note": "tips：先看好（老）电影再看新电影",
+      "note": "tipsï¼åçå¥½ï¼èï¼çµå½±åçæ°çµå½±",
       "inCinema": false
     },
     {
       "id": 10867,
-      "title": "西西里的美丽传说",
+      "title": "è¥¿è¥¿éçç¾ä¸½ä¼ è¯´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -561,7 +571,7 @@
     },
     {
       "id": 801803,
-      "title": "独行月球",
+      "title": "ç¬è¡æç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -574,7 +584,7 @@
     },
     {
       "id": 205596,
-      "title": "模仿游戏",
+      "title": "æ¨¡ä»¿æ¸¸æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -587,7 +597,7 @@
     },
     {
       "id": 45380,
-      "title": "疯狂的石头",
+      "title": "ç¯ççç³å¤´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -600,7 +610,7 @@
     },
     {
       "id": 26955,
-      "title": "绿洲",
+      "title": "ç»¿æ´²",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -613,7 +623,7 @@
     },
     {
       "id": 928720,
-      "title": "隐入尘烟",
+      "title": "éå¥å°ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -621,12 +631,12 @@
       ],
       "watchDate": "2022-07-23",
       "rating": 10,
-      "note": "2022年7月为止，本年度最好的国内电影！很真实的爱情故事，有很强的代入感。",
+      "note": "2022å¹´7æä¸ºæ­¢ï¼æ¬å¹´åº¦æå¥½çå½åçµå½±ï¼å¾çå®çç±ææäºï¼æå¾å¼ºçä»£å¥æã",
       "inCinema": false
     },
     {
       "id": 314388,
-      "title": "山河故人",
+      "title": "å±±æ²³æäºº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -639,7 +649,7 @@
     },
     {
       "id": 90283,
-      "title": "Hello！树先生",
+      "title": "Helloï¼æ åç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -652,7 +662,7 @@
     },
     {
       "id": 739267,
-      "title": "同学麦娜丝",
+      "title": "åå­¦éº¦å¨ä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -665,7 +675,7 @@
     },
     {
       "id": 531384,
-      "title": "无双",
+      "title": "æ å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -678,7 +688,7 @@
     },
     {
       "id": 441393,
-      "title": "江湖儿女",
+      "title": "æ±æ¹å¿å¥³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -691,7 +701,7 @@
     },
     {
       "id": 543762,
-      "title": "过春天",
+      "title": "è¿æ¥å¤©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -704,7 +714,7 @@
     },
     {
       "id": 839803,
-      "title": "雄狮少年",
+      "title": "éç®å°å¹´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -717,7 +727,7 @@
     },
     {
       "id": 412555,
-      "title": "青春派",
+      "title": "éæ¥æ´¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -730,7 +740,7 @@
     },
     {
       "id": 256106,
-      "title": "推拿",
+      "title": "æ¨æ¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -743,7 +753,7 @@
     },
     {
       "id": 739269,
-      "title": "孤味",
+      "title": "å­¤å³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -756,7 +766,7 @@
     },
     {
       "id": 295279,
-      "title": "背靠背，脸对脸",
+      "title": "èé èï¼è¸å¯¹è¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -769,7 +779,7 @@
     },
     {
       "id": 1402,
-      "title": "当幸福来敲门",
+      "title": "å½å¹¸ç¦æ¥æ²é¨",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -782,7 +792,7 @@
     },
     {
       "id": 545611,
-      "title": "瞬息全宇宙",
+      "title": "ç¬æ¯å¨å®å®",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -795,7 +805,7 @@
     },
     {
       "id": 14392,
-      "title": "投名状",
+      "title": "æåç¶",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -808,7 +818,7 @@
     },
     {
       "id": 15370,
-      "title": "猫的报恩",
+      "title": "ç«çæ¥æ©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -821,7 +831,7 @@
     },
     {
       "id": 79279,
-      "title": "甲方乙方",
+      "title": "ç²æ¹ä¹æ¹",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -834,7 +844,7 @@
     },
     {
       "id": 47423,
-      "title": "纵横四海",
+      "title": "çºµæ¨ªåæµ·",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -847,7 +857,7 @@
     },
     {
       "id": 11728,
-      "title": "孔雀",
+      "title": "å­é",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -860,7 +870,7 @@
     },
     {
       "id": 644,
-      "title": "人工智能",
+      "title": "äººå·¥æºè½",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -873,7 +883,7 @@
     },
     {
       "id": 75677,
-      "title": "李米的猜想",
+      "title": "æç±³ççæ³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -886,7 +896,7 @@
     },
     {
       "id": 7350,
-      "title": "遗愿清单",
+      "title": "éæ¿æ¸å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -899,7 +909,7 @@
     },
     {
       "id": 496243,
-      "title": "寄生虫",
+      "title": "å¯çè«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -912,7 +922,7 @@
     },
     {
       "id": 524087,
-      "title": "谁先爱上他的",
+      "title": "è°åç±ä¸ä»ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -925,7 +935,7 @@
     },
     {
       "id": 44714,
-      "title": "斗牛",
+      "title": "æç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -938,7 +948,7 @@
     },
     {
       "id": 619264,
-      "title": "饥饿站台",
+      "title": "é¥¥é¥¿ç«å°",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -951,7 +961,7 @@
     },
     {
       "id": 2062,
-      "title": "美食总动员",
+      "title": "ç¾é£æ»å¨å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -964,7 +974,7 @@
     },
     {
       "id": 920,
-      "title": "赛车总动员",
+      "title": "èµè½¦æ»å¨å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -977,7 +987,7 @@
     },
     {
       "id": 9806,
-      "title": "超人总动员",
+      "title": "è¶äººæ»å¨å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -990,7 +1000,7 @@
     },
     {
       "id": 1427,
-      "title": "香水",
+      "title": "é¦æ°´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1003,7 +1013,7 @@
     },
     {
       "id": 72245,
-      "title": "钢的琴",
+      "title": "é¢çç´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1016,7 +1026,7 @@
     },
     {
       "id": 483983,
-      "title": "气球",
+      "title": "æ°ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1024,12 +1034,12 @@
       ],
       "watchDate": "2022-03-02",
       "rating": 10,
-      "note": "个人觉得更多是关于女性话题，电影里，姐姐和妹妹的对比让我印象深刻",
+      "note": "ä¸ªäººè§å¾æ´å¤æ¯å³äºå¥³æ§è¯é¢ï¼çµå½±éï¼å§å§åå¦¹å¦¹çå¯¹æ¯è®©æå°è±¡æ·±å»",
       "inCinema": false
     },
     {
       "id": 25296,
-      "title": "推手",
+      "title": "æ¨æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1042,7 +1052,7 @@
     },
     {
       "id": 1255,
-      "title": "汉江怪物",
+      "title": "æ±æ±æªç©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1055,7 +1065,7 @@
     },
     {
       "id": 695932,
-      "title": "花束般的恋爱",
+      "title": "è±æè¬çæç±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1068,7 +1078,7 @@
     },
     {
       "id": 396535,
-      "title": "釜山行",
+      "title": "éå±±è¡",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1081,7 +1091,7 @@
     },
     {
       "id": 5876,
-      "title": "迷雾",
+      "title": "è¿·é¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1094,7 +1104,7 @@
     },
     {
       "id": 139329,
-      "title": "一九四二",
+      "title": "ä¸ä¹åäº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1107,7 +1117,7 @@
     },
     {
       "id": 923192,
-      "title": "这个杀手不太冷静",
+      "title": "è¿ä¸ªææä¸å¤ªå·é",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1120,7 +1130,7 @@
     },
     {
       "id": 827689,
-      "title": "四海",
+      "title": "åæµ·",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1133,7 +1143,7 @@
     },
     {
       "id": 32582,
-      "title": "风声",
+      "title": "é£å£°",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1146,7 +1156,7 @@
     },
     {
       "id": 59421,
-      "title": "金福南杀人事件始末",
+      "title": "éç¦åæäººäºä»¶å§æ«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1154,12 +1164,12 @@
       ],
       "watchDate": "2021-12-03",
       "rating": 8,
-      "note": "。。别轻易看",
+      "note": "ããå«è½»æç",
       "inCinema": false
     },
     {
       "id": 37247,
-      "title": "毕业生",
+      "title": "æ¯ä¸ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1172,7 +1182,7 @@
     },
     {
       "id": 398173,
-      "title": "此房是我造",
+      "title": "æ­¤æ¿æ¯æé ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1185,7 +1195,7 @@
     },
     {
       "id": 438631,
-      "title": "沙丘",
+      "title": "æ²ä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1198,7 +1208,7 @@
     },
     {
       "id": 329865,
-      "title": "降临",
+      "title": "éä¸´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1211,7 +1221,7 @@
     },
     {
       "id": 550988,
-      "title": "失控玩家",
+      "title": "å¤±æ§ç©å®¶",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1224,7 +1234,7 @@
     },
     {
       "id": 51739,
-      "title": "借东西的小人阿莉埃蒂",
+      "title": "åä¸è¥¿çå°äººé¿èåè",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1237,7 +1247,7 @@
     },
     {
       "id": 10515,
-      "title": "天空之城",
+      "title": "å¤©ç©ºä¹å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1250,7 +1260,7 @@
     },
     {
       "id": 11621,
-      "title": "红猪",
+      "title": "çº¢çª",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1263,7 +1273,7 @@
     },
     {
       "id": 508943,
-      "title": "夏日友晴天",
+      "title": "å¤æ¥åæ´å¤©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1276,7 +1286,7 @@
     },
     {
       "id": 51520,
-      "title": "盲山",
+      "title": "ç²å±±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1284,12 +1294,12 @@
       ],
       "watchDate": "2021-08-06",
       "rating": 10,
-      "note": "唉",
+      "note": "å",
       "inCinema": false
     },
     {
       "id": 10404,
-      "title": "大红灯笼高高挂",
+      "title": "å¤§çº¢ç¯ç¬¼é«é«æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1302,7 +1312,7 @@
     },
     {
       "id": 29363,
-      "title": "天下无贼",
+      "title": "å¤©ä¸æ è´¼",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1315,7 +1325,7 @@
     },
     {
       "id": 86831,
-      "title": "爱,死亡与机器人",
+      "title": "ç±,æ­»äº¡ä¸æºå¨äºº",
       "mediaType": "tv",
       "status": "watched",
       "note": null,
@@ -1326,7 +1336,7 @@
     },
     {
       "id": 478804,
-      "title": "血观音",
+      "title": "è¡è§é³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1339,7 +1349,7 @@
     },
     {
       "id": 36113,
-      "title": "落叶归根",
+      "title": "è½å¶å½æ ¹",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1352,7 +1362,7 @@
     },
     {
       "id": 335462,
-      "title": "战狼",
+      "title": "æç¼",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1365,7 +1375,7 @@
     },
     {
       "id": 82690,
-      "title": "无敌破坏王",
+      "title": "æ æç ´åç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1378,7 +1388,7 @@
     },
     {
       "id": 600354,
-      "title": "困在时间里的父亲",
+      "title": "å°å¨æ¶é´éçç¶äº²",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1391,7 +1401,7 @@
     },
     {
       "id": 475149,
-      "title": "大佛普拉斯",
+      "title": "å¤§ä½æ®ææ¯",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1404,7 +1414,7 @@
     },
     {
       "id": 639557,
-      "title": "悬崖之上",
+      "title": "æ¬å´ä¹ä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1417,7 +1427,7 @@
     },
     {
       "id": 4550,
-      "title": "亲切的金子",
+      "title": "äº²åçéå­",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1430,7 +1440,7 @@
     },
     {
       "id": 23128,
-      "title": "海豚湾",
+      "title": "æµ·è±æ¹¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1443,7 +1453,7 @@
     },
     {
       "id": 50270,
-      "title": "红辣椒",
+      "title": "çº¢è¾£æ¤",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1456,7 +1466,7 @@
     },
     {
       "id": 128,
-      "title": "幽灵公主",
+      "title": "å¹½çµå¬ä¸»",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1469,7 +1479,7 @@
     },
     {
       "id": 635389,
-      "title": "姜子牙",
+      "title": "å§å­ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1482,7 +1492,7 @@
     },
     {
       "id": 734778,
-      "title": "我和我的家乡",
+      "title": "æåæçå®¶ä¹¡",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1495,7 +1505,7 @@
     },
     {
       "id": 529203,
-      "title": "疯狂原始人2",
+      "title": "ç¯çåå§äºº2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1508,7 +1518,7 @@
     },
     {
       "id": 12405,
-      "title": "贫民窟的百万富翁",
+      "title": "è´«æ°çªçç¾ä¸å¯ç¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1521,7 +1531,7 @@
     },
     {
       "id": 716815,
-      "title": "送你一朵小红花",
+      "title": "éä½ ä¸æµå°çº¢è±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1534,7 +1544,7 @@
     },
     {
       "id": 635302,
-      "title": "鬼灭之刃 剧场版 无限列车篇",
+      "title": "é¬¼ç­ä¹å å§åºç æ éåè½¦ç¯",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1547,7 +1557,7 @@
     },
     {
       "id": 568160,
-      "title": "天气之子",
+      "title": "å¤©æ°ä¹å­",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1560,7 +1570,7 @@
     },
     {
       "id": 354912,
-      "title": "寻梦环游记",
+      "title": "å¯»æ¢¦ç¯æ¸¸è®°",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1573,7 +1583,7 @@
     },
     {
       "id": 42006,
-      "title": "红高粱",
+      "title": "çº¢é«ç²±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1586,7 +1596,7 @@
     },
     {
       "id": 736516,
-      "title": "吉祥如意",
+      "title": "åç¥¥å¦æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1594,12 +1604,12 @@
       ],
       "watchDate": "2021-03-02",
       "rating": 10,
-      "note": "必看，好吧",
+      "note": "å¿çï¼å¥½å§",
       "inCinema": false
     },
     {
       "id": 758891,
-      "title": "你好，李焕英",
+      "title": "ä½ å¥½ï¼æçè±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1612,7 +1622,7 @@
     },
     {
       "id": 505513,
-      "title": "唐人街探案2",
+      "title": "åäººè¡æ¢æ¡2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1625,7 +1635,7 @@
     },
     {
       "id": 421742,
-      "title": "驴得水",
+      "title": "é©´å¾æ°´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1638,7 +1648,7 @@
     },
     {
       "id": 150540,
-      "title": "头脑特工队",
+      "title": "å¤´èç¹å·¥é",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1651,7 +1661,7 @@
     },
     {
       "id": 508442,
-      "title": "心灵奇旅",
+      "title": "å¿çµå¥æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1664,7 +1674,7 @@
     },
     {
       "id": 185,
-      "title": "发条橙",
+      "title": "åæ¡æ©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1677,7 +1687,7 @@
     },
     {
       "id": 694,
-      "title": "闪灵",
+      "title": "éªçµ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1690,7 +1700,7 @@
     },
     {
       "id": 9261,
-      "title": "喜宴",
+      "title": "åå®´",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1703,7 +1713,7 @@
     },
     {
       "id": 254302,
-      "title": "摩天大楼",
+      "title": "æ©å¤©å¤§æ¥¼",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1716,7 +1726,7 @@
     },
     {
       "id": 157841,
-      "title": "少年斯派维的奇异旅行",
+      "title": "å°å¹´æ¯æ´¾ç»´çå¥å¼æè¡",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1729,7 +1739,7 @@
     },
     {
       "id": 18785,
-      "title": "宿醉",
+      "title": "å®¿é",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1742,7 +1752,7 @@
     },
     {
       "id": 146,
-      "title": "卧虎藏龙",
+      "title": "å§èèé¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1755,7 +1765,7 @@
     },
     {
       "id": 575219,
-      "title": "飞驰人生",
+      "title": "é£é©°äººç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1768,7 +1778,7 @@
     },
     {
       "id": 51885,
-      "title": "太阳照常升起",
+      "title": "å¤ªé³ç§å¸¸åèµ·",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1781,7 +1791,7 @@
     },
     {
       "id": 503235,
-      "title": "邪不压正",
+      "title": "éªä¸åæ­£",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1794,7 +1804,7 @@
     },
     {
       "id": 25838,
-      "title": "鬼子来了",
+      "title": "é¬¼å­æ¥äº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1807,7 +1817,7 @@
     },
     {
       "id": 10494,
-      "title": "未麻的部屋",
+      "title": "æªéº»çé¨å±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1820,7 +1830,7 @@
     },
     {
       "id": 152584,
-      "title": "阿黛尔的生活",
+      "title": "é¿é»å°ççæ´»",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1833,7 +1843,7 @@
     },
     {
       "id": 152601,
-      "title": "她",
+      "title": "å¥¹",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1846,7 +1856,7 @@
     },
     {
       "id": 21208,
-      "title": "孤儿怨",
+      "title": "å­¤å¿æ¨",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1859,7 +1869,7 @@
     },
     {
       "id": 290098,
-      "title": "小姐",
+      "title": "å°å§",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1872,7 +1882,7 @@
     },
     {
       "id": 670,
-      "title": "老男孩",
+      "title": "èç·å­©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1885,7 +1895,7 @@
     },
     {
       "id": 2517,
-      "title": "无人知晓",
+      "title": "æ äººç¥æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1898,7 +1908,7 @@
     },
     {
       "id": 220289,
-      "title": "彗星来的那一夜",
+      "title": "å½ææ¥çé£ä¸å¤",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1911,7 +1921,7 @@
     },
     {
       "id": 152532,
-      "title": "达拉斯买家俱乐部",
+      "title": "è¾¾ææ¯ä¹°å®¶ä¿±ä¹é¨",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1924,7 +1934,7 @@
     },
     {
       "id": 74577,
-      "title": "去他妈的世界",
+      "title": "å»ä»å¦çä¸ç",
       "mediaType": "tv",
       "status": "watched",
       "note": null,
@@ -1935,7 +1945,7 @@
     },
     {
       "id": 292362,
-      "title": "心迷宫",
+      "title": "å¿è¿·å®«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1948,7 +1958,7 @@
     },
     {
       "id": 8358,
-      "title": "荒岛余生",
+      "title": "èå²ä½ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1961,7 +1971,7 @@
     },
     {
       "id": 586048,
-      "title": "82年生的金智英",
+      "title": "82å¹´ççéæºè±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1974,7 +1984,7 @@
     },
     {
       "id": 807,
-      "title": "七宗罪",
+      "title": "ä¸å®ç½ª",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -1987,7 +1997,7 @@
     },
     {
       "id": 20453,
-      "title": "三傻大闹宝莱坞",
+      "title": "ä¸å»å¤§é¹å®è±å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2000,7 +2010,7 @@
     },
     {
       "id": 512350,
-      "title": "人生果实",
+      "title": "äººçæå®",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2013,7 +2023,7 @@
     },
     {
       "id": 546554,
-      "title": "利刃出鞘",
+      "title": "å©ååºé",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2026,7 +2036,7 @@
     },
     {
       "id": 9470,
-      "title": "功夫",
+      "title": "åå¤«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2039,7 +2049,7 @@
     },
     {
       "id": 1865,
-      "title": "加勒比海盗",
+      "title": "å åæ¯æµ·ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2052,7 +2062,7 @@
     },
     {
       "id": 129,
-      "title": "千与千寻",
+      "title": "åä¸åå¯»",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2065,7 +2075,7 @@
     },
     {
       "id": 4935,
-      "title": "哈尔的移动城堡",
+      "title": "åå°çç§»å¨åå ¡",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2078,7 +2088,7 @@
     },
     {
       "id": 37703,
-      "title": "唐伯虎点秋香",
+      "title": "åä¼¯èç¹ç§é¦",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2091,7 +2101,7 @@
     },
     {
       "id": 21835,
-      "title": "大话西游之大圣娶亲",
+      "title": "å¤§è¯è¥¿æ¸¸ä¹å¤§å£å¨¶äº²",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2104,7 +2114,7 @@
     },
     {
       "id": 475557,
-      "title": "小丑",
+      "title": "å°ä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2117,7 +2127,7 @@
     },
     {
       "id": 575813,
-      "title": "少年的你",
+      "title": "å°å¹´çä½ ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2130,10 +2140,10 @@
     },
     {
       "id": 81356,
-      "title": "性爱自修室",
+      "title": "æ§ç±èªä¿®å®¤",
       "mediaType": "tv",
       "status": "watched",
-      "note": "很喜欢的剧",
+      "note": "å¾åæ¬¢çå§",
       "watchDates": [
         "2020-07-25"
       ],
@@ -2141,7 +2151,7 @@
     },
     {
       "id": 585,
-      "title": "怪兽电力公司",
+      "title": "æªå½çµåå¬å¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2154,7 +2164,7 @@
     },
     {
       "id": 857,
-      "title": "拯救大兵瑞恩",
+      "title": "æ¯æå¤§åµçæ©",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2167,7 +2177,7 @@
     },
     {
       "id": 550,
-      "title": "搏击俱乐部",
+      "title": "æå»ä¿±ä¹é¨",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2180,7 +2190,7 @@
     },
     {
       "id": 122906,
-      "title": "时空恋旅人",
+      "title": "æ¶ç©ºææäºº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2193,7 +2203,7 @@
     },
     {
       "id": 157336,
-      "title": "星际穿越",
+      "title": "æéç©¿è¶",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2206,7 +2216,7 @@
     },
     {
       "id": 10681,
-      "title": "机器人总动员",
+      "title": "æºå¨äººæ»å¨å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2219,7 +2229,7 @@
     },
     {
       "id": 11423,
-      "title": "杀人回忆",
+      "title": "æäººåå¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2232,7 +2242,7 @@
     },
     {
       "id": 37165,
-      "title": "楚门的世界",
+      "title": "æ¥é¨çä¸ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2245,7 +2255,7 @@
     },
     {
       "id": 207,
-      "title": "死亡诗社",
+      "title": "æ­»äº¡è¯ç¤¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2258,7 +2268,7 @@
     },
     {
       "id": 274,
-      "title": "沉默的羔羊",
+      "title": "æ²é»çç¾ç¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2271,7 +2281,7 @@
     },
     {
       "id": 597,
-      "title": "泰坦尼克号",
+      "title": "æ³°å¦å°¼åå·",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2284,7 +2294,7 @@
     },
     {
       "id": 661950,
-      "title": "活着",
+      "title": "æ´»ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2297,7 +2307,7 @@
     },
     {
       "id": 210577,
-      "title": "消失的爱人",
+      "title": "æ¶å¤±çç±äºº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2310,7 +2320,7 @@
     },
     {
       "id": 81481,
-      "title": "熔炉",
+      "title": "çç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2323,7 +2333,7 @@
     },
     {
       "id": 8587,
-      "title": "狮子王",
+      "title": "ç®å­ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2336,7 +2346,7 @@
     },
     {
       "id": 640,
-      "title": "猫鼠游戏",
+      "title": "ç«é¼ æ¸¸æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2349,7 +2359,7 @@
     },
     {
       "id": 10193,
-      "title": "玩具总动员3",
+      "title": "ç©å·æ»å¨å3",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2362,7 +2372,7 @@
     },
     {
       "id": 176,
-      "title": "电锯惊魂",
+      "title": "çµé¯æé­",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2375,7 +2385,7 @@
     },
     {
       "id": 20352,
-      "title": "神偷奶爸",
+      "title": "ç¥å·å¥¶ç¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2388,7 +2398,7 @@
     },
     {
       "id": 559969,
-      "title": "续命之徒：绝命毒师电影",
+      "title": "ç»­å½ä¹å¾ï¼ç»å½æ¯å¸çµå½±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2401,7 +2411,7 @@
     },
     {
       "id": 490132,
-      "title": "绿皮书",
+      "title": "ç»¿ç®ä¹¦",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2414,7 +2424,7 @@
     },
     {
       "id": 278,
-      "title": "肖申克的救赎",
+      "title": "èç³åçæèµ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2427,7 +2437,7 @@
     },
     {
       "id": 2832,
-      "title": "致命ID",
+      "title": "è´å½ID",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2440,7 +2450,7 @@
     },
     {
       "id": 155,
-      "title": "蝙蝠侠：黑暗骑士",
+      "title": "èè ä¾ ï¼é»æéªå£«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2453,7 +2463,7 @@
     },
     {
       "id": 1954,
-      "title": "蝴蝶效应",
+      "title": "è´è¶æåº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2466,7 +2476,7 @@
     },
     {
       "id": 31512,
-      "title": "被嫌弃的松子的一生",
+      "title": "è¢«å«å¼çæ¾å­çä¸ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2479,7 +2489,7 @@
     },
     {
       "id": 51533,
-      "title": "让子弹飞",
+      "title": "è®©å­å¼¹é£",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2492,7 +2502,7 @@
     },
     {
       "id": 652783,
-      "title": "误杀",
+      "title": "è¯¯æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2505,7 +2515,7 @@
     },
     {
       "id": 242452,
-      "title": "辩护人",
+      "title": "è¾©æ¤äºº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2518,7 +2528,7 @@
     },
     {
       "id": 101,
-      "title": "这个杀手不太冷",
+      "title": "è¿ä¸ªææä¸å¤ªå·",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2531,7 +2541,7 @@
     },
     {
       "id": 19995,
-      "title": "阿凡达",
+      "title": "é¿å¡è¾¾",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2544,7 +2554,7 @@
     },
     {
       "id": 13,
-      "title": "阿甘正传",
+      "title": "é¿çæ­£ä¼ ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2557,7 +2567,7 @@
     },
     {
       "id": 10997,
-      "title": "霸王别姬",
+      "title": "é¸çå«å§¬",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2570,7 +2580,7 @@
     },
     {
       "id": 14160,
-      "title": "飞屋环游记",
+      "title": "é£å±ç¯æ¸¸è®°",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2583,7 +2593,7 @@
     },
     {
       "id": 10451,
-      "title": "饮食男女",
+      "title": "é¥®é£ç·å¥³",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2596,7 +2606,7 @@
     },
     {
       "id": 603,
-      "title": "黑客帝国",
+      "title": "é»å®¢å¸å½",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2609,7 +2619,7 @@
     },
     {
       "id": 535170,
-      "title": "一出好戏",
+      "title": "ä¸åºå¥½æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2622,7 +2632,7 @@
     },
     {
       "id": 415636,
-      "title": "从你的全世界路过",
+      "title": "ä»ä½ çå¨ä¸çè·¯è¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2635,7 +2645,7 @@
     },
     {
       "id": 372058,
-      "title": "你的名字。",
+      "title": "ä½ çåå­ã",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2648,7 +2658,7 @@
     },
     {
       "id": 351286,
-      "title": "侏罗纪世界2",
+      "title": "ä¾ç½çºªä¸ç2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2661,7 +2671,7 @@
     },
     {
       "id": 166426,
-      "title": "加勒比海盗5：死无对证",
+      "title": "å åæ¯æµ·ç5ï¼æ­»æ å¯¹è¯",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2674,7 +2684,7 @@
     },
     {
       "id": 508747,
-      "title": "后来的我们",
+      "title": "åæ¥çæä»¬",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2687,7 +2697,7 @@
     },
     {
       "id": 615453,
-      "title": "哪吒之魔童降世",
+      "title": "åªåä¹é­ç«¥éä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2700,7 +2710,7 @@
     },
     {
       "id": 493899,
-      "title": "地久天长",
+      "title": "å°ä¹å¤©é¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2713,7 +2723,7 @@
     },
     {
       "id": 24428,
-      "title": "复仇者联盟",
+      "title": "å¤ä»èèç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2726,7 +2736,7 @@
     },
     {
       "id": 99861,
-      "title": "复仇者联盟2：奥创纪元",
+      "title": "å¤ä»èèç2ï¼å¥¥åçºªå",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2739,7 +2749,7 @@
     },
     {
       "id": 299536,
-      "title": "复仇者联盟3：无限战争",
+      "title": "å¤ä»èèç3ï¼æ éæäº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2752,7 +2762,7 @@
     },
     {
       "id": 299534,
-      "title": "复仇者联盟4：终局之战",
+      "title": "å¤ä»èèç4ï¼ç»å±ä¹æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2765,7 +2775,7 @@
     },
     {
       "id": 333339,
-      "title": "头号玩家",
+      "title": "å¤´å·ç©å®¶",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2778,7 +2788,7 @@
     },
     {
       "id": 284052,
-      "title": "奇异博士",
+      "title": "å¥å¼åå£«",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2791,7 +2801,7 @@
     },
     {
       "id": 522681,
-      "title": "密室逃生",
+      "title": "å¯å®¤éç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2804,7 +2814,7 @@
     },
     {
       "id": 345940,
-      "title": "巨齿鲨",
+      "title": "å·¨é½¿é²¨",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2817,7 +2827,7 @@
     },
     {
       "id": 463319,
-      "title": "影",
+      "title": "å½±",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2830,7 +2840,7 @@
     },
     {
       "id": 494858,
-      "title": "心理罪之城市之光",
+      "title": "å¿çç½ªä¹åå¸ä¹å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2843,7 +2853,7 @@
     },
     {
       "id": 532753,
-      "title": "我不是药神",
+      "title": "æä¸æ¯è¯ç¥",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2856,7 +2866,7 @@
     },
     {
       "id": 612845,
-      "title": "我和我的祖国",
+      "title": "æåæçç¥å½",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2869,7 +2879,7 @@
     },
     {
       "id": 452557,
-      "title": "战狼2",
+      "title": "æç¼2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2882,7 +2892,7 @@
     },
     {
       "id": 1724,
-      "title": "无敌浩克",
+      "title": "æ ææµ©å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2895,7 +2905,7 @@
     },
     {
       "id": 289930,
-      "title": "无问西东",
+      "title": "æ é®è¥¿ä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2908,7 +2918,7 @@
     },
     {
       "id": 335983,
-      "title": "毒液：致命守护者",
+      "title": "æ¯æ¶²ï¼è´å½å®æ¤è",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2921,7 +2931,7 @@
     },
     {
       "id": 535167,
-      "title": "流浪地球",
+      "title": "æµæµªå°ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2934,7 +2944,7 @@
     },
     {
       "id": 300668,
-      "title": "湮灭",
+      "title": "æ¹®ç­",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2947,7 +2957,7 @@
     },
     {
       "id": 506763,
-      "title": "狄仁杰之四大天王",
+      "title": "çä»æ°ä¹åå¤§å¤©ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2960,7 +2970,7 @@
     },
     {
       "id": 284593,
-      "title": "狗十三",
+      "title": "çåä¸",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2973,7 +2983,7 @@
     },
     {
       "id": 281338,
-      "title": "猩球崛起3：终极之战",
+      "title": "ç©çå´èµ·3ï¼ç»æä¹æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2986,7 +2996,7 @@
     },
     {
       "id": 573699,
-      "title": "白蛇：缘起",
+      "title": "ç½èï¼ç¼èµ·",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -2999,7 +3009,7 @@
     },
     {
       "id": 411088,
-      "title": "看不见的客人",
+      "title": "çä¸è§çå®¢äºº",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3012,7 +3022,7 @@
     },
     {
       "id": 1771,
-      "title": "美国队长",
+      "title": "ç¾å½éé¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3025,7 +3035,7 @@
     },
     {
       "id": 100402,
-      "title": "美国队长2",
+      "title": "ç¾å½éé¿2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3038,7 +3048,7 @@
     },
     {
       "id": 271110,
-      "title": "美国队长3",
+      "title": "ç¾å½éé¿3",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3051,7 +3061,7 @@
     },
     {
       "id": 457251,
-      "title": "芳华",
+      "title": "è³å",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3064,7 +3074,7 @@
     },
     {
       "id": 1726,
-      "title": "钢铁侠",
+      "title": "é¢éä¾ ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3077,7 +3087,7 @@
     },
     {
       "id": 10138,
-      "title": "钢铁侠2",
+      "title": "é¢éä¾ 2",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3090,7 +3100,7 @@
     },
     {
       "id": 68721,
-      "title": "钢铁侠3",
+      "title": "é¢éä¾ 3",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3103,7 +3113,7 @@
     },
     {
       "id": 399579,
-      "title": "阿丽塔：战斗天使",
+      "title": "é¿ä¸½å¡ï¼ææå¤©ä½¿",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3116,7 +3126,7 @@
     },
     {
       "id": 10195,
-      "title": "雷神",
+      "title": "é·ç¥",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3129,7 +3139,7 @@
     },
     {
       "id": 76338,
-      "title": "雷神2：黑暗世界",
+      "title": "é·ç¥2ï¼é»æä¸ç",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3142,7 +3152,7 @@
     },
     {
       "id": 284053,
-      "title": "雷神3：诸神黄昏",
+      "title": "é·ç¥3ï¼è¯¸ç¥é»æ",
       "mediaType": "movie",
       "status": "watched",
       "watchDates": [
@@ -3157,14 +3167,14 @@
   "wishlist": [
     {
       "id": 105,
-      "title": "回到未来",
+      "title": "åå°æªæ¥",
       "mediaType": "movie",
       "status": "wishlist",
       "note": null
     },
     {
       "id": 5915,
-      "title": "荒野生存",
+      "title": "èéçå­",
       "mediaType": "movie",
       "status": "wishlist",
       "note": null
@@ -3173,31 +3183,31 @@
   "dropped": [
     {
       "id": 252135,
-      "title": "回魂记",
+      "title": "åé­è®°",
       "mediaType": "tv",
       "status": "dropped",
-      "note": "不想看了",
+      "note": "ä¸æ³çäº",
       "droppedDate": "2026-01-02"
     },
     {
       "id": 209867,
-      "title": "葬送的芙莉莲",
+      "title": "è¬éçèèè²",
       "mediaType": "tv",
       "status": "dropped",
-      "note": "不想看了~",
+      "note": "ä¸æ³çäº~",
       "droppedDate": "2026-01-02"
     },
     {
       "id": "bilibili-BV1NGHGzJEfx",
-      "title": "首尔夏天",
+      "title": "é¦å°å¤å¤©",
       "mediaType": "web-video",
       "platform": "bilibili",
       "url": "https://www.bilibili.com/video/BV1NGHGzJEfx",
       "coverUrl": "https://i1.hdslb.com/bfs/archive/54af207d91496ce2a418aa3bb9f62ac63f98d56e.jpg",
-      "creator": "食贫道",
+      "creator": "é£è´«é",
       "duration": "03:17:25",
       "status": "dropped",
-      "note": "时长比较长,没有一口气看完",
+      "note": "æ¶é¿æ¯è¾é¿,æ²¡æä¸å£æ°çå®",
       "droppedDate": "2026-01-02"
     }
   ]
