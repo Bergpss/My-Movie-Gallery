@@ -298,3 +298,221 @@ async function addMovie(movieData) {
 
 // 启动
 init();
+
+// ==================== 我的记录功能 ====================
+
+let allMovies = []; // 所有电影数据
+let currentFilter = 'all'; // 当前筛选状态
+const editModal = document.getElementById('edit-modal');
+const editForm = document.getElementById('edit-form');
+const libraryResults = document.getElementById('library-results');
+const libraryLoading = document.getElementById('library-loading');
+const libraryEmpty = document.getElementById('library-empty');
+
+// 切换到"我的记录"Tab 时加载数据
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (btn.dataset.tab === 'library') {
+            loadLibraryMovies();
+        }
+    });
+});
+
+// 筛选按钮事件
+document.querySelectorAll('.library-filter .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.library-filter .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.status;
+        renderLibraryMovies();
+    });
+});
+
+// 加载我的电影记录
+async function loadLibraryMovies() {
+    libraryResults.innerHTML = '';
+    libraryLoading.hidden = false;
+    libraryEmpty.hidden = true;
+
+    try {
+        const response = await fetch('/data/movies.json');
+        if (response.ok) {
+            const data = await response.json();
+            allMovies = data.items || [];
+            renderLibraryMovies();
+        }
+    } catch (error) {
+        console.error('加载电影列表失败:', error);
+    } finally {
+        libraryLoading.hidden = true;
+    }
+}
+
+// 渲染我的电影记录
+function renderLibraryMovies() {
+    const filtered = currentFilter === 'all'
+        ? allMovies
+        : allMovies.filter(m => m.status === currentFilter);
+
+    if (filtered.length === 0) {
+        libraryResults.innerHTML = '';
+        libraryEmpty.hidden = false;
+        return;
+    }
+
+    libraryEmpty.hidden = true;
+    libraryResults.innerHTML = filtered.map(movie => {
+        const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path;
+        const statusLabels = {
+            watching: '正在看',
+            watched: '已看完',
+            wishlist: '想看',
+            dropped: '弃剧'
+        };
+        return `
+        <div class="result-item library-item" data-movie='${JSON.stringify(movie).replace(/'/g, "&#39;")}'>
+            ${posterPath
+                ? `<img src="${POSTER_BASE_URL}${posterPath}" alt="${movie.title}" loading="lazy">`
+                : `<div class="no-poster">🎬</div>`
+            }
+            <div class="result-item-info">
+                <h4>${movie.tmdb?.title || movie.title}</h4>
+                <p>${statusLabels[movie.status] || movie.status}${movie.rating ? ` · ${movie.rating}分` : ''}</p>
+            </div>
+        </div>
+    `}).join('');
+
+    // 绑定点击事件打开编辑弹窗
+    document.querySelectorAll('.library-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const movie = JSON.parse(item.dataset.movie);
+            openEditModal(movie);
+        });
+    });
+}
+
+// 打开编辑弹窗
+function openEditModal(movie) {
+    const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path;
+    document.getElementById('edit-modal-poster').src = posterPath
+        ? `${POSTER_BASE_URL}${posterPath}`
+        : '';
+    document.getElementById('edit-modal-title').textContent = movie.tmdb?.title || movie.title;
+    document.getElementById('edit-modal-meta').textContent =
+        `${movie.tmdb?.release_date ? movie.tmdb.release_date.slice(0, 4) : '未知'} · ${movie.mediaType === 'tv' ? '剧集' : '电影'}`;
+
+    document.getElementById('edit-id').value = movie.id;
+    document.getElementById('edit-status').value = movie.status || 'watched';
+    document.getElementById('edit-rating').value = movie.rating || '';
+    document.getElementById('edit-date').value = movie.watchDate || movie.watchDates?.[0] || '';
+    document.getElementById('edit-cinema').checked = movie.inCinema || false;
+    document.getElementById('edit-note').value = movie.note || '';
+
+    editModal.hidden = false;
+}
+
+// 关闭编辑弹窗
+function closeEditModal() {
+    editModal.hidden = true;
+    editForm.reset();
+}
+
+// 编辑弹窗关闭按钮
+document.getElementById('edit-modal-close').addEventListener('click', closeEditModal);
+editModal.addEventListener('click', (e) => {
+    if (e.target === editModal) closeEditModal();
+});
+
+// 保存修改
+editForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const updateData = {
+        id: document.getElementById('edit-id').value,
+        status: document.getElementById('edit-status').value,
+        rating: document.getElementById('edit-rating').value || null,
+        note: document.getElementById('edit-note').value || null,
+        inCinema: document.getElementById('edit-cinema').checked,
+        watchDate: document.getElementById('edit-date').value || null,
+    };
+
+    try {
+        const response = await fetch(`${API_BASE}/update`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`,
+            },
+            body: JSON.stringify(updateData),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            if (response.status === 401) {
+                handleTokenExpired();
+                return;
+            }
+            showMessage(adminMessage, data.error || '更新失败', true);
+            return;
+        }
+
+        closeEditModal();
+        showMessage(adminMessage, '更新成功！', false);
+        // 重新加载数据
+        await loadExistingMovies();
+        await loadLibraryMovies();
+    } catch (error) {
+        showMessage(adminMessage, '网络错误，请重试', true);
+    }
+});
+
+// 删除电影
+document.getElementById('delete-movie-btn').addEventListener('click', async () => {
+    const id = document.getElementById('edit-id').value;
+    const title = document.getElementById('edit-modal-title').textContent;
+
+    if (!confirm(`确定要删除"${title}"吗？此操作不可恢复。`)) {
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API_BASE}/delete`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`,
+            },
+            body: JSON.stringify({ id }),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            if (response.status === 401) {
+                handleTokenExpired();
+                return;
+            }
+            showMessage(adminMessage, data.error || '删除失败', true);
+            return;
+        }
+
+        closeEditModal();
+        showMessage(adminMessage, '删除成功！', false);
+        // 重新加载数据
+        await loadExistingMovies();
+        await loadLibraryMovies();
+    } catch (error) {
+        showMessage(adminMessage, '网络错误，请重试', true);
+    }
+});
+
+// Token 过期处理
+function handleTokenExpired() {
+    localStorage.removeItem('adminToken');
+    authToken = null;
+    loginSection.hidden = false;
+    adminSection.hidden = true;
+    showMessage(loginError, '登录已过期，请重新登录', true);
+    loginError.hidden = false;
+}

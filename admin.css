@@ -420,3 +420,65 @@ body {
         text-align: center;
     }
 }
+
+/* 我的记录筛选按钮 */
+.library-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.library-filter .filter-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.library-filter .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.library-filter .filter-btn.active {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+    color: #fff;
+}
+
+/* 编辑按钮组 */
+.edit-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.edit-buttons .btn {
+    flex: 1;
+}
+
+/* 删除按钮样式 */
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* 我的记录项目样式 */
+.library-item {
+    position: relative;
+}
+
+.library-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
