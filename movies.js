@@ -210,7 +210,7 @@ function renderMovies(movies) {
                 // Movie/TV rendering
                 const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path || null;
                 imagePath = posterPath ? `${POSTER_BASE_URL}${posterPath}` : PLACEHOLDER_POSTER;
-                title = movie.title || movie.tmdb?.title || movie.tmdb?.original_title || 'Untitled';
+                title = movie.tmdb?.title || movie.tmdb?.original_title || movie.title || 'Untitled';
                 const ratingValue = typeof movie.rating === 'number'
                     ? movie.rating
                     : typeof movie.tmdb?.vote_average === 'number'
