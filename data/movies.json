@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-04T10:38:56.430Z",
+  "generatedAt": "2026-01-04T10:49:11.334Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 253
+    "total": 254
   },
   "items": [
     {
@@ -40,6 +40,50 @@
         "popularity": 156.2423,
         "homepage": "https://www.hbo.com/content/it-welcome-to-derry",
         "directors": []
+      }
+    },
+    {
+      "id": 505192,
+      "title": "小偷家族",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2025-10-20"
+      ],
+      "watchDate": "2025-10-20",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "万引き家族",
+        "original_language": "ja",
+        "title": "小偷家族",
+        "overview": "在一次扒窃归来的寒夜，阿治与儿子在街头偶遇一位受冻的小女孩。起初不愿收留的妻子，在得知女孩身世后心生怜惜，最终同意将她带回家中照料。这个靠着小偷小摸勉强维生的贫困家庭，虽生活清苦却洋溢着温馨的暖意——直到某场意外揭露了众人隐藏的秘密，那些让彼此紧紧相依的亲人间的羁绊，也开始面临残酷的考验。",
+        "poster_path": "/kaX3NJ5umSF4CJqDthyXtpDAMsX.jpg",
+        "backdrop_path": "/Z1JeznJExodyj0iUbL1wgkts88.jpg",
+        "release_date": "2018-06-02",
+        "runtime": 117,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 7.847,
+        "vote_count": 2211,
+        "popularity": 3.7242,
+        "homepage": "",
+        "directors": [
+          "是枝裕和"
+        ]
       }
     },
     {
