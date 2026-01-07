@@ -221,6 +221,12 @@ function renderMovies(movies) {
                 const mediaType = movie.mediaType === 'tv' ? 'tv' : 'movie';
                 targetUrl = movie.id ? `https://www.themoviedb.org/${mediaType}/${movie.id}` : '#';
                 releaseDate = formatDate(getReleaseDate(movie));
+
+                // Director information
+                const directors = movie.tmdb?.directors;
+                if (Array.isArray(directors) && directors.length > 0) {
+                    creatorInfo = `<p class="director-info">导演：${directors.join('、')}</p>`;
+                }
             }
 
             const formattedWatchDates = (Array.isArray(movie.watchDates)
