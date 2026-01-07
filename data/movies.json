@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-07T12:43:28.387Z",
+  "generatedAt": "2026-01-07T12:43:49.887Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 258
+    "total": 259
   },
   "items": [
     {
@@ -10665,6 +10665,44 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 911430,
+      "title": "F1：狂飙飞车",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "F1",
+        "original_language": "en",
+        "title": "F1：狂飙飞车",
+        "overview": "桑尼·海耶斯曾经是F1赛场上最具潜力的天才新星，但一场意外葬送了他的职业生涯，从此他沦为人们口中最生不逢时的“沧海遗珠”。三十年后的如今，桑尼是一名自由职业的落魄赛车手，他的前队友——如今是濒临破产的F1车队老板鲁本·塞万提斯却突然找上门来。鲁本说服桑尼重返F1赛场，这不仅是拯救他车队的最后希望，更是桑尼向世界证明自己仍是顶尖车手的最佳契机。桑尼将与车队的热门新秀乔舒亚·皮尔斯并肩前行，这位年轻的车手也渴望在赛道上书写自己的传奇。然而伴随着引擎开始轰鸣，桑尼过去的创伤也如影随形，他同时意识到在F1的世界里，并肩作战的队友也会是最强劲的对手，而通往自我救赎的道路，绝非孤身一人能够走完。",
+        "poster_path": "/5f0SkrD6VUn34fUe4NDkda9bFdb.jpg",
+        "backdrop_path": "/ZtcGMc204JsNqfjS9lU6udRgpo.jpg",
+        "release_date": "2025-06-25",
+        "runtime": 156,
+        "genres": [
+          {
+            "id": 28,
+            "name": "动作"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.792,
+        "vote_count": 3008,
+        "popularity": 44.2649,
+        "homepage": "",
+        "directors": [
+          "约瑟夫·科辛斯基"
         ]
       }
     },
