@@ -73,7 +73,7 @@ function sortMoviesByWatchDate(movies) {
 
 async function fetchMoviesFromList() {
     try {
-        const response = await fetch(MOVIE_DATA_URL, { cache: 'no-store' });
+        const response = await fetch(MOVIE_DATA_URL);
 
         if (!response.ok) {
             throw new Error(`Failed to load movie data: ${response.status}`);
@@ -85,6 +85,31 @@ async function fetchMoviesFromList() {
         console.error('Error fetching movies:', error);
         return [];
     }
+}
+
+function showLoadingSkeletons() {
+    const containers = [
+        document.getElementById('watching-container'),
+        document.getElementById('wishlist-container'),
+        document.getElementById('movie-container'),
+        document.getElementById('dropped-container')
+    ];
+
+    const skeletonCount = [2, 3, 8, 2]; // Different counts for each section
+
+    containers.forEach((container, index) => {
+        if (!container) return;
+        container.innerHTML = '';
+        for (let i = 0; i < skeletonCount[index]; i++) {
+            container.innerHTML += `
+                <div class="movie-item skeleton-item">
+                    <div class="skeleton-poster"></div>
+                    <div class="skeleton-title"></div>
+                    <div class="skeleton-date"></div>
+                </div>
+            `;
+        }
+    });
 }
 
 function filterMoviesByType(movies, filterType) {
@@ -285,6 +310,7 @@ function setupFilterButtons() {
 }
 
 async function initGallery() {
+    showLoadingSkeletons();
     allMovies = await fetchMoviesFromList();
     renderMovies(allMovies);
     setupFilterButtons();
