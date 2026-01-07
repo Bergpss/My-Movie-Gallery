@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-07T13:06:19.342Z",
+  "generatedAt": "2026-01-07T13:08:25.100Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 262
+    "total": 263
   },
   "items": [
     {
@@ -10665,6 +10665,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1500536,
+      "title": "南京照相馆",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "南京照相馆",
+        "original_language": "zh",
+        "title": "南京照相馆",
+        "overview": "影片故事取材于南京大屠杀期间日军真实罪证影像。一群生活在南京的百姓躲在吉祥照相馆中避难，为了尽可能的多活一日，他们被迫帮助日军摄影师冲洗底片，却意外冲印出了能证明日军屠城的罪证照片。他们原本只想在大屠杀中保命活下去，面对日军在南京城内的暴行，他们决定让这些底片留存下去……",
+        "poster_path": "/lwrANgpPEBmYZ59oExpCiuv34Ou.jpg",
+        "backdrop_path": "/ngLgoY3MTfLANqv9cpXr96saaFV.jpg",
+        "release_date": "2025-07-19",
+        "runtime": 137,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10752,
+            "name": "战争"
+          },
+          {
+            "id": 36,
+            "name": "历史"
+          }
+        ],
+        "vote_average": 8.2,
+        "vote_count": 56,
+        "popularity": 4.2337,
+        "homepage": "",
+        "directors": [
+          "申奥"
         ]
       }
     },
