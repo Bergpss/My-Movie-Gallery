@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-07T13:05:10.263Z",
+  "generatedAt": "2026-01-07T13:06:19.342Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 261
+    "total": 262
   },
   "items": [
     {
@@ -10665,6 +10665,44 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1404791,
+      "title": "人偶之家",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "ドールハウス",
+        "original_language": "ja",
+        "title": "人偶之家",
+        "overview": "故事主角是失去五岁女儿芽衣的铃木佳惠（长泽雅美）和丈夫忠彦（濑户康史）。沉浸在悲伤中的佳惠，在古董市场找到一个与芽衣非常相似的可爱洋娃娃，并开始呵护它，逐渐恢复了活力。但是，佳惠和忠彦有了新的女儿真衣之后，两人就不再关注这个洋娃娃了。渐渐地，五岁大的真衣开始和洋娃娃玩耍，这个家庭接二连三地发生奇怪的事情。佳惠他们试图摆脱这个洋娃娃，但无论扔掉还是供奉，这个洋娃娃却莫名其妙地回来了！洋娃娃隐藏的秘密是什么？以及即将揭开的震撼真相是什么——！",
+        "poster_path": "/obihuWErUC8L5T0QnRJXyh73jV7.jpg",
+        "backdrop_path": "/faDD1VulsjasBtCySuLWTW201lz.jpg",
+        "release_date": "2025-06-13",
+        "runtime": 110,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 7.1,
+        "vote_count": 10,
+        "popularity": 12.0688,
+        "homepage": "https://dollhouse-movie.toho.co.jp/",
+        "directors": [
+          "矢口史靖"
         ]
       }
     },
