@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-07T12:43:49.887Z",
+  "generatedAt": "2026-01-07T12:44:18.283Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 259
+    "total": 260
   },
   "items": [
     {
@@ -10665,6 +10665,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 639988,
+      "title": "无可奈何",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "어쩔수가없다",
+        "original_language": "ko",
+        "title": "无可奈何",
+        "overview": "中产阶级男子刘万洙失业后为了再就业，在一本杂志上刊登了一个虚假的招聘广告，决定淘汰五个比他更有才华、更年轻、更英俊的人。他在无奈与希望之间来回穿梭，将竞争对手一一杀死……",
+        "poster_path": "/2OX7FU2x8RVaWH622xVAeCIkYno.jpg",
+        "backdrop_path": "/1ktHy4yBupG3JzYoFsQ8DFoqZh4.jpg",
+        "release_date": "2025-09-24",
+        "runtime": 139,
+        "genres": [
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.729,
+        "vote_count": 264,
+        "popularity": 68.6306,
+        "homepage": "",
+        "directors": [
+          "朴赞郁"
         ]
       }
     },
