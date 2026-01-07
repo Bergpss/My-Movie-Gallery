@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-07T12:44:18.283Z",
+  "generatedAt": "2026-01-07T13:05:10.263Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 260
+    "total": 261
   },
   "items": [
     {
@@ -10665,6 +10665,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1054867,
+      "title": "一战再战",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "One Battle After Another",
+        "original_language": "en",
+        "title": "一战再战",
+        "overview": "落魄潦倒的革命者鲍勃（莱昂纳多·迪卡普里奥 饰）终日生活在草木皆兵的偏执状态，他与世隔绝，只和坚韧自立的女儿薇拉（蔡斯·英菲尼迪 饰）相依为命。然而，当鲍勃的宿敌（西恩·潘 饰）在16年后再度现身，女儿也突然失踪，这位曾经的激进分子仓促踏上了寻女之路，父女二人不得不直面他过往行为种下的恶果……",
+        "poster_path": "/pcaSAivZ8uFYAVmufI0ArKy7mE3.jpg",
+        "backdrop_path": "/zpEWFNqoN8Qg1SzMMHmaGyOBTdW.jpg",
+        "release_date": "2025-09-23",
+        "runtime": 162,
+        "genres": [
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 28,
+            "name": "动作"
+          }
+        ],
+        "vote_average": 7.459,
+        "vote_count": 2279,
+        "popularity": 81.8539,
+        "homepage": "",
+        "directors": [
+          "保罗·托马斯·安德森"
         ]
       }
     },
