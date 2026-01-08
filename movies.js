@@ -202,10 +202,11 @@ function renderMovies(movies) {
         sorted.forEach(movie => {
             const isWebVideo = movie.mediaType === 'web-video';
 
-            let imagePath, title, rating, cinemaBadge, targetUrl, releaseDate;
+            let imagePath, title, rating, cinemaBadge, targetUrl;
             let platformBadge = '';
-            let creatorInfo = '';
-            let durationInfo = '';
+            
+            // Metadata rows collection
+            let metaRows = [];
 
             if (isWebVideo) {
                 // Web video rendering
@@ -216,7 +217,6 @@ function renderMovies(movies) {
                 rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
                 cinemaBadge = '';
                 targetUrl = movie.url || '#';
-                releaseDate = null;
 
                 if (movie.platform) {
                     const icon = getPlatformIcon(movie.platform);
@@ -225,11 +225,11 @@ function renderMovies(movies) {
                 }
 
                 if (movie.creator) {
-                    creatorInfo = `<p class="creator-info">UP主：${movie.creator}</p>`;
+                    metaRows.push({ label: 'UP主', value: movie.creator });
                 }
 
                 if (movie.duration) {
-                    durationInfo = `<p class="duration-info">时长：${movie.duration}</p>`;
+                    metaRows.push({ label: '时长', value: movie.duration });
                 }
             } else {
                 // Movie/TV rendering
@@ -245,12 +245,16 @@ function renderMovies(movies) {
                 cinemaBadge = movie.inCinema ? '<span class="cinema-badge" title="影院观影">🎦</span>' : '';
                 const mediaType = movie.mediaType === 'tv' ? 'tv' : 'movie';
                 targetUrl = movie.id ? `https://www.themoviedb.org/${mediaType}/${movie.id}` : '#';
-                releaseDate = formatDate(getReleaseDate(movie));
+                
+                const releaseDate = formatDate(getReleaseDate(movie));
+                if (releaseDate) {
+                    metaRows.push({ label: '上映', value: releaseDate });
+                }
 
                 // Director information
                 const directors = movie.tmdb?.directors;
                 if (Array.isArray(directors) && directors.length > 0) {
-                    creatorInfo = `<p class="director-info">导演：${directors.join('、')}</p>`;
+                    metaRows.push({ label: '导演', value: directors.join('、') });
                 }
             }
 
@@ -262,10 +266,27 @@ function renderMovies(movies) {
                 .map(date => formatDate(date))
                 .filter(Boolean);
             const [primaryWatchDate, ...extraWatchDates] = formattedWatchDates;
+            
+            if (primaryWatchDate) {
+                metaRows.push({ label: '观影', value: primaryWatchDate });
+            }
+            if (extraWatchDates.length > 0) {
+                metaRows.push({ label: '重温', value: extraWatchDates.join('、') });
+            }
+
+            const metaHtml = metaRows.map(row => `
+                <div class="meta-row">
+                    <span class="meta-label">${row.label}</span>
+                    <span class="meta-value">${row.value}</span>
+                </div>
+            `).join('');
+
             const note = movie.note ? `<p class="watch-note">${movie.note}</p>` : '';
             const wishlistReason = movie.wishlistReason ? `<p class="wishlist-reason">💡 ${movie.wishlistReason}</p>` : '';
-            const watchDatesMarkup = extraWatchDates.length
-                ? `<p class="watch-dates">再看：${extraWatchDates.join('、')}</p>`
+            
+            // Only show note container if there is content
+            const noteContainerHtml = (note || wishlistReason) 
+                ? `<div class="movie-note-container">${wishlistReason}${note}</div>` 
                 : '';
 
             container.innerHTML += `
@@ -278,14 +299,13 @@ function renderMovies(movies) {
                             ${platformBadge}
                         </div>
                     </a>
-                    <p>${title}</p>
-                    ${releaseDate ? `<p class="release-date">上映：${releaseDate}</p>` : ''}
-                    ${creatorInfo}
-                    ${durationInfo}
-                    ${wishlistReason}
-                    ${primaryWatchDate ? `<p class="watch-date">观影：${primaryWatchDate}</p>` : ''}
-                    ${watchDatesMarkup}
-                    ${note}
+                    <div class="movie-info">
+                        <h3 class="movie-title">${title}</h3>
+                        <div class="movie-meta">
+                            ${metaHtml}
+                        </div>
+                        ${noteContainerHtml}
+                    </div>
                 </div>
             `;
         });
