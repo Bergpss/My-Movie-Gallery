@@ -64,7 +64,7 @@ export async function onRequestPost(context) {
 
         // 获取请求数据
         const movieData = await request.json();
-        const { id, title, mediaType, status, rating, note, inCinema, watchDate } = movieData;
+        const { id, title, mediaType, status, rating, note, inCinema, watchDate, wishlistReason } = movieData;
 
         if (!id || !title) {
             return new Response(JSON.stringify({ error: '缺少必要参数' }), {
@@ -124,6 +124,9 @@ export async function onRequestPost(context) {
             newMovie.status = 'watching';
         } else if (movieStatus === 'wishlist') {
             newMovie.status = 'wishlist';
+            if (wishlistReason) {
+                newMovie.wishlistReason = wishlistReason;
+            }
         } else {
             // watched
             if (watchDate) {

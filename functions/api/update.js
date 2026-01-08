@@ -68,7 +68,7 @@ export async function onRequestPost(context) {
 
         // 获取请求数据
         const updateData = await request.json();
-        const { id, status, rating, note, inCinema, watchDate } = updateData;
+        const { id, status, rating, note, inCinema, watchDate, wishlistReason } = updateData;
 
         if (!id) {
             return new Response(JSON.stringify({ error: '缺少电影 ID' }), {
@@ -180,6 +180,15 @@ export async function onRequestPost(context) {
                 updatedMovie.watchDates.sort();
             }
             updatedMovie.watchDate = updatedMovie.watchDates[0];
+        }
+
+        // 处理想看的理由
+        if (wishlistReason !== undefined) {
+            if (wishlistReason === null || wishlistReason === '') {
+                delete updatedMovie.wishlistReason;
+            } else {
+                updatedMovie.wishlistReason = wishlistReason;
+            }
         }
 
         // 从原列表移除

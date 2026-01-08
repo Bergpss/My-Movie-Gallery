@@ -99,6 +99,34 @@ function setupEventListeners() {
     addModal.addEventListener('click', (e) => {
         if (e.target === addModal) closeModal();
     });
+
+    // 状态变化时更新表单字段可见性
+    document.getElementById('add-status').addEventListener('change', (e) => {
+        updateFormFieldsVisibility('add', e.target.value);
+    });
+    document.getElementById('edit-status').addEventListener('change', (e) => {
+        updateFormFieldsVisibility('edit', e.target.value);
+    });
+}
+
+// 根据状态更新表单字段可见性
+function updateFormFieldsVisibility(prefix, status) {
+    const isWishlist = status === 'wishlist';
+
+    // 获取相关元素
+    const ratingGroup = document.getElementById(`${prefix}-rating-group`);
+    const watchInfoRow = document.getElementById(`${prefix}-watch-info-row`);
+    const reasonGroup = document.getElementById(`${prefix}-reason-group`);
+
+    if (ratingGroup) {
+        ratingGroup.hidden = isWishlist;
+    }
+    if (watchInfoRow) {
+        watchInfoRow.hidden = isWishlist;
+    }
+    if (reasonGroup) {
+        reasonGroup.hidden = !isWishlist;
+    }
 }
 
 // 登录处理
@@ -209,6 +237,10 @@ function openAddModal(movie) {
     document.getElementById('add-title').value = movie.title;
     document.getElementById('add-type').value = movie.mediaType || 'movie';
 
+    // 重置状态为默认值并更新字段可见性
+    document.getElementById('add-status').value = 'watched';
+    updateFormFieldsVisibility('add', 'watched');
+
     addModal.hidden = false;
 }
 
@@ -224,14 +256,18 @@ function closeModal() {
 async function handleAddFromModal(e) {
     e.preventDefault();
 
+    const status = document.getElementById('add-status').value;
+    const isWishlist = status === 'wishlist';
+
     const movieData = {
         id: parseInt(document.getElementById('add-id').value),
         title: document.getElementById('add-title').value,
         mediaType: document.getElementById('add-type').value,
-        status: document.getElementById('add-status').value,
-        rating: document.getElementById('add-rating').value ? parseFloat(document.getElementById('add-rating').value) : undefined,
-        watchDate: document.getElementById('add-date').value || undefined,
-        inCinema: document.getElementById('add-cinema').checked,
+        status: status,
+        rating: isWishlist ? undefined : (document.getElementById('add-rating').value ? parseFloat(document.getElementById('add-rating').value) : undefined),
+        watchDate: isWishlist ? undefined : (document.getElementById('add-date').value || undefined),
+        inCinema: isWishlist ? false : document.getElementById('add-cinema').checked,
+        wishlistReason: isWishlist ? (document.getElementById('add-reason').value || undefined) : undefined,
         note: document.getElementById('add-note').value || undefined,
     };
 
@@ -406,7 +442,11 @@ function openEditModal(movie) {
     document.getElementById('edit-rating').value = movie.rating || '';
     document.getElementById('edit-date').value = movie.watchDate || movie.watchDates?.[0] || '';
     document.getElementById('edit-cinema').checked = movie.inCinema || false;
+    document.getElementById('edit-reason').value = movie.wishlistReason || '';
     document.getElementById('edit-note').value = movie.note || '';
+
+    // 根据状态更新字段可见性
+    updateFormFieldsVisibility('edit', movie.status || 'watched');
 
     editModal.hidden = false;
 }
@@ -427,13 +467,17 @@ editModal.addEventListener('click', (e) => {
 editForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const status = document.getElementById('edit-status').value;
+    const isWishlist = status === 'wishlist';
+
     const updateData = {
         id: document.getElementById('edit-id').value,
-        status: document.getElementById('edit-status').value,
-        rating: document.getElementById('edit-rating').value || null,
+        status: status,
+        rating: isWishlist ? null : (document.getElementById('edit-rating').value || null),
         note: document.getElementById('edit-note').value || null,
-        inCinema: document.getElementById('edit-cinema').checked,
-        watchDate: document.getElementById('edit-date').value || null,
+        inCinema: isWishlist ? false : document.getElementById('edit-cinema').checked,
+        watchDate: isWishlist ? null : (document.getElementById('edit-date').value || null),
+        wishlistReason: isWishlist ? (document.getElementById('edit-reason').value || null) : null,
     };
 
     try {

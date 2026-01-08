@@ -155,12 +155,12 @@
                                 <option value="wishlist">想看</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group watched-only-field" id="add-rating-group">
                             <label for="add-rating">评分 (0-10)</label>
                             <input type="number" id="add-rating" min="0" max="10" step="0.1" placeholder="可选">
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row watched-only-field" id="add-watch-info-row">
                         <div class="form-group">
                             <label for="add-date">观影日期</label>
                             <input type="date" id="add-date">
@@ -170,6 +170,10 @@
                                 <input type="checkbox" id="add-cinema"> 影院观影 🎦
                             </label>
                         </div>
+                    </div>
+                    <div class="form-group wishlist-only-field" id="add-reason-group" hidden>
+                        <label for="add-reason">想看的理由</label>
+                        <textarea id="add-reason" rows="2" placeholder="为什么想看这部电影？"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="add-note">备注</label>
@@ -204,12 +208,12 @@
                             <option value="dropped">弃剧</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group watched-only-field" id="edit-rating-group">
                         <label for="edit-rating">评分 (0-10)</label>
                         <input type="number" id="edit-rating" min="0" max="10" step="0.1" placeholder="可选">
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row watched-only-field" id="edit-watch-info-row">
                     <div class="form-group">
                         <label for="edit-date">观影日期</label>
                         <input type="date" id="edit-date">
@@ -219,6 +223,10 @@
                             <input type="checkbox" id="edit-cinema"> 影院观影 🎦
                         </label>
                     </div>
+                </div>
+                <div class="form-group wishlist-only-field" id="edit-reason-group" hidden>
+                    <label for="edit-reason">想看的理由</label>
+                    <textarea id="edit-reason" rows="2" placeholder="为什么想看这部电影？"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="edit-note">备注</label>

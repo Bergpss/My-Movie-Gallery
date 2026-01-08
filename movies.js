@@ -263,6 +263,7 @@ function renderMovies(movies) {
                 .filter(Boolean);
             const [primaryWatchDate, ...extraWatchDates] = formattedWatchDates;
             const note = movie.note ? `<p class="watch-note">${movie.note}</p>` : '';
+            const wishlistReason = movie.wishlistReason ? `<p class="wishlist-reason">💡 ${movie.wishlistReason}</p>` : '';
             const watchDatesMarkup = extraWatchDates.length
                 ? `<p class="watch-dates">再看：${extraWatchDates.join('、')}</p>`
                 : '';
@@ -281,6 +282,7 @@ function renderMovies(movies) {
                     ${releaseDate ? `<p class="release-date">上映：${releaseDate}</p>` : ''}
                     ${creatorInfo}
                     ${durationInfo}
+                    ${wishlistReason}
                     ${primaryWatchDate ? `<p class="watch-date">观影：${primaryWatchDate}</p>` : ''}
                     ${watchDatesMarkup}
                     ${note}
