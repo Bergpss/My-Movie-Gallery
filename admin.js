@@ -79,9 +79,14 @@ function setupEventListeners() {
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => {
+                c.classList.remove('active');
+                c.hidden = true;
+            });
             btn.classList.add('active');
-            document.getElementById(`${btn.dataset.tab}-tab`).classList.add('active');
+            const targetTab = document.getElementById(`${btn.dataset.tab}-tab`);
+            targetTab.classList.add('active');
+            targetTab.hidden = false;
         });
     });
 
