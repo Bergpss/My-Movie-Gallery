@@ -75,9 +75,10 @@ export async function onRequestPost(context) {
 
         // 从 GitHub 获取当前 library.json
         const githubToken = env.GITHUB_TOKEN;
+        const githubOwner = env.GITHUB_OWNER;
         const githubRepo = env.GITHUB_REPO;
 
-        if (!githubToken || !githubRepo) {
+        if (!githubToken || !githubOwner || !githubRepo) {
             return new Response(JSON.stringify({ error: 'GitHub 配置缺失' }), {
                 status: 500,
                 headers: { 'Content-Type': 'application/json', ...corsHeaders },
@@ -85,7 +86,7 @@ export async function onRequestPost(context) {
         }
 
         const filePath = 'data/library.json';
-        const apiUrl = `https://api.github.com/repos/${githubRepo}/contents/${filePath}`;
+        const apiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${filePath}`;
 
         // 获取文件内容
         const getResponse = await fetch(apiUrl, {

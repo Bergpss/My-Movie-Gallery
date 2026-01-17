@@ -79,16 +79,17 @@ export async function onRequestPost(context) {
 
         // 从 GitHub 获取当前 library.json
         const githubToken = env.GITHUB_TOKEN;
+        const githubOwner = env.GITHUB_OWNER;
         const githubRepo = env.GITHUB_REPO;
 
-        if (!githubToken || !githubRepo) {
+        if (!githubToken || !githubOwner || !githubRepo) {
             return new Response(JSON.stringify({ error: '服务器配置错误' }), {
                 status: 500,
                 headers: { 'Content-Type': 'application/json', ...corsHeaders },
             });
         }
 
-        const apiUrl = `https://api.github.com/repos/${githubRepo}/contents/data/library.json`;
+        const apiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/data/library.json`;
 
         const getResponse = await fetch(apiUrl, {
             headers: {
