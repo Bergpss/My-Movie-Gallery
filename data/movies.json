@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-17T08:24:26.045Z",
+  "generatedAt": "2026-01-17T16:57:38.364Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 265
+    "total": 266
   },
   "items": [
     {
@@ -68,6 +68,46 @@
         "popularity": 6.6203,
         "homepage": "https://www.netflix.com/title/82006516",
         "directors": []
+      }
+    },
+    {
+      "id": 880,
+      "title": "安东尼娅家族",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-01-17"
+      ],
+      "watchDate": "2026-01-17",
+      "rating": 8,
+      "note": "甜甜的研友推荐，这个电影会让我想起来《百年孤独》",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Antonia",
+        "original_language": "nl",
+        "title": "安东尼娅家族",
+        "overview": "　　二战后，安东尼娅带着16岁的女儿达尼埃莱回乡生活。不久，曾被她解救的雇工“笨嘴\"前来投奔，成为“家族\"的新成员。之后，达尼埃莱救了正要被哥哥皮泰强奸的痴呆女代代，并把她领回家。农夫巴斯在追求安东尼娅被拒后，也成了“家族\"的成员。长大成人的达尼埃莱成为画家。她虽不想结婚却在与妓女莱塔的兄弟做爱后怀孕，后生下女儿泰雷瑟。莱塔又带着好几个孩子加入“家族\"。皮泰从军归来，强奸了泰雷瑟。安东尼娅严惩了他。到了60年代，泰雷瑟的女儿萨拉赫出生了，而安东尼娅的生命也到了尽头...",
+        "poster_path": "/774YCGVNZUJ5TTAmk80u37SHqUN.jpg",
+        "backdrop_path": "/sOkUBkwq21ZEThCX7wboY2Xl3m5.jpg",
+        "release_date": "1995-09-21",
+        "runtime": 102,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 6.903,
+        "vote_count": 139,
+        "popularity": 0.9669,
+        "homepage": "",
+        "directors": [
+          "Marleen Gorris"
+        ]
       }
     },
     {
