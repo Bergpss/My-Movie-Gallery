@@ -1,11 +1,43 @@
 {
-  "generatedAt": "2026-01-07T13:08:25.100Z",
+  "generatedAt": "2026-01-17T08:08:15.879Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 263
+    "total": 264
   },
   "items": [
+    {
+      "id": 293613,
+      "title": "体能之巅：亚洲大挑战",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "피지컬: 아시아",
+        "original_language": "ko",
+        "title": "体能之巅：亚洲大挑战",
+        "overview": "体能之巅这次提高难度，邀请亚洲顶尖运动员各自代表自己的国家竞赛，他们不只为个人荣耀而战，更要为了国家的荣誉奋斗。如果队伍中的一位成员失败，全队都会受到影响，因此比赛中的每一刻都是令人血脉偾张的生存战。激战之后，究竟谁会成为拥有最巅峰体能的最强国家队呢？",
+        "poster_path": "/qKtoFZN0aJNoHPoJTAX17n3oQxR.jpg",
+        "backdrop_path": "/823qOjKt0V0N9S6h2uoqu1IA15f.jpg",
+        "release_date": "2025-10-28",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 10764,
+            "name": "真人秀"
+          }
+        ],
+        "vote_average": 7.371,
+        "vote_count": 31,
+        "popularity": 6.6203,
+        "homepage": "https://www.netflix.com/title/82006516",
+        "directors": []
+      }
+    },
     {
       "id": 200875,
       "title": "小丑回魂：欢迎来到德里",
