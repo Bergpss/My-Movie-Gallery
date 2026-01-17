@@ -87,6 +87,11 @@ function setupEventListeners() {
             const targetTab = document.getElementById(`${btn.dataset.tab}-tab`);
             targetTab.classList.add('active');
             targetTab.hidden = false;
+            
+            // 切换到"我的记录"Tab 时加载数据
+            if (btn.dataset.tab === 'library') {
+                loadLibraryMovies();
+            }
         });
     });
 
@@ -112,25 +117,42 @@ function setupEventListeners() {
     document.getElementById('edit-status').addEventListener('change', (e) => {
         updateFormFieldsVisibility('edit', e.target.value);
     });
+
+    // 我的记录筛选按钮事件
+    document.querySelectorAll('.library-filter .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.library-filter .filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.dataset.status;
+            renderLibraryMovies();
+        });
+    });
 }
 
 // 根据状态更新表单字段可见性
 function updateFormFieldsVisibility(prefix, status) {
     const isWishlist = status === 'wishlist';
+    const isWatching = status === 'watching';
 
     // 获取相关元素
     const ratingGroup = document.getElementById(`${prefix}-rating-group`);
     const watchInfoRow = document.getElementById(`${prefix}-watch-info-row`);
     const reasonGroup = document.getElementById(`${prefix}-reason-group`);
+    const dateLabel = document.getElementById(`${prefix}-date-label`);
 
+    // 评分字段：想看和正在看都隐藏
     if (ratingGroup) {
-        ratingGroup.hidden = isWishlist;
+        ratingGroup.hidden = isWishlist || isWatching;
     }
     if (watchInfoRow) {
         watchInfoRow.hidden = isWishlist;
     }
     if (reasonGroup) {
         reasonGroup.hidden = !isWishlist;
+    }
+    // 日期标签：正在看显示"开始观看日期"，其他显示"观影日期"
+    if (dateLabel) {
+        dateLabel.textContent = isWatching ? '开始观看日期' : '观影日期';
     }
 }
 
@@ -263,13 +285,15 @@ async function handleAddFromModal(e) {
 
     const status = document.getElementById('add-status').value;
     const isWishlist = status === 'wishlist';
+    const isWatching = status === 'watching';
+    const noRating = isWishlist || isWatching;
 
     const movieData = {
         id: parseInt(document.getElementById('add-id').value),
         title: document.getElementById('add-title').value,
         mediaType: document.getElementById('add-type').value,
         status: status,
-        rating: isWishlist ? undefined : (document.getElementById('add-rating').value ? parseFloat(document.getElementById('add-rating').value) : undefined),
+        rating: noRating ? undefined : (document.getElementById('add-rating').value ? parseFloat(document.getElementById('add-rating').value) : undefined),
         watchDate: isWishlist ? undefined : (document.getElementById('add-date').value || undefined),
         inCinema: isWishlist ? false : document.getElementById('add-cinema').checked,
         wishlistReason: isWishlist ? (document.getElementById('add-reason').value || undefined) : undefined,
@@ -350,27 +374,13 @@ const libraryResults = document.getElementById('library-results');
 const libraryLoading = document.getElementById('library-loading');
 const libraryEmpty = document.getElementById('library-empty');
 
-// 切换到"我的记录"Tab 时加载数据
-document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        if (btn.dataset.tab === 'library') {
-            loadLibraryMovies();
-        }
-    });
-});
-
-// 筛选按钮事件
-document.querySelectorAll('.library-filter .filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.library-filter .filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentFilter = btn.dataset.status;
-        renderLibraryMovies();
-    });
-});
-
 // 加载我的电影记录
 async function loadLibraryMovies() {
+    if (!libraryResults || !libraryLoading || !libraryEmpty) {
+        console.error('Library DOM elements not found');
+        return;
+    }
+
     libraryResults.innerHTML = '';
     libraryLoading.hidden = false;
     libraryEmpty.hidden = true;
@@ -381,9 +391,15 @@ async function loadLibraryMovies() {
             const data = await response.json();
             allMovies = data.items || [];
             renderLibraryMovies();
+        } else {
+            console.error('加载电影列表失败:', response.status, response.statusText);
+            libraryEmpty.textContent = '加载失败，请刷新页面重试';
+            libraryEmpty.hidden = false;
         }
     } catch (error) {
         console.error('加载电影列表失败:', error);
+        libraryEmpty.textContent = '加载失败，请检查网络连接';
+        libraryEmpty.hidden = false;
     } finally {
         libraryLoading.hidden = true;
     }
@@ -474,11 +490,13 @@ editForm.addEventListener('submit', async (e) => {
 
     const status = document.getElementById('edit-status').value;
     const isWishlist = status === 'wishlist';
+    const isWatching = status === 'watching';
+    const noRating = isWishlist || isWatching;
 
     const updateData = {
         id: document.getElementById('edit-id').value,
         status: status,
-        rating: isWishlist ? null : (document.getElementById('edit-rating').value || null),
+        rating: noRating ? null : (document.getElementById('edit-rating').value || null),
         note: document.getElementById('edit-note').value || null,
         inCinema: isWishlist ? false : document.getElementById('edit-cinema').checked,
         watchDate: isWishlist ? null : (document.getElementById('edit-date').value || null),
