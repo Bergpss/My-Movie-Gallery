@@ -11,13 +11,6 @@
       "title": "体能之巅：亚洲大挑战",
       "mediaType": "tv",
       "status": "watching"
-    },
-    {
-      "id": 200875,
-      "title": "小丑回魂：欢迎来到德里",
-      "mediaType": "tv",
-      "status": "watching",
-      "note": null
     }
   ],
   "watched": [
@@ -3264,6 +3257,14 @@
     }
   ],
   "dropped": [
+    {
+      "id": 200875,
+      "title": "小丑回魂：欢迎来到德里",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": "蛮好的看的，就是最后一两集没劲了",
+      "inCinema": false
+    },
     {
       "id": 252135,
       "title": "回魂记",
