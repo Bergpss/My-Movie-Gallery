@@ -83,6 +83,68 @@
 - 页面展示为“上映日期 + 观影日期列表”。上映日期来自 TMDB 的 `release_date`；观影日期来自 `watchDates`，若为空则不显示。
 - 所有导入脚本会按最新观影日期对 `watched` 列表降序排序，保持展示一致。
 
+## 本地测试
+
+### 启动本地服务器
+
+在项目根目录运行以下命令启动本地 HTTP 服务器：
+
+```bash
+python3 -m http.server 4173
+```
+
+或者使用其他端口（如 8000）：
+
+```bash
+python3 -m http.server 8000
+```
+
+### 测试主页面
+
+1. 确保已生成 `data/movies.json`（运行 `node scripts/fetch_movies.js`）
+2. 在浏览器中访问 `http://localhost:4173/index.html`
+3. 检查以下内容：
+   - "正在看"和"已看完"板块是否正确显示
+   - 电影海报和详情是否正确加载
+   - 筛选按钮（全部/电影/剧集/网络视频）是否正常工作
+   - 响应式布局在不同屏幕尺寸下是否正常
+
+### 测试管理后台
+
+1. 访问 `http://localhost:4173/admin.html`
+2. **注意**：管理后台的 API 功能（搜索、添加、编辑、删除）需要部署到支持 Cloudflare Workers 或类似 serverless 平台的环境才能正常工作。本地测试时：
+   - 可以查看页面布局和 UI 交互
+   - 登录功能需要后端 API 支持（`/api/auth`）
+   - 搜索、添加、编辑、删除功能需要相应的 API 端点
+3. 如需完整测试管理功能，需要：
+   - 部署 `functions/api/` 下的 serverless 函数
+   - 配置环境变量（`ADMIN_PASSWORD`、`JWT_SECRET`、`TMDB_API_KEY` 等）
+
+### 验证数据
+
+在修改 `data/library.json` 或运行脚本后，验证生成的 JSON 文件：
+
+```bash
+# 检查 JSON 格式是否正确
+jq . data/movies.json
+
+# 检查数据结构
+jq '.items | length' data/movies.json  # 查看电影总数
+jq '.items[] | select(.status == "watching")' data/movies.json  # 查看"正在看"的影片
+```
+
+### 测试脚本
+
+在修改 CLI 脚本后，建议先用测试数据验证：
+
+```bash
+# 添加一个测试条目到 library.json
+# 运行脚本验证功能
+TMDB_API_KEY="<你的 API Key>" node scripts/fetch_movies.js
+
+# 验证无误后，从 library.json 中删除测试条目
+```
+
 ## 部署提示
 
 - 站点是纯静态输出，GitHub Pages 只需要 `index.html`、`movies.js`、`styles.css` 和自动生成的 `data/movies.json`。
