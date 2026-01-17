@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-17T08:08:43.324Z",
+  "generatedAt": "2026-01-17T08:17:38.712Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -67,42 +67,6 @@
         "vote_count": 31,
         "popularity": 6.6203,
         "homepage": "https://www.netflix.com/title/82006516",
-        "directors": []
-      }
-    },
-    {
-      "id": 200875,
-      "title": "小丑回魂：欢迎来到德里",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "IT: Welcome to Derry",
-        "original_language": "en",
-        "title": "小丑回魂：欢迎来到德里镇",
-        "overview": "《小丑回魂》系列前传剧集，故事背景设定在1962年，比原版电影的时间线早了27年，深入探索了恐怖小丑潘尼怀斯的起源以及德里镇背后循环发生的恐怖事件。",
-        "poster_path": "/kk0hdltG1EkGNRV8noegSErSZKQ.jpg",
-        "backdrop_path": "/2fOKVDoc2O3eZmBZesWPuE5kgPN.jpg",
-        "release_date": "2025-10-26",
-        "runtime": null,
-        "genres": [
-          {
-            "id": 18,
-            "name": "剧情"
-          },
-          {
-            "id": 9648,
-            "name": "悬疑"
-          }
-        ],
-        "vote_average": 8.24,
-        "vote_count": 1106,
-        "popularity": 156.2423,
-        "homepage": "https://www.hbo.com/content/it-welcome-to-derry",
         "directors": []
       }
     },
@@ -11090,6 +11054,42 @@
         "directors": [
           "西恩·潘"
         ]
+      }
+    },
+    {
+      "id": 200875,
+      "title": "小丑回魂：欢迎来到德里",
+      "mediaType": "tv",
+      "status": "dropped",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": "蛮好的看的，就是最后一两集没劲了",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "IT: Welcome to Derry",
+        "original_language": "en",
+        "title": "小丑回魂：欢迎来到德里镇",
+        "overview": "《小丑回魂》系列前传剧集，故事背景设定在1962年，比原版电影的时间线早了27年，深入探索了恐怖小丑潘尼怀斯的起源以及德里镇背后循环发生的恐怖事件。",
+        "poster_path": "/kk0hdltG1EkGNRV8noegSErSZKQ.jpg",
+        "backdrop_path": "/2fOKVDoc2O3eZmBZesWPuE5kgPN.jpg",
+        "release_date": "2025-10-26",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8.24,
+        "vote_count": 1106,
+        "popularity": 156.2423,
+        "homepage": "https://www.hbo.com/content/it-welcome-to-derry",
+        "directors": []
       }
     },
     {
