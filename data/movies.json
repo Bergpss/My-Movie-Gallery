@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-17T16:57:38.364Z",
+  "generatedAt": "2026-01-17T16:58:10.626Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 266
+    "total": 267
   },
   "items": [
     {
@@ -10777,6 +10777,44 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 264644,
+      "title": "房间",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Room",
+        "original_language": "en",
+        "title": "房间",
+        "overview": "影片讲述了五岁男孩杰克的非凡故事。他性格活泼，由挚爱且无私的母亲悉心照料。如同所有伟大的母亲，妈妈倾尽全力守护杰克的快乐与安全，以温暖和慈爱哺育他，陪他游戏、讲故事，践行着平凡母子间的日常。然而，他们的生活却远非寻常——二人被困于一个仅十英尺乘十英尺、被母亲委婉称为“房间”的封闭空间。妈妈在“房间”里为杰克构筑了完整的天地，并拼尽一切确保即使在这险恶环境中，杰克仍能度过充实而有意义的人生。但随着杰克对处境的好奇日渐增长，妈妈的坚韧也逼近极限，他们策划了一场危险的逃脱计划。最终，二人不得不直面可能比囚禁更令人畏惧的存在：现实世界。[A24]",
+        "poster_path": "/9VQ7SPwSoGbcOWAR6vChL2IMASw.jpg",
+        "backdrop_path": "/cGV6R2vzT4TYIabf3JgmrOISQ0y.jpg",
+        "release_date": "2015-10-16",
+        "runtime": 118,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 7.998,
+        "vote_count": 9531,
+        "popularity": 3.7876,
+        "homepage": "",
+        "directors": [
+          "伦尼·阿伯拉罕森"
         ]
       }
     },
