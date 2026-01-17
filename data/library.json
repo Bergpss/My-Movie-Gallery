@@ -15,6 +15,19 @@
   ],
   "watched": [
     {
+      "id": 1356587,
+      "title": "长安的荔枝",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 9,
+      "note": "大鹏的电影总会给人惊喜，刘德华还是帅哇！",
+      "inCinema": false,
+      "watchDates": [
+        "2026-01-10"
+      ],
+      "watchDate": "2026-01-10"
+    },
+    {
       "id": 246386,
       "title": "都是她的错",
       "mediaType": "tv",
@@ -3226,12 +3239,6 @@
     {
       "id": 911430,
       "title": "F1：狂飙飞车",
-      "mediaType": "movie",
-      "status": "wishlist"
-    },
-    {
-      "id": 1356587,
-      "title": "长安的荔枝",
       "mediaType": "movie",
       "status": "wishlist"
     },
