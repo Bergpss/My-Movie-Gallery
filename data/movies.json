@@ -1,11 +1,43 @@
 {
-  "generatedAt": "2026-01-17T08:08:15.879Z",
+  "generatedAt": "2026-01-17T08:08:43.324Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 264
+    "total": 265
   },
   "items": [
+    {
+      "id": 64010,
+      "title": "请回答1988",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "응답하라 1988",
+        "original_language": "ko",
+        "title": "请回答1988",
+        "overview": "故事以1988年汉城（今首尔）奥运会为故事背景，讲述住在首尔市道峰区双门洞的五个家庭的故事，这五个家庭的孩子中，都生于1971年的德善、善宇、东龙、崔泽、正焕，是从小一起长大的好朋友，1988年正处于他们18岁的青春年华，他们有共同的兴趣，还有共同崇拜的偶像，在这五个男女中也有暧昧的男女情愫，在那个纯真的年代，他们共谱了许多美好的记忆。",
+        "poster_path": "/cX068rNsLNFnRCTNbqqARhwbhug.jpg",
+        "backdrop_path": "/sZH7lGs06skRKkrqp1LRi57VVMb.jpg",
+        "release_date": "2015-11-06",
+        "runtime": 90,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 8.8,
+        "vote_count": 194,
+        "popularity": 7.3725,
+        "homepage": "http://program.tving.com/tvn/reply1988/",
+        "directors": []
+      }
+    },
     {
       "id": 293613,
       "title": "体能之巅：亚洲大挑战",
