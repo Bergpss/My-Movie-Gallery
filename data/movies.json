@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-24T06:28:43.002Z",
+  "generatedAt": "2026-01-24T06:35:21.740Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 269
+    "total": 270
   },
   "items": [
     {
@@ -10855,6 +10855,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 17609,
+      "title": "反基督者",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Antichrist",
+        "original_language": "en",
+        "title": "反基督者",
+        "overview": "在充满狂乱且略带忧伤的夜晚，一对夫妇痛失可爱的幼子尼克。这件事给他们以莫大的打击，也让这段原本便矛盾暗生的婚姻走向崩溃边缘。妻子（夏洛特•甘斯布 Charlotte Gainsbourg 饰）久久沉浸悲痛中无法自拔，身为心理咨询师丈夫（威廉•达福 Willem Dafoe 饰）一方面希望弥合破裂的婚姻，另一方面试图通过心理疏导让妻子忘记过去。最终，他们决定前往位于伊登（Eden）森林的小木屋中缓释心情。此前一年，女人曾带着尼克在此撰写一篇关于基督和反女性的论文，过往的回忆让重蹈此地的她紧张慌乱。心理治疗在焦灼烦躁的情绪中进行，夫妻俩没有找到渴望已久的光明，反而堕入更加无边的黑暗之中……\r 　　本片荣获2009年戛纳电影节最佳女主角奖（Charlotte Gainsbourg）。 ©豆瓣",
+        "poster_path": "/ge7zbYvpfsDP3luKi0iSpzOgncM.jpg",
+        "backdrop_path": "/utABPVjXBlM8NUOBecCyLLuzQSe.jpg",
+        "release_date": "2009-05-20",
+        "runtime": 104,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 6.621,
+        "vote_count": 2758,
+        "popularity": 3.7906,
+        "homepage": "",
+        "directors": [
+          "拉斯·冯·提尔"
         ]
       }
     },
