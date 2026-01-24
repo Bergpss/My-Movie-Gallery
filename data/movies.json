@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-01-17T16:58:10.626Z",
+  "generatedAt": "2026-01-24T06:24:27.277Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 267
+    "total": 268
   },
   "items": [
     {
@@ -68,6 +68,42 @@
         "popularity": 6.6203,
         "homepage": "https://www.netflix.com/title/82006516",
         "directors": []
+      }
+    },
+    {
+      "id": 258216,
+      "title": "女性瘾者：第一部",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-01-24"
+      ],
+      "watchDate": "2026-01-24",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Nymphomaniac: Vol. I",
+        "original_language": "en",
+        "title": "女性瘾者：第一部",
+        "overview": "一个寒冷的冬日夜晚迷人的单身汉塞利格曼在小巷里发现被揍的乔，他将她带回家公寓，帮她治疗伤口，并问起她的生活，投入的倾听了乔的人生8个章节，一个女人从出生到50岁的性欲旅程，繁复而多样的人生故事，其间伴随着联想和突发事件，充满了野性与诗意。",
+        "poster_path": "/piikL8vRh3s1ysHGTIqaZpdjfNU.jpg",
+        "backdrop_path": "/2HVQQ8TLSh5H0vPwShwcNCRhig3.jpg",
+        "release_date": "2013-12-25",
+        "runtime": 118,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 6.843,
+        "vote_count": 3570,
+        "popularity": 1.5775,
+        "homepage": "",
+        "directors": [
+          "拉斯·冯·提尔"
+        ]
       }
     },
     {
