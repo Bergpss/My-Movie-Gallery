@@ -5,15 +5,22 @@
       "title": "请回答1988",
       "mediaType": "tv",
       "status": "watching"
-    },
+    }
+  ],
+  "watched": [
     {
       "id": 293613,
       "title": "体能之巅：亚洲大挑战",
       "mediaType": "tv",
-      "status": "watching"
-    }
-  ],
-  "watched": [
+      "status": "watched",
+      "rating": 7,
+      "note": null,
+      "inCinema": false,
+      "watchDates": [
+        "2026-01-20"
+      ],
+      "watchDate": "2026-01-20"
+    },
     {
       "id": 249397,
       "title": "女性瘾者：第二部",
