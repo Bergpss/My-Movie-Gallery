@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-24T06:28:00.675Z",
+  "generatedAt": "2026-01-24T06:28:43.002Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -42,10 +42,12 @@
       "id": 293613,
       "title": "体能之巅：亚洲大挑战",
       "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
+      "status": "watched",
+      "watchDates": [
+        "2026-01-20"
+      ],
+      "watchDate": "2026-01-20",
+      "rating": 7,
       "note": null,
       "inCinema": false,
       "tmdb": {
