@@ -25,6 +25,10 @@ const adminMessage = document.getElementById('admin-message');
 function init() {
     if (authToken) {
         showAdminSection();
+    } else {
+        // 没有登录时，显示登录界面，隐藏管理区域
+        loginSection.hidden = false;
+        adminSection.hidden = true;
     }
 
     // 设置今天的日期为默认值
