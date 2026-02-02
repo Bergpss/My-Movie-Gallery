@@ -45,6 +45,75 @@ async function showAdminSection() {
     adminSection.hidden = false;
     // 加载已添加的电影列表
     await loadExistingMovies();
+    
+    // 检查是否有未完成的操作
+    const pendingAction = localStorage.getItem('pendingAction');
+    if (pendingAction) {
+        try {
+            const action = JSON.parse(pendingAction);
+            localStorage.removeItem('pendingAction');
+            
+            // 显示提示并询问用户是否继续
+            const shouldContinue = confirm('检测到上次未完成的操作，是否继续？');
+            if (shouldContinue) {
+                await resumePendingAction(action);
+            }
+        } catch (error) {
+            console.error('恢复未完成操作失败:', error);
+        }
+    }
+}
+
+// 恢复未完成的操作
+async function resumePendingAction(action) {
+    switch (action.type) {
+        case 'add':
+            await addMovie(action.data);
+            break;
+        case 'update':
+            // 对于更新操作，需要先打开编辑弹窗
+            showMessage(adminMessage, '正在恢复未完成的更新...', false);
+            // 重新提交更新
+            const updateResponse = await fetch(`${API_BASE}/update`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${authToken}`,
+                },
+                body: JSON.stringify(action.data),
+            });
+            const updateData = await updateResponse.json();
+            if (updateResponse.ok) {
+                showMessage(adminMessage, '更新成功！', false);
+                await loadExistingMovies();
+                await loadLibraryMovies();
+            } else {
+                showMessage(adminMessage, updateData.error || '更新失败', true);
+            }
+            break;
+        case 'delete':
+            // 删除操作需要再次确认
+            const shouldDelete = confirm(`是否继续删除"${action.data.title}"？`);
+            if (shouldDelete) {
+                const deleteResponse = await fetch(`${API_BASE}/delete`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`,
+                    },
+                    body: JSON.stringify({ id: action.data.id }),
+                });
+                const deleteData = await deleteResponse.json();
+                if (deleteResponse.ok) {
+                    showMessage(adminMessage, '删除成功！', false);
+                    await loadExistingMovies();
+                    await loadLibraryMovies();
+                } else {
+                    showMessage(adminMessage, deleteData.error || '删除失败', true);
+                }
+            }
+            break;
+    }
 }
 
 // 加载已添加的电影ID列表
@@ -341,13 +410,11 @@ async function addMovie(movieData) {
 
         if (!response.ok) {
             if (response.status === 401) {
-                // Token 过期，需要重新登录
-                localStorage.removeItem('adminToken');
-                authToken = null;
-                loginSection.hidden = false;
-                adminSection.hidden = true;
-                showMessage(loginError, '登录已过期，请重新登录', true);
-                loginError.hidden = false;
+                // Token 过期，保存当前操作并跳转登录
+                handleTokenExpired({
+                    type: 'add',
+                    data: movieData
+                });
                 return;
             }
             showMessage(adminMessage, data.error || '添加失败', true);
@@ -521,7 +588,10 @@ editForm.addEventListener('submit', async (e) => {
 
         if (!response.ok) {
             if (response.status === 401) {
-                handleTokenExpired();
+                handleTokenExpired({
+                    type: 'update',
+                    data: updateData
+                });
                 return;
             }
             showMessage(adminMessage, data.error || '更新失败', true);
@@ -561,7 +631,10 @@ document.getElementById('delete-movie-btn').addEventListener('click', async () =
 
         if (!response.ok) {
             if (response.status === 401) {
-                handleTokenExpired();
+                handleTokenExpired({
+                    type: 'delete',
+                    data: { id, title }
+                });
                 return;
             }
             showMessage(adminMessage, data.error || '删除失败', true);
@@ -579,7 +652,12 @@ document.getElementById('delete-movie-btn').addEventListener('click', async () =
 });
 
 // Token 过期处理
-function handleTokenExpired() {
+function handleTokenExpired(pendingAction = null) {
+    // 保存未完成的操作
+    if (pendingAction) {
+        localStorage.setItem('pendingAction', JSON.stringify(pendingAction));
+    }
+    
     localStorage.removeItem('adminToken');
     authToken = null;
     loginSection.hidden = false;
