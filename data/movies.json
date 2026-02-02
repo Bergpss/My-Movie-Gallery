@@ -1,11 +1,84 @@
 {
-  "generatedAt": "2026-01-24T06:35:58.007Z",
+  "generatedAt": "2026-02-02T05:35:18.276Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 271
+    "total": 273
   },
   "items": [
+    {
+      "id": 68945,
+      "title": "心里的声音",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "마음의 소리",
+        "original_language": "ko",
+        "title": "心里的声音",
+        "overview": "该剧讲述了男主角赵石“一事无成”，孤独的坚持着自己画漫画的梦想，他笔下的人物脱离了一般漫画中梦幻优美的固有形象，配色也多少有些夸张。这样的漫画很难被常人认可，满怀希望送去出版社，却被编辑嘲讽。就连自己的父母和哥哥也觉得赵石的漫画并没有意思。不断受挫的赵石并没有因此放弃自己的梦想，直到自己重逢了学生时期的初恋爱凤。被所有人称为无趣的这部作品却让爱凤笑到不能自已。一直不被肯定的赵石也因此获得了希望。最终，赵石的作品被越来越多的人赞赏，甚至到了因为读者的期盼不能随心停载休假的时候，受到喜爱和鼓励的赵石也有了被人气所困的烦恼，但是当他看到自己已经成了尚未成功的同窗极度羡慕的对象，想到自己一直持续画下去的动力就是希望自己的漫画能给人带来笑声，赵石再次找到了初心，有了继续前进的动力。",
+        "poster_path": "/opMZpWva1nX8jpZJBQApFsP5Otr.jpg",
+        "backdrop_path": "/5O0MHAS4cA6PvhNOyDiVmv4w2U4.jpg",
+        "release_date": "2016-11-07",
+        "runtime": 12,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.804,
+        "vote_count": 28,
+        "popularity": 3.8663,
+        "homepage": "https://tv.naver.com/soundofheart",
+        "directors": [
+          "河炳勋",
+          "Kim Hyun-Soo"
+        ]
+      }
+    },
+    {
+      "id": 106161,
+      "title": "阿尔玛不是一般人",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Alma's Not Normal",
+        "original_language": "en",
+        "title": "阿尔玛不是一般人",
+        "overview": "　　梦想远大，没有资历，永远是她自己。妈妈被分割了，奶奶太忙了，但在一次混乱的分手后，野孩子阿尔玛打算在博尔顿自由生活。",
+        "poster_path": "/9EUlK8ZHZCKSC8TLi5bXocHwBzc.jpg",
+        "backdrop_path": "/bEArHOVknnuhkwjjg7iMCMfsjEH.jpg",
+        "release_date": "2020-04-07",
+        "runtime": 29,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.333,
+        "vote_count": 21,
+        "popularity": 1.424,
+        "homepage": "https://www.bbc.co.uk/programmes/p09r3q71",
+        "directors": [
+          "Andrew Chaplin"
+        ]
+      }
+    },
     {
       "id": 64010,
       "title": "请回答1988",
