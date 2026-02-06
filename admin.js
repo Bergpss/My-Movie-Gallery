@@ -6,6 +6,7 @@ const API_BASE = '/api';
 // 状态
 let authToken = localStorage.getItem('adminToken');
 let existingMovieIds = new Set(); // 已添加的电影 ID 集合
+let tokenValidUntil = null; // Token 有效期缓存
 
 // DOM 元素
 const loginSection = document.getElementById('login-section');
@@ -67,6 +68,18 @@ async function showAdminSection() {
 // 恢复未完成的操作
 async function resumePendingAction(action) {
     switch (action.type) {
+        case 'open-add-modal':
+            // 重新打开添加弹窗
+            if (action.movie) {
+                openAddModal(action.movie);
+            }
+            break;
+        case 'open-edit-modal':
+            // 重新打开编辑弹窗
+            if (action.movie) {
+                openEditModal(action.movie);
+            }
+            break;
         case 'add':
             await addMovie(action.data);
             break;
@@ -324,8 +337,48 @@ function renderSearchResults(results) {
     });
 }
 
+// 验证 Token 是否有效
+async function validateToken() {
+    if (!authToken) return false;
+    
+    // 如果缓存的有效期还没到，直接返回 true
+    if (tokenValidUntil && Date.now() < tokenValidUntil) {
+        return true;
+    }
+    
+    try {
+        // 尝试调用一个轻量级的 API 验证 token
+        const response = await fetch('/data/movies.json', {
+            headers: authToken ? { 'Authorization': `Bearer ${authToken}` } : {}
+        });
+        
+        if (response.ok) {
+            // Token 有效，缓存 5 分钟
+            tokenValidUntil = Date.now() + 5 * 60 * 1000;
+            return true;
+        }
+        
+        return false;
+    } catch (error) {
+        console.error('Token 验证失败:', error);
+        return false;
+    }
+}
+
 // 打开添加弹窗
-function openAddModal(movie) {
+async function openAddModal(movie) {
+    // 先验证 token 是否有效
+    const isValid = await validateToken();
+    if (!isValid) {
+        // Token 无效，保存当前要添加的电影，然后跳转登录
+        localStorage.setItem('pendingAction', JSON.stringify({
+            type: 'open-add-modal',
+            movie: movie
+        }));
+        handleTokenExpired();
+        return;
+    }
+    
     document.getElementById('modal-poster').src = movie.posterPath
         ? `${POSTER_BASE_URL}${movie.posterPath}`
         : '';
@@ -520,7 +573,19 @@ function renderLibraryMovies() {
 }
 
 // 打开编辑弹窗
-function openEditModal(movie) {
+async function openEditModal(movie) {
+    // 先验证 token 是否有效
+    const isValid = await validateToken();
+    if (!isValid) {
+        // Token 无效，保存当前要编辑的电影，然后跳转登录
+        localStorage.setItem('pendingAction', JSON.stringify({
+            type: 'open-edit-modal',
+            movie: movie
+        }));
+        handleTokenExpired();
+        return;
+    }
+    
     const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path;
     document.getElementById('edit-modal-poster').src = posterPath
         ? `${POSTER_BASE_URL}${posterPath}`
@@ -653,10 +718,17 @@ document.getElementById('delete-movie-btn').addEventListener('click', async () =
 
 // Token 过期处理
 function handleTokenExpired(pendingAction = null) {
+    // 关闭所有打开的弹窗
+    if (addModal) addModal.hidden = true;
+    if (editModal) editModal.hidden = true;
+    
     // 保存未完成的操作
     if (pendingAction) {
         localStorage.setItem('pendingAction', JSON.stringify(pendingAction));
     }
+    
+    // 清除 token 有效期缓存
+    tokenValidUntil = null;
     
     localStorage.removeItem('adminToken');
     authToken = null;
