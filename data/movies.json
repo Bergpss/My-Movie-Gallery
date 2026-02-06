@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-02T05:35:18.276Z",
+  "generatedAt": "2026-02-06T12:41:36.281Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 273
+    "total": 274
   },
   "items": [
     {
@@ -10928,6 +10928,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1933,
+      "title": "小岛惊魂",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Others",
+        "original_language": "en",
+        "title": "小岛惊魂",
+        "overview": "　　一个名叫葛瑞丝(妮可基嫚饰）的女人在二次大战末期，带著两个孩子避居到小岛上，等著丈夫从战场回来。由于她的孩子们患有疾病，不能接触阳光，所以一家人必须被迫孤独地生活在陌生的小岛上。葛瑞丝在日常生活上订有种种奇怪的规定，如：不可随便把门打开，除非先确定前一扇门已经关上。  葛瑞丝一家虽然过著与世隔绝的生活，但她总觉得这座房子有那麽点不对劲，尤其她的女儿一直声称屋子裡还有其他人... 加上新来的三个古怪又神祕的僕人，葛瑞丝究竟会遭遇到什麽样的危险呢？",
+        "poster_path": "/6cR1TKFLvTEO8N4JzgInhYZGvCz.jpg",
+        "backdrop_path": "/rbBe9WQ1OqCxzgwskOTnaY6JdUA.jpg",
+        "release_date": "2001-08-02",
+        "runtime": 104,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 7.616,
+        "vote_count": 6992,
+        "popularity": 5.8567,
+        "homepage": "",
+        "directors": [
+          "亚历桑德罗·阿曼巴"
         ]
       }
     },
