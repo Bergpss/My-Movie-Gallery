@@ -1,11 +1,49 @@
 {
-  "generatedAt": "2026-02-07T14:47:41.216Z",
+  "generatedAt": "2026-02-07T14:48:01.815Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 275
+    "total": 276
   },
   "items": [
+    {
+      "id": 335984,
+      "title": "银翼杀手2049",
+      "mediaType": "movie",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Blade Runner 2049",
+        "original_language": "en",
+        "title": "银翼杀手2049",
+        "overview": "故事发生在《银翼杀手》（1982）事件的三十年后，新一代银翼杀手、洛杉矶警局警官“K”（瑞恩·高斯林 饰）发现了一个深藏已久的秘密，其威力足以让残存的社会陷入混乱。K的发现促使他踏上寻找失踪三十年的前代银翼杀手、洛杉矶警局探员瑞克·戴克（哈里森·福特 饰）的旅程。",
+        "poster_path": "/sxA89XGotN9c5u5O1GWpbYYX3Ks.jpg",
+        "backdrop_path": "/ilRyazdMJwN05exqhwK4tMKBYZs.jpg",
+        "release_date": "2017-10-04",
+        "runtime": 164,
+        "genres": [
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.589,
+        "vote_count": 14747,
+        "popularity": 19.3199,
+        "homepage": "",
+        "directors": [
+          "丹尼斯·维伦纽瓦"
+        ]
+      }
+    },
     {
       "id": 68945,
       "title": "心里的声音",
