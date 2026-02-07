@@ -21,6 +21,19 @@
   ],
   "watched": [
     {
+      "id": 225171,
+      "title": "Pluribus",
+      "mediaType": "tv",
+      "status": "watched",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "watchDates": [
+        "2026-02-05"
+      ],
+      "watchDate": "2026-02-05"
+    },
+    {
       "id": 1933,
       "title": "小岛惊魂",
       "mediaType": "movie",
@@ -3328,12 +3341,6 @@
       "id": 911430,
       "title": "F1：狂飙飞车",
       "mediaType": "movie",
-      "status": "wishlist"
-    },
-    {
-      "id": 225171,
-      "title": "Pluribus",
-      "mediaType": "tv",
       "status": "wishlist"
     },
     {
