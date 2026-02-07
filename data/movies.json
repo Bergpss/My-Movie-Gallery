@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-07T12:37:36.415Z",
+  "generatedAt": "2026-02-07T14:47:41.216Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -108,6 +108,44 @@
         "vote_count": 194,
         "popularity": 7.3725,
         "homepage": "http://program.tving.com/tvn/reply1988/",
+        "directors": []
+      }
+    },
+    {
+      "id": 225171,
+      "title": "Pluribus",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2026-02-05"
+      ],
+      "watchDate": "2026-02-05",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Pluribus",
+        "original_language": "en",
+        "title": "Pluribus",
+        "overview": "故事围绕“幸福也会像病毒一样传染”这一概念展开。背景设定在一个与现实世界相似却被微妙扭曲的平行世界中，当快乐突然成为可怕的“传染病”，女主必须想办法在这场全民狂欢中拯救世界。",
+        "poster_path": "/2CmFP7hMzC8OGu9ur2oQu12J5A.jpg",
+        "backdrop_path": "/vNCNUxNHHgP0WsA19hxztUsG3yG.jpg",
+        "release_date": "2025-11-06",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          }
+        ],
+        "vote_average": 8,
+        "vote_count": 471,
+        "popularity": 94.3217,
+        "homepage": "https://tv.apple.com/show/umc.cmc.37axgovs2yozlyh3c2cmwzlza",
         "directors": []
       }
     },
@@ -11325,42 +11363,6 @@
         "directors": [
           "约瑟夫·科辛斯基"
         ]
-      }
-    },
-    {
-      "id": 225171,
-      "title": "Pluribus",
-      "mediaType": "tv",
-      "status": "wishlist",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "Pluribus",
-        "original_language": "en",
-        "title": "Pluribus",
-        "overview": "故事围绕“幸福也会像病毒一样传染”这一概念展开。背景设定在一个与现实世界相似却被微妙扭曲的平行世界中，当快乐突然成为可怕的“传染病”，女主必须想办法在这场全民狂欢中拯救世界。",
-        "poster_path": "/2CmFP7hMzC8OGu9ur2oQu12J5A.jpg",
-        "backdrop_path": "/vNCNUxNHHgP0WsA19hxztUsG3yG.jpg",
-        "release_date": "2025-11-06",
-        "runtime": null,
-        "genres": [
-          {
-            "id": 18,
-            "name": "剧情"
-          },
-          {
-            "id": 10765,
-            "name": "Sci-Fi & Fantasy"
-          }
-        ],
-        "vote_average": 8,
-        "vote_count": 471,
-        "popularity": 94.3217,
-        "homepage": "https://tv.apple.com/show/umc.cmc.37axgovs2yozlyh3c2cmwzlza",
-        "directors": []
       }
     },
     {
