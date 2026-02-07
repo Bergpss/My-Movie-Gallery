@@ -21,6 +21,19 @@
   ],
   "watched": [
     {
+      "id": 1933,
+      "title": "小岛惊魂",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 9,
+      "note": "好经典的电影，还是会吓得不轻",
+      "inCinema": false,
+      "watchDates": [
+        "2026-02-06"
+      ],
+      "watchDate": "2026-02-06"
+    },
+    {
       "id": 293613,
       "title": "体能之巅：亚洲大挑战",
       "mediaType": "tv",
@@ -3260,12 +3273,6 @@
     }
   ],
   "wishlist": [
-    {
-      "id": 1933,
-      "title": "小岛惊魂",
-      "mediaType": "movie",
-      "status": "wishlist"
-    },
     {
       "id": 62215,
       "title": "忧郁症",
