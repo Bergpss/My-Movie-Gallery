@@ -26,10 +26,11 @@
       "mediaType": "movie",
       "status": "watched",
       "rating": 9,
-      "note": "在回家的飞机上跟TT看的",
+      "note": "在回家的飞机上跟甜甜看的",
       "inCinema": false,
       "watchDates": [
-        "2026-02-08"
+        "2026-02-08",
+        "2026-02-09"
       ],
       "watchDate": "2026-02-08"
     },
