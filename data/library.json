@@ -1,12 +1,6 @@
 {
   "watching": [
     {
-      "id": 335984,
-      "title": "银翼杀手2049",
-      "mediaType": "movie",
-      "status": "watching"
-    },
-    {
       "id": 68945,
       "title": "心里的声音",
       "mediaType": "tv",
@@ -26,6 +20,19 @@
     }
   ],
   "watched": [
+    {
+      "id": 335984,
+      "title": "银翼杀手2049",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 9,
+      "note": "在回家的飞机上跟TT看的",
+      "inCinema": false,
+      "watchDates": [
+        "2026-02-08"
+      ],
+      "watchDate": "2026-02-08"
+    },
     {
       "id": 225171,
       "title": "Pluribus",
