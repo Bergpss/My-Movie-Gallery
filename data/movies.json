@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-08T17:09:56.431Z",
+  "generatedAt": "2026-02-09T04:33:08.874Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 276
+    "total": 277
   },
   "items": [
     {
@@ -108,6 +108,44 @@
         "vote_count": 194,
         "popularity": 7.3725,
         "homepage": "http://program.tving.com/tvn/reply1988/",
+        "directors": []
+      }
+    },
+    {
+      "id": 225180,
+      "title": "BLUE EYE SAMURAI",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2026-02-09"
+      ],
+      "watchDate": "2026-02-09",
+      "rating": 9,
+      "note": "观影日期为记录日期",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "BLUE EYE SAMURAI",
+        "original_language": "en",
+        "title": "BLUE EYE SAMURAI",
+        "overview": "在江户时代的日本，一位年轻的武士为报复那些让她备受排挤之人而杀出一条血路。",
+        "poster_path": "/kCHpv83zmOUu8sPonln7TZtsBAu.jpg",
+        "backdrop_path": "/oCMZpwLBcb3dnRuzEKWNWrw1tHz.jpg",
+        "release_date": "2023-11-03",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 16,
+            "name": "动画"
+          }
+        ],
+        "vote_average": 8.488,
+        "vote_count": 694,
+        "popularity": 21.9249,
+        "homepage": "https://www.netflix.com/title/81144203",
         "directors": []
       }
     },
