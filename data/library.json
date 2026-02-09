@@ -21,6 +21,16 @@
   ],
   "watched": [
     {
+      "id": 225180,
+      "title": "BLUE EYE SAMURAI",
+      "mediaType": "tv",
+      "watchDates": [
+        "2026-02-09"
+      ],
+      "rating": 9,
+      "note": "观影日期为记录日期"
+    },
+    {
       "id": 335984,
       "title": "银翼杀手2049",
       "mediaType": "movie",
