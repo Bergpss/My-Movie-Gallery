@@ -21,6 +21,16 @@
   ],
   "watched": [
     {
+      "id": 1462229,
+      "title": "飞驰人生3",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-02-22"
+      ],
+      "rating": 6.5,
+      "inCinema": true
+    },
+    {
       "id": 225180,
       "title": "BLUE EYE SAMURAI",
       "mediaType": "tv",
