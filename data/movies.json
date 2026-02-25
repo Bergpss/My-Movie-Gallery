@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-09T04:33:08.874Z",
+  "generatedAt": "2026-02-25T15:37:56.547Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 277
+    "total": 278
   },
   "items": [
     {
@@ -109,6 +109,46 @@
         "popularity": 7.3725,
         "homepage": "http://program.tving.com/tvn/reply1988/",
         "directors": []
+      }
+    },
+    {
+      "id": 1462229,
+      "title": "飞驰人生3",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-02-22"
+      ],
+      "watchDate": "2026-02-22",
+      "rating": 6.5,
+      "note": null,
+      "inCinema": true,
+      "tmdb": {
+        "original_title": "飞驰人生3",
+        "original_language": "zh",
+        "title": "飞驰人生3",
+        "overview": "巴音布鲁克最后一站收官后，张驰（沈腾 饰）受邀作为车队主教练征战全新赛事“沐尘100拉力赛”，“野生车手”走上国际舞台！面对高手如云的全新赛道，孙宇强（尹正 饰）、记星（张本煜 饰）一如既往协同作战，林臻东（黄景瑜 饰）等实力车手应邀强势集结，一支凝聚了顶配速度与信念的车队就此成立！然而，张驰发现真正的挑战仿佛并非来自比赛本身，赛场之外暗流涌动，让他们飞驰之路充满变数……",
+        "poster_path": "/cL5vAK6bUHYWTOnypi34mzzWI8X.jpg",
+        "backdrop_path": "/rLHFufd3gALwHay1Sxl3MjbGQ7E.jpg",
+        "release_date": "2026-02-17",
+        "runtime": 126,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7,
+        "vote_count": 8,
+        "popularity": 9.1031,
+        "homepage": "",
+        "directors": [
+          "韩寒"
+        ]
       }
     },
     {
