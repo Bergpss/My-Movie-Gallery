@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-28T18:52:22.773Z",
+  "generatedAt": "2026-03-08T04:20:11.247Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 279
+    "total": 280
   },
   "items": [
     {
@@ -109,6 +109,50 @@
         "popularity": 7.3725,
         "homepage": "http://program.tving.com/tvn/reply1988/",
         "directors": []
+      }
+    },
+    {
+      "id": 1233413,
+      "title": "罪人",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-03-07"
+      ],
+      "watchDate": "2026-03-07",
+      "rating": 10,
+      "note": "我们在🚄上看的，软卧太舒服了",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Sinners",
+        "original_language": "en",
+        "title": "罪人",
+        "overview": "《黑豹》《奎迪》导演瑞恩·库格勒执导，迈克尔·B·乔丹主演，带来恐惧的全新诠释。一对双胞胎兄弟（均由迈克尔·B·乔丹饰演）试图摆脱过去纷扰的生活，回到家乡寻求新生，却发现更深的邪恶正等待着他们的归来。[华纳兄弟影业]",
+        "poster_path": "/I91EahT9ytqtl4KfA2QCzGlvSD.jpg",
+        "backdrop_path": "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+        "release_date": "2025-04-16",
+        "runtime": 131,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 28,
+            "name": "动作"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 7.488,
+        "vote_count": 3869,
+        "popularity": 42.076,
+        "homepage": "",
+        "directors": [
+          "瑞恩·库格勒"
+        ]
       }
     },
     {
