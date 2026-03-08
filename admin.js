@@ -36,6 +36,9 @@ function init() {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('manual-date').value = today;
     document.getElementById('add-date').value = today;
+    updateFormFieldsVisibility('manual', document.getElementById('manual-status').value);
+    updateFormFieldsVisibility('add', document.getElementById('add-status').value);
+    updateFormFieldsVisibility('edit', document.getElementById('edit-status').value);
 
     setupEventListeners();
 }
@@ -200,6 +203,9 @@ function setupEventListeners() {
     document.getElementById('add-status').addEventListener('change', (e) => {
         updateFormFieldsVisibility('add', e.target.value);
     });
+    document.getElementById('manual-status').addEventListener('change', (e) => {
+        updateFormFieldsVisibility('manual', e.target.value);
+    });
     document.getElementById('edit-status').addEventListener('change', (e) => {
         updateFormFieldsVisibility('edit', e.target.value);
     });
@@ -225,6 +231,7 @@ function updateFormFieldsVisibility(prefix, status) {
     const watchInfoRow = document.getElementById(`${prefix}-watch-info-row`);
     const reasonGroup = document.getElementById(`${prefix}-reason-group`);
     const dateLabel = document.getElementById(`${prefix}-date-label`);
+    const cinemaField = document.getElementById(`${prefix}-cinema`)?.closest('.form-group');
 
     // 评分字段：想看和正在看都隐藏
     if (ratingGroup) {
@@ -236,9 +243,37 @@ function updateFormFieldsVisibility(prefix, status) {
     if (reasonGroup) {
         reasonGroup.hidden = !isWishlist;
     }
+    if (cinemaField) {
+        cinemaField.hidden = isWishlist;
+    }
     // 日期标签：正在看显示"开始观看日期"，其他显示"观影日期"
     if (dateLabel) {
         dateLabel.textContent = isWatching ? '开始观看日期' : '观影日期';
+    }
+}
+
+function decodeBase64Url(value) {
+    const normalized = value.replace(/-/g, '+').replace(/_/g, '/');
+    const padded = normalized.padEnd(Math.ceil(normalized.length / 4) * 4, '=');
+    return atob(padded);
+}
+
+function getTokenExpiration(token) {
+    if (!token) {
+        return null;
+    }
+
+    try {
+        const [, payload] = token.split('.');
+        if (!payload) {
+            return null;
+        }
+
+        const parsed = JSON.parse(decodeBase64Url(payload));
+        return typeof parsed.exp === 'number' ? parsed.exp : null;
+    } catch (error) {
+        console.warn('Token 解析失败:', error);
+        return null;
     }
 }
 
@@ -345,24 +380,14 @@ async function validateToken() {
     if (tokenValidUntil && Date.now() < tokenValidUntil) {
         return true;
     }
-    
-    try {
-        // 尝试调用一个轻量级的 API 验证 token
-        const response = await fetch('/data/movies.json', {
-            headers: authToken ? { 'Authorization': `Bearer ${authToken}` } : {}
-        });
-        
-        if (response.ok) {
-            // Token 有效，缓存 5 分钟
-            tokenValidUntil = Date.now() + 5 * 60 * 1000;
-            return true;
-        }
-        
-        return false;
-    } catch (error) {
-        console.error('Token 验证失败:', error);
+
+    const expiration = getTokenExpiration(authToken);
+    if (!expiration || Date.now() >= expiration) {
         return false;
     }
+
+    tokenValidUntil = Math.min(expiration, Date.now() + 5 * 60 * 1000);
+    return true;
 }
 
 // 打开添加弹窗
@@ -403,6 +428,7 @@ function closeModal() {
     // 重置表单
     addForm.reset();
     document.getElementById('add-date').value = new Date().toISOString().split('T')[0];
+    updateFormFieldsVisibility('add', document.getElementById('add-status').value);
 }
 
 // 从弹窗添加电影
@@ -433,14 +459,20 @@ async function handleAddFromModal(e) {
 async function handleManualAdd(e) {
     e.preventDefault();
 
+    const status = document.getElementById('manual-status').value;
+    const isWishlist = status === 'wishlist';
+    const isWatching = status === 'watching';
+    const noRating = isWishlist || isWatching;
+
     const movieData = {
         id: parseInt(document.getElementById('manual-id').value),
         title: document.getElementById('manual-title').value,
         mediaType: document.getElementById('manual-type').value,
-        status: document.getElementById('manual-status').value,
-        rating: document.getElementById('manual-rating').value ? parseFloat(document.getElementById('manual-rating').value) : undefined,
-        watchDate: document.getElementById('manual-date').value || undefined,
-        inCinema: document.getElementById('manual-cinema').checked,
+        status: status,
+        rating: noRating ? undefined : (document.getElementById('manual-rating').value ? parseFloat(document.getElementById('manual-rating').value) : undefined),
+        watchDate: isWishlist ? undefined : (document.getElementById('manual-date').value || undefined),
+        inCinema: isWishlist ? false : document.getElementById('manual-cinema').checked,
+        wishlistReason: isWishlist ? (document.getElementById('manual-reason').value || undefined) : undefined,
         note: document.getElementById('manual-note').value || undefined,
     };
 
@@ -480,6 +512,7 @@ async function addMovie(movieData) {
         // 清空手动表单
         manualForm.reset();
         document.getElementById('manual-date').value = new Date().toISOString().split('T')[0];
+        updateFormFieldsVisibility('manual', document.getElementById('manual-status').value);
     } catch (error) {
         showMessage(adminMessage, '网络错误，请重试', true);
     }
@@ -612,6 +645,7 @@ async function openEditModal(movie) {
 function closeEditModal() {
     editModal.hidden = true;
     editForm.reset();
+    updateFormFieldsVisibility('edit', document.getElementById('edit-status').value);
 }
 
 // 编辑弹窗关闭按钮

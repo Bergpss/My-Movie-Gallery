@@ -88,16 +88,17 @@
                                 <option value="watched">已看完</option>
                                 <option value="watching">正在看</option>
                                 <option value="wishlist">想看</option>
+                                <option value="dropped">弃剧</option>
                             </select>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
+                    <div class="form-row" id="manual-watch-info-row">
+                        <div class="form-group" id="manual-rating-group">
                             <label for="manual-rating">评分 (0-10)</label>
                             <input type="number" id="manual-rating" min="0" max="10" step="0.1" placeholder="可选">
                         </div>
                         <div class="form-group">
-                            <label for="manual-date">观影日期</label>
+                            <label for="manual-date" id="manual-date-label">观影日期</label>
                             <input type="date" id="manual-date">
                         </div>
                     </div>
@@ -105,6 +106,10 @@
                         <label>
                             <input type="checkbox" id="manual-cinema"> 影院观影 🎦
                         </label>
+                    </div>
+                    <div class="form-group" id="manual-reason-group" hidden>
+                        <label for="manual-reason">想看的理由</label>
+                        <textarea id="manual-reason" rows="2" placeholder="为什么想看这部电影？"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="manual-note">备注</label>
@@ -238,7 +243,6 @@
                 </div>
             </form>
         </div>
-    </div>
     </div>
 
     <script src="admin.js"></script>

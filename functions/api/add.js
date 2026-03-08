@@ -128,6 +128,11 @@ export async function onRequestPost(context) {
             if (wishlistReason) {
                 newMovie.wishlistReason = wishlistReason;
             }
+        } else if (movieStatus === 'dropped') {
+            newMovie.status = 'dropped';
+            if (watchDate) {
+                newMovie.watchDates = [watchDate];
+            }
         } else {
             // watched
             if (watchDate) {
@@ -151,7 +156,13 @@ export async function onRequestPost(context) {
         }
 
         // 检查是否已存在
-        const targetList = movieStatus === 'watching' ? 'watching' : movieStatus === 'wishlist' ? 'wishlist' : 'watched';
+        const targetList = movieStatus === 'watching'
+            ? 'watching'
+            : movieStatus === 'wishlist'
+                ? 'wishlist'
+                : movieStatus === 'dropped'
+                    ? 'dropped'
+                    : 'watched';
 
         // 确保目标列表存在
         if (!currentContent[targetList]) {
@@ -159,11 +170,12 @@ export async function onRequestPost(context) {
         }
 
         // 检查是否已存在（在任何列表中）
-        const existsInWatching = currentContent.watching?.some(m => m.id === id);
-        const existsInWatched = currentContent.watched?.some(m => m.id === id);
-        const existsInWishlist = currentContent.wishlist?.some(m => m.id === id);
+        const existsInWatching = currentContent.watching?.some(m => String(m.id) === String(id));
+        const existsInWatched = currentContent.watched?.some(m => String(m.id) === String(id));
+        const existsInWishlist = currentContent.wishlist?.some(m => String(m.id) === String(id));
+        const existsInDropped = currentContent.dropped?.some(m => String(m.id) === String(id));
 
-        if (existsInWatching || existsInWatched || existsInWishlist) {
+        if (existsInWatching || existsInWatched || existsInWishlist || existsInDropped) {
             return new Response(JSON.stringify({ error: '该电影已存在于观影记录中' }), {
                 status: 400,
                 headers: { 'Content-Type': 'application/json', ...corsHeaders },
@@ -199,7 +211,7 @@ export async function onRequestPost(context) {
 
         return new Response(JSON.stringify({
             success: true,
-            message: `已添加「${title}」到${targetList === 'watching' ? '正在看' : targetList === 'wishlist' ? '想看' : '已看完'}`
+            message: `已添加「${title}」到${targetList === 'watching' ? '正在看' : targetList === 'wishlist' ? '想看' : targetList === 'dropped' ? '弃剧' : '已看完'}`
         }), {
             status: 200,
             headers: { 'Content-Type': 'application/json', ...corsHeaders },

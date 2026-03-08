@@ -192,6 +192,23 @@ export async function onRequestPost(context) {
             }
         }
 
+        if (targetListName === 'wishlist') {
+            updatedMovie.status = 'wishlist';
+            delete updatedMovie.rating;
+            delete updatedMovie.watchDate;
+            delete updatedMovie.watchDates;
+            updatedMovie.inCinema = false;
+        } else if (targetListName === 'watching') {
+            updatedMovie.status = 'watching';
+            delete updatedMovie.rating;
+            delete updatedMovie.wishlistReason;
+        } else if (targetListName === 'dropped') {
+            updatedMovie.status = 'dropped';
+            delete updatedMovie.wishlistReason;
+        } else {
+            delete updatedMovie.wishlistReason;
+        }
+
         // 从原列表移除
         currentContent[sourceList].splice(movieIndex, 1);
 

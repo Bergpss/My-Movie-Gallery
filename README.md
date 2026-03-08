@@ -1,151 +1,224 @@
 # My Movie Gallery
 
-静态站点，用本地维护的观影记录列表去 TMDB 拉取详情，最终生成 `data/movies.json` 给前端使用。无需数据库，也不会把 TMDB 凭据暴露给访客。
+[中文说明](./README.zh-CN.md)
 
-## 数据结构
+My Movie Gallery is a static movie log site backed by a hand-maintained library file and a generated TMDB snapshot. The public site reads `data/movies.json`, while the source of truth remains `data/library.json`.
 
-- `data/library.json` 是唯一需要手动维护的文件。
-  ```json
-  {
-    "watching": [
-      { "id": 933260, "title": "某种物质", "mediaType": "movie", "status": "watching", "note": "…" }
-    ],
-    "watched": [
-      { "id": 137, "title": "土拨鼠之日", "mediaType": "movie", "watchDates": ["2025-09-30"], "rating": 8 }
-    ]
-  }
-  ```
-  - `id` 是 TMDB 电影 ID（推荐：先查询一次 TMDB，确认后写入）。
-  - `title` 只是方便识别，脚本生成时会用 TMDB 的官方标题兜底。
-  - `watchDates`（可选）记录多次观影日期，按字符串数组存储，并保持由早到晚的顺序（例如 `"watchDates": ["2024-10-01", "2025-01-12"]`）。
-  - `watchDate` 会自动设为首次观影日期（即 `watchDates` 的第一项）。
-  - `status`（可选）默认分为 `watching` / `watched` / `wishlist`，前端据此显示“两大板块”（“正在看”含想看内容）。
-  - `mediaType`（可选）`movie` 或 `tv`，缺省为 `movie`。导入/新增脚本会自动给出。
-  - `inCinema`（可选）布尔值，代表是否在电影院观影。前端会以 🎦 Emoji 提示。
-  - `rating`、`note`（可选）会直接渲染在页面上。
+The project also includes:
 
-- `data/movies.json` 由脚本自动生成，包含 TMDB 详情（海报、导演、上映日期等），不需要手动编辑。
+- a browser-based admin page at `admin.html`
+- Node.js CLI scripts for adding, importing, promoting, and dropping entries
+- serverless API handlers in `functions/api/` for admin authentication and CRUD operations
 
-## 生成流程
+## Project Structure
 
-1. 准备 TMDB API Key（v3），保存在环境变量 `TMDB_API_KEY` 中。可选：
-   - `TMDB_LANGUAGE`（默认 `zh-CN`）
-   - `TMDB_REGION`
-2. 通过脚本维护清单：
-   ```bash
-   TMDB_API_KEY="<你的 API Key>" \
-   node scripts/add_movie.js
-   ```
-   脚本会引导你输入中文片名、状态（正在看/已看过/想看）、备注等信息，并自动调用 TMDB 搜索获取 ID，随后写入 `data/library.json`。
-   - 若你愿意，也可以直接手动编辑 `data/library.json`。
-   - 已经在“正在看”中的影片想要快速标记为“已看过”时，可运行：
-     ```bash
-     node scripts/promote_movie.js
-     ```
-     选择条目并输入观影日期/评分即可自动移入 `watched` 列表并追加日期。
-   - 如果只想把豆瓣 CSV 转成 JSON 并补全 IMDb，可运行：
-     ```bash
-     TMDB_API_KEY="<你的 API Key>" \
-     node scripts/export_douban_json.js "data/豆伴(180354423).csv" --limit=10
-     ```
-     脚本会在 `fromdouban.json` 输出包含 `title`、`watch_date`、`imdb_id`、`douban_url`、`note` 等字段的数组，可在导入前检查或做进一步处理。
-  - 批量导入（例如来自豆瓣）的观影记录，可运行：
-    ```bash
-    TMDB_API_KEY="<你的 API Key>" \
-    node scripts/import_douban.js "data/豆伴(180354423).csv" --limit=10
-    ```
-    支持 JSON 数组或 CSV（如豆瓣导出的“豆伴.csv”）。字段：`title`、`watch_date`、`year`（可选，上映年份），可选 `imdb_id` 以及 `链接`。脚本会根据标题与年份自动匹配 TMDB（电影与剧集都会搜索），尽量补全 `tmdb_id` 与 `imdb_id`，并把记录写入 `watched` 列表、合并所有观影日期。调试时可利用 `--limit=` 参数限制导入数量。
-  - 如果只想把豆瓣 CSV 转成 JSON 并补全 TMDB/IMDb，可运行：
-    ```bash
-    TMDB_API_KEY="<你的 API Key>" \
-    node scripts/export_douban_json.js "data/豆伴(180354423).csv" --limit=10
-    ```
-    脚本会生成 `fromdouban.json`（含 `title`、`watch_date`、`year`、`tmdb_id`、`imdb_id` 等字段），便于在导入前进行校验或补充。
-  - 若已生成 `fromdouban.json`，可直接导入库：
-    ```bash
-    TMDB_API_KEY="<你的 API Key>" \
-    node scripts/import_from_json.js fromdouban.json
-    ```
-    该脚本会把所有包含 `tmdb_id` 的条目写入 `library.json` 的 `watched`，并合并观影日期。
-3. 运行生成脚本：
-   ```bash
-   TMDB_API_KEY="<你的 API Key>" \
-   node scripts/fetch_movies.js
-   ```
-4. 脚本会读取 `library.json`，逐个访问 TMDB `/movie/{id}` 接口，生成新的 `data/movies.json`。
-5. 将 `data/movies.json`（以及更新后的 `library.json`）纳入版本控制并部署到 GitHub Pages。
+```text
+.
+├── index.html              # Public gallery
+├── admin.html              # Admin interface
+├── movies.js               # Public gallery logic
+├── admin.js                # Admin interface logic
+├── styles.css
+├── admin.css
+├── data/
+│   ├── library.json        # Source of truth, edited by hand or scripts
+│   └── movies.json         # Generated snapshot for the frontend
+├── functions/api/          # auth/search/add/update/delete endpoints
+├── scripts/                # CLI tools for maintaining the library
+└── movie_posters/          # Placeholder and custom poster assets
+```
 
-## 自定义字段
+## Data Flow
 
-- 更改 `watchDates`、`note`、`rating` 等信息后重新运行脚本，生成的页面会即时反映。配合 `scripts/promote_movie.js` 可快速把“正在看”条目转移至“已看过”。
-- 若想把影片移到“正在看”，把它放入 `watching` 数组或把 `status` 改为 `watching`。
-- 删除条目即从 `library.json` 移除对应对象，再跑一次脚本。
-- 页面展示为“上映日期 + 观影日期列表”。上映日期来自 TMDB 的 `release_date`；观影日期来自 `watchDates`，若为空则不显示。
-- 所有导入脚本会按最新观影日期对 `watched` 列表降序排序，保持展示一致。
+1. Maintain `data/library.json`.
+2. Run `scripts/fetch_movies.js` with a TMDB API key.
+3. The script fetches TMDB metadata for movie and TV entries, keeps web-video entries as local metadata, and writes `data/movies.json`.
+4. `index.html` and `admin.html` read `data/movies.json` in the browser.
 
-## 本地测试
+## Library Schema
 
-### 启动本地服务器
+`data/library.json` is grouped by status buckets:
 
-在项目根目录运行以下命令启动本地 HTTP 服务器：
+```json
+{
+  "watching": [],
+  "watched": [],
+  "wishlist": [],
+  "dropped": []
+}
+```
+
+Common fields:
+
+- `id`: TMDB ID for movies/TV, or a generated string ID for `web-video`
+- `title`: display title
+- `mediaType`: `movie`, `tv`, or `web-video`
+- `status`: usually `watching`, `watched`, `wishlist`, or `dropped`
+- `note`: optional note
+- `rating`: optional rating from `0` to `10`
+- `watchDates`: optional array of ISO dates
+- `inCinema`: optional boolean
+
+Movie / TV only:
+
+- `wishlistReason`: optional text for wishlist entries
+
+Web video only:
+
+- `platform`
+- `url`
+- `coverUrl`
+- `creator`
+- `duration`
+
+Notes:
+
+- `data/movies.json` is generated. Do not edit it manually.
+- `watchDate` may appear in generated data as a convenience field derived from `watchDates`.
+
+## Requirements
+
+- Node.js 18+ recommended
+- TMDB API v3 key for scripts that fetch TMDB data
+
+Optional environment variables:
+
+- `TMDB_API_KEY`
+- `TMDB_LANGUAGE` default: `zh-CN`
+- `TMDB_REGION` default: `CN`
+
+## Common Commands
+
+Add a movie or TV entry interactively:
+
+```bash
+TMDB_API_KEY=your_key node scripts/add_movie.js
+```
+
+Add a web video entry:
+
+```bash
+node scripts/add_web_video.js
+```
+
+Promote entries from `watching` to `watched`:
+
+```bash
+node scripts/promote_movie.js
+```
+
+Move entries from `watching` to `dropped`:
+
+```bash
+node scripts/drop_movie.js
+```
+
+Import from Douban CSV or JSON:
+
+```bash
+TMDB_API_KEY=your_key node scripts/import_douban.js "data/豆伴(180354423).csv"
+```
+
+Export Douban data to `fromdouban.json` first:
+
+```bash
+TMDB_API_KEY=your_key node scripts/export_douban_json.js "data/豆伴(180354423).csv"
+```
+
+Import from an existing JSON export:
+
+```bash
+node scripts/import_from_json.js fromdouban.json
+```
+
+Regenerate the frontend snapshot:
+
+```bash
+TMDB_API_KEY=your_key node scripts/fetch_movies.js
+```
+
+Quick add and refresh:
+
+```bash
+./scripts/quick_add.sh
+```
+
+Validate generated JSON:
+
+```bash
+jq . data/movies.json
+```
+
+Serve locally:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-或者使用其他端口（如 8000）：
+Then open:
 
-```bash
-python3 -m http.server 8000
-```
+- `http://localhost:4173/index.html`
+- `http://localhost:4173/admin.html`
 
-### 测试主页面
+## Public Gallery
 
-1. 确保已生成 `data/movies.json`（运行 `node scripts/fetch_movies.js`）
-2. 在浏览器中访问 `http://localhost:4173/index.html`
-3. 检查以下内容：
-   - "正在看"和"已看完"板块是否正确显示
-   - 电影海报和详情是否正确加载
-   - 筛选按钮（全部/电影/剧集/网络视频）是否正常工作
-   - 响应式布局在不同屏幕尺寸下是否正常
+The public page currently supports:
 
-### 测试管理后台
+- sections for `watching`, `wishlist`, `watched`, and `dropped`
+- filtering by `all`, `movie`, `tv`, and `web-video`
+- TMDB poster / backdrop fallbacks
+- wishlist reasons, notes, watch dates, ratings, and cinema badges
+- external links to TMDB for movies and TV entries
 
-1. 访问 `http://localhost:4173/admin.html`
-2. **注意**：管理后台的 API 功能（搜索、添加、编辑、删除）需要部署到支持 Cloudflare Workers 或类似 serverless 平台的环境才能正常工作。本地测试时：
-   - 可以查看页面布局和 UI 交互
-   - 登录功能需要后端 API 支持（`/api/auth`）
-   - 搜索、添加、编辑、删除功能需要相应的 API 端点
-3. 如需完整测试管理功能，需要：
-   - 部署 `functions/api/` 下的 serverless 函数
-   - 配置环境变量（`ADMIN_PASSWORD`、`JWT_SECRET`、`TMDB_API_KEY` 等）
+## Admin Interface
 
-### 验证数据
+`admin.html` is the browser UI for:
 
-在修改 `data/library.json` 或运行脚本后，验证生成的 JSON 文件：
+- logging in as admin
+- searching TMDB
+- adding entries
+- manually adding entries by TMDB ID
+- editing and deleting existing entries
 
-```bash
-# 检查 JSON 格式是否正确
-jq . data/movies.json
+It depends on the serverless endpoints in `functions/api/`:
 
-# 检查数据结构
-jq '.items | length' data/movies.json  # 查看电影总数
-jq '.items[] | select(.status == "watching")' data/movies.json  # 查看"正在看"的影片
-```
+- `auth.js`
+- `search.js`
+- `add.js`
+- `update.js`
+- `delete.js`
 
-### 测试脚本
+Required environment variables for admin APIs:
 
-在修改 CLI 脚本后，建议先用测试数据验证：
+- `ADMIN_PASSWORD`
+- `JWT_SECRET`
+- `TMDB_API_KEY`
+- `GITHUB_TOKEN`
+- `GITHUB_OWNER`
+- `GITHUB_REPO`
 
-```bash
-# 添加一个测试条目到 library.json
-# 运行脚本验证功能
-TMDB_API_KEY="<你的 API Key>" node scripts/fetch_movies.js
+The CRUD endpoints update `data/library.json` through the GitHub Contents API, so the admin flow is intended for a deployed serverless environment rather than a plain local static server.
 
-# 验证无误后，从 library.json 中删除测试条目
-```
+## Local Testing
 
-## 部署提示
+Recommended manual checks:
 
-- 站点是纯静态输出，GitHub Pages 只需要 `index.html`、`movies.js`、`styles.css` 和自动生成的 `data/movies.json`。
-- 记得不要把 `TMDB_API_KEY` 写进仓库；只需在本地或 CI 环境变量中配置后运行脚本即可。
+1. Regenerate `data/movies.json`.
+2. Run `jq . data/movies.json`.
+3. Start `python3 -m http.server 4173`.
+4. Verify `index.html` on desktop and mobile widths.
+5. Verify status sections and filter buttons.
+6. Open `admin.html` and verify UI behavior.
+
+Admin limitations in local-only mode:
+
+- login will not work without deployed `/api/auth`
+- TMDB search will not work without deployed `/api/search`
+- add, update, and delete require deployed serverless functions plus environment variables
+
+## Deployment Notes
+
+- The public site is static and can be hosted on GitHub Pages.
+- The admin API layer requires a serverless platform compatible with `functions/api/`.
+- Never commit TMDB or GitHub secrets.
+- After changing `data/library.json`, regenerate `data/movies.json` before deploying the frontend.
