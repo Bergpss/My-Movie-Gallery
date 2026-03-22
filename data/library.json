@@ -21,6 +21,17 @@
   ],
   "watched": [
     {
+      "id": 1327819,
+      "title": "河狸变身计划",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-03-21"
+      ],
+      "rating": 10,
+      "note": "没有坏人，只有愤怒的动物",
+      "inCinema": true
+    },
+    {
       "id": 1233413,
       "title": "罪人",
       "mediaType": "movie",
