@@ -1,11 +1,53 @@
 {
-  "generatedAt": "2026-03-22T01:35:31.076Z",
+  "generatedAt": "2026-03-22T01:38:20.181Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 281
+    "total": 282
   },
   "items": [
+    {
+      "id": 175,
+      "title": "碧海蓝天",
+      "mediaType": "movie",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": "在广场跟 阿光、Samuel一起看的",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Le Grand Bleu",
+        "original_language": "fr",
+        "title": "碧海蓝天",
+        "overview": "杰克在希腊海边长大，虽然小时候眼看着爸爸死于一次潜水事故，却没有削减杰克对大海的热爱。当杰克的朋友恩佐找到他，劝说他参加潜水冠军大赛时，杰克答应了，在比赛中成绩突出勇夺冠军，并且得到了乔安娜的爱。两人打得火热，杰克却意识到他放不下、离不开大海。意外发生了。好友恩佐在潜水中不幸丧生，杰克把恩佐的尸首放入大海当中，杰克的心中非常迷乱，他觉得自己不再属于人类社会，只想潜进深海，像海豚一样陪伴大海一生。尽管传来了乔安娜怀孕的消息，杰克深情的看了看爱人，转身投入了大海的怀抱。",
+        "poster_path": "/ikD0ORv6IXkupSEwXlgMDm5fPeX.jpg",
+        "backdrop_path": "/1J28PJOkusMN5Ab9Q3oF310e11k.jpg",
+        "release_date": "1988-05-10",
+        "runtime": 168,
+        "genres": [
+          {
+            "id": 10749,
+            "name": "爱情"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.445,
+        "vote_count": 1543,
+        "popularity": 3.6227,
+        "homepage": "",
+        "directors": [
+          "吕克·贝松"
+        ]
+      }
+    },
     {
       "id": 68945,
       "title": "心里的声音",
