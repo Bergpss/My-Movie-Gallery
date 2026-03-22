@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-08T04:20:11.247Z",
+  "generatedAt": "2026-03-22T01:35:31.076Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 280
+    "total": 281
   },
   "items": [
     {
@@ -109,6 +109,54 @@
         "popularity": 7.3725,
         "homepage": "http://program.tving.com/tvn/reply1988/",
         "directors": []
+      }
+    },
+    {
+      "id": 1327819,
+      "title": "河狸变身计划",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-03-21"
+      ],
+      "watchDate": "2026-03-21",
+      "rating": 10,
+      "note": "没有坏人，只有愤怒的动物",
+      "inCinema": true,
+      "tmdb": {
+        "original_title": "Hoppers",
+        "original_language": "en",
+        "title": "河狸变身计划",
+        "overview": "　　梅宝是一位对动物世界充满好奇的年轻女孩，她利用先进的意识上传技术，将自己的思维注入一只机械河狸体内。以这种独特的形态，梅宝结识了河狸王国的乔治国王等动物伙伴。然而，一个由房地产开发计划带来的威胁，正试图破坏动物们的栖息地。梅宝与她的新朋友们联手，利用机械河狸的能力和人类的智慧，共同对抗这个危机，守护动物们的家园。",
+        "poster_path": "/7iPj1Bj03lX1RJaVdRmKs5N7Nrz.jpg",
+        "backdrop_path": "/2RrLuIfIzGWWIH8IAEo6o0IYHmx.jpg",
+        "release_date": "2026-03-04",
+        "runtime": 99,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 10751,
+            "name": "家庭"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.636,
+        "vote_count": 242,
+        "popularity": 134.1029,
+        "homepage": "",
+        "directors": [
+          "丹尼尔·钟"
+        ]
       }
     },
     {
