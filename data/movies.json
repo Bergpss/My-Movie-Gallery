@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-27T15:51:20.486Z",
+  "generatedAt": "2026-03-27T15:52:26.075Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 283
+    "total": 284
   },
   "items": [
     {
@@ -11304,6 +11304,38 @@
         "directors": [
           "塔伊加·维迪提"
         ]
+      }
+    },
+    {
+      "id": 210195,
+      "title": "串流先锋",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Playlist",
+        "original_language": "sv",
+        "title": "串流先锋",
+        "overview": "在这个带有虚构成分的故事中，一名瑞典科技创业者及其合作伙伴决心通过合法合规的串流服务平台彻底改变音乐行业。",
+        "poster_path": "/egpTOFTvOaSBRcnTK1IPma4x6kq.jpg",
+        "backdrop_path": "/jIJRg7AVzlDHJeD7PgHCGt5ndTm.jpg",
+        "release_date": "2022-10-13",
+        "runtime": 50,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.146,
+        "vote_count": 144,
+        "popularity": 3.1838,
+        "homepage": "https://www.netflix.com/title/81186296",
+        "directors": []
       }
     },
     {
