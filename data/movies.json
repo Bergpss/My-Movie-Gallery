@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-22T01:38:20.181Z",
+  "generatedAt": "2026-03-27T15:51:20.486Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 282
+    "total": 283
   },
   "items": [
     {
@@ -151,6 +151,46 @@
         "popularity": 7.3725,
         "homepage": "http://program.tving.com/tvn/reply1988/",
         "directors": []
+      }
+    },
+    {
+      "id": 240457,
+      "title": "道格拉斯被取消了",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2026-03-25"
+      ],
+      "watchDate": "2026-03-25",
+      "rating": 9,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Douglas Is Cancelled",
+        "original_language": "en",
+        "title": "道格拉斯被取消了",
+        "overview": "道格拉斯过着完美的生活。他享受着作为国宝级人物和《六点直播》时事节目主持人的特权地位，而在节目之外，他与身为报纸编辑的妻子希拉在家中和谐相处。\n\n但在一次家庭婚礼上，他的世界被彻底颠覆了。因为他不慎被听到说了一个“不合时宜的笑话”。当一位宾客威胁要在社交媒体上揭露道格拉斯时，谣言迅速传播，引发了一场数字风暴，迅速扰乱了他的生活和事业。拥有两百万社交媒体粉丝的技术达人兼共同主播玛德琳可以通过发布辩护帖来向道格拉斯伸出援手……但她会这样做吗？",
+        "poster_path": "/5Yu8cBlB0nAKAl4Ymu7cOGNYWfs.jpg",
+        "backdrop_path": "/c4pDqJF0RugviUlFp0pjqNsSajz.jpg",
+        "release_date": "2024-06-27",
+        "runtime": 42,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.2,
+        "vote_count": 55,
+        "popularity": 4.3615,
+        "homepage": "https://www.itv.com/watch/douglas-is-cancelled/10a4088",
+        "directors": [
+          "Ben Palmer"
+        ]
       }
     },
     {
