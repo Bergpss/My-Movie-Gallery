@@ -28,6 +28,16 @@
   ],
   "watched": [
     {
+      "id": 1541,
+      "title": "末路狂花",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-03-28"
+      ],
+      "rating": 10,
+      "note": "我站在十字路口，永远不会知道明天是什么样的，但我只能向前，不能回头"
+    },
+    {
       "id": 240457,
       "title": "道格拉斯被取消了",
       "mediaType": "tv",
