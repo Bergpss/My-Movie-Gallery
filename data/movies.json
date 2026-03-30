@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-30T08:03:23.626Z",
+  "generatedAt": "2026-03-30T08:04:35.906Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 285
+    "total": 286
   },
   "items": [
     {
@@ -11347,6 +11347,44 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1824,
+      "title": "初恋50次",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "50 First Dates",
+        "original_language": "en",
+        "title": "初恋50次",
+        "overview": "　　亨利·罗斯（亚当·桑德勒）是个典型的花花公子，他最擅长的事就是以不同的身份，让美女迷恋上他，并在事后，迅速从关系中脱身。身为夏威夷海洋馆的兽医，亨利有着无尽的浪漫情怀来感染到此休闲的美女，这一次他看上了在餐馆独自用餐的露西(德鲁·巴里摩尔饰)。他们在一起谈天说地，用百吉饼搭建小房子，笑声不断。亨利对女孩恋恋不舍，相约明晨再次一起用餐。然而，第二天清晨，当亨利热情的与露西打招呼时，露西却宛如陌生人一般冷淡。原来女孩由于车祸患上了奇怪的短期记忆丧失症，记忆永远停留在车祸的前一天。情圣亨利遇到了自己的难题，他坠入的情网，却爱上一个不断对爱情失忆的女孩儿……",
+        "poster_path": "/uQbLDdcWMB55DvAWskdCXeoaOtI.jpg",
+        "backdrop_path": "/gHmR2WIqPqrFzPxqknlOEOgbrrl.jpg",
+        "release_date": "2004-02-13",
+        "runtime": 99,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 10749,
+            "name": "爱情"
+          }
+        ],
+        "vote_average": 6.87,
+        "vote_count": 7642,
+        "popularity": 13.1592,
+        "homepage": "",
+        "directors": [
+          "彼得·西格尔"
         ]
       }
     },
