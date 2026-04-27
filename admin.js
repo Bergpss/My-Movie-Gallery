@@ -23,15 +23,7 @@ const addForm = document.getElementById('add-form');
 const adminMessage = document.getElementById('admin-message');
 
 // 初始化
-function init() {
-    if (authToken) {
-        showAdminSection();
-    } else {
-        // 没有登录时，显示登录界面，隐藏管理区域
-        loginSection.hidden = false;
-        adminSection.hidden = true;
-    }
-
+async function init() {
     // 设置今天的日期为默认值
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('manual-date').value = today;
@@ -41,6 +33,20 @@ function init() {
     updateFormFieldsVisibility('edit', document.getElementById('edit-status').value);
 
     setupEventListeners();
+
+    if (authToken) {
+        const isValid = await validateToken();
+        if (isValid) {
+            await showAdminSection();
+            return;
+        }
+        handleTokenExpired();
+        return;
+    }
+
+    // 没有登录时，显示登录界面，隐藏管理区域
+    loginSection.hidden = false;
+    adminSection.hidden = true;
 }
 
 // 显示管理区域
@@ -298,9 +304,10 @@ async function handleLogin(e) {
         }
 
         authToken = data.token;
+        tokenValidUntil = null;
         localStorage.setItem('adminToken', authToken);
         loginError.hidden = true;
-        showAdminSection();
+        await showAdminSection();
     } catch (error) {
         loginError.textContent = '网络错误，请重试';
         loginError.hidden = false;
