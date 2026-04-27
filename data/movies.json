@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-30T08:12:45.170Z",
+  "generatedAt": "2026-04-27T03:05:45.548Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 287
+    "total": 288
   },
   "items": [
     {
@@ -11391,6 +11391,52 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 116745,
+      "title": "白日梦想家",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Secret Life of Walter Mitty",
+        "original_language": "en",
+        "title": "白日梦想家",
+        "overview": "沃特·密提 是一名在《生活》杂志工作了16年的胶片洗印经理。他性格内向，甚至无法跟心仪的同事谢莉尔 开口搭讪。面对生活他像个旁观者，时常“放空”做白日英雄梦。直到有一天公司被并购，杂志需要做最后一期的封面，而封面成功与否的关键是能否找到狂野摄影师尚恩 的一卷胶片。沃特终于开口搭讪谢莉尔，并在她和母亲 的鼓励下踏上真正的冒险之旅。 冰原、大海、喜马拉雅山……沃特的白日梦远不及现实壮丽。",
+        "poster_path": "/xUvcmKgDFRy79LqTibh7bpu1R5r.jpg",
+        "backdrop_path": "/pzMrxeP9XkKOtQVUBPTq5yk4ck5.jpg",
+        "release_date": "2013-12-18",
+        "runtime": 114,
+        "genres": [
+          {
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 14,
+            "name": "奇幻"
+          }
+        ],
+        "vote_average": 7.2,
+        "vote_count": 8192,
+        "popularity": 7.3958,
+        "homepage": "",
+        "directors": [
+          "本·斯蒂勒"
         ]
       }
     },
