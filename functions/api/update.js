@@ -93,7 +93,7 @@ export async function onRequestPost(context) {
 
         const getResponse = await fetch(apiUrl, {
             headers: {
-                'Authorization': `token ${githubToken}`,
+                'Authorization': `Bearer ${githubToken}`,
                 'Accept': 'application/vnd.github.v3+json',
                 'User-Agent': 'My-Movie-Gallery-Admin',
             },
@@ -222,7 +222,7 @@ export async function onRequestPost(context) {
         const updateResponse = await fetch(apiUrl, {
             method: 'PUT',
             headers: {
-                'Authorization': `token ${githubToken}`,
+                'Authorization': `Bearer ${githubToken}`,
                 'Accept': 'application/vnd.github.v3+json',
                 'User-Agent': 'My-Movie-Gallery-Admin',
                 'Content-Type': 'application/json',
