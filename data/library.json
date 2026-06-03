@@ -1,12 +1,6 @@
 {
   "watching": [
     {
-      "id": 68945,
-      "title": "心里的声音",
-      "mediaType": "tv",
-      "status": "watching"
-    },
-    {
       "id": 106161,
       "title": "阿尔玛不是一般人",
       "mediaType": "tv",
@@ -3485,6 +3479,14 @@
     }
   ],
   "dropped": [
+    {
+      "id": 68945,
+      "title": "心里的声音",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": null,
+      "inCinema": false
+    },
     {
       "id": 175,
       "title": "碧海蓝天",
