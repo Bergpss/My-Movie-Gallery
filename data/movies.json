@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-03T05:05:25.338Z",
+  "generatedAt": "2026-06-03T05:51:46.371Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 290
+    "total": 291
   },
   "items": [
     {
@@ -11285,6 +11285,46 @@
         "directors": [
           "塔伊加·维迪提"
         ]
+      }
+    },
+    {
+      "id": 285807,
+      "title": "宿敌交锋",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Nemesis",
+        "original_language": "en",
+        "title": "宿敌交锋",
+        "overview": "洛杉矶警局一名坚韧不拔的警探执着地追捕犯下多起嚣张劫案的神偷 — 双方只有一人能够胜出。",
+        "poster_path": "/ztbX4emuGwNnyJjLBMHqrGBS48B.jpg",
+        "backdrop_path": "/pxnJeLSBdUikUOrWdNgrK1HQy2u.jpg",
+        "release_date": "2026-05-14",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          }
+        ],
+        "vote_average": 7.1,
+        "vote_count": 63,
+        "popularity": 34.2874,
+        "homepage": "https://www.netflix.com/title/81737397",
+        "directors": []
       }
     },
     {
