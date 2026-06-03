@@ -1,51 +1,11 @@
 {
-  "generatedAt": "2026-06-03T04:42:21.513Z",
+  "generatedAt": "2026-06-03T04:42:33.318Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
     "total": 291
   },
   "items": [
-    {
-      "id": 103397,
-      "title": "守护解放西",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "守护解放西",
-        "original_language": "zh",
-        "title": "守护解放西",
-        "overview": "由哔哩哔哩及中广天择传媒股份有限公司联合出品制作的《守护解放西》作为一档观察类真人秀，通过观察纪录式的拍摄手法，以湖南省长沙市坡子街派出所民警为人物核心，深度展示大都市核心商圈城市警察的日常工作。节目通过民警巡逻、多警种联动、疑犯审讯、要案参与等事件，展现警情复杂地带的法、理、情、事，塑造有担当、有理性、有人情的人民警察形象，并通过各类案件故事普及相关安全和法律常识。",
-        "poster_path": "/3gIc5PjBV3LmMODWKkAaY5CnGy1.jpg",
-        "backdrop_path": "/5CcRTSJCAIA0F6gd6LtMSOABvxB.jpg",
-        "release_date": "2019-09-14",
-        "runtime": 36,
-        "genres": [
-          {
-            "id": 10764,
-            "name": "真人秀"
-          },
-          {
-            "id": 99,
-            "name": "纪录"
-          },
-          {
-            "id": 80,
-            "name": "犯罪"
-          }
-        ],
-        "vote_average": 8.5,
-        "vote_count": 4,
-        "popularity": 1.9901,
-        "homepage": "",
-        "directors": []
-      }
-    },
     {
       "id": 175,
       "title": "碧海蓝天",
@@ -12108,6 +12068,46 @@
         "directors": [
           "西恩·潘"
         ]
+      }
+    },
+    {
+      "id": 103397,
+      "title": "守护解放西",
+      "mediaType": "tv",
+      "status": "dropped",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "守护解放西",
+        "original_language": "zh",
+        "title": "守护解放西",
+        "overview": "由哔哩哔哩及中广天择传媒股份有限公司联合出品制作的《守护解放西》作为一档观察类真人秀，通过观察纪录式的拍摄手法，以湖南省长沙市坡子街派出所民警为人物核心，深度展示大都市核心商圈城市警察的日常工作。节目通过民警巡逻、多警种联动、疑犯审讯、要案参与等事件，展现警情复杂地带的法、理、情、事，塑造有担当、有理性、有人情的人民警察形象，并通过各类案件故事普及相关安全和法律常识。",
+        "poster_path": "/3gIc5PjBV3LmMODWKkAaY5CnGy1.jpg",
+        "backdrop_path": "/5CcRTSJCAIA0F6gd6LtMSOABvxB.jpg",
+        "release_date": "2019-09-14",
+        "runtime": 36,
+        "genres": [
+          {
+            "id": 10764,
+            "name": "真人秀"
+          },
+          {
+            "id": 99,
+            "name": "纪录"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          }
+        ],
+        "vote_average": 8.5,
+        "vote_count": 4,
+        "popularity": 1.9901,
+        "homepage": "",
+        "directors": []
       }
     },
     {
