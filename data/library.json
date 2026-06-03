@@ -1,12 +1,6 @@
 {
   "watching": [
     {
-      "id": 106161,
-      "title": "阿尔玛不是一般人",
-      "mediaType": "tv",
-      "status": "watching"
-    },
-    {
       "id": 64010,
       "title": "请回答1988",
       "mediaType": "tv",
@@ -3479,6 +3473,14 @@
     }
   ],
   "dropped": [
+    {
+      "id": 106161,
+      "title": "阿尔玛不是一般人",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": null,
+      "inCinema": false
+    },
     {
       "id": 68945,
       "title": "心里的声音",
