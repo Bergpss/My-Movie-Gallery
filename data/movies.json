@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-27T03:06:05.497Z",
+  "generatedAt": "2026-06-03T04:42:06.149Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 289
+    "total": 290
   },
   "items": [
     {
@@ -11431,6 +11431,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 745,
+      "title": "第六感",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Sixth Sense",
+        "original_language": "en",
+        "title": "第六感",
+        "overview": "　　麦克（布鲁斯·威利斯 饰）是著名儿童心理学家，却也有始终未能治愈的患者，甚至因此遭到枪杀，这名少年随后也饮枪自毙。这给麦克带来很大心理阴影，一年后他找到另一个症状很像这名患者的男孩柯尔（海利·乔·奥斯蒙 饰），并耐心的做起了他的医生。柯尔并不容易接近，但麦克还是慢慢赢得 了他的信任，得知了柯尔的秘密。原来柯尔有着灵异的第六感，可以看到鬼魂。虽然这令人感到难以置信，但麦克在证实了事情的真相后还是帮助柯尔接受了这个事实。  　　可是就在问题即将得到解决的时候，麦克却在柯尔的引导下，发现了一个更令人震惊的秘密……",
+        "poster_path": "/z4lxLbYOTj0SqhJFmYfh0hcVd8v.jpg",
+        "backdrop_path": "/6TjllWT3cGrPFyqDXurVZ3L8bBi.jpg",
+        "release_date": "1999-08-06",
+        "runtime": 103,
+        "genres": [
+          {
+            "id": 9648,
+            "name": "悬疑"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.953,
+        "vote_count": 12860,
+        "popularity": 10.8684,
+        "homepage": "",
+        "directors": [
+          "M·奈特·沙马兰"
         ]
       }
     },
