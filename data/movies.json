@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-03T04:42:06.149Z",
+  "generatedAt": "2026-06-03T04:42:21.513Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 290
+    "total": 291
   },
   "items": [
     {
@@ -11431,6 +11431,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 629,
+      "title": "非常嫌疑犯",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Usual Suspects",
+        "original_language": "en",
+        "title": "非常嫌疑犯",
+        "overview": "美国加州的圣佩雷罗港一艘货轮爆炸，死亡27人，9000万美元失踪。事故发生以后，联邦调查局探员白基奇在医院等待昏迷不醒的幸存者；海关特派员大卫（查兹•帕明特里 饰）则对另外一名拿到特赦令的幸存者金特（凯文•史派西 饰）进行了审问。金特供认，在事故中丧生的基顿（加布里埃尔•伯恩 饰）、法特（本尼西奥•德托罗 饰）、麦曼诺（斯蒂芬•鲍尔文 饰）和杜学尼（凯文•波拉克 饰），以及他本人，六个月前被警察局作为卡车抢劫案的疑犯带到警局过了一夜，五人因此结成了一个犯罪团伙，狼狈为奸……",
+        "poster_path": "/7HDY0yZxiM1uMTM1wLm6R0AuW4Z.jpg",
+        "backdrop_path": "/hy0Hx9fMPk2fmw26Li60z1S2giU.jpg",
+        "release_date": "1995-07-19",
+        "runtime": 96,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 8.169,
+        "vote_count": 11419,
+        "popularity": 10.0583,
+        "homepage": "",
+        "directors": [
+          "布莱恩·辛格"
         ]
       }
     },
