@@ -3384,6 +3384,13 @@
   ],
   "wishlist": [
     {
+      "id": 629,
+      "title": "非常嫌疑犯",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "wishlistReason": "在《巨人的工具》这本书里看到的"
+    },
+    {
       "id": 745,
       "title": "第六感",
       "mediaType": "movie",
