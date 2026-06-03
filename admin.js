@@ -108,7 +108,7 @@ async function resumePendingAction(action) {
             if (updateResponse.ok) {
                 showMessage(adminMessage, '更新成功！', false);
                 await loadExistingMovies();
-                await loadLibraryMovies();
+                applyLocalMovieUpdate(action.data);
             } else {
                 showMessage(adminMessage, updateData.error || '更新失败', true);
             }
@@ -612,6 +612,51 @@ function renderLibraryMovies() {
     });
 }
 
+function applyLocalMovieUpdate(updateData) {
+    const movieIndex = allMovies.findIndex(movie => String(movie.id) === String(updateData.id));
+    if (movieIndex === -1) {
+        return;
+    }
+
+    const updatedMovie = {
+        ...allMovies[movieIndex],
+        status: updateData.status,
+        inCinema: updateData.inCinema,
+    };
+
+    if (updateData.rating === null || updateData.rating === '') {
+        delete updatedMovie.rating;
+    } else if (updateData.rating !== undefined) {
+        updatedMovie.rating = Number(updateData.rating);
+    }
+
+    if (updateData.note === null || updateData.note === '') {
+        delete updatedMovie.note;
+    } else if (updateData.note !== undefined) {
+        updatedMovie.note = updateData.note;
+    }
+
+    if (updateData.watchDate) {
+        updatedMovie.watchDate = updateData.watchDate;
+        updatedMovie.watchDates = Array.from(new Set([...(updatedMovie.watchDates || []), updateData.watchDate])).sort();
+    }
+
+    if (updateData.status === 'wishlist') {
+        delete updatedMovie.rating;
+        delete updatedMovie.watchDate;
+        delete updatedMovie.watchDates;
+        updatedMovie.inCinema = false;
+        if (updateData.wishlistReason) {
+            updatedMovie.wishlistReason = updateData.wishlistReason;
+        }
+    } else {
+        delete updatedMovie.wishlistReason;
+    }
+
+    allMovies.splice(movieIndex, 1, updatedMovie);
+    renderLibraryMovies();
+}
+
 // 打开编辑弹窗
 async function openEditModal(movie) {
     // 先验证 token 是否有效
@@ -706,9 +751,8 @@ editForm.addEventListener('submit', async (e) => {
 
         closeEditModal();
         showMessage(adminMessage, '更新成功！', false);
-        // 重新加载数据
         await loadExistingMovies();
-        await loadLibraryMovies();
+        applyLocalMovieUpdate(updateData);
     } catch (error) {
         showMessage(adminMessage, '网络错误，请重试', true);
     }
