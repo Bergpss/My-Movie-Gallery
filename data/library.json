@@ -1,12 +1,6 @@
 {
   "watching": [
     {
-      "id": 103397,
-      "title": "守护解放西",
-      "mediaType": "tv",
-      "status": "watching"
-    },
-    {
       "id": 175,
       "title": "碧海蓝天",
       "mediaType": "movie",
@@ -3498,6 +3492,14 @@
     }
   ],
   "dropped": [
+    {
+      "id": 103397,
+      "title": "守护解放西",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": null,
+      "inCinema": false
+    },
     {
       "id": 200875,
       "title": "小丑回魂：欢迎来到德里",
