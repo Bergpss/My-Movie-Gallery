@@ -2,6 +2,19 @@
   "watching": [],
   "watched": [
     {
+      "id": 911430,
+      "title": "F1：狂飙飞车",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 9,
+      "note": "如果做事不是为了钱，那会是为了什么？",
+      "inCinema": false,
+      "watchDates": [
+        "2026-05-31"
+      ],
+      "watchDate": "2026-05-31"
+    },
+    {
       "id": 10497,
       "title": "苦月亮",
       "mediaType": "movie",
@@ -3434,12 +3447,6 @@
     {
       "id": 639988,
       "title": "无可奈何",
-      "mediaType": "movie",
-      "status": "wishlist"
-    },
-    {
-      "id": 911430,
-      "title": "F1：狂飙飞车",
       "mediaType": "movie",
       "status": "wishlist"
     },
