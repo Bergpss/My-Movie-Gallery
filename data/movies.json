@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-03T04:43:04.448Z",
+  "generatedAt": "2026-06-03T05:04:34.966Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 291
+    "total": 290
   },
   "items": [
     {
@@ -11445,50 +11445,6 @@
         "popularity": 3.1838,
         "homepage": "https://www.netflix.com/title/81186296",
         "directors": []
-      }
-    },
-    {
-      "id": 206487,
-      "title": "前目的地",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "Predestination",
-        "original_language": "en",
-        "title": "前目的地",
-        "overview": "时空特工执行最后任务，追捕长期逍遥的爆炸犯，过程中牵出一连串悖论与身份谜题。",
-        "poster_path": null,
-        "backdrop_path": null,
-        "release_date": "2014-08-28",
-        "runtime": 97,
-        "genres": [
-          {
-            "id": 878,
-            "name": "科幻"
-          },
-          {
-            "id": 53,
-            "name": "惊悚"
-          }
-        ],
-        "vote_average": null,
-        "vote_count": null,
-        "popularity": null,
-        "homepage": "",
-        "directors": [
-          "Michael Spierig",
-          "Peter Spierig"
-        ],
-        "cast": [
-          "Ethan Hawke",
-          "Sarah Snook",
-          "Noah Taylor"
-        ]
       }
     },
     {
