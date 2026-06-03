@@ -1,12 +1,5 @@
 {
-  "watching": [
-    {
-      "id": 64010,
-      "title": "请回答1988",
-      "mediaType": "tv",
-      "status": "watching"
-    }
-  ],
+  "watching": [],
   "watched": [
     {
       "id": 10497,
@@ -3473,6 +3466,14 @@
     }
   ],
   "dropped": [
+    {
+      "id": 64010,
+      "title": "请回答1988",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": null,
+      "inCinema": false
+    },
     {
       "id": 106161,
       "title": "阿尔玛不是一般人",
