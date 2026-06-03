@@ -1,13 +1,6 @@
 {
   "watching": [
     {
-      "id": 175,
-      "title": "碧海蓝天",
-      "mediaType": "movie",
-      "status": "watching",
-      "note": "在广场跟 阿光、Samuel一起看的"
-    },
-    {
       "id": 68945,
       "title": "心里的声音",
       "mediaType": "tv",
@@ -3492,6 +3485,14 @@
     }
   ],
   "dropped": [
+    {
+      "id": 175,
+      "title": "碧海蓝天",
+      "mediaType": "movie",
+      "status": "dropped",
+      "note": "在广场跟 阿光、Samuel一起看的",
+      "inCinema": false
+    },
     {
       "id": 103397,
       "title": "守护解放西",
