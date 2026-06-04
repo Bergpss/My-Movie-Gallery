@@ -1,11 +1,55 @@
 {
-  "generatedAt": "2026-06-03T05:51:46.371Z",
+  "generatedAt": "2026-06-04T14:15:59.452Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 291
+    "total": 292
   },
   "items": [
+    {
+      "id": 429918,
+      "title": "生存家族",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-06-04"
+      ],
+      "watchDate": "2026-06-04",
+      "rating": 10,
+      "note": "一家人在一起就是最好的。我和康康就是一家人哦",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "サバイバルファミリー",
+        "original_language": "ja",
+        "title": "生存家族",
+        "overview": "《生存家族》讲述了这么一个故事，突然有一天家里的电器全部无法运转，车，自来水，电池，手机和电视等等都不能使用了，在东京生活的铃木一家决定骑自行车去乡下，逃离东京…",
+        "poster_path": "/w3xYbgmrWLhJxTTjzDPjEvS5Qg8.jpg",
+        "backdrop_path": "/8eP1SDVCSasQlZ6fCq2uzkLNKjr.jpg",
+        "release_date": "2017-02-11",
+        "runtime": 117,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          }
+        ],
+        "vote_average": 7.271,
+        "vote_count": 144,
+        "popularity": 1.4105,
+        "homepage": "",
+        "directors": [
+          "矢口史靖"
+        ]
+      }
+    },
     {
       "id": 911430,
       "title": "F1：狂飙飞车",
