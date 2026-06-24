@@ -1,11 +1,51 @@
 {
-  "generatedAt": "2026-06-04T14:15:59.452Z",
+  "generatedAt": "2026-06-24T08:54:38.083Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 292
+    "total": 293
   },
   "items": [
+    {
+      "id": 270476,
+      "title": "寡妇湾",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Widow's Bay",
+        "original_language": "en",
+        "title": "寡妇湾",
+        "overview": "一位镇长无视当地人声称寡妇湾小镇遭受诅咒的警告，执意要将其打造成下一个新英格兰旅游胜地。",
+        "poster_path": "/mTJIgeN8Z0fvqf0JHlncWWWPKTe.jpg",
+        "backdrop_path": "/u6XtMg9Ai9siEbEs0UudPS3EaZY.jpg",
+        "release_date": "2026-04-28",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8.224,
+        "vote_count": 210,
+        "popularity": 83.7346,
+        "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
+        "directors": []
+      }
+    },
     {
       "id": 429918,
       "title": "生存家族",
