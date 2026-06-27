@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-24T08:55:00.983Z",
+  "generatedAt": "2026-06-27T14:49:02.920Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 294
+    "total": 295
   },
   "items": [
     {
@@ -11368,6 +11368,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 792307,
+      "title": "可怜的东西",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Poor Things",
+        "original_language": "en",
+        "title": "可怜的东西",
+        "overview": "由导演欧格斯·兰斯莫斯与制片人艾玛·斯通携手呈现，讲述贝拉·巴克斯特——一位由才华横溢且不拘传统的科学家戈德温·巴克斯特博士塑造而成的年轻女子——那不可思议的际遇与奇幻蜕变。在巴克斯特的庇护下，贝拉渴望汲取知识。为了填补她所欠缺的世俗认知，贝拉与油滑堕落的律师邓肯·韦德伯恩私奔，展开一场横跨各大洲的旋风冒险。挣脱时代偏见的束缚，贝拉历经性的试炼，亦萌生出对平等的追求。[探照灯影业]",
+        "poster_path": "/5XJRtk8C0jB5eLXM9Nubz8M8uCN.jpg",
+        "backdrop_path": "/zh6IdheEYinU4TPtorWsjx6qPQE.jpg",
+        "release_date": "2023-12-07",
+        "runtime": 141,
+        "genres": [
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 10749,
+            "name": "爱情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.6,
+        "vote_count": 5529,
+        "popularity": 11.1048,
+        "homepage": "",
+        "directors": [
+          "欧格斯·兰斯莫斯"
         ]
       }
     },
