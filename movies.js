@@ -1,9 +1,12 @@
 const MOVIE_DATA_URL = 'data/movies.json';
+const RECOMMENDATION_API_URL = '/api/recommendations';
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const PLACEHOLDER_POSTER = 'movie_posters/placeholder.png';
 
 let allMovies = [];
 let currentFilter = 'all';
+let recommendationMovies = [];
+let recommendationStatusText = '基于已看记录计算中';
 
 function formatDate(isoString) {
     if (!isoString) {
@@ -89,13 +92,14 @@ async function fetchMoviesFromList() {
 
 function showLoadingSkeletons() {
     const containers = [
+        document.getElementById('recommendation-container'),
         document.getElementById('watching-container'),
         document.getElementById('wishlist-container'),
         document.getElementById('movie-container'),
         document.getElementById('dropped-container')
     ];
 
-    const skeletonCount = [2, 3, 8, 2]; // Different counts for each section
+    const skeletonCount = [4, 2, 3, 8, 2]; // Different counts for each section
 
     containers.forEach((container, index) => {
         if (!container) return;
@@ -144,6 +148,162 @@ function getPlatformColor(platform) {
         'other': '#666',
     };
     return colors[platform] || '#666';
+}
+
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+function getRecommendationEngine() {
+    return window.MovieRecommendationEngine || null;
+}
+
+function getRecommendationSourceLabel(source) {
+    if (source === 'tmdb') {
+        return 'TMDB';
+    }
+    return '推荐';
+}
+
+function createRecommendationCardHtml(movie) {
+    const posterPath = movie.tmdb?.poster_path || movie.tmdb?.backdrop_path || null;
+    const imagePath = posterPath ? `${POSTER_BASE_URL}${posterPath}` : PLACEHOLDER_POSTER;
+    const title = movie.tmdb?.title || movie.tmdb?.original_title || movie.title || 'Untitled';
+    const ratingValue = typeof movie.tmdb?.vote_average === 'number'
+        ? movie.tmdb.vote_average
+        : typeof movie.rating === 'number'
+            ? movie.rating
+            : null;
+    const rating = typeof ratingValue === 'number' ? ratingValue.toFixed(1) : null;
+    const releaseDate = formatDate(getReleaseDate(movie));
+    const genres = Array.isArray(movie.tmdb?.genres)
+        ? movie.tmdb.genres.map(genre => genre.name).filter(Boolean).slice(0, 2)
+        : [];
+    const targetUrl = movie.id ? `https://www.themoviedb.org/movie/${movie.id}` : '#';
+    const sourceLabel = getRecommendationSourceLabel(movie.recommendationSource);
+
+    const metaRows = [
+        releaseDate ? { label: '上映', value: releaseDate } : null,
+        genres.length > 0 ? { label: '类型', value: genres.join('、') } : null,
+    ].filter(Boolean);
+
+    const metaHtml = metaRows.map(row => `
+        <div class="meta-row">
+            <span class="meta-label">${escapeHtml(row.label)}</span>
+            <span class="meta-value">${escapeHtml(row.value)}</span>
+        </div>
+    `).join('');
+
+    const reason = movie.recommendationReason
+        ? `<p class="recommendation-reason">${escapeHtml(movie.recommendationReason)}</p>`
+        : '';
+
+    return `
+        <div class="movie-item">
+            <a class="poster-wrapper" href="${escapeHtml(targetUrl)}" target="_blank" rel="noopener noreferrer">
+                <img src="${escapeHtml(imagePath)}" alt="${escapeHtml(title)}" loading="lazy">
+                <div class="badge-row">
+                    ${rating ? `<span class="rating-badge">${escapeHtml(rating)}</span>` : ''}
+                    <span class="recommendation-source">${escapeHtml(sourceLabel)}</span>
+                </div>
+            </a>
+            <div class="movie-info">
+                <h3 class="movie-title">${escapeHtml(title)}</h3>
+                <div class="movie-meta">
+                    ${metaHtml}
+                </div>
+                ${reason ? `<div class="movie-note-container">${reason}</div>` : ''}
+            </div>
+        </div>
+    `;
+}
+
+function renderRecommendations() {
+    const recommendationContainer = document.getElementById('recommendation-container');
+    const recommendationEmpty = document.querySelector('#recommendation-section .empty-message');
+    const recommendationStatus = document.getElementById('recommendation-status');
+
+    if (!recommendationContainer || !recommendationEmpty || !recommendationStatus) {
+        return;
+    }
+
+    recommendationContainer.innerHTML = '';
+    recommendationStatus.textContent = recommendationStatusText;
+
+    if (currentFilter !== 'all' && currentFilter !== 'movie') {
+        recommendationEmpty.hidden = false;
+        recommendationEmpty.textContent = '当前筛选只展示电影推荐';
+        recommendationStatus.textContent = '切回全部或电影可查看推荐';
+        return;
+    }
+
+    recommendationEmpty.textContent = '暂无可推荐的未看电影';
+
+    if (recommendationMovies.length === 0) {
+        recommendationEmpty.hidden = false;
+        return;
+    }
+
+    recommendationEmpty.hidden = true;
+    recommendationContainer.innerHTML = recommendationMovies
+        .slice(0, 8)
+        .map(movie => createRecommendationCardHtml(movie))
+        .join('');
+}
+
+async function loadRecommendations() {
+    const engine = getRecommendationEngine();
+
+    if (!engine || !allMovies.length) {
+        recommendationMovies = [];
+        recommendationStatusText = '推荐引擎未加载';
+        renderRecommendations();
+        return;
+    }
+
+    const profile = engine.buildTasteProfile(allMovies);
+    recommendationMovies = [];
+    recommendationStatusText = '正在从 TMDB 查找库外电影';
+    renderRecommendations();
+
+    try {
+        const response = await fetch(RECOMMENDATION_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                profile,
+                limit: 40,
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Recommendation API failed: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const remoteRecommendations = engine.rankExternalRecommendations(data.results || [], profile, {
+            genreMap: data.genreMap || {},
+            limit: 8,
+        });
+
+        recommendationMovies = remoteRecommendations;
+        recommendationStatusText = remoteRecommendations.length > 0
+            ? '来自 TMDB，已排除库里已有电影'
+            : 'TMDB 暂无新的匹配电影';
+        renderRecommendations();
+    } catch (error) {
+        console.info('在线推荐暂不可用:', error);
+        recommendationMovies = [];
+        recommendationStatusText = '在线推荐暂不可用';
+        renderRecommendations();
+    }
 }
 
 function renderMovies(movies) {
@@ -315,6 +475,7 @@ function renderMovies(movies) {
     renderList(wishlistContainer, wishlistEmpty, wishlistMovies, 'release');
     renderList(watchedContainer, watchedEmpty, watchedMovies, 'watch');
     renderList(droppedContainer, droppedEmpty, droppedMovies, 'release');
+    renderRecommendations();
 }
 
 function setupFilterButtons() {
@@ -336,6 +497,7 @@ async function initGallery() {
     allMovies = await fetchMoviesFromList();
     renderMovies(allMovies);
     setupFilterButtons();
+    loadRecommendations();
 }
 
 window.onload = initGallery;

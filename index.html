@@ -21,6 +21,15 @@
                 <button class="filter-btn" data-filter="web-video">网络视频</button>
             </div>
 
+            <section class="movie-section" id="recommendation-section">
+                <div class="section-heading-row">
+                    <h2 class="section-title">给你推荐</h2>
+                    <span id="recommendation-status" class="section-status">基于已看记录计算中</span>
+                </div>
+                <div id="recommendation-container" class="movie-grid"></div>
+                <p class="empty-message" hidden>暂无可推荐的未看电影</p>
+            </section>
+
             <section class="movie-section" id="watching-section">
                 <h2 class="section-title">正在看</h2>
                 <div id="watching-container" class="movie-grid"></div>
@@ -46,6 +55,7 @@
             </section>
         </div>
 
+        <script src="recommendation-engine.js"></script>
         <script src="movies.js"></script>
     </body>
 
