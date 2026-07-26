@@ -9,6 +9,19 @@
   ],
   "watched": [
     {
+      "id": 1083381,
+      "title": "后室",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 7.5,
+      "note": "想法挺新颖的，营造的心理恐怖很不错，但感觉故事缺乏一些感觉",
+      "inCinema": false,
+      "watchDates": [
+        "2026-07-15"
+      ],
+      "watchDate": "2026-07-15"
+    },
+    {
       "id": 429918,
       "title": "生存家族",
       "mediaType": "movie",
@@ -3381,13 +3394,6 @@
     }
   ],
   "wishlist": [
-    {
-      "id": 1083381,
-      "title": "后室",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "wishlistReason": "甜甜给我推荐的，流媒体还没上映"
-    },
     {
       "id": 792307,
       "title": "可怜的东西",
