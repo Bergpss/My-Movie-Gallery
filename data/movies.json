@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T08:00:56.004Z",
+  "generatedAt": "2026-07-26T09:35:13.190Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -44,6 +44,50 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 1083381,
+      "title": "后室",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-07-15"
+      ],
+      "watchDate": "2026-07-15",
+      "rating": 7.5,
+      "note": "想法挺新颖的，营造的心理恐怖很不错，但感觉故事缺乏一些感觉",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Backrooms",
+        "original_language": "en",
+        "title": "后室",
+        "overview": "一位心理治疗师的病人，在一次诡异的事故中“切入”到了一个超越现实的奇异维度。为了带回病人，这位治疗师不得不亲自踏入那片无边无际、充满黄色壁纸和嗡嗡荧光灯响声的未知迷宫。",
+        "poster_path": "/7flxvNLk48fvJel8zHDGqMFvQ9C.jpg",
+        "backdrop_path": "/mCpwRayjXMFzKHbjbzc5JRKfq1O.jpg",
+        "release_date": "2026-05-27",
+        "runtime": 111,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          }
+        ],
+        "vote_average": 6.82,
+        "vote_count": 983,
+        "popularity": 405.1727,
+        "homepage": "",
+        "directors": [
+          "凯恩·帕森斯"
+        ]
       }
     },
     {
@@ -11368,48 +11412,6 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
-        ]
-      }
-    },
-    {
-      "id": 1083381,
-      "title": "后室",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "watchDates": [],
-      "watchDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "Backrooms",
-        "original_language": "en",
-        "title": "后室",
-        "overview": "一位心理治疗师的病人，在一次诡异的事故中“切入”到了一个超越现实的奇异维度。为了带回病人，这位治疗师不得不亲自踏入那片无边无际、充满黄色壁纸和嗡嗡荧光灯响声的未知迷宫。",
-        "poster_path": "/7flxvNLk48fvJel8zHDGqMFvQ9C.jpg",
-        "backdrop_path": "/mCpwRayjXMFzKHbjbzc5JRKfq1O.jpg",
-        "release_date": "2026-05-27",
-        "runtime": 111,
-        "genres": [
-          {
-            "id": 27,
-            "name": "恐怖"
-          },
-          {
-            "id": 9648,
-            "name": "悬疑"
-          },
-          {
-            "id": 878,
-            "name": "科幻"
-          }
-        ],
-        "vote_average": 6.82,
-        "vote_count": 983,
-        "popularity": 405.1727,
-        "homepage": "",
-        "directors": [
-          "凯恩·帕森斯"
         ]
       }
     },
