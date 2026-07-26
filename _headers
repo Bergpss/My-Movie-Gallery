@@ -1,0 +1,11 @@
+/movies.js
+  Cache-Control: no-cache, must-revalidate
+
+/recommendation-engine.js
+  Cache-Control: no-cache, must-revalidate
+
+/styles.css
+  Cache-Control: no-cache, must-revalidate
+
+/data/movies.json
+  Cache-Control: no-cache, must-revalidate

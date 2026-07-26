@@ -1,5 +1,6 @@
 const MOVIE_DATA_URL = 'data/movies.json';
 const RECOMMENDATION_API_URL = '/api/recommendations';
+const RECOMMENDATION_REQUEST_TIMEOUT_MS = 30000;
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const PLACEHOLDER_POSTER = 'movie_posters/placeholder.png';
 
@@ -271,6 +272,12 @@ async function loadRecommendations() {
     recommendationStatusText = '正在从 TMDB 查找库外电影';
     renderRecommendations();
 
+    const requestController = new AbortController();
+    const timeoutId = window.setTimeout(
+        () => requestController.abort(),
+        RECOMMENDATION_REQUEST_TIMEOUT_MS,
+    );
+
     try {
         const response = await fetch(RECOMMENDATION_API_URL, {
             method: 'POST',
@@ -281,6 +288,7 @@ async function loadRecommendations() {
                 profile,
                 limit: 40,
             }),
+            signal: requestController.signal,
         });
 
         if (!response.ok) {
@@ -303,6 +311,8 @@ async function loadRecommendations() {
         recommendationMovies = [];
         recommendationStatusText = '在线推荐暂不可用';
         renderRecommendations();
+    } finally {
+        window.clearTimeout(timeoutId);
     }
 }
 
@@ -500,4 +510,8 @@ async function initGallery() {
     loadRecommendations();
 }
 
-window.onload = initGallery;
+if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', initGallery, { once: true });
+} else {
+    initGallery();
+}
