@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-02T14:45:04.945Z",
+  "generatedAt": "2026-08-02T14:46:08.121Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 297
+    "total": 298
   },
   "items": [
     {
@@ -44,6 +44,42 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 985939,
+      "title": "坠落",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-07-31"
+      ],
+      "watchDate": "2026-07-31",
+      "rating": 7,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Fall",
+        "original_language": "en",
+        "title": "坠落",
+        "overview": "贝琪（格蕾丝·富尔顿 饰）和亨特（维吉尼亚·加德纳 饰）是一对喜欢追求刺激的好友，某天，她们攀上一座高达610米的电视塔后，意外受困于顶端，面对恶劣天气和物资短缺，她们必须设法在令人晕眩的高度上活下去。",
+        "poster_path": "/4V6vyZSUmEMkObcVaGtDNn4R318.jpg",
+        "backdrop_path": "/hT3OqvzMqCQuJsUjZnQwA5NuxgK.jpg",
+        "release_date": "2022-08-11",
+        "runtime": 107,
+        "genres": [
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 7.1,
+        "vote_count": 4733,
+        "popularity": 19.6392,
+        "homepage": "",
+        "directors": [
+          "斯科特·曼恩"
+        ]
       }
     },
     {
