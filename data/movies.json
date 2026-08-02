@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-26T09:35:13.190Z",
+  "generatedAt": "2026-08-02T14:45:04.945Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 296
+    "total": 297
   },
   "items": [
     {
@@ -44,6 +44,50 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 80278,
+      "title": "海啸奇迹",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-08-02"
+      ],
+      "watchDate": "2026-08-02",
+      "rating": 10,
+      "note": "买保险的意义",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Impossible",
+        "original_language": "en",
+        "title": "海啸奇迹",
+        "overview": "玛莉雅（娜奥米·沃茨 Naomi Watts 饰）和亨利（伊万·麦克格雷格 Ewan McGregor 饰）带着三个儿子，一同前往泰国共渡圣诞佳节，不料就在圣诞节隔天，当这幸福的一家人在泳池旁享受着悠闲时光时，一股猛兽般的万呎滔天巨浪竟迎面袭来。被眼前景象震慑住的玛莉雅，一时反应不及，不幸惨遭巨浪袭卷；而尽管亨利及时抓住两个儿子准备逃亡， 一切仍旧太迟，凶猛的大水最后仍冲散了他们。一度被巨浪击昏的玛莉雅，醒来后发现自己正漂浮在海面，而原本围绕在身旁的所有景物，都已被淹没于水面下，她深信家人们皆已罹难的同时，竟发现自己的大儿子卢卡斯，竟然就漂浮在距离她仅有几公尺远的海面上。玛丽雅顿时犹如被打了一剂强心针，她决定想尽办法，要带着大儿子卢卡斯一起活着离开......",
+        "poster_path": "/jPMJaHZ3amfnijYZQP3xwjcZap9.jpg",
+        "backdrop_path": "/3NfM0sRwVLnsQkCd5YBPGvM9a5v.jpg",
+        "release_date": "2012-09-09",
+        "runtime": 113,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 36,
+            "name": "历史"
+          }
+        ],
+        "vote_average": 7.374,
+        "vote_count": 6762,
+        "popularity": 10.3621,
+        "homepage": "",
+        "directors": [
+          "J·A·巴亚纳"
+        ]
       }
     },
     {
