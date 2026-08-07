@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-02T14:46:08.121Z",
+  "generatedAt": "2026-08-07T15:37:59.673Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 298
+    "total": 299
   },
   "items": [
     {
@@ -11492,6 +11492,40 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 913823,
+      "title": "火山挚恋",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Fire of Love",
+        "original_language": "en",
+        "title": "火山挚恋",
+        "overview": "卡蒂亚和莫里斯·克拉夫特热爱两样事物——彼此与火山。二十年间，这对勇敢的法国火山学家夫妇游历全球，追逐火山喷发，记录他们的发现。最终，他们于1991年的一次火山爆发中殒命，留下了永久丰富人类对自然世界认知的宝贵遗产。",
+        "poster_path": "/CSTZaZEch8JAJsExY4jISwSYye.jpg",
+        "backdrop_path": "/3oRwn7WIMt4Vtw65mnydDQHthwQ.jpg",
+        "release_date": "2022-07-06",
+        "runtime": 98,
+        "genres": [
+          {
+            "id": 99,
+            "name": "纪录"
+          }
+        ],
+        "vote_average": 7.5,
+        "vote_count": 256,
+        "popularity": 3.2771,
+        "homepage": "",
+        "directors": [
+          "萨拉·多萨"
         ]
       }
     },
