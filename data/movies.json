@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-07T15:37:59.673Z",
+  "generatedAt": "2026-08-07T15:38:26.015Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 299
+    "total": 300
   },
   "items": [
     {
@@ -11492,6 +11492,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1368337,
+      "title": "奥德赛",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "The Odyssey",
+        "original_language": "en",
+        "title": "奥德赛",
+        "overview": "特洛伊战争结束后，伊萨卡国王奥德修斯踏上了返回家乡的艰险旅程。",
+        "poster_path": "/Aj0Uykxj0vhwVsyrRJka0aM3SP1.jpg",
+        "backdrop_path": "/sSIzzVhhLfgLKVBcAUv0X6cLYz9.jpg",
+        "release_date": "2026-07-15",
+        "runtime": 173,
+        "genres": [
+          {
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 28,
+            "name": "动作"
+          },
+          {
+            "id": 14,
+            "name": "奇幻"
+          }
+        ],
+        "vote_average": 7.97,
+        "vote_count": 2332,
+        "popularity": 879.0771,
+        "homepage": "",
+        "directors": [
+          "克里斯托弗·诺兰"
         ]
       }
     },
