@@ -3414,6 +3414,13 @@
   ],
   "wishlist": [
     {
+      "id": 1368337,
+      "title": "奥德赛",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "wishlistReason": "未来某一天我一定会去美国最好的 IMAX 影厅看"
+    },
+    {
       "id": 913823,
       "title": "火山挚恋",
       "mediaType": "movie",
