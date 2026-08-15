@@ -9,6 +9,19 @@
   ],
   "watched": [
     {
+      "id": 1368337,
+      "title": "奥德赛",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 10,
+      "note": "这段历史/故事的演绎真的很有趣，之前玩《战神》看其他古希腊神话的影视剧都能串起来。在 CINITY 影厅看的，未来一定要去满血版的 IMAX 影厅重温",
+      "inCinema": true,
+      "watchDates": [
+        "2026-08-09"
+      ],
+      "watchDate": "2026-08-09"
+    },
+    {
       "id": 985939,
       "title": "坠落",
       "mediaType": "movie",
@@ -3413,13 +3426,6 @@
     }
   ],
   "wishlist": [
-    {
-      "id": 1368337,
-      "title": "奥德赛",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "wishlistReason": "未来某一天我一定会去美国最好的 IMAX 影厅看"
-    },
     {
       "id": 913823,
       "title": "火山挚恋",
