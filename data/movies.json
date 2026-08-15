@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-15T13:06:42.475Z",
+  "generatedAt": "2026-08-15T13:07:30.206Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 300
+    "total": 301
   },
   "items": [
     {
@@ -11536,6 +11536,44 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1391021,
+      "title": "欢迎来龙餐馆",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "欢迎来龙餐馆",
+        "original_language": "zh",
+        "title": "欢迎来龙餐馆",
+        "overview": "徐福为养家还债远赴中东中餐馆当厨师，在当地结识了大堂经理马俊生。他们以地道中国风味广招八方来客，龙餐馆声名鹊起。然而随着战争爆发，当地形势急转直下，没有人能够独善其身，徐福和马俊生也不例外，他们的命运将何去何从？战火中的龙餐馆又将如何维系？",
+        "poster_path": "/2OJX7udqqpk5c82pXXdL2hnny0D.jpg",
+        "backdrop_path": "/zr7om0GOLOcLo7SXMmNEG5rz6de.jpg",
+        "release_date": "2026-08-08",
+        "runtime": 140,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10752,
+            "name": "战争"
+          }
+        ],
+        "vote_average": 9.1,
+        "vote_count": 10,
+        "popularity": 54.2843,
+        "homepage": "",
+        "directors": [
+          "文牧野"
         ]
       }
     },
