@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-15T13:07:30.206Z",
+  "generatedAt": "2026-08-16T14:00:47.455Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 301
+    "total": 302
   },
   "items": [
     {
@@ -44,6 +44,46 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 19381,
+      "title": "我想做的是",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-07-28"
+      ],
+      "watchDate": "2026-07-28",
+      "rating": 9,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Strike!",
+        "original_language": "en",
+        "title": "我想做的是",
+        "overview": "　问题少女欧迪（盖比·霍夫曼 Gaby Hoffmann 饰）成为了高德女子中学的转校生，在学校里，她加入了名为“粉骚联盟”的社团之中，和好友们一起享受着无拘无束的校园生活。想当心理学家的沫沫（梅里特·维沃 Merritt Wever 饰）、想成为杂志主编的薇瑞娜（克尔斯滕·邓斯特 Kirsten Dunst 饰）、想成为耀眼明星的丁卡（莫尼卡·凯娜 Monica Keena 饰），在联盟里，每个女孩都坚强的守护着各自的梦想。  　　一次偶然中，欧迪得知校长决定将学校同隔壁的圣安伯男子高中合并，这也就意味着，高德必须敞开大门，迎接那些脑袋里整天都不知道在想些什么的臭男生们。女孩子们当然不会允许这样荒唐的事情发生。",
+        "poster_path": "/cCr8mLqIVkbjBNs1uaZPvkXYnWA.jpg",
+        "backdrop_path": "/7ICPss8rtKmjda2kL9V5aVIjd9g.jpg",
+        "release_date": "1998-08-21",
+        "runtime": 97,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 6.368,
+        "vote_count": 136,
+        "popularity": 3.1455,
+        "homepage": "",
+        "directors": [
+          "Sarah Kernochan"
+        ]
       }
     },
     {
