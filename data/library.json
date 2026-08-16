@@ -9,6 +9,15 @@
   ],
   "watched": [
     {
+      "id": 19381,
+      "title": "我想做的是",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-07-28"
+      ],
+      "rating": 9
+    },
+    {
       "id": 1368337,
       "title": "奥德赛",
       "mediaType": "movie",
