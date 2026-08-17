@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-17T01:32:44.393Z",
+  "generatedAt": "2026-08-17T15:55:05.579Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 303
+    "total": 304
   },
   "items": [
     {
@@ -11620,6 +11620,46 @@
         "directors": [
           "塔伊加·维迪提"
         ]
+      }
+    },
+    {
+      "id": 1407,
+      "title": "国土安全",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Homeland",
+        "original_language": "en",
+        "title": "国土安全",
+        "overview": "中情局反恐事务的特工Carrie 在中东地区执行任务时，她的线向她透露了一个惊人的秘密：一名被俘的美军士兵已经变节，现在为基地组织效力，准备在美国本土策划发动恐怖袭击。几个月后，美国海军陆战队根据线报在阿富汗发现了被俘近九年的Nicholas Brody中士，荣归故里的Brody受到英雄般的礼遇。同时，Carrie也被中情局调回国内工作，并坚信Brody就是那个已经变节的士兵，从而暗中展开调查。Brody发现妻子妻子Jessica 已与好友相恋，醋性大发的他与Carrie发生了关系。Carrie一方面爱上了这个男人，一方面还是对他存有疑心。究竟Brody是否变节？他与Carrie的关系将如何发展？",
+        "poster_path": "/vv2ZABllvZydAvQLHNnBZBluEH1.jpg",
+        "backdrop_path": "/391ixi0wVbFtFLQnOy8ZncWv2io.jpg",
+        "release_date": "2011-10-02",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10768,
+            "name": "War & Politics"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          }
+        ],
+        "vote_average": 7.591,
+        "vote_count": 2659,
+        "popularity": 86.6307,
+        "homepage": "https://www.sho.com/homeland",
+        "directors": []
       }
     },
     {
