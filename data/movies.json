@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T06:47:35.645Z",
+  "generatedAt": "2026-08-20T13:46:26.295Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 305
+    "total": 306
   },
   "items": [
     {
@@ -87,6 +87,46 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 11216,
+      "title": "天堂电影院",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-08-20"
+      ],
+      "watchDate": "2026-08-20",
+      "rating": 10,
+      "note": "感觉像人的一生，离别、爱仿佛似曾相识，真羡慕主角有一个家，仿佛多年回去后一切都没变，家就是一个注定要离开，但也注定永远怀念的地方。“不论以后你做什么事，都要热爱，就像以前热爱放映室一样”",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Nuovo Cinema Paradiso",
+        "original_language": "it",
+        "title": "天堂电影院",
+        "overview": "　　在意大利南部小镇姜卡尔多，童年的小多多不仅喜欢看电影，还喜欢看放映师艾弗达“剪”电影：在40年代的意大利小镇上，电影在放映之前都要经由牧师检查，把认为观众不宜的镜头（比如接吻戏）严格地剪掉之后，才可以放映。好心的艾佛特为了让更多的观众看到电影，搞了一次露天电影，结果胶片着火了，多多把艾弗达从火海中救了出来，但艾弗达双目失明。多多成了小镇唯一会放电影的人，他接替艾佛特成了小镇的电影放映师。多多渐渐长大，他爱上了银行家的女儿艾莲娜。初恋的纯洁情愫美如天堂，但是一对小情侣的海誓山盟被艾莲娜父亲的阻挠给隔断了，托托去服兵役，而艾莲娜去念大学。伤心的多多在艾佛达的鼓励下，离开小镇，追寻自己生命中的梦想……30年后，艾佛达去世，此时的多多已经是功成名就的导演，他回到了家乡参加艾弗达的葬礼。老放映员留给他一份礼物，原来是当初被镇上的检查员勒令剪掉的吻戏胶片。多多看着这些镜头，突然发现自己已经理解了生命中的一切。",
+        "poster_path": "/myeMOuOLu9Z7MwRF9HU7p5L4cYB.jpg",
+        "backdrop_path": "/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
+        "release_date": "1988-11-17",
+        "runtime": 124,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10749,
+            "name": "爱情"
+          }
+        ],
+        "vote_average": 8.43,
+        "vote_count": 4942,
+        "popularity": 17.7168,
+        "homepage": "",
+        "directors": [
+          "朱塞佩·托纳多雷"
+        ]
       }
     },
     {
