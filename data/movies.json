@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T13:46:26.295Z",
+  "generatedAt": "2026-08-20T13:49:49.424Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 306
+    "total": 307
   },
   "items": [
     {
@@ -11703,6 +11703,48 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 54186,
+      "title": "告白",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "告白",
+        "original_language": "ja",
+        "title": "告白",
+        "overview": "一所平凡的中学，1年B组即将迎来春假。不知天高地厚的学生们肆意吵闹，殊不知一场绵亘数月的风暴正向他们袭来。级任教师森口悠子（松隆子 饰）全然无视这片混乱，静静地向学生们做出最后的告白。这个单亲妈妈独自抚养着可爱的女儿（芦田爱菜 饰），然而女儿最终在游泳池中溺水身亡。警察 认定这是一起意外，森口则认定女儿死于班上两个学生之手。她不动声色地指责着犯人A和B，并宣布用自己的方式进行复仇。在此之后，森口辞去教师职务，1年B班的学生也心怀惴惴迎来了春假。新学期开始，残酷的风暴袭向了这群无知无畏的少男少女……本片根据湊かなえ的原作改编，并成为2010年电影旬报十佳影片；第34届日本电影学院奖最佳作品、最佳导演、最佳剧本和最佳剪辑4项大奖。",
+        "poster_path": "/5zMc9ggvMIvEOwH9rj4ojMLaBFG.jpg",
+        "backdrop_path": "/sT7f721Zvb9Feo11sbhvkk2JLHi.jpg",
+        "release_date": "2010-06-04",
+        "runtime": 106,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 7.584,
+        "vote_count": 1011,
+        "popularity": 4.4099,
+        "homepage": "",
+        "directors": [
+          "中岛哲也"
         ]
       }
     },
