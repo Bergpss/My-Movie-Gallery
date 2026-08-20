@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-17T15:55:05.579Z",
+  "generatedAt": "2026-08-20T06:47:35.645Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 304
+    "total": 305
   },
   "items": [
     {
@@ -87,6 +87,50 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 27205,
+      "title": "盗梦空间",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-08-20"
+      ],
+      "watchDate": "2026-08-20",
+      "rating": 10,
+      "note": "a day for movies, inception, do not lost in dreams",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Inception",
+        "original_language": "en",
+        "title": "盗梦空间",
+        "overview": "道姆·柯布与同事阿瑟和纳什在一次针对日本能源大亨齐藤（渡边谦 饰）的盗梦行动中失败，反被齐藤利用。齐藤威逼利诱因遭通缉而流亡海外的柯布帮他拆分他竞争对手的公司，采取极端措施在其唯一继承人罗伯特·费希尔的深层潜意识中种下放弃家族公司、自立门户的想法。为了重返美国，柯布偷偷求助于岳父迈尔斯，吸收了年轻的梦境设计师艾里阿德妮、梦境演员艾姆斯和药剂师约瑟夫加入行动。在一层层递进的梦境中，柯布不仅要对付费希尔潜意识的本能反抗，还必须直面已逝妻子梅尔的处处破坏，实际情况远比预想危险得多……",
+        "poster_path": "/89W962aAnPS3N3BdKgy2BvUhnCh.jpg",
+        "backdrop_path": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+        "release_date": "2010-07-15",
+        "runtime": 148,
+        "genres": [
+          {
+            "id": 28,
+            "name": "动作"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          }
+        ],
+        "vote_average": 8.372,
+        "vote_count": 39935,
+        "popularity": 64.5184,
+        "homepage": "",
+        "directors": [
+          "克里斯托弗·诺兰"
+        ]
       }
     },
     {
