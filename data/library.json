@@ -15,6 +15,16 @@
   ],
   "watched": [
     {
+      "id": 27205,
+      "title": "盗梦空间",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-08-20"
+      ],
+      "rating": 10,
+      "note": "a day for movies, inception, do not lost in dreams"
+    },
+    {
       "id": 19381,
       "title": "我想做的是",
       "mediaType": "movie",
