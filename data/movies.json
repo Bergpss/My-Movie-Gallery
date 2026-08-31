@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-20T13:49:49.424Z",
+  "generatedAt": "2026-08-31T08:11:00.018Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 307
+    "total": 308
   },
   "items": [
     {
@@ -87,6 +87,46 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 1339713,
+      "title": "痴迷",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-08-28"
+      ],
+      "watchDate": "2026-08-28",
+      "rating": 8,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Obsession",
+        "original_language": "en",
+        "title": "痴迷",
+        "overview": "在折断神秘的“心愿柳”以赢得暗恋对象的心之后，一个对爱情充满幻想的人如愿以偿地得到了自己想要的一切，但很快他发现，有些欲望需要付出黑暗而可怕的代价。",
+        "poster_path": "/32HbiLe4AWBqsM7WrYEYpL3oHmS.jpg",
+        "backdrop_path": "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+        "release_date": "2026-05-13",
+        "runtime": 108,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 53,
+            "name": "惊悚"
+          }
+        ],
+        "vote_average": 8.2,
+        "vote_count": 5183,
+        "popularity": 254.3681,
+        "homepage": "https://www.focusfeatures.com/obsession",
+        "directors": [
+          "Curry Barker"
+        ]
       }
     },
     {
