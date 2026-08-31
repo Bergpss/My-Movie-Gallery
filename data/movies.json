@@ -1,11 +1,57 @@
 {
-  "generatedAt": "2026-08-31T08:11:23.192Z",
+  "generatedAt": "2026-08-31T08:11:39.775Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 309
+    "total": 310
   },
   "items": [
+    {
+      "id": 43865,
+      "title": "心理测量者",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [],
+      "watchDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "PSYCHO-PASS サイコパス",
+        "original_language": "ja",
+        "title": "心理测量者",
+        "overview": "在人类的心理状态和性格倾向都将即时的数值化的未来。人们为了实现“好的人生”的数值指标，而将所有的感情、欲望、社会病态心理倾向等记录并管理起来。判断人类心之所在的方法，则是以某些人的个人灵魂本身作为标准，而这些被作为计测值的人们，他们被称为“PSYCHO-PASS”。其中与犯罪相关的数值也用“犯罪系数”来计测，犯罪者们就根据这些数值被制裁。维持治安的警察们常常和抓捕犯人们的行动部队“执行官”、以及监视指挥执行官们的“监视官”们一起作为一支队伍执行任务。自身就有着相当高的犯罪系数、能够接近犯罪根源的搜查官才能够成为优秀的“执行官”。因为“执行官”也有着可能孕育成犯罪者的危险倾向，所以就需要对搜查行动有着冷静的判断力的精英“监视官”来监视。公安局刑事科第一分队的成员们各怀想法，虽然常常会与真正的正义相悖却不得不继续执行任务。他们的所面临的彼岸将会有着什么？",
+        "poster_path": "/aX6S3P8xiz9nJwXjaka5e9kT6f4.jpg",
+        "backdrop_path": "/2HtnTJLs3CDUTu6ug8rib5vNnU2.jpg",
+        "release_date": "2012-10-12",
+        "runtime": 28,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          },
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          }
+        ],
+        "vote_average": 7.736,
+        "vote_count": 489,
+        "popularity": 19.9026,
+        "homepage": "https://psycho-pass.com",
+        "directors": [
+          "盐谷直义"
+        ]
+      }
+    },
     {
       "id": 68292,
       "title": "我的恐怖妻子",
