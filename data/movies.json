@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-31T08:11:00.018Z",
+  "generatedAt": "2026-08-31T08:11:23.192Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 308
+    "total": 309
   },
   "items": [
     {
@@ -87,6 +87,42 @@
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
+      }
+    },
+    {
+      "id": 1241983,
+      "title": "火车梦",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-08-28"
+      ],
+      "watchDate": "2026-08-28",
+      "rating": 8,
+      "note": "荒野大镖客即视感",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Train Dreams",
+        "original_language": "en",
+        "title": "火车梦",
+        "overview": "改编自丹尼斯·约翰逊的中篇小说，影片以动人笔触描绘了伐木工兼铁路工人罗伯特·格兰尼尔的生命肖像——在20世纪初剧变中的美国，他度过了一段蕴藏意外深度与美感的人生。",
+        "poster_path": "/ob3TVLDyhsNSaPwdh5LQ845HBGS.jpg",
+        "backdrop_path": "/u5NWHVhZ6HWc1fXnqn82cMar5St.jpg",
+        "release_date": "2025-11-05",
+        "runtime": 103,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.312,
+        "vote_count": 1158,
+        "popularity": 9.2647,
+        "homepage": "",
+        "directors": [
+          "克林特·本特利"
+        ]
       }
     },
     {
