@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-31T08:11:39.775Z",
+  "generatedAt": "2026-09-07T08:26:44.156Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 310
+    "total": 311
   },
   "items": [
     {
@@ -132,6 +132,40 @@
         "vote_count": 210,
         "popularity": 83.7346,
         "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
+        "directors": []
+      }
+    },
+    {
+      "id": 286617,
+      "title": "踮起脚尖",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2026-09-06"
+      ],
+      "watchDate": "2026-09-06",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Tip Toe",
+        "original_language": "en",
+        "title": "踮起脚尖",
+        "overview": "电工克莱夫与邻居利奥及一位LGBTQ+酒吧老板之间的关系迅速恶化，起因是利奥被锁在门外时，克莱夫允许他使用了手机。本剧由拉塞尔·T·戴维斯创作，共五集。",
+        "poster_path": "/Amo8TyKaRBk5iMJVFOcwfLTEMsX.jpg",
+        "backdrop_path": "/mX5njTGmCl8QGgdoBWiSKmHEy23.jpg",
+        "release_date": "2026-05-31",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 6.4,
+        "vote_count": 30,
+        "popularity": 9.7239,
+        "homepage": "https://www.channel4.com/programmes/tip-toe",
         "directors": []
       }
     },
