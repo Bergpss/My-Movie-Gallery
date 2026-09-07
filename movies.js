@@ -1,3 +1,5 @@
+import { formatWatchPeriod } from './watch-dates.js';
+
 const MOVIE_DATA_URL = 'data/movies.json';
 const RECOMMENDATION_API_URL = '/api/recommendations';
 const RECOMMENDATION_REQUEST_TIMEOUT_MS = 30000;
@@ -27,6 +29,7 @@ function getReleaseDate(movie) {
 }
 
 function getWatchDate(movie) {
+    if (movie.watchStartDate) return movie.watchEndDate || movie.watchStartDate;
     if (Array.isArray(movie.watchDates) && movie.watchDates.length) {
         return movie.watchDates[0];
     }
@@ -435,17 +438,18 @@ function renderMovies(movies) {
                     : [])
                 .map(date => formatDate(date))
                 .filter(Boolean);
-            const [primaryWatchDate, ...extraWatchDates] = formattedWatchDates;
+            const extraWatchDates = formattedWatchDates.filter(date => date !== (movie.watchStartDate || movie.watchDate || formattedWatchDates[0]));
             
-            if (primaryWatchDate) {
-                metaRows.push({ label: '观影', value: primaryWatchDate });
+            const watchPeriod = formatWatchPeriod(movie);
+            if (watchPeriod) {
+                metaRows.push({ label: '观影', value: watchPeriod.replace(/\d{4}-\d{2}-\d{2}/g, date => `<span class="watch-date">${date}</span>`), isWatchPeriod: true });
             }
             if (extraWatchDates.length > 0) {
                 metaRows.push({ label: '重温', value: extraWatchDates.join('、') });
             }
 
             const metaHtml = metaRows.map(row => `
-                <div class="meta-row">
+                <div class="meta-row${row.isWatchPeriod ? ' watch-period' : ''}">
                     <span class="meta-label">${row.label}</span>
                     <span class="meta-value">${row.value}</span>
                 </div>

@@ -417,3 +417,12 @@ body {
     background-size: 200px 100%;
     animation: shimmer 1.2s ease-in-out infinite;
 }
+
+.watch-period .meta-label {
+    flex-shrink: 0;
+}
+
+.watch-date {
+    display: inline-block;
+    white-space: nowrap;
+}

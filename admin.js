@@ -1,3 +1,5 @@
+import { applyWatchPeriod, formatWatchPeriod, validateWatchPeriod } from './watch-dates.js';
+
 // 管理界面逻辑
 
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w300';
@@ -252,9 +254,9 @@ function updateFormFieldsVisibility(prefix, status) {
     if (cinemaField) {
         cinemaField.hidden = isWishlist;
     }
-    // 日期标签：正在看显示"开始观看日期"，其他显示"观影日期"
+    // 单日记录只需填写开始日期
     if (dateLabel) {
-        dateLabel.textContent = isWatching ? '开始观看日期' : '观影日期';
+        dateLabel.textContent = '开始日期 / 单日观影';
     }
 }
 
@@ -453,12 +455,18 @@ async function handleAddFromModal(e) {
         mediaType: document.getElementById('add-type').value,
         status: status,
         rating: noRating ? undefined : (document.getElementById('add-rating').value ? parseFloat(document.getElementById('add-rating').value) : undefined),
-        watchDate: isWishlist ? undefined : (document.getElementById('add-date').value || undefined),
+        watchStartDate: isWishlist ? null : (document.getElementById('add-date').value || null),
+        watchEndDate: isWishlist ? null : (document.getElementById('add-end-date').value || null),
         inCinema: isWishlist ? false : document.getElementById('add-cinema').checked,
         wishlistReason: isWishlist ? (document.getElementById('add-reason').value || undefined) : undefined,
         note: document.getElementById('add-note').value || undefined,
     };
 
+    const dateError = validateWatchPeriod(movieData.watchStartDate, movieData.watchEndDate);
+    if (dateError) {
+        alert(dateError);
+        return;
+    }
     await addMovie(movieData);
 }
 
@@ -477,12 +485,18 @@ async function handleManualAdd(e) {
         mediaType: document.getElementById('manual-type').value,
         status: status,
         rating: noRating ? undefined : (document.getElementById('manual-rating').value ? parseFloat(document.getElementById('manual-rating').value) : undefined),
-        watchDate: isWishlist ? undefined : (document.getElementById('manual-date').value || undefined),
+        watchStartDate: isWishlist ? null : (document.getElementById('manual-date').value || null),
+        watchEndDate: isWishlist ? null : (document.getElementById('manual-end-date').value || null),
         inCinema: isWishlist ? false : document.getElementById('manual-cinema').checked,
         wishlistReason: isWishlist ? (document.getElementById('manual-reason').value || undefined) : undefined,
         note: document.getElementById('manual-note').value || undefined,
     };
 
+    const dateError = validateWatchPeriod(movieData.watchStartDate, movieData.watchEndDate);
+    if (dateError) {
+        alert(dateError);
+        return;
+    }
     await addMovie(movieData);
 }
 
@@ -599,6 +613,7 @@ function renderLibraryMovies() {
             <div class="result-item-info">
                 <h4>${movie.tmdb?.title || movie.title}</h4>
                 <p>${statusLabels[movie.status] || movie.status}${movie.rating ? ` · ${movie.rating}分` : ''}</p>
+                <p>${formatWatchPeriod(movie)}</p>
             </div>
         </div>
     `}).join('');
@@ -636,10 +651,7 @@ function applyLocalMovieUpdate(updateData) {
         updatedMovie.note = updateData.note;
     }
 
-    if (updateData.watchDate) {
-        updatedMovie.watchDate = updateData.watchDate;
-        updatedMovie.watchDates = Array.from(new Set([...(updatedMovie.watchDates || []), updateData.watchDate])).sort();
-    }
+    applyWatchPeriod(updatedMovie, updateData);
 
     if (updateData.status === 'wishlist') {
         delete updatedMovie.rating;
@@ -682,7 +694,8 @@ async function openEditModal(movie) {
     document.getElementById('edit-id').value = movie.id;
     document.getElementById('edit-status').value = movie.status || 'watched';
     document.getElementById('edit-rating').value = movie.rating || '';
-    document.getElementById('edit-date').value = movie.watchDate || movie.watchDates?.[0] || '';
+    document.getElementById('edit-date').value = movie.watchStartDate || movie.watchDate || movie.watchDates?.[0] || '';
+    document.getElementById('edit-end-date').value = movie.watchEndDate || '';
     document.getElementById('edit-cinema').checked = movie.inCinema || false;
     document.getElementById('edit-reason').value = movie.wishlistReason || '';
     document.getElementById('edit-note').value = movie.note || '';
@@ -721,9 +734,16 @@ editForm.addEventListener('submit', async (e) => {
         rating: noRating ? null : (document.getElementById('edit-rating').value || null),
         note: document.getElementById('edit-note').value || null,
         inCinema: isWishlist ? false : document.getElementById('edit-cinema').checked,
-        watchDate: isWishlist ? null : (document.getElementById('edit-date').value || null),
+        watchStartDate: isWishlist ? null : (document.getElementById('edit-date').value || null),
+        watchEndDate: isWishlist ? null : (document.getElementById('edit-end-date').value || null),
         wishlistReason: isWishlist ? (document.getElementById('edit-reason').value || null) : null,
     };
+
+    const dateError = validateWatchPeriod(updateData.watchStartDate, updateData.watchEndDate);
+    if (dateError) {
+        alert(dateError);
+        return;
+    }
 
     try {
         const response = await fetch(`${API_BASE}/update`, {

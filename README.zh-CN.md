@@ -222,3 +222,11 @@ python3 -m http.server 4173
 - 管理后台 API 需要部署到兼容 `functions/api/` 的 serverless 平台。
 - 不要把 TMDB 或 GitHub 的密钥提交到仓库。
 - 每次修改 `data/library.json` 后，前台部署前都要重新生成 `data/movies.json`。
+
+### 观影周期
+
+新增和编辑记录时，可填写开始日期与可选的结束日期。只填开始日期时，已看完的作品显示单日日期，正在看的作品显示“开始日期 至今”；填写不同的起止日期时显示完整周期。结束日期不能早于开始日期。
+
+`data/library.json` 使用可选字段 `watchStartDate`、`watchEndDate`（YYYY-MM-DD）保存当前观影周期，兼容原有 `watchDate`、`watchDates` 和重温记录。修改日期会替换当前日期，转为想看会清除观影时间。重新运行 `scripts/fetch_movies.js` 会将周期同步到生成数据。
+
+回归检查：`node --test scripts/test_watch_period.mjs`。

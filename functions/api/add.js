@@ -1,3 +1,5 @@
+import { applyWatchPeriod, validateWatchPeriod } from '../../watch-dates.js';
+
 // 添加电影 API - 通过 GitHub API 修改 library.json
 
 // 从 auth.js 导入 JWT 验证函数
@@ -74,6 +76,14 @@ export async function onRequestPost(context) {
         }
 
         // 从 GitHub 获取当前 library.json
+        const dateError = validateWatchPeriod(movieData.watchStartDate ?? movieData.watchDate, movieData.watchEndDate);
+        if (dateError) {
+            return new Response(JSON.stringify({ error: dateError }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json', ...corsHeaders },
+            });
+        }
+
         const githubToken = env.GITHUB_TOKEN;
         const githubOwner = env.GITHUB_OWNER;
         const githubRepo = env.GITHUB_REPO;
@@ -142,6 +152,8 @@ export async function onRequestPost(context) {
                 newMovie.watchDates = [today];
             }
         }
+
+        applyWatchPeriod(newMovie, { ...movieData, status: movieStatus });
 
         if (typeof rating === 'number' && rating >= 0 && rating <= 10) {
             newMovie.rating = rating;

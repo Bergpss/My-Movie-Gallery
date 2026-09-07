@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>管理后台 - Berg观影记录</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css?v=20260907-1">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 </head>
 
@@ -98,8 +98,10 @@
                             <input type="number" id="manual-rating" min="0" max="10" step="0.1" placeholder="可选">
                         </div>
                         <div class="form-group">
-                            <label for="manual-date" id="manual-date-label">观影日期</label>
+                            <label for="manual-date" id="manual-date-label">开始日期 / 单日观影</label>
                             <input type="date" id="manual-date">
+                            <label for="manual-end-date" class="end-date-label">结束日期（可选）</label>
+                            <input type="date" id="manual-end-date">
                         </div>
                     </div>
                     <div class="form-group">
@@ -167,8 +169,10 @@
                     </div>
                     <div class="form-row watched-only-field" id="add-watch-info-row">
                         <div class="form-group">
-                            <label for="add-date" id="add-date-label">观影日期</label>
+                            <label for="add-date" id="add-date-label">开始日期 / 单日观影</label>
                             <input type="date" id="add-date">
+                            <label for="add-end-date" class="end-date-label">结束日期（可选）</label>
+                            <input type="date" id="add-end-date">
                         </div>
                         <div class="form-group">
                             <label>
@@ -220,8 +224,10 @@
                 </div>
                 <div class="form-row watched-only-field" id="edit-watch-info-row">
                     <div class="form-group">
-                        <label for="edit-date" id="edit-date-label">观影日期</label>
+                        <label for="edit-date" id="edit-date-label">开始日期 / 单日观影</label>
                         <input type="date" id="edit-date">
+                        <label for="edit-end-date" class="end-date-label">结束日期（可选）</label>
+                        <input type="date" id="edit-end-date">
                     </div>
                     <div class="form-group">
                         <label>
@@ -245,7 +251,7 @@
         </div>
     </div>
 
-    <script src="admin.js"></script>
+    <script type="module" src="admin.js?v=20260907-1"></script>
 </body>
 
 </html>

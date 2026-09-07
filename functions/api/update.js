@@ -1,3 +1,5 @@
+import { applyWatchPeriod, validateWatchPeriod } from '../../watch-dates.js';
+
 // 更新电影 API - 通过 GitHub API 修改 library.json
 
 // JWT 验证函数
@@ -68,7 +70,7 @@ export async function onRequestPost(context) {
 
         // 获取请求数据
         const updateData = await request.json();
-        const { id, status, rating, note, inCinema, watchDate, wishlistReason } = updateData;
+        const { id, status, rating, note, inCinema, wishlistReason } = updateData;
 
         if (!id) {
             return new Response(JSON.stringify({ error: '缺少电影 ID' }), {
@@ -78,6 +80,14 @@ export async function onRequestPost(context) {
         }
 
         // 从 GitHub 获取当前 library.json
+        const dateError = validateWatchPeriod(updateData.watchStartDate ?? updateData.watchDate, updateData.watchEndDate);
+        if (dateError) {
+            return new Response(JSON.stringify({ error: dateError }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json', ...corsHeaders },
+            });
+        }
+
         const githubToken = env.GITHUB_TOKEN;
         const githubOwner = env.GITHUB_OWNER;
         const githubRepo = env.GITHUB_REPO;
@@ -172,16 +182,7 @@ export async function onRequestPost(context) {
             updatedMovie.inCinema = Boolean(inCinema);
         }
 
-        if (watchDate) {
-            if (!updatedMovie.watchDates) {
-                updatedMovie.watchDates = [];
-            }
-            if (!updatedMovie.watchDates.includes(watchDate)) {
-                updatedMovie.watchDates.push(watchDate);
-                updatedMovie.watchDates.sort();
-            }
-            updatedMovie.watchDate = updatedMovie.watchDates[0];
-        }
+        applyWatchPeriod(updatedMovie, { ...updateData, status: targetListName });
 
         // 处理想看的理由
         if (wishlistReason !== undefined) {

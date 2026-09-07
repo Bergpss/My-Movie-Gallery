@@ -482,3 +482,6 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+.form-group .end-date-label {
+    margin-top: 12px;
+}
