@@ -21,6 +21,19 @@
   ],
   "watched": [
     {
+      "id": 14836,
+      "title": "鬼妈妈",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-09-10"
+      ],
+      "watchStartDate": "2026-09-10",
+      "watchEndDate": null,
+      "watchDate": "2026-09-10",
+      "rating": 10,
+      "note": "好棒的画风啊"
+    },
+    {
       "id": 286617,
       "title": "踮起脚尖",
       "mediaType": "tv",
