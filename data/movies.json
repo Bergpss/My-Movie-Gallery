@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-10T14:09:09.353Z",
+  "generatedAt": "2026-09-11T04:01:00.815Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 312
+    "total": 313
   },
   "items": [
     {
@@ -12465,6 +12465,42 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1483525,
+      "title": "可能的爱情",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "가능한 사랑",
+        "original_language": "ko",
+        "title": "可能的爱情",
+        "overview": "在这个故事中，两对已婚夫妇——失业工人和妻子与纪录片制作人和丈夫——因拍摄纪录片而相遇，各自面对不同的人生和隐藏的欲望。",
+        "poster_path": "/afov480Y30WBDhb9OwOFdgAtcOQ.jpg",
+        "backdrop_path": "/kPbyLj2OyjojqvR1jfK1VvXzabg.jpg",
+        "release_date": "2026-09-23",
+        "runtime": 165,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 0,
+        "vote_count": 0,
+        "popularity": 23.0791,
+        "homepage": "",
+        "directors": [
+          "李沧东"
         ]
       }
     },
