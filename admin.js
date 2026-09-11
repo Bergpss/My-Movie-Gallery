@@ -601,6 +601,7 @@ function renderLibraryMovies() {
         const statusLabels = {
             watching: '正在看',
             watched: '已看完',
+            recap: '看过解说',
             wishlist: '想看',
             dropped: '弃剧'
         };

@@ -144,7 +144,10 @@ export async function onRequestPost(context) {
                 newMovie.watchDates = [watchDate];
             }
         } else {
-            // watched
+            // 已看完或看过解说
+            if (movieStatus === 'recap') {
+                newMovie.status = 'recap';
+            }
             if (watchDate) {
                 newMovie.watchDates = [watchDate];
             } else {
@@ -174,7 +177,9 @@ export async function onRequestPost(context) {
                 ? 'wishlist'
                 : movieStatus === 'dropped'
                     ? 'dropped'
-                    : 'watched';
+                    : movieStatus === 'recap'
+                        ? 'recap'
+                        : 'watched';
 
         // 确保目标列表存在
         if (!currentContent[targetList]) {
@@ -187,7 +192,9 @@ export async function onRequestPost(context) {
         const existsInWishlist = currentContent.wishlist?.some(m => String(m.id) === String(id));
         const existsInDropped = currentContent.dropped?.some(m => String(m.id) === String(id));
 
-        if (existsInWatching || existsInWatched || existsInWishlist || existsInDropped) {
+        const existsInRecap = currentContent.recap?.some(m => String(m.id) === String(id));
+
+        if (existsInWatching || existsInWatched || existsInWishlist || existsInDropped || existsInRecap) {
             return new Response(JSON.stringify({ error: '该电影已存在于观影记录中' }), {
                 status: 400,
                 headers: { 'Content-Type': 'application/json', ...corsHeaders },
@@ -223,7 +230,7 @@ export async function onRequestPost(context) {
 
         return new Response(JSON.stringify({
             success: true,
-            message: `已添加「${title}」到${targetList === 'watching' ? '正在看' : targetList === 'wishlist' ? '想看' : targetList === 'dropped' ? '弃剧' : '已看完'}`
+            message: `已添加「${title}」到${targetList === 'watching' ? '正在看' : targetList === 'wishlist' ? '想看' : targetList === 'dropped' ? '弃剧' : targetList === 'recap' ? '看过解说' : '已看完'}`
         }), {
             status: 200,
             headers: { 'Content-Type': 'application/json', ...corsHeaders },

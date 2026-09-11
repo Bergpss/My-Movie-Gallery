@@ -42,6 +42,8 @@ async function loadLibrary() {
     const wishlist = Array.isArray(parsed?.wishlist) ? parsed.wishlist : [];
     const dropped = Array.isArray(parsed?.dropped) ? parsed.dropped : [];
 
+    const recap = Array.isArray(parsed?.recap) ? parsed.recap : [];
+
     const deduped = new Map();
 
     const upsert = (entry, defaultStatus) => {
@@ -93,6 +95,7 @@ async function loadLibrary() {
     watched.forEach(entry => upsert(entry, 'watched'));
     wishlist.forEach(entry => upsert(entry, 'wishlist'));
     dropped.forEach(entry => upsert(entry, 'dropped'));
+    recap.forEach(entry => upsert(entry, 'recap'));
 
     return Array.from(deduped.values());
 }

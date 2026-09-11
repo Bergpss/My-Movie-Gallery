@@ -123,7 +123,7 @@ export async function onRequestPost(context) {
         const sha = fileData.sha;
 
         // 在所有列表中查找电影
-        const lists = ['watching', 'watched', 'wishlist', 'dropped'];
+        const lists = ['watching', 'watched', 'wishlist', 'dropped', 'recap'];
         let found = false;
         let sourceList = null;
         let movieIndex = -1;
@@ -152,6 +152,7 @@ export async function onRequestPost(context) {
         const targetList = status || movie.status || 'watched';
         const targetListName = targetList === 'watching' ? 'watching'
             : targetList === 'wishlist' ? 'wishlist'
+                : targetList === 'recap' ? 'recap'
                 : targetList === 'dropped' ? 'dropped'
                     : 'watched';
 

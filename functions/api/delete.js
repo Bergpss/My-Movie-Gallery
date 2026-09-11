@@ -113,7 +113,7 @@ export async function onRequestPost(context) {
         const sha = fileData.sha;
 
         // 在所有列表中查找并删除电影
-        const lists = ['watching', 'watched', 'wishlist', 'dropped'];
+        const lists = ['watching', 'watched', 'wishlist', 'dropped', 'recap'];
         let found = false;
         let deletedTitle = '';
 

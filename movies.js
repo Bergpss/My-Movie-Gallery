@@ -100,10 +100,11 @@ function showLoadingSkeletons() {
         document.getElementById('watching-container'),
         document.getElementById('wishlist-container'),
         document.getElementById('movie-container'),
-        document.getElementById('dropped-container')
+        document.getElementById('dropped-container'),
+        document.getElementById('recap-container')
     ];
 
-    const skeletonCount = [4, 2, 3, 8, 2]; // Different counts for each section
+    const skeletonCount = [4, 2, 3, 8, 2, 2]; // Different counts for each section
 
     containers.forEach((container, index) => {
         if (!container) return;
@@ -329,7 +330,10 @@ function renderMovies(movies) {
     const droppedContainer = document.getElementById('dropped-container');
     const droppedEmpty = document.querySelector('#dropped-section .empty-message');
 
-    [watchingContainer, wishlistContainer, watchedContainer, droppedContainer].forEach(container => {
+    const recapContainer = document.getElementById('recap-container');
+    const recapEmpty = document.querySelector('#recap-section .empty-message');
+
+    [watchingContainer, wishlistContainer, watchedContainer, droppedContainer, recapContainer].forEach(container => {
         if (container) {
             container.innerHTML = '';
         }
@@ -352,8 +356,10 @@ function renderMovies(movies) {
         return status === 'dropped';
     });
 
+    const recapMovies = filteredMovies.filter(movie => (movie.status || '').toLowerCase() === 'recap');
+
     const watchedMovies = filteredMovies.filter(movie => {
-        return !watchingMovies.includes(movie) && !wishlistMovies.includes(movie) && !droppedMovies.includes(movie);
+        return !watchingMovies.includes(movie) && !wishlistMovies.includes(movie) && !droppedMovies.includes(movie) && !recapMovies.includes(movie);
     });
 
     const renderList = (container, emptyMessageEl, list, sortMode) => {
@@ -489,6 +495,7 @@ function renderMovies(movies) {
     renderList(wishlistContainer, wishlistEmpty, wishlistMovies, 'release');
     renderList(watchedContainer, watchedEmpty, watchedMovies, 'watch');
     renderList(droppedContainer, droppedEmpty, droppedMovies, 'release');
+    renderList(recapContainer, recapEmpty, recapMovies, 'watch');
     renderRecommendations();
 }
 
