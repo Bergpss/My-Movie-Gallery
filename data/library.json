@@ -21,6 +21,18 @@
   ],
   "watched": [
     {
+      "id": 46738,
+      "title": "焦土之城",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-09-12"
+      ],
+      "watchStartDate": "2026-09-12",
+      "watchEndDate": null,
+      "watchDate": "2026-09-12",
+      "rating": 7.5
+    },
+    {
       "id": 14836,
       "title": "鬼妈妈",
       "mediaType": "movie",
