@@ -1,6 +1,18 @@
 {
   "watching": [
     {
+      "id": 124101,
+      "title": "绝望写手",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchStartDate": "2026-09-18",
+      "watchEndDate": null,
+      "watchDate": "2026-09-18",
+      "watchDates": [
+        "2026-09-18"
+      ]
+    },
+    {
       "id": 43865,
       "title": "心理测量者",
       "mediaType": "tv",
