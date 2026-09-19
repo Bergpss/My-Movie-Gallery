@@ -1,11 +1,51 @@
 {
-  "generatedAt": "2026-09-12T15:15:46.631Z",
+  "generatedAt": "2026-09-19T01:32:17.579Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 314
+    "total": 315
   },
   "items": [
+    {
+      "id": 124101,
+      "title": "绝望写手",
+      "mediaType": "tv",
+      "status": "watching",
+      "watchDates": [
+        "2026-09-18"
+      ],
+      "watchDate": "2026-09-18",
+      "watchStartDate": "2026-09-18",
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Hacks",
+        "original_language": "en",
+        "title": "绝望写手",
+        "overview": "故事聚焦于拉斯维加斯的传奇喜剧演员黛博拉与自命不凡的叛逆25岁少女艾娃之间的黑暗师徒关系。",
+        "poster_path": "/lREDe8HTA81Urfj6moo3NyLge2e.jpg",
+        "backdrop_path": "/bbAR4qKxjnjyKAt4YMrL725Mtfw.jpg",
+        "release_date": "2021-05-13",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 7.5,
+        "vote_count": 393,
+        "popularity": 46.3998,
+        "homepage": "https://www.hbomax.com/shows/hacks/67e940b7-aab2-46ce-a62b-c7308cde9de7",
+        "directors": []
+      }
+    },
     {
       "id": 43865,
       "title": "心理测量者",
