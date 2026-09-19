@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T01:32:17.579Z",
+  "generatedAt": "2026-09-19T01:33:08.614Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 315
+    "total": 316
   },
   "items": [
     {
@@ -12551,6 +12551,54 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 205050,
+      "title": "香格里拉边境",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "シャングリラ・フロンティア",
+        "original_language": "ja",
+        "title": "香格里拉边境",
+        "overview": "你是为了什么而玩游戏的？如果说世上存在着100部神作游戏，那垃圾游戏肯定有1000部。这是喜爱垃圾游戏，同时也被垃圾游戏所爱的男人「阳务乐郎」，向垃圾游戏的对立面——神作游戏《香格里拉边境》发起挑战的故事。原作网络小说的总阅览数超过5亿，并少见的跳过书籍出版直接在《周刊少年MAGAZINE》上改编成漫画开始连载。在这本拥有60年以上历史的漫画杂志上，成为了读者问卷评比有史以来的首个四冠王！本作品通过每个人都能拥有的游戏体验来描绘出一种全新风格的奇幻世界，让沉浸在过去记忆中的大人，生活在科技最前沿的年轻人，都能感受到全新的冒险刺激。一名「垃圾游戏猎人」向神作发起挑战，至高无上的「游戏×幻想」的冒险故事，开幕！",
+        "poster_path": "/1y6vnsQdoNSZupBEOiLuzXZfYHv.jpg",
+        "backdrop_path": "/xcgdODcDuzngTXRtV7AtnAFpWzu.jpg",
+        "release_date": "2023-10-01",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          },
+          {
+            "id": 10759,
+            "name": "动作冒险"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 16,
+            "name": "动画"
+          }
+        ],
+        "vote_average": 8.2,
+        "vote_count": 253,
+        "popularity": 24.5711,
+        "homepage": "https://anime.shangrilafrontier.com",
+        "directors": [
+          "洼冈俊之"
         ]
       }
     },
