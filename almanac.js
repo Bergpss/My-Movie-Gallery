@@ -186,9 +186,18 @@ function openMovie(movie) {
     $('detail-link').hidden = !movie.externalUrl;
     $('detail-link').href = movie.externalUrl || '#';
     $('detail-link').textContent = movie.mediaType === 'web-video' ? '打开原视频 ↗' : '在 TMDB 查看 ↗';
+    // 防剧透：每次打开都先遮住简介
+    setOverviewRevealed(false);
     $('movie-dialog').showModal();
     $('movie-dialog').scrollTop = 0;
     $('close-dialog').focus();
+}
+
+function setOverviewRevealed(revealed) {
+    $('detail-spoiler').classList.toggle('revealed', revealed);
+    $('detail-overview').inert = !revealed;
+    $('detail-overview').setAttribute('aria-hidden', String(!revealed));
+    $('reveal-overview').hidden = revealed;
 }
 
 async function loadData() {
@@ -279,6 +288,10 @@ document.addEventListener('error', event => {
     if (image instanceof HTMLImageElement && !image.src.endsWith(PLACEHOLDER)) image.src = PLACEHOLDER;
 }, true);
 $('retry').addEventListener('click', () => dataError ? loadData() : loadRecommendations());
+$('reveal-overview').addEventListener('click', () => {
+    setOverviewRevealed(true);
+    $('detail-overview').focus();
+});
 $('close-dialog').addEventListener('click', () => $('movie-dialog').close());
 $('movie-dialog').addEventListener('click', event => {
     if (event.target !== $('movie-dialog')) return;

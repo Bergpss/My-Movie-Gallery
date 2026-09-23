@@ -154,6 +154,12 @@ dialog::backdrop { background: #0009; backdrop-filter: blur(4px); }
 .detail-body section { margin-top: 20px; }
 .detail-body section h3 { margin: 0 0 6px; font: 500 11px var(--mono); letter-spacing: .12em; color: var(--muted); }
 .detail-body section p { margin: 0; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; }
+/* 防剧透：简介默认模糊，点击后显示 */
+.spoiler { position: relative; }
+.spoiler p { filter: blur(6px); user-select: none; transition: filter .25s; }
+.spoiler.revealed p { filter: none; user-select: auto; }
+.spoiler-reveal { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; font: 500 13px var(--sans); color: var(--ink); background: color-mix(in srgb, var(--surface) 55%, transparent); }
+.spoiler-reveal:hover { color: var(--accent); }
 #detail-note-section p { padding-left: 12px; border-left: 3px solid var(--accent); }
 .detail-link { display: inline-block; margin-top: 24px; font-size: 13px; border-bottom: 1px solid var(--accent); color: var(--accent); }
 .no-script { margin: 40px 20px; }

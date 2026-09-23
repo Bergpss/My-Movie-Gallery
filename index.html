@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- 字体异步加载：国内访问 Google Fonts 慢时不阻塞首屏，回退到系统字体 -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="almanac.css?v=20260923-1">
+        <link rel="stylesheet" href="almanac.css?v=20260923-2">
     </head>
     <body>
         <a class="skip-link" href="#main">跳到正文</a>
@@ -97,12 +97,14 @@
                 <div id="detail-ratings" class="detail-ratings"></div><dl id="detail-meta"></dl>
                 <section id="detail-note-section"><h3>我的观影笔记</h3><p id="detail-note"></p></section>
                 <section id="detail-reason-section"><h3 id="detail-reason-heading">想看理由</h3><p id="detail-reason"></p></section>
-                <section id="detail-overview-section"><h3>关于这部影片</h3><p id="detail-overview"></p></section>
+                <section id="detail-overview-section"><h3>关于这部影片</h3>
+                    <div class="spoiler" id="detail-spoiler"><p id="detail-overview" tabindex="-1"></p><button id="reveal-overview" class="spoiler-reveal">可能剧透 · 点击显示简介</button></div>
+                </section>
                 <a id="detail-link" class="detail-link" target="_blank" rel="noopener noreferrer">在 TMDB 查看 ↗</a>
             </div></div>
         </dialog>
         <noscript><p class="no-script">请启用 JavaScript 以浏览观影年鉴。</p></noscript>
         <script src="recommendation-engine.js?v=20260726-1"></script>
-        <script type="module" src="almanac.js?v=20260923-1"></script>
+        <script type="module" src="almanac.js?v=20260923-2"></script>
     </body>
 </html>
