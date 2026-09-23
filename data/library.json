@@ -11,12 +11,6 @@
       "watchDates": [
         "2026-09-18"
       ]
-    },
-    {
-      "id": 270476,
-      "title": "寡妇湾",
-      "mediaType": "tv",
-      "status": "watching"
     }
   ],
   "watched": [
@@ -3695,6 +3689,18 @@
     }
   ],
   "dropped": [
+    {
+      "id": 270476,
+      "title": "寡妇湾",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": null,
+      "inCinema": false,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "watchDate": null,
+      "watchDates": []
+    },
     {
       "id": 68292,
       "title": "我的恐怖妻子",
