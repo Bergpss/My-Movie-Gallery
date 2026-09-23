@@ -116,6 +116,7 @@ img { max-width: 100%; }
 .list-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; padding-block: 40px 20px; border-bottom: 1px solid var(--ink); }
 .list-head h1 { margin: 6px 0 0; font: 900 clamp(40px, 7vw, 72px)/1 var(--sans); }
 .list-subtitle { margin: 10px 0 0; color: var(--muted); }
+.list-subtitle:empty, .empty-state p:empty { display: none; }
 .type-filters { display: flex; gap: 4px; flex-wrap: wrap; }
 .type-filters button { padding: 6px 12px; font-size: 13px; color: var(--muted); border: 1px solid var(--grid); }
 .type-filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }

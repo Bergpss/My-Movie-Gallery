@@ -5,7 +5,6 @@ import { formatWatchPeriod } from './watch-dates.js';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => `&#${char.charCodeAt(0)};`);
 const labels = { watched: '看过', watching: '正在看', wishlist: '想看', discover: '发现', recap: '看过解说', dropped: '弃剧' };
-const subtitles = { watched: '搜索你看过的每一部。', watching: '故事还在继续，看完进年鉴。', wishlist: '留给下一次，与光影相遇。', discover: '从喜欢的电影，走向下一段故事。', recap: '从另一个视角，走进故事。', dropped: '有些故事，暂且停在这里。' };
 const typeLabels = { movie: '电影', tv: '剧集', 'web-video': '网络视频' };
 const state = { status: 'watched', type: 'all', query: '', year: null };
 let movies = [];
@@ -123,7 +122,7 @@ function renderList() {
     const waiting = discovering && recommendationState === 'loading';
     $('list-eyebrow').textContent = state.query ? `搜索「${state.query}」` : 'BERG 的收藏';
     $('list-title').textContent = labels[state.status];
-    $('list-subtitle').textContent = `${subtitles[state.status]}${selected.length ? ` 共 ${selected.length} 部。` : ''}`;
+    $('list-subtitle').textContent = selected.length ? `共 ${selected.length} 部` : '';
     const empty = !waiting && selected.length === 0;
     $('empty-state').hidden = !empty;
     $('empty-title').textContent = dataError ? '观影记录暂时无法加载' : state.query ? '没有找到这部影片'
@@ -131,7 +130,7 @@ function renderList() {
     $('empty-description').textContent = dataError ? '请检查网络连接后重试。'
         : state.query ? '试试其他片名，或清空搜索。'
             : discovering ? recommendationMessage
-                : state.type !== 'all' ? '切换影片类型，看看其他收藏。' : '收藏下一段光影，留下一段记忆。';
+                : state.type !== 'all' ? '切换影片类型，看看其他收藏。' : '';
     $('retry').hidden = !dataError && !(discovering && recommendationState === 'error');
     $('grid').innerHTML = waiting || empty ? '' : selected.map(movie => `<button class="poster-card" data-key="${esc(movie.key)}" aria-label="查看《${esc(movie.title)}》">
         <img loading="lazy" decoding="async" alt="" src="${esc(posterAt(movie.poster, 'w342'))}">
