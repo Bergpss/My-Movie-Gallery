@@ -259,7 +259,6 @@ document.querySelectorAll('[data-status]').forEach(button => button.addEventList
     state.status = button.dataset.status;
     state.query = '';
     $('search').value = '';
-    document.querySelector('.more-nav').open = false;
     render();
     window.scrollTo({ top: 0 });
     if (state.status === 'discover') loadRecommendations();
