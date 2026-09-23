@@ -84,20 +84,24 @@ img { max-width: 100%; }
 .cal .dnum { font: 10px var(--mono); color: var(--muted); text-align: center; }
 .cal .c { aspect-ratio: 2 / 3; background: var(--cell); position: relative; }
 .cal .c.x { background: none; }
-.cal .c img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cal .c button { position: absolute; inset: 0; display: flex; gap: 1px; }
+.cal .c img { flex: 1 1 0; min-width: 0; height: 100%; object-fit: cover; }
 .cal .c[data-count]::after { content: attr(data-count); position: absolute; right: -3px; top: -5px; z-index: 1; font: 700 9px/14px var(--mono); min-width: 14px; text-align: center; background: var(--accent); color: var(--on-accent); border-radius: 7px; }
-.cal .c button { position: absolute; inset: 0; }
-.cal .c button:hover img, .cal .c button:focus-visible img, .cal .c button[aria-pressed="true"] img { outline: 2px solid var(--accent); outline-offset: 1px; }
+.cal .c button:hover, .cal .c button:focus-visible, .cal .c button[aria-pressed="true"] { outline: 2px solid var(--accent); outline-offset: 1px; z-index: 1; }
 
-.focus { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; margin-top: 24px; padding-block: 20px; border-top: 1px solid var(--grid); }
+/* 选中那天的观影：一天看了几部就列几部 */
+.focus { margin-top: 24px; padding-block: 20px; border-top: 1px solid var(--grid); display: grid; gap: 28px; }
 .focus:empty { display: none; }
-.focus img { width: 160px; max-width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: var(--cell); }
-.focus h3 { margin: 4px 0; font: 900 32px/1.2 var(--sans); }
-.focus .meta { font: 12px var(--mono); color: var(--muted); }
+.focus-date { margin: 0; }
+.focus-film { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; }
+.focus[data-count]:not([data-count="1"]) .focus-film { grid-template-columns: 120px minmax(0, 1fr); }
+.focus[data-count]:not([data-count="1"]) .focus-film + .focus-film { padding-top: 28px; border-top: 1px solid var(--grid); }
+.focus-film img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: var(--cell); }
+.focus h3 { margin: 0 0 4px; font: 900 32px/1.2 var(--sans); }
+.focus .label { margin: 0 0 4px; }
+.focus .meta { margin: 0; font: 12px var(--mono); color: var(--muted); }
 .focus blockquote { margin: 16px 0 0; padding-left: 14px; border-left: 3px solid var(--accent); font-size: 16px; max-width: 36em; white-space: pre-wrap; overflow-wrap: anywhere; }
 .focus-more { margin-top: 16px; font-size: 13px; border-bottom: 1px solid currentColor; }
-.focus-others { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
-.focus-others button { text-decoration: underline; text-underline-offset: 3px; }
 
 .genres { display: flex; height: 44px; border: 1px solid var(--ink); }
 .genres span { display: flex; align-items: center; padding-inline: 8px; font: 500 12px var(--sans); white-space: nowrap; overflow: hidden; border-right: 1px solid var(--ink); min-width: 0; }
@@ -169,7 +173,7 @@ dialog::backdrop { background: #0009; backdrop-filter: blur(4px); }
 @media (max-width: 860px) {
     .intro { grid-template-columns: 1fr; gap: 24px; }
     .top-rated { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .focus { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
+    .focus-film, .focus[data-count]:not([data-count="1"]) .focus-film { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
     .focus h3 { font-size: 24px; }
     .now { grid-template-columns: 1fr; }
 }

@@ -67,7 +67,7 @@ function renderAlmanac() {
         + (summary.favorite ? `，最难忘的也许是<b>《${esc(summary.favorite.title)}》</b>。` : '。');
 
     renderCalendar(year, list);
-    showFocus(list[0], list);
+    showDay(list[0]?.watchSortDate, list);
 
     const total = summary.genres.reduce((sum, [, count]) => sum + count, 0);
     $('genres').innerHTML = summary.genres.slice(0, 7).map(([genre, count]) =>
@@ -89,30 +89,37 @@ function renderCalendar(year, list) {
         const monthDays = new Date(+year, month, 0).getDate();
         html += `<span class="m">${mm}月</span>`;
         for (let day = 1; day <= 31; day++) {
-            const films = days.get(`${mm}-${String(day).padStart(2, '0')}`);
+            const key = `${mm}-${String(day).padStart(2, '0')}`;
+            const films = days.get(key);
             if (day > monthDays) html += '<span class="c x"></span>';
             else if (!films) html += '<span class="c"></span>';
-            else html += `<span class="c"${films.length > 1 ? ` data-count="${films.length}"` : ''}><button data-focus="${esc(films[0].key)}" aria-pressed="false" title="${esc(films.map(film => film.title).join(' / '))}" aria-label="${month}月${day}日：${esc(films.map(film => film.title).join('、'))}">
-                <img loading="lazy" alt="" src="${esc(posterAt(films[0].poster, 'w92'))}"></button></span>`;
+            // 同一天看了多部：海报在格子里并排切开，最多显示 3 张
+            else html += `<span class="c"${films.length > 1 ? ` data-count="${films.length}"` : ''}><button data-day="${year}-${key}" aria-pressed="false" title="${esc(films.map(film => film.title).join(' / '))}" aria-label="${month}月${day}日：${esc(films.map(film => film.title).join('、'))}">
+                ${films.slice(0, 3).map(film => `<img loading="lazy" alt="" src="${esc(posterAt(film.poster, 'w92'))}">`).join('')}</button></span>`;
         }
     }
     $('cal').innerHTML = html;
 }
 
-function showFocus(movie, list) {
-    if (!movie) { $('focus').replaceChildren(); return; }
-    const sameDay = list.filter(other => other.watchSortDate === movie.watchSortDate && other.key !== movie.key);
+function focusFilm(movie) {
     const meta = [movie.tmdb?.original_title !== movie.title && movie.tmdb?.original_title, movie.tmdb?.release_date?.slice(0, 4),
         movie.tmdb?.directors?.join('、'), movie.tmdb?.runtime && `${movie.tmdb.runtime} min`,
         movie.personalRating != null && `我的评分 ${movie.personalRating}`].filter(Boolean).join(' · ');
-    $('focus').innerHTML = `<img alt="" src="${esc(posterAt(movie.poster, 'w342'))}">
-        <div><p class="label">${esc(movie.watchSortDate.replaceAll('-', '.'))}${movie.inCinema ? ' · 影院' : ''}</p>
-        <h3>${esc(movie.title)}</h3><p class="meta">${esc(meta)}</p>
+    return `<article class="focus-film"><img alt="" src="${esc(posterAt(movie.poster, 'w342'))}">
+        <div>${movie.inCinema ? '<p class="label">影院</p>' : ''}<h3>${esc(movie.title)}</h3><p class="meta">${esc(meta)}</p>
         ${movie.note ? `<blockquote>${esc(movie.note)}</blockquote>` : ''}
-        ${sameDay.length ? `<div class="focus-others">同一天还看了：${sameDay.map(other => `<button data-focus="${esc(other.key)}">${esc(other.title)}</button>`).join('')}</div>` : ''}
-        <button class="focus-more" data-key="${esc(movie.key)}">查看完整记录 →</button></div>`;
-    document.querySelectorAll('#cal button[data-focus]').forEach(button =>
-        button.setAttribute('aria-pressed', String(findMovie(button.dataset.focus)?.watchSortDate === movie.watchSortDate)));
+        <button class="focus-more" data-key="${esc(movie.key)}">查看完整记录 →</button></div></article>`;
+}
+
+// 按天展示：列出这一天看的每一部
+function showDay(date, list) {
+    const films = list.filter(movie => movie.watchSortDate === date);
+    if (!films.length) { $('focus').replaceChildren(); return; }
+    $('focus').dataset.count = String(films.length);
+    $('focus').innerHTML = `<p class="label focus-date">${esc(date.replaceAll('-', '.'))}${films.length > 1 ? ` · ${films.length} 部` : ''}</p>`
+        + films.map(focusFilm).join('');
+    document.querySelectorAll('#cal button[data-day]').forEach(button =>
+        button.setAttribute('aria-pressed', String(button.dataset.day === date)));
 }
 
 function renderList() {
@@ -278,8 +285,8 @@ $('year-bars').addEventListener('click', event => {
     if (button) { state.year = button.dataset.year; render(); }
 });
 document.addEventListener('click', event => {
-    const focus = event.target.closest('[data-focus]');
-    if (focus) return showFocus(findMovie(focus.dataset.focus), years.get(state.year) || []);
+    const day = event.target.closest('[data-day]');
+    if (day) return showDay(day.dataset.day, years.get(state.year) || []);
     const card = event.target.closest('[data-key]');
     if (card) openMovie(findMovie(card.dataset.key));
 });
