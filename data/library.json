@@ -13,12 +13,6 @@
       ]
     },
     {
-      "id": 68292,
-      "title": "我的恐怖妻子",
-      "mediaType": "tv",
-      "status": "watching"
-    },
-    {
       "id": 270476,
       "title": "寡妇湾",
       "mediaType": "tv",
@@ -3701,6 +3695,18 @@
     }
   ],
   "dropped": [
+    {
+      "id": 68292,
+      "title": "我的恐怖妻子",
+      "mediaType": "tv",
+      "status": "dropped",
+      "note": null,
+      "inCinema": false,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "watchDate": null,
+      "watchDates": []
+    },
     {
       "id": 64010,
       "title": "请回答1988",
