@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-23T09:13:28.224Z",
+  "generatedAt": "2026-09-23T09:16:40.138Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 317
+    "total": 318
   },
   "items": [
     {
@@ -12416,6 +12416,51 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1423191,
+      "title": "生化危机：爆发夜",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "mustSeeInCinema": true,
+      "tmdb": {
+        "original_title": "Resident Evil",
+        "original_language": "en",
+        "title": "生化危机：爆发夜",
+        "overview": "奉命奔赴浣熊市的医疗速递员布莱恩，意外深陷全城失控的病毒浩劫。浣熊市彻底沦陷，异变怪物横行肆虐、嗜血猎捕，身陷末日绝境的他，能否在这场惊魂噩梦中突围求生，搏出一线生机？",
+        "poster_path": "/qMvRqzzDVfQpLi5ZoKwttTQdaJe.jpg",
+        "backdrop_path": "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+        "release_date": "2026-09-16",
+        "runtime": 95,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          }
+        ],
+        "vote_average": 7.3,
+        "vote_count": 342,
+        "popularity": 584.55,
+        "homepage": "",
+        "directors": [
+          "扎克·克雷格"
         ]
       }
     },
