@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-23T09:22:47.846Z",
+  "generatedAt": "2026-09-23T14:03:04.253Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 318
+    "total": 319
   },
   "items": [
     {
@@ -12459,6 +12459,48 @@
         "directors": [
           "塔伊加·维迪提"
         ]
+      }
+    },
+    {
+      "id": 95480,
+      "title": "Slow Horses",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Slow Horses",
+        "original_language": "en",
+        "title": "Slow Horses",
+        "overview": "该剧根据米克·赫伦的同名系列小说改编，故事围绕着军情五处内一个不正常的特务组，以及他们讨人厌的老板：臭名满天下的杰克逊·兰姆。他们在真假难辨的间谍世界中努力着，以保卫英国免受邪恶势力的侵害。",
+        "poster_path": "/xPrBhPFundGRzXRZiRknxieycdQ.jpg",
+        "backdrop_path": "/xpSxYoqTyz0Fb8Wn2S3bp0NIqVc.jpg",
+        "release_date": "2022-04-01",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8.024,
+        "vote_count": 994,
+        "popularity": 155.2859,
+        "homepage": "https://tv.apple.com/show/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o",
+        "directors": []
       }
     },
     {
