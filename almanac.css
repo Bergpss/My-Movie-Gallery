@@ -43,14 +43,17 @@ img { max-width: 100%; }
 .feedback:empty { display: none; }
 
 /* 正在看：年鉴之前的「此刻」一栏 */
-.now { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding-block: 20px; border-bottom: 1px solid var(--grid); align-items: start; }
-.now h2 { margin: 0; font: 700 22px/1.2 var(--sans); }
-.now h2 small { display: block; margin-top: 6px; }
-.now-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.now { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 24px; padding-block: 36px; border-bottom: 1px solid var(--grid); align-items: start; }
+.now h2 { margin: 0; font: 900 32px/1.2 var(--sans); }
+.now h2 small { display: block; margin-top: 8px; font-size: 12px; }
+/* 在看的部数少时卡片更大：1 部单独放宽，2 部各占一半，3 部以上三列 */
+.now-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.now-list[data-count="1"] { grid-template-columns: minmax(0, 640px); }
+.now-list[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .now-list button { display: block; width: 100%; text-align: left; }
 .now-list img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--cell); }
-.now-list p { margin: 8px 0 0; display: flex; justify-content: space-between; gap: 8px; font-weight: 700; }
-.now-list p span { font: 500 11px var(--mono); color: var(--accent); white-space: nowrap; }
+.now-list p { margin: 12px 0 0; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 20px; font-weight: 700; }
+.now-list p span { font: 500 12px var(--mono); color: var(--accent); white-space: nowrap; }
 .now-list button:hover img { filter: brightness(1.05); }
 
 /* 大年份 + 年份柱状图 */
@@ -70,7 +73,7 @@ img { max-width: 100%; }
 .summary em { font: 700 1.5em/1 var(--display); font-stretch: 80%; font-style: normal; font-variant-numeric: tabular-nums; color: var(--accent); margin-inline: .08em; }
 .summary b { font-weight: 700; }
 
-#almanac > section { padding-block: 44px 0; }
+#almanac > section:not(.now) { padding-block: 44px 0; }
 .sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
 .sec-head h2 { margin: 0; font: 700 22px var(--sans); }
 
@@ -175,7 +178,8 @@ dialog::backdrop { background: #0009; backdrop-filter: blur(4px); }
     .primary-nav { gap: 14px; font-size: 13px; }
     .search-box { width: 100%; }
     /* 手机上正在看改成横向滑动，不把年鉴挤出首屏 */
-    .now-list { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 62%; overflow-x: auto; scroll-snap-type: x mandatory; }
+    .now h2 { font-size: 26px; }
+    .now-list, .now-list[data-count] { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 80%; overflow-x: auto; scroll-snap-type: x mandatory; }
     .now-list button { scroll-snap-align: start; }
     .now-list p { flex-direction: column; gap: 0; }
     .poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -41,7 +41,8 @@ function render() {
 function renderNow() {
     const watching = selectMovies(movies, { status: 'watching' });
     $('now-section').hidden = watching.length === 0;
-    $('now-count').textContent = `${watching.length} 部 · 看完进年鉴`;
+    $('now-count').textContent = `${watching.length} 部`;
+    $('now').dataset.count = String(Math.min(watching.length, 3));
     $('now').innerHTML = watching.map(movie => `<button data-key="${esc(movie.key)}" aria-label="查看《${esc(movie.title)}》">
         <img loading="lazy" alt="" src="${esc(movie.tmdb?.backdrop_path ? `https://image.tmdb.org/t/p/w780${movie.tmdb.backdrop_path}` : movie.poster)}">
         <p>${esc(movie.title)}<span>${typeLabel(movie)}${genreNames(movie)[0] ? ' · ' + esc(genreNames(movie)[0]) : ''}</span></p>
