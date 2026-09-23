@@ -59,6 +59,17 @@ async function verifyJWT(token, secret) {
   }
 }
 
+// 固定耗时比较：先各自哈希成等长摘要再逐字节比，避免按响应时间猜密码
+async function passwordMatches(input, expected) {
+  const encoder = new TextEncoder();
+  const [a, b] = await Promise.all([input, expected].map(value => crypto.subtle.digest('SHA-256', encoder.encode(String(value)))));
+  const left = new Uint8Array(a);
+  const right = new Uint8Array(b);
+  let diff = 0;
+  for (let i = 0; i < left.length; i++) diff |= left[i] ^ right[i];
+  return diff === 0;
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
   
@@ -81,14 +92,15 @@ export async function onRequestPost(context) {
     
     // 验证密码
     const adminPassword = env.ADMIN_PASSWORD;
-    if (!adminPassword) {
+    const jwtSecret = env.JWT_SECRET;
+    if (!adminPassword || !jwtSecret) {
       return new Response(JSON.stringify({ error: '服务器配置错误' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json', ...corsHeaders },
       });
     }
     
-    if (password !== adminPassword) {
+    if (!(await passwordMatches(password, adminPassword))) {
       return new Response(JSON.stringify({ error: '密码错误' }), {
         status: 401,
         headers: { 'Content-Type': 'application/json', ...corsHeaders },
@@ -96,7 +108,6 @@ export async function onRequestPost(context) {
     }
     
     // 生成 JWT Token（24 小时有效）
-    const jwtSecret = env.JWT_SECRET || 'default-secret-change-me';
     const token = await createJWT(
       {
         role: 'admin',

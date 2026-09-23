@@ -54,7 +54,13 @@ export async function onRequestPost(context) {
         }
 
         const token = authHeader.slice(7);
-        const jwtSecret = env.JWT_SECRET || 'default-secret-change-me';
+        const jwtSecret = env.JWT_SECRET;
+        if (!jwtSecret) {
+            return new Response(JSON.stringify({ error: '服务器配置错误' }), {
+                status: 500,
+                headers: { 'Content-Type': 'application/json', ...corsHeaders },
+            });
+        }
         const payload = await verifyJWT(token, jwtSecret);
 
         if (!payload || payload.role !== 'admin') {
