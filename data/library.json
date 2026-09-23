@@ -15,6 +15,21 @@
   ],
   "watched": [
     {
+      "id": 1391021,
+      "title": "欢迎来龙餐馆",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 10,
+      "note": null,
+      "inCinema": true,
+      "watchStartDate": "2026-08-22",
+      "watchEndDate": null,
+      "watchDate": "2026-08-22",
+      "watchDates": [
+        "2026-08-22"
+      ]
+    },
+    {
       "id": 46738,
       "title": "焦土之城",
       "mediaType": "movie",
@@ -3561,12 +3576,6 @@
       "mediaType": "tv",
       "status": "wishlist",
       "wishlistReason": "看到推上把这部剧跟《龙餐馆》对比"
-    },
-    {
-      "id": 1391021,
-      "title": "欢迎来龙餐馆",
-      "mediaType": "movie",
-      "status": "wishlist"
     },
     {
       "id": 913823,
