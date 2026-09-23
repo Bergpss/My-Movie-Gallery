@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T09:16:40.138Z",
+  "generatedAt": "2026-09-23T09:22:47.846Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -44,6 +44,48 @@
         "popularity": 46.3998,
         "homepage": "https://www.hbomax.com/shows/hacks/67e940b7-aab2-46ce-a62b-c7308cde9de7",
         "directors": []
+      }
+    },
+    {
+      "id": 1391021,
+      "title": "欢迎来龙餐馆",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-08-22"
+      ],
+      "watchDate": "2026-08-22",
+      "watchStartDate": "2026-08-22",
+      "watchEndDate": null,
+      "rating": 10,
+      "note": null,
+      "inCinema": true,
+      "tmdb": {
+        "original_title": "欢迎来龙餐馆",
+        "original_language": "zh",
+        "title": "欢迎来龙餐馆",
+        "overview": "徐福为养家还债远赴中东中餐馆当厨师，在当地结识了大堂经理马俊生。他们以地道中国风味广招八方来客，龙餐馆声名鹊起。然而随着战争爆发，当地形势急转直下，没有人能够独善其身，徐福和马俊生也不例外，他们的命运将何去何从？战火中的龙餐馆又将如何维系？",
+        "poster_path": "/2OJX7udqqpk5c82pXXdL2hnny0D.jpg",
+        "backdrop_path": "/zr7om0GOLOcLo7SXMmNEG5rz6de.jpg",
+        "release_date": "2026-08-08",
+        "runtime": 140,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10752,
+            "name": "战争"
+          }
+        ],
+        "vote_average": 9.1,
+        "vote_count": 10,
+        "popularity": 54.2843,
+        "homepage": "",
+        "directors": [
+          "文牧野"
+        ]
       }
     },
     {
@@ -12727,46 +12769,6 @@
         "popularity": 86.6307,
         "homepage": "https://www.sho.com/homeland",
         "directors": []
-      }
-    },
-    {
-      "id": 1391021,
-      "title": "欢迎来龙餐馆",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "watchDates": [],
-      "watchDate": null,
-      "watchStartDate": null,
-      "watchEndDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "欢迎来龙餐馆",
-        "original_language": "zh",
-        "title": "欢迎来龙餐馆",
-        "overview": "徐福为养家还债远赴中东中餐馆当厨师，在当地结识了大堂经理马俊生。他们以地道中国风味广招八方来客，龙餐馆声名鹊起。然而随着战争爆发，当地形势急转直下，没有人能够独善其身，徐福和马俊生也不例外，他们的命运将何去何从？战火中的龙餐馆又将如何维系？",
-        "poster_path": "/2OJX7udqqpk5c82pXXdL2hnny0D.jpg",
-        "backdrop_path": "/zr7om0GOLOcLo7SXMmNEG5rz6de.jpg",
-        "release_date": "2026-08-08",
-        "runtime": 140,
-        "genres": [
-          {
-            "id": 18,
-            "name": "剧情"
-          },
-          {
-            "id": 10752,
-            "name": "战争"
-          }
-        ],
-        "vote_average": 9.1,
-        "vote_count": 10,
-        "popularity": 54.2843,
-        "homepage": "",
-        "directors": [
-          "文牧野"
-        ]
       }
     },
     {
