@@ -9,3 +9,24 @@
 
 /data/movies.json
   Cache-Control: no-cache, must-revalidate
+
+/gallery.js
+  Cache-Control: no-cache, must-revalidate
+
+/gallery-scene.js
+  Cache-Control: no-cache, must-revalidate
+
+/gallery-data.js
+  Cache-Control: no-cache, must-revalidate
+
+/gallery.css
+  Cache-Control: no-cache, must-revalidate
+
+/almanac.js
+  Cache-Control: no-cache, must-revalidate
+
+/almanac-data.js
+  Cache-Control: no-cache, must-revalidate
+
+/almanac.css
+  Cache-Control: no-cache, must-revalidate
