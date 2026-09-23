@@ -76,7 +76,7 @@ export async function onRequestPost(context) {
 
         // 获取请求数据
         const updateData = await request.json();
-        const { id, status, rating, note, inCinema, wishlistReason } = updateData;
+        const { id, status, rating, note, inCinema, wishlistReason, mustSeeInCinema } = updateData;
 
         if (!id) {
             return new Response(JSON.stringify({ error: '缺少电影 ID' }), {
@@ -198,6 +198,19 @@ export async function onRequestPost(context) {
             } else {
                 updatedMovie.wishlistReason = wishlistReason;
             }
+        }
+
+        if (mustSeeInCinema !== undefined) {
+            if (mustSeeInCinema) {
+                updatedMovie.mustSeeInCinema = true;
+            } else {
+                delete updatedMovie.mustSeeInCinema;
+            }
+        }
+
+        // 「必须去影院」只属于想看；看过或开始看之后就不再需要
+        if (targetListName !== 'wishlist') {
+            delete updatedMovie.mustSeeInCinema;
         }
 
         if (targetListName === 'wishlist') {

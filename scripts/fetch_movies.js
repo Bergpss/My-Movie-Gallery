@@ -16,6 +16,16 @@ if (!TMDB_API_KEY) {
     process.exit(1);
 }
 
+// 想看专属字段：只在有值时写入，避免给每条记录都加上空字段
+function wishlistFields(entry, existing = {}) {
+    const reason = entry.wishlistReason ?? existing.wishlistReason;
+    const mustSee = entry.mustSeeInCinema ?? existing.mustSeeInCinema;
+    return {
+        ...(reason ? { wishlistReason: reason } : {}),
+        ...(mustSee === true ? { mustSeeInCinema: true } : {}),
+    };
+}
+
 function normaliseWatchDates(...sources) {
     const combined = [];
     sources.forEach(source => {
@@ -77,6 +87,7 @@ async function loadLibrary() {
             inCinema: typeof entry.inCinema === 'boolean'
                 ? entry.inCinema
                 : (typeof existing.inCinema === 'boolean' ? existing.inCinema : false),
+            ...wishlistFields(entry, existing),
         };
 
         // For web-video, add custom fields
@@ -277,6 +288,7 @@ async function buildSnapshot(entries, existingMap) {
             rating: typeof entry.rating === 'number' ? entry.rating : null,
             note: entry.note ?? null,
             inCinema: typeof entry.inCinema === 'boolean' ? entry.inCinema : false,
+            ...wishlistFields(entry),
             tmdb: tmdbData,
         });
     }

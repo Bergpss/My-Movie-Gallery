@@ -459,6 +459,7 @@ async function handleAddFromModal(e) {
         watchEndDate: isWishlist ? null : (document.getElementById('add-end-date').value || null),
         inCinema: isWishlist ? false : document.getElementById('add-cinema').checked,
         wishlistReason: isWishlist ? (document.getElementById('add-reason').value || undefined) : undefined,
+        mustSeeInCinema: isWishlist ? document.getElementById('add-must-see').checked : undefined,
         note: document.getElementById('add-note').value || undefined,
     };
 
@@ -489,6 +490,7 @@ async function handleManualAdd(e) {
         watchEndDate: isWishlist ? null : (document.getElementById('manual-end-date').value || null),
         inCinema: isWishlist ? false : document.getElementById('manual-cinema').checked,
         wishlistReason: isWishlist ? (document.getElementById('manual-reason').value || undefined) : undefined,
+        mustSeeInCinema: isWishlist ? document.getElementById('manual-must-see').checked : undefined,
         note: document.getElementById('manual-note').value || undefined,
     };
 
@@ -662,8 +664,14 @@ function applyLocalMovieUpdate(updateData) {
         if (updateData.wishlistReason) {
             updatedMovie.wishlistReason = updateData.wishlistReason;
         }
+        if (updateData.mustSeeInCinema) {
+            updatedMovie.mustSeeInCinema = true;
+        } else {
+            delete updatedMovie.mustSeeInCinema;
+        }
     } else {
         delete updatedMovie.wishlistReason;
+        delete updatedMovie.mustSeeInCinema;
     }
 
     allMovies.splice(movieIndex, 1, updatedMovie);
@@ -699,6 +707,7 @@ async function openEditModal(movie) {
     document.getElementById('edit-end-date').value = movie.watchEndDate || '';
     document.getElementById('edit-cinema').checked = movie.inCinema || false;
     document.getElementById('edit-reason').value = movie.wishlistReason || '';
+    document.getElementById('edit-must-see').checked = movie.mustSeeInCinema === true;
     document.getElementById('edit-note').value = movie.note || '';
 
     // 根据状态更新字段可见性
@@ -738,6 +747,7 @@ editForm.addEventListener('submit', async (e) => {
         watchStartDate: isWishlist ? null : (document.getElementById('edit-date').value || null),
         watchEndDate: isWishlist ? null : (document.getElementById('edit-end-date').value || null),
         wishlistReason: isWishlist ? (document.getElementById('edit-reason').value || null) : null,
+        mustSeeInCinema: isWishlist ? document.getElementById('edit-must-see').checked : false,
     };
 
     const dateError = validateWatchPeriod(updateData.watchStartDate, updateData.watchEndDate);

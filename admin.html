@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>管理后台 - Berg观影记录</title>
-    <link rel="stylesheet" href="admin.css?v=20260907-1">
+    <link rel="stylesheet" href="admin.css?v=20260923-1">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 </head>
 
@@ -113,6 +113,9 @@
                     <div class="form-group" id="manual-reason-group" hidden>
                         <label for="manual-reason">想看的理由</label>
                         <textarea id="manual-reason" rows="2" placeholder="为什么想看这部电影？"></textarea>
+                        <label class="must-see">
+                            <input type="checkbox" id="manual-must-see"> 必须去影院看 🎬
+                        </label>
                     </div>
                     <div class="form-group">
                         <label for="manual-note">备注</label>
@@ -186,6 +189,9 @@
                     <div class="form-group wishlist-only-field" id="add-reason-group" hidden>
                         <label for="add-reason">想看的理由</label>
                         <textarea id="add-reason" rows="2" placeholder="为什么想看这部电影？"></textarea>
+                        <label class="must-see">
+                            <input type="checkbox" id="add-must-see"> 必须去影院看 🎬
+                        </label>
                     </div>
                     <div class="form-group">
                         <label for="add-note">备注</label>
@@ -242,6 +248,9 @@
                 <div class="form-group wishlist-only-field" id="edit-reason-group" hidden>
                     <label for="edit-reason">想看的理由</label>
                     <textarea id="edit-reason" rows="2" placeholder="为什么想看这部电影？"></textarea>
+                    <label class="must-see">
+                        <input type="checkbox" id="edit-must-see"> 必须去影院看 🎬
+                    </label>
                 </div>
                 <div class="form-group">
                     <label for="edit-note">备注</label>
@@ -255,7 +264,7 @@
         </div>
     </div>
 
-    <script type="module" src="admin.js?v=20260911-1"></script>
+    <script type="module" src="admin.js?v=20260923-1"></script>
 </body>
 
 </html>

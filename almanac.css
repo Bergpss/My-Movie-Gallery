@@ -124,7 +124,8 @@ img { max-width: 100%; }
 .type-filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .poster-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 32px 16px; padding-block: 28px 20px; }
 .poster-grid:empty { display: none; }
-.poster-card { display: block; width: 100%; text-align: left; min-width: 0; }
+.poster-card { position: relative; display: block; width: 100%; text-align: left; min-width: 0; }
+.must-see-badge { position: absolute; top: 8px; left: 8px; padding: 3px 8px; font: 700 11px/1.4 var(--sans); color: var(--on-accent); background: var(--accent); }
 .poster-card img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: var(--cell); transition: transform .2s; }
 .poster-card:hover img { transform: translateY(-3px); }
 .poster-card h2 { margin: 10px 0 2px; font-size: 14px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

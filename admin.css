@@ -109,6 +109,11 @@ body {
     margin-right: 8px;
 }
 
+.form-group .must-see {
+    margin: 10px 0 0;
+    cursor: pointer;
+}
+
 .form-row {
     display: flex;
     gap: 16px;

@@ -134,6 +134,7 @@ function renderList() {
     $('retry').hidden = !dataError && !(discovering && recommendationState === 'error');
     $('grid').innerHTML = waiting || empty ? '' : selected.map(movie => `<button class="poster-card" data-key="${esc(movie.key)}" aria-label="查看《${esc(movie.title)}》">
         <img loading="lazy" decoding="async" alt="" src="${esc(posterAt(movie.poster, 'w342'))}">
+        ${movie.mustSeeInCinema && movie.category === 'wishlist' ? '<span class="must-see-badge">必须去影院</span>' : ''}
         <h2>${esc(movie.title)}</h2>
         <span class="card-meta"><span>${esc(movie.watchSortDate || movie.tmdb?.release_date?.slice(0, 4) || typeLabel(movie))}</span>
         <span class="card-rating">${movie.personalRating != null ? `我的 ${movie.personalRating.toFixed(1)}` : movie.tmdbRating != null ? `TMDB ${movie.tmdbRating.toFixed(1)}` : ''}</span></span>
@@ -164,6 +165,7 @@ function openMovie(movie) {
     const rewatch = (Array.isArray(movie.watchDates) ? movie.watchDates : []).filter(date => date !== firstDate);
     const rows = [
         ['观影', period], ['重温', rewatch.join('、')], ['地点', movie.inCinema ? '影院观影' : ''],
+        ['影院', movie.mustSeeInCinema && movie.category === 'wishlist' ? '必须去影院看' : ''],
         ['上映', movie.tmdb?.release_date], ['导演', movie.tmdb?.directors?.join('、')],
         ['类型', genreNames(movie).join(' / ')],
         ['时长', movie.duration || (movie.tmdb?.runtime ? `${movie.tmdb.runtime} 分钟` : '')],

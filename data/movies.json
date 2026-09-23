@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T09:09:05.928Z",
+  "generatedAt": "2026-09-23T09:13:28.224Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -43,48 +43,6 @@
         "vote_count": 393,
         "popularity": 46.3998,
         "homepage": "https://www.hbomax.com/shows/hacks/67e940b7-aab2-46ce-a62b-c7308cde9de7",
-        "directors": []
-      }
-    },
-    {
-      "id": 270476,
-      "title": "寡妇湾",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [],
-      "watchDate": null,
-      "watchStartDate": null,
-      "watchEndDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "Widow's Bay",
-        "original_language": "en",
-        "title": "寡妇湾",
-        "overview": "一位镇长无视当地人声称寡妇湾小镇遭受诅咒的警告，执意要将其打造成下一个新英格兰旅游胜地。",
-        "poster_path": "/mTJIgeN8Z0fvqf0JHlncWWWPKTe.jpg",
-        "backdrop_path": "/u6XtMg9Ai9siEbEs0UudPS3EaZY.jpg",
-        "release_date": "2026-04-28",
-        "runtime": null,
-        "genres": [
-          {
-            "id": 18,
-            "name": "剧情"
-          },
-          {
-            "id": 35,
-            "name": "喜剧"
-          },
-          {
-            "id": 9648,
-            "name": "悬疑"
-          }
-        ],
-        "vote_average": 8.224,
-        "vote_count": 210,
-        "popularity": 83.7346,
-        "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
         "directors": []
       }
     },
@@ -12473,6 +12431,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "从甜那里获取到的安利",
       "tmdb": {
         "original_title": "PSYCHO-PASS サイコパス",
         "original_language": "ja",
@@ -12649,6 +12608,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "甜总强烈推荐",
       "tmdb": {
         "original_title": "告白",
         "original_language": "ja",
@@ -12693,6 +12653,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "看到推上把这部剧跟《龙餐馆》对比",
       "tmdb": {
         "original_title": "Homeland",
         "original_language": "en",
@@ -12775,6 +12736,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "推友推荐",
       "tmdb": {
         "original_title": "Fire of Love",
         "original_language": "en",
@@ -12855,6 +12817,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "宝贝的小红书分享推荐",
       "tmdb": {
         "original_title": "フールナイト",
         "original_language": "ja",
@@ -12945,6 +12908,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "在《巨人的工具》这本书里看到的",
       "tmdb": {
         "original_title": "The Usual Suspects",
         "original_language": "en",
@@ -12989,6 +12953,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "在《巨人的工具》这本书里看到的",
       "tmdb": {
         "original_title": "The Sixth Sense",
         "original_language": "en",
@@ -13033,6 +12998,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "小院电影院的第二场电影",
       "tmdb": {
         "original_title": "The Secret Life of Walter Mitty",
         "original_language": "en",
@@ -13081,6 +13047,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "李宏毅教授在龙虾课上介绍的",
       "tmdb": {
         "original_title": "50 First Dates",
         "original_language": "en",
@@ -13121,6 +13088,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "Spotify 怎么从瑞典小团队干翻整个音乐行业，每集一个视角，拍得像剧",
       "tmdb": {
         "original_title": "The Playlist",
         "original_language": "sv",
@@ -13189,6 +13157,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "丹麦导演 Lars von Trier 的抑郁三部曲",
       "tmdb": {
         "original_title": "Melancholia",
         "original_language": "en",
@@ -13229,6 +13198,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "丹麦导演 Lars von Trier 的抑郁三部曲",
       "tmdb": {
         "original_title": "Antichrist",
         "original_language": "en",
@@ -13273,6 +13243,7 @@
       "rating": null,
       "note": null,
       "inCinema": false,
+      "wishlistReason": "甜甜看着“反应很大”的电影！",
       "tmdb": {
         "original_title": "Room",
         "original_language": "en",
@@ -13555,6 +13526,48 @@
         "directors": [
           "西恩·潘"
         ]
+      }
+    },
+    {
+      "id": 270476,
+      "title": "寡妇湾",
+      "mediaType": "tv",
+      "status": "dropped",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Widow's Bay",
+        "original_language": "en",
+        "title": "寡妇湾",
+        "overview": "一位镇长无视当地人声称寡妇湾小镇遭受诅咒的警告，执意要将其打造成下一个新英格兰旅游胜地。",
+        "poster_path": "/mTJIgeN8Z0fvqf0JHlncWWWPKTe.jpg",
+        "backdrop_path": "/u6XtMg9Ai9siEbEs0UudPS3EaZY.jpg",
+        "release_date": "2026-04-28",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 8.224,
+        "vote_count": 210,
+        "popularity": 83.7346,
+        "homepage": "https://tv.apple.com/show/umc.cmc.1zzly0vah46bnvnwf0qkrjhh2",
+        "directors": []
       }
     },
     {

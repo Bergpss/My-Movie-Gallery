@@ -72,7 +72,7 @@ export async function onRequestPost(context) {
 
         // 获取请求数据
         const movieData = await request.json();
-        const { id, title, mediaType, status, rating, note, inCinema, watchDate, wishlistReason } = movieData;
+        const { id, title, mediaType, status, rating, note, inCinema, watchDate, wishlistReason, mustSeeInCinema } = movieData;
 
         if (!id || !title) {
             return new Response(JSON.stringify({ error: '缺少必要参数' }), {
@@ -143,6 +143,9 @@ export async function onRequestPost(context) {
             newMovie.status = 'wishlist';
             if (wishlistReason) {
                 newMovie.wishlistReason = wishlistReason;
+            }
+            if (mustSeeInCinema) {
+                newMovie.mustSeeInCinema = true;
             }
         } else if (movieStatus === 'dropped') {
             newMovie.status = 'dropped';
