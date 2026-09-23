@@ -3515,6 +3515,13 @@
   ],
   "wishlist": [
     {
+      "id": 1423191,
+      "title": "生化危机：爆发夜",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "mustSeeInCinema": true
+    },
+    {
       "id": 43865,
       "title": "心理测量者",
       "mediaType": "tv",
