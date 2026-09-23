@@ -13,12 +13,6 @@
       ]
     },
     {
-      "id": 43865,
-      "title": "心理测量者",
-      "mediaType": "tv",
-      "status": "watching"
-    },
-    {
       "id": 68292,
       "title": "我的恐怖妻子",
       "mediaType": "tv",
@@ -3532,6 +3526,15 @@
     }
   ],
   "wishlist": [
+    {
+      "id": 43865,
+      "title": "心理测量者",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "note": null,
+      "inCinema": false,
+      "wishlistReason": "从甜那里获取到的安利"
+    },
     {
       "id": 127532,
       "title": "我独自升级",
