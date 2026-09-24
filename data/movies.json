@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-23T14:03:04.253Z",
+  "generatedAt": "2026-09-24T06:35:01.563Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 319
+    "total": 320
   },
   "items": [
     {
@@ -12459,6 +12459,45 @@
         "directors": [
           "塔伊加·维迪提"
         ]
+      }
+    },
+    {
+      "id": 1398,
+      "title": "黑道家族",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "wishlistReason": "《剧本》Richard Walter 里的",
+      "tmdb": {
+        "original_title": "The Sopranos",
+        "original_language": "en",
+        "title": "黑道家族",
+        "overview": "本剧呈现黑手党生活、美国家庭、意裔美国人社群、暴力支配的世界与道德的灰色地带。由詹姆士·甘多费尼（James Gandolfini）、萝兰·布雷柯（Lorraine Bracco）、艾迪·法柯（Edie Falco）及麦克·英普雷欧里（Michael Imperioli）领衔主演。剧情的主线围绕在东尼·沙普蓝诺（甘多费尼饰）的家庭与自己所领导的犯罪组织的各式矛盾与冲突。 ",
+        "poster_path": "/9Z3dU2I0ixIqXrVnlrtzxEBIlpw.jpg",
+        "backdrop_path": "/lNpkvX2s8LGB0mjGODMT4o6Up7j.jpg",
+        "release_date": "1999-01-10",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 80,
+            "name": "犯罪"
+          },
+          {
+            "id": 18,
+            "name": "剧情"
+          }
+        ],
+        "vote_average": 8.673,
+        "vote_count": 3686,
+        "popularity": 138.0839,
+        "homepage": "https://www.hbo.com/the-sopranos",
+        "directors": []
       }
     },
     {
