@@ -15,6 +15,19 @@
   ],
   "watched": [
     {
+      "id": 23606,
+      "title": "那年夏天，宁静的海",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-10-02"
+      ],
+      "watchStartDate": "2026-10-02",
+      "watchEndDate": null,
+      "watchDate": "2026-10-02",
+      "rating": 10,
+      "note": "B：感觉好悲伤；好喜欢里面的音乐；后劲太足了\n甜：宁静的海，宁静的人，但是汹涌的感情"
+    },
+    {
       "id": 1391021,
       "title": "欢迎来龙餐馆",
       "mediaType": "movie",
