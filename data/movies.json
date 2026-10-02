@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-24T06:35:01.563Z",
+  "generatedAt": "2026-10-02T15:16:02.342Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 320
+    "total": 321
   },
   "items": [
     {
@@ -44,6 +44,52 @@
         "popularity": 46.3998,
         "homepage": "https://www.hbomax.com/shows/hacks/67e940b7-aab2-46ce-a62b-c7308cde9de7",
         "directors": []
+      }
+    },
+    {
+      "id": 23606,
+      "title": "那年夏天，宁静的海",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-10-02"
+      ],
+      "watchDate": "2026-10-02",
+      "watchStartDate": "2026-10-02",
+      "watchEndDate": null,
+      "rating": 10,
+      "note": "B：感觉好悲伤；好喜欢里面的音乐；后劲太足了\n甜：宁静的海，宁静的人，但是汹涌的感情",
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "あの夏、いちばん静かな海。",
+        "original_language": "ja",
+        "title": "那年夏天，宁静的海",
+        "overview": "聋哑青年茂（真木藏人饰）是名清洁工，他在一个清理垃圾堆时发现了一个被人扔掉的破旧冲浪板，捡去修好后就带着女朋友贵子（大岛弘子饰）到海边练习，贵子也是个聋哑人。 茂对冲浪从喜爱发展到痴迷的程度，他一下班就到海边不停地练习，而贵子总是坐在海滩上微笑地望着他。日复一日，茂的技术越来越好。冲浪用品店老板送给茂一套潜水服，并给了他一份参加冲浪比赛的申请表。在比赛那天，茂和贵子兴致冲冲地到了海边，却因意外没有参加成比赛。但茂对冲浪的热爱不减，贵子也一如既往地支持他，在后来的比赛中，茂取得了优胜。几天以后，茂又到海边练习。贵子因事来迟，却没有看到茂，眼前是一片寂静的海面。",
+        "poster_path": "/uJejYYDn8rsdtbXIcAGBbG451yJ.jpg",
+        "backdrop_path": "/2F5VRSmiPQgPA6MMLdn8tpXwHzG.jpg",
+        "release_date": "1991-10-19",
+        "runtime": 101,
+        "genres": [
+          {
+            "id": 18,
+            "name": "剧情"
+          },
+          {
+            "id": 10749,
+            "name": "爱情"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 7.496,
+        "vote_count": 232,
+        "popularity": 4.1637,
+        "homepage": "",
+        "directors": [
+          "北野武"
+        ]
       }
     },
     {
