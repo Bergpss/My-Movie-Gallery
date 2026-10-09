@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-02T15:16:02.342Z",
+  "generatedAt": "2026-10-09T05:26:47.451Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 321
+    "total": 322
   },
   "items": [
     {
@@ -12504,6 +12504,42 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1400837,
+      "title": "另一个妈咪",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Other Mommy",
+        "original_language": "en",
+        "title": "另一个妈咪",
+        "overview": "故事讲述八岁女孩贝拉住在父母婚姻摇摇欲坠的房子里。某天，她发现衣柜深处总在深夜探出一个东西——那东西长得和她妈妈乌苏拉一模一样，于是贝拉叫它“另一个妈妈”。它每天重复同一句话：“我可以进到你心里吗？”贝拉本能地拒绝，但“另一个妈妈”开始以更扭曲狰狞的形态渗透家庭生活，甚至试图取代真正的母亲。当家中怪事频发、家人也开始看见它时，贝拉必须在被彻底吞噬前，揪出这个伪装者，或者承认有些门不该打开。影片改编自乔什·马勒曼2024年的同名小说。",
+        "poster_path": "/8NhvDXIZXU39wZCJbhUerrJyRnK.jpg",
+        "backdrop_path": "/gy1RZonkd5CYWl64qCdIBcS4HjI.jpg",
+        "release_date": "2026-10-07",
+        "runtime": 93,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          }
+        ],
+        "vote_average": 7.548,
+        "vote_count": 21,
+        "popularity": 88.5693,
+        "homepage": "",
+        "directors": [
+          "罗布·萨维奇"
         ]
       }
     },
