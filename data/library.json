@@ -15,6 +15,21 @@
   ],
   "watched": [
     {
+      "id": 1423191,
+      "title": "生化危机：爆发夜",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 10,
+      "note": "回忆童年",
+      "inCinema": true,
+      "watchStartDate": "2026-10-10",
+      "watchEndDate": null,
+      "watchDate": "2026-10-10",
+      "watchDates": [
+        "2026-10-10"
+      ]
+    },
+    {
       "id": 23606,
       "title": "那年夏天，宁静的海",
       "mediaType": "movie",
@@ -3560,13 +3575,6 @@
       "title": "Slow Horses",
       "mediaType": "tv",
       "status": "wishlist"
-    },
-    {
-      "id": 1423191,
-      "title": "生化危机：爆发夜",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "mustSeeInCinema": true
     },
     {
       "id": 43865,
