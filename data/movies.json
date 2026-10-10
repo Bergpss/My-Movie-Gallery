@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T05:26:47.451Z",
+  "generatedAt": "2026-10-10T16:08:35.405Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -44,6 +44,52 @@
         "popularity": 46.3998,
         "homepage": "https://www.hbomax.com/shows/hacks/67e940b7-aab2-46ce-a62b-c7308cde9de7",
         "directors": []
+      }
+    },
+    {
+      "id": 1423191,
+      "title": "生化危机：爆发夜",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-10-10"
+      ],
+      "watchDate": "2026-10-10",
+      "watchStartDate": "2026-10-10",
+      "watchEndDate": null,
+      "rating": 10,
+      "note": "回忆童年",
+      "inCinema": true,
+      "tmdb": {
+        "original_title": "Resident Evil",
+        "original_language": "en",
+        "title": "生化危机：爆发夜",
+        "overview": "奉命奔赴浣熊市的医疗速递员布莱恩，意外深陷全城失控的病毒浩劫。浣熊市彻底沦陷，异变怪物横行肆虐、嗜血猎捕，身陷末日绝境的他，能否在这场惊魂噩梦中突围求生，搏出一线生机？",
+        "poster_path": "/qMvRqzzDVfQpLi5ZoKwttTQdaJe.jpg",
+        "backdrop_path": "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+        "release_date": "2026-09-16",
+        "runtime": 95,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          }
+        ],
+        "vote_average": 7.3,
+        "vote_count": 342,
+        "popularity": 584.55,
+        "homepage": "",
+        "directors": [
+          "扎克·克雷格"
+        ]
       }
     },
     {
@@ -12622,51 +12668,6 @@
         "popularity": 155.2859,
         "homepage": "https://tv.apple.com/show/umc.cmc.2szz3fdt71tl1ulnbp8utgq5o",
         "directors": []
-      }
-    },
-    {
-      "id": 1423191,
-      "title": "生化危机：爆发夜",
-      "mediaType": "movie",
-      "status": "wishlist",
-      "watchDates": [],
-      "watchDate": null,
-      "watchStartDate": null,
-      "watchEndDate": null,
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "mustSeeInCinema": true,
-      "tmdb": {
-        "original_title": "Resident Evil",
-        "original_language": "en",
-        "title": "生化危机：爆发夜",
-        "overview": "奉命奔赴浣熊市的医疗速递员布莱恩，意外深陷全城失控的病毒浩劫。浣熊市彻底沦陷，异变怪物横行肆虐、嗜血猎捕，身陷末日绝境的他，能否在这场惊魂噩梦中突围求生，搏出一线生机？",
-        "poster_path": "/qMvRqzzDVfQpLi5ZoKwttTQdaJe.jpg",
-        "backdrop_path": "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
-        "release_date": "2026-09-16",
-        "runtime": 95,
-        "genres": [
-          {
-            "id": 27,
-            "name": "恐怖"
-          },
-          {
-            "id": 878,
-            "name": "科幻"
-          },
-          {
-            "id": 12,
-            "name": "冒险"
-          }
-        ],
-        "vote_average": 7.3,
-        "vote_count": 342,
-        "popularity": 584.55,
-        "homepage": "",
-        "directors": [
-          "扎克·克雷格"
-        ]
       }
     },
     {
