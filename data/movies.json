@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T16:08:35.405Z",
+  "generatedAt": "2026-10-24T12:01:25.023Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 322
+    "total": 323
   },
   "items": [
     {
@@ -12550,6 +12550,43 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1765072,
+      "title": "你能看到一切",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "You Can See Everything",
+        "original_language": "en",
+        "title": "你能看到一切",
+        "overview": "在被判入狱前的34天，臭名昭著的硅谷创始人伊丽莎白·霍姆斯邀请了一支持怀疑态度的摄制组记录她的一举一动。起初这是一部关于神秘罪犯的私密肖像，却演变成一场持续3年、坠入深渊的迷幻之旅。",
+        "poster_path": "/5zaoousDbGy7uM1s2OH4GqR0aQy.jpg",
+        "backdrop_path": "/nhIL3O4W9h5V5JbNQm7yjoDk3So.jpg",
+        "release_date": "2026-10-16",
+        "runtime": 174,
+        "genres": [
+          {
+            "id": 99,
+            "name": "纪录"
+          }
+        ],
+        "vote_average": 9.1,
+        "vote_count": 31,
+        "popularity": 141.0193,
+        "homepage": "",
+        "directors": [
+          "Nathan Fielder",
+          "Lance Oppenheim"
         ]
       }
     },
