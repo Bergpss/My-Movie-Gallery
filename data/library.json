@@ -15,6 +15,18 @@
   ],
   "watched": [
     {
+      "id": 324857,
+      "title": "蜘蛛侠：平行宇宙",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-10-24"
+      ],
+      "watchStartDate": "2026-10-24",
+      "watchEndDate": null,
+      "watchDate": "2026-10-24",
+      "rating": 10
+    },
+    {
       "id": 1423191,
       "title": "生化危机：爆发夜",
       "mediaType": "movie",
