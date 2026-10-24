@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T12:01:25.023Z",
+  "generatedAt": "2026-10-24T15:06:03.646Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 323
+    "total": 324
   },
   "items": [
     {
@@ -44,6 +44,58 @@
         "popularity": 46.3998,
         "homepage": "https://www.hbomax.com/shows/hacks/67e940b7-aab2-46ce-a62b-c7308cde9de7",
         "directors": []
+      }
+    },
+    {
+      "id": 324857,
+      "title": "蜘蛛侠：平行宇宙",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-10-24"
+      ],
+      "watchDate": "2026-10-24",
+      "watchStartDate": "2026-10-24",
+      "watchEndDate": null,
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Spider-Man: Into the Spider-Verse",
+        "original_language": "en",
+        "title": "蜘蛛侠：平行宇宙",
+        "overview": "布鲁克林少年迈尔斯·莫拉莱斯一直在努力适应新的学校和家庭期待，一次意外却让他被一只神秘蜘蛛咬伤，并逐渐获得了与蜘蛛侠相似的能力。与此同时，犯罪头目金并秘密启动了一台能够打开平行宇宙的时空对撞机，导致不同世界之间的界限开始崩塌。来自另一个宇宙的彼得·帕克因此出现在迈尔斯面前，随后更多拥有不同身份与能力的蜘蛛侠也接连来到这个世界。面对越来越失控的危机，尚未真正掌握力量的迈尔斯不得不和这些陌生的蜘蛛侠并肩行动，并寻找属于自己的英雄之路……",
+        "poster_path": "/ylS5mFW7M6ReUjKhbEI4N4xB5fA.jpg",
+        "backdrop_path": "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
+        "release_date": "2018-12-06",
+        "runtime": 116,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 28,
+            "name": "动作"
+          },
+          {
+            "id": 12,
+            "name": "冒险"
+          },
+          {
+            "id": 878,
+            "name": "科幻"
+          }
+        ],
+        "vote_average": 8.403,
+        "vote_count": 18063,
+        "popularity": 34.4799,
+        "homepage": "",
+        "directors": [
+          "鲍勃·佩尔西凯蒂",
+          "彼得·拉姆齐",
+          "罗德尼·罗斯曼"
+        ]
       }
     },
     {
