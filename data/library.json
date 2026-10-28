@@ -1,19 +1,21 @@
 {
-  "watching": [
+  "watching": [],
+  "watched": [
     {
       "id": 124101,
       "title": "绝望写手",
       "mediaType": "tv",
-      "status": "watching",
+      "status": "watched",
       "watchStartDate": "2026-09-18",
-      "watchEndDate": null,
+      "watchEndDate": "2026-10-17",
       "watchDate": "2026-09-18",
       "watchDates": [
         "2026-09-18"
-      ]
-    }
-  ],
-  "watched": [
+      ],
+      "rating": 10,
+      "note": null,
+      "inCinema": false
+    },
     {
       "id": 324857,
       "title": "蜘蛛侠：平行宇宙",
