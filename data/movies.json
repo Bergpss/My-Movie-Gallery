@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T15:06:03.646Z",
+  "generatedAt": "2026-10-28T10:28:04.128Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
@@ -10,14 +10,14 @@
       "id": 124101,
       "title": "绝望写手",
       "mediaType": "tv",
-      "status": "watching",
+      "status": "watched",
       "watchDates": [
         "2026-09-18"
       ],
       "watchDate": "2026-09-18",
       "watchStartDate": "2026-09-18",
-      "watchEndDate": null,
-      "rating": null,
+      "watchEndDate": "2026-10-17",
+      "rating": 10,
       "note": null,
       "inCinema": false,
       "tmdb": {
