@@ -1,11 +1,53 @@
 {
-  "generatedAt": "2026-10-28T10:28:04.128Z",
+  "generatedAt": "2026-10-29T02:30:20.482Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 324
+    "total": 325
   },
   "items": [
+    {
+      "id": 951491,
+      "title": "电锯惊魂10",
+      "mediaType": "movie",
+      "status": "watched",
+      "watchDates": [
+        "2026-10-28"
+      ],
+      "watchDate": "2026-10-28",
+      "watchStartDate": "2026-10-28",
+      "watchEndDate": null,
+      "rating": 8.5,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Saw X",
+        "original_language": "en",
+        "title": "电锯惊魂10",
+        "overview": "患病而绝望的约翰·克莱默（托宾·贝尔 Tobin Bell 饰）前往墨西哥进行一次危险的实验手术，希望能奇迹般地治愈癌症，却发现整个手术都是场骗局，旨在欺骗最弱势的群体。抱持着全新目的后，“竖锯”，这位臭名昭著的连环杀手重操旧业，开始对付起这些骗子。",
+        "poster_path": "/9y9vkznGGrEzfwEOJ976jFCBn8i.jpg",
+        "backdrop_path": "/uUJp5I4IbzuhdUiEx4R9OAoFpbz.jpg",
+        "release_date": "2023-09-27",
+        "runtime": 118,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 7.145,
+        "vote_count": 2529,
+        "popularity": 9.7616,
+        "homepage": "",
+        "directors": [
+          "凯文·格鲁特"
+        ]
+      }
+    },
     {
       "id": 124101,
       "title": "绝望写手",
