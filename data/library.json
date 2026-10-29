@@ -2,6 +2,18 @@
   "watching": [],
   "watched": [
     {
+      "id": 951491,
+      "title": "电锯惊魂10",
+      "mediaType": "movie",
+      "watchDates": [
+        "2026-10-28"
+      ],
+      "watchStartDate": "2026-10-28",
+      "watchEndDate": null,
+      "watchDate": "2026-10-28",
+      "rating": 8.5
+    },
+    {
       "id": 124101,
       "title": "绝望写手",
       "mediaType": "tv",
