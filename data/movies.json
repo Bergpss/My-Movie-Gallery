@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-29T02:30:20.482Z",
+  "generatedAt": "2026-10-30T04:25:10.268Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 325
+    "total": 326
   },
   "items": [
     {
@@ -12644,6 +12644,46 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 272118,
+      "title": "小城日常",
+      "mediaType": "tv",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "CITY THE ANIMATION",
+        "original_language": "ja",
+        "title": "小城日常",
+        "overview": "这座城镇，绝非寻常之地。有欢笑（噗嗤嗤！），有心跳（怦怦♡），有泪光（扑簌扑簌……）。居民们编织出无法预料的“平凡”日常！欢迎来到心跳连发的奇妙CITY！",
+        "poster_path": "/e5vL96yFiVLaDmN3ZlcsqQOJoIX.jpg",
+        "backdrop_path": "/1rxLKPOIHdJ9aFUwmzQ9gagZkUc.jpg",
+        "release_date": "2025-07-07",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 16,
+            "name": "动画"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          }
+        ],
+        "vote_average": 8.364,
+        "vote_count": 33,
+        "popularity": 18.3641,
+        "homepage": "https://city-the-animation.com",
+        "directors": [
+          "石立太一"
         ]
       }
     },
