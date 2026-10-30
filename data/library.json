@@ -1,5 +1,20 @@
 {
-  "watching": [],
+  "watching": [
+    {
+      "id": 272118,
+      "title": "小城日常",
+      "mediaType": "tv",
+      "status": "watching",
+      "note": null,
+      "inCinema": false,
+      "watchStartDate": "2026-10-30",
+      "watchEndDate": null,
+      "watchDate": "2026-10-30",
+      "watchDates": [
+        "2026-10-30"
+      ]
+    }
+  ],
   "watched": [
     {
       "id": 951491,
@@ -3583,12 +3598,6 @@
     }
   ],
   "wishlist": [
-    {
-      "id": 272118,
-      "title": "小城日常",
-      "mediaType": "tv",
-      "status": "wishlist"
-    },
     {
       "id": 1765072,
       "title": "你能看到一切",
