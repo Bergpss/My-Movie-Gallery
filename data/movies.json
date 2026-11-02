@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-02T13:54:35.843Z",
+  "generatedAt": "2026-11-02T13:54:53.514Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
-    "total": 327
+    "total": 328
   },
   "items": [
     {
@@ -12724,6 +12724,50 @@
         "homepage": "",
         "directors": [
           "塔伊加·维迪提"
+        ]
+      }
+    },
+    {
+      "id": 1514026,
+      "title": "逃出布迪秀",
+      "mediaType": "movie",
+      "status": "wishlist",
+      "watchDates": [],
+      "watchDate": null,
+      "watchStartDate": null,
+      "watchEndDate": null,
+      "rating": null,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "Buddy",
+        "original_language": "en",
+        "title": "逃出布迪秀",
+        "overview": "一群孩子被困在看似欢乐的儿童电视节目中。随着橙色独角兽布迪露出凶残本性，这个充满歌舞与欢笑的世界逐渐显露出恐怖真相。",
+        "poster_path": "/qG84lCvV5wDVBDYaNFPDFWa9IAl.jpg",
+        "backdrop_path": "/ytoLEl5yDaxB8AtZ52uKWjaQ9ql.jpg",
+        "release_date": "2026-08-27",
+        "runtime": 96,
+        "genres": [
+          {
+            "id": 27,
+            "name": "恐怖"
+          },
+          {
+            "id": 35,
+            "name": "喜剧"
+          },
+          {
+            "id": 14,
+            "name": "奇幻"
+          }
+        ],
+        "vote_average": 6.993,
+        "vote_count": 227,
+        "popularity": 201.9313,
+        "homepage": "",
+        "directors": [
+          "Casper Kelly"
         ]
       }
     },
