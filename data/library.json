@@ -6,11 +6,13 @@
       "mediaType": "tv",
       "status": "watching",
       "watchStartDate": "2026-11-01",
-      "watchEndDate": null,
+      "watchEndDate": "2026-11-05",
       "watchDate": "2026-11-01",
       "watchDates": [
         "2026-11-01"
-      ]
+      ],
+      "note": null,
+      "inCinema": false
     },
     {
       "id": 272118,
