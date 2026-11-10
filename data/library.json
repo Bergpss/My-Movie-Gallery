@@ -1,20 +1,6 @@
 {
   "watching": [
     {
-      "id": 289517,
-      "title": "末路兼职",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchStartDate": "2026-11-01",
-      "watchEndDate": "2026-11-05",
-      "watchDate": "2026-11-01",
-      "watchDates": [
-        "2026-11-01"
-      ],
-      "note": null,
-      "inCinema": false
-    },
-    {
       "id": 272118,
       "title": "小城日常",
       "mediaType": "tv",
@@ -30,6 +16,21 @@
     }
   ],
   "watched": [
+    {
+      "id": 289517,
+      "title": "末路兼职",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchStartDate": "2026-11-01",
+      "watchEndDate": "2026-11-05",
+      "watchDate": "2026-11-01",
+      "watchDates": [
+        "2026-11-01"
+      ],
+      "note": null,
+      "inCinema": false,
+      "rating": 10
+    },
     {
       "id": 951491,
       "title": "电锯惊魂10",
