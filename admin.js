@@ -1,4 +1,4 @@
-import { applyWatchPeriod, formatWatchPeriod, validateWatchPeriod } from './watch-dates.js';
+import { applyWatchPeriod, formatWatchPeriod, syncWatchEndDateAndStatus, validateWatchPeriod } from './watch-dates.js';
 
 // 管理界面逻辑
 
@@ -214,8 +214,15 @@ function setupEventListeners() {
     document.getElementById('manual-status').addEventListener('change', (e) => {
         updateFormFieldsVisibility('manual', e.target.value);
     });
-    document.getElementById('edit-status').addEventListener('change', (e) => {
-        updateFormFieldsVisibility('edit', e.target.value);
+    document.getElementById('edit-status').addEventListener('change', () => {
+        syncEditWatchFields('status');
+    });
+    const editEndDate = document.getElementById('edit-end-date');
+    editEndDate.addEventListener('input', () => {
+        syncEditWatchFields('endDate');
+    });
+    editEndDate.addEventListener('change', () => {
+        syncEditWatchFields('endDate');
     });
 
     // 我的记录筛选按钮事件
@@ -258,6 +265,20 @@ function updateFormFieldsVisibility(prefix, status) {
     if (dateLabel) {
         dateLabel.textContent = '开始日期 / 单日观影';
     }
+}
+
+function syncEditWatchFields(changed) {
+    const statusEl = document.getElementById('edit-status');
+    const endEl = document.getElementById('edit-end-date');
+    const synced = syncWatchEndDateAndStatus({
+        status: statusEl.value,
+        watchEndDate: endEl.value || null,
+        changed,
+    });
+    statusEl.value = synced.status;
+    endEl.value = synced.watchEndDate || '';
+    updateFormFieldsVisibility('edit', synced.status);
+    return synced;
 }
 
 function decodeBase64Url(value) {
@@ -710,8 +731,8 @@ async function openEditModal(movie) {
     document.getElementById('edit-must-see').checked = movie.mustSeeInCinema === true;
     document.getElementById('edit-note').value = movie.note || '';
 
-    // 根据状态更新字段可见性
-    updateFormFieldsVisibility('edit', movie.status || 'watched');
+    // A saved end date means watched, even if the record was previously inconsistent.
+    syncEditWatchFields('load');
 
     editModal.hidden = false;
 }
@@ -733,7 +754,8 @@ editModal.addEventListener('click', (e) => {
 editForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const status = document.getElementById('edit-status').value;
+    const synced = syncEditWatchFields('save');
+    const status = synced.status;
     const isWishlist = status === 'wishlist';
     const isWatching = status === 'watching';
     const noRating = isWishlist || isWatching;
@@ -745,7 +767,7 @@ editForm.addEventListener('submit', async (e) => {
         note: document.getElementById('edit-note').value || null,
         inCinema: isWishlist ? false : document.getElementById('edit-cinema').checked,
         watchStartDate: isWishlist ? null : (document.getElementById('edit-date').value || null),
-        watchEndDate: isWishlist ? null : (document.getElementById('edit-end-date').value || null),
+        watchEndDate: isWishlist ? null : synced.watchEndDate,
         wishlistReason: isWishlist ? (document.getElementById('edit-reason').value || null) : null,
         mustSeeInCinema: isWishlist ? document.getElementById('edit-must-see').checked : false,
     };
