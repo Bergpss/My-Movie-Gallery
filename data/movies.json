@@ -1,49 +1,11 @@
 {
-  "generatedAt": "2026-11-07T01:30:20.845Z",
+  "generatedAt": "2026-11-10T10:43:52.871Z",
   "source": {
     "type": "local-library",
     "language": "zh-CN",
     "total": 328
   },
   "items": [
-    {
-      "id": 289517,
-      "title": "末路兼职",
-      "mediaType": "tv",
-      "status": "watching",
-      "watchDates": [
-        "2026-11-01"
-      ],
-      "watchDate": "2026-11-01",
-      "watchStartDate": "2026-11-01",
-      "watchEndDate": "2026-11-05",
-      "rating": null,
-      "note": null,
-      "inCinema": false,
-      "tmdb": {
-        "original_title": "꿀알바",
-        "original_language": "ko",
-        "title": "末路兼职",
-        "overview": "负债累累的年轻男子接下了一家神秘机构提供的高薪兼职工作，却发现为了赚更多钱干的这份差事竟变成了一场噩梦。",
-        "poster_path": "/34Z1vlsow72njbGBNYCaxqFFGjP.jpg",
-        "backdrop_path": "/cyH2fZUjIJjLmgpF3tgA5CSGz4L.jpg",
-        "release_date": "2026-10-30",
-        "runtime": null,
-        "genres": [
-          {
-            "id": 9648,
-            "name": "悬疑"
-          }
-        ],
-        "vote_average": 7.6,
-        "vote_count": 24,
-        "popularity": 130.7353,
-        "homepage": "https://www.netflix.com/title/81997887",
-        "directors": [
-          "김다민"
-        ]
-      }
-    },
     {
       "id": 272118,
       "title": "小城日常",
@@ -83,6 +45,44 @@
         "homepage": "https://city-the-animation.com",
         "directors": [
           "石立太一"
+        ]
+      }
+    },
+    {
+      "id": 289517,
+      "title": "末路兼职",
+      "mediaType": "tv",
+      "status": "watched",
+      "watchDates": [
+        "2026-11-01"
+      ],
+      "watchDate": "2026-11-01",
+      "watchStartDate": "2026-11-01",
+      "watchEndDate": "2026-11-05",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "tmdb": {
+        "original_title": "꿀알바",
+        "original_language": "ko",
+        "title": "末路兼职",
+        "overview": "负债累累的年轻男子接下了一家神秘机构提供的高薪兼职工作，却发现为了赚更多钱干的这份差事竟变成了一场噩梦。",
+        "poster_path": "/34Z1vlsow72njbGBNYCaxqFFGjP.jpg",
+        "backdrop_path": "/cyH2fZUjIJjLmgpF3tgA5CSGz4L.jpg",
+        "release_date": "2026-10-30",
+        "runtime": null,
+        "genres": [
+          {
+            "id": 9648,
+            "name": "悬疑"
+          }
+        ],
+        "vote_average": 7.6,
+        "vote_count": 24,
+        "popularity": 130.7353,
+        "homepage": "https://www.netflix.com/title/81997887",
+        "directors": [
+          "김다민"
         ]
       }
     },
