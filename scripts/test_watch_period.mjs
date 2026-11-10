@@ -5,7 +5,7 @@ import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { applyWatchPeriod, formatWatchPeriod, validateWatchPeriod } from '../watch-dates.js';
+import { applyWatchPeriod, formatWatchPeriod, syncWatchEndDateAndStatus, validateWatchPeriod } from '../watch-dates.js';
 import { onRequestPost as updateMovie } from '../functions/api/update.js';
 import { onRequestPost as addMovie } from '../functions/api/add.js';
 
@@ -82,4 +82,80 @@ test('snapshot regeneration retains ranges for movies and web videos without rem
     } finally {
         await rm(cwd, { recursive: true, force: true });
     }
+});
+
+test('edit form: filling or changing an end date marks the title watched', () => {
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watching', watchEndDate: '2026-11-05', changed: 'endDate' }),
+        { status: 'watched', watchEndDate: '2026-11-05' }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watching', watchEndDate: '2026-11-06', changed: 'endDate' }),
+        { status: 'watched', watchEndDate: '2026-11-06' }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'wishlist', watchEndDate: '2026-11-05', changed: 'endDate' }),
+        { status: 'watched', watchEndDate: '2026-11-05' }
+    );
+});
+
+test('edit form: choosing watched without an end date does not invent today', () => {
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: null, changed: 'status' }),
+        { status: 'watched', watchEndDate: null }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: '', changed: 'status' }),
+        { status: 'watched', watchEndDate: null }
+    );
+    const kept = syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: '2026-11-05', changed: 'status' });
+    assert.deepEqual(kept, { status: 'watched', watchEndDate: '2026-11-05' });
+});
+
+test('edit form: switching to another status clears the end date', () => {
+    for (const status of ['watching', 'wishlist', 'dropped', 'recap']) {
+        assert.deepEqual(
+            syncWatchEndDateAndStatus({ status, watchEndDate: '2026-11-05', changed: 'status' }),
+            { status, watchEndDate: null }
+        );
+    }
+});
+
+test('edit form: clearing only the end date leaves the status unchanged', () => {
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: null, changed: 'endDate' }),
+        { status: 'watched', watchEndDate: null }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: '', changed: 'endDate' }),
+        { status: 'watched', watchEndDate: null }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watching', watchEndDate: '', changed: 'endDate' }),
+        { status: 'watching', watchEndDate: null }
+    );
+});
+
+test('edit form: load and save reconcile a filled end date to watched without inventing a date', () => {
+    // The screenshot case: 正在看 plus an end date becomes 已看完 when the form loads or saves.
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watching', watchEndDate: '2026-11-05', changed: 'load' }),
+        { status: 'watched', watchEndDate: '2026-11-05' }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watching', watchEndDate: '2026-11-05', changed: 'save' }),
+        { status: 'watched', watchEndDate: '2026-11-05' }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: null, changed: 'load' }),
+        { status: 'watched', watchEndDate: null }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watched', watchEndDate: null, changed: 'save' }),
+        { status: 'watched', watchEndDate: null }
+    );
+    assert.deepEqual(
+        syncWatchEndDateAndStatus({ status: 'watching', watchEndDate: null, changed: 'load' }),
+        { status: 'watching', watchEndDate: null }
+    );
 });

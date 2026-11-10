@@ -13,6 +13,23 @@ export function validateWatchPeriod(start, end) {
     return null;
 }
 
+// Keep the edit form's status and end date consistent:
+// a filled end date means watched; switching away from watched clears the end date.
+// Clearing the end date, or choosing watched, never invents a date.
+export function syncWatchEndDateAndStatus({ status, watchEndDate, changed }) {
+    const end = watchEndDate || null;
+    if (changed === 'status') {
+        return {
+            status,
+            watchEndDate: status === 'watched' ? end : null,
+        };
+    }
+    return {
+        status: end ? 'watched' : status,
+        watchEndDate: end,
+    };
+}
+
 export function applyWatchPeriod(movie, update) {
     if (update.watchStartDate !== undefined || update.watchEndDate !== undefined) {
         const start = update.watchStartDate || null;
