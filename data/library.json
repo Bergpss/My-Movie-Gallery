@@ -17,6 +17,21 @@
   ],
   "watched": [
     {
+      "id": 1483525,
+      "title": "可能的爱情",
+      "mediaType": "movie",
+      "status": "watched",
+      "rating": 10,
+      "note": null,
+      "inCinema": false,
+      "watchStartDate": "2026-11-16",
+      "watchEndDate": "2026-11-17",
+      "watchDate": "2026-11-16",
+      "watchDates": [
+        "2026-11-16"
+      ]
+    },
+    {
       "id": 289517,
       "title": "末路兼职",
       "mediaType": "tv",
@@ -3663,12 +3678,6 @@
       "id": 205050,
       "title": "香格里拉边境",
       "mediaType": "tv",
-      "status": "wishlist"
-    },
-    {
-      "id": 1483525,
-      "title": "可能的爱情",
-      "mediaType": "movie",
       "status": "wishlist"
     },
     {
